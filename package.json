@@ -4,7 +4,9 @@
   "description": "ReactPDF Proof of Concept",
   "main": "index.js",
   "scripts": {
+    "start": "cross-env NODE_ENV=production node lib/index.js",
     "build": "babel src --out-dir lib",
+    "heroku-postbuild": "npm run build",
     "dev": "babel -w src --out-dir lib & nodemon lib/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -31,6 +33,7 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-3": "^6.24.1",
+    "cross-env": "^5.1.1",
     "nodemon": "^1.12.5",
     "rimraf": "^2.6.2"
   }
