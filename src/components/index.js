@@ -11,11 +11,6 @@ import {
 } from '@react-pdf/core'
 import ReactPDF from '@react-pdf/node'
 
-// has issues.
-/*Font.register(`${__dirname}/fonts/gt-america-standard-regular.ttf`, {
-  family: 'GT America Regular',
-})*/
-
 const styles = StyleSheet.create({
   page: {
     //flexDirection: 'row',
@@ -28,35 +23,46 @@ const styles = StyleSheet.create({
   },
   titleblock: {
     width: 500,
-    marginTop: 30,
-    marginBottom: 10
+    marginTop: 20,
+    marginBottom: 40
   },
   text: {
     columns: 2,
-    color: 'green',
     width: 400,
     fontSize: 12,
     lineHeight: 2, // not supported.
     //align: 'justify'
-    //fontFamily: 'GT America Regular',  
+    fontFamily: 'Rubis Regular',
   },
   headline: {
     fontSize: 24,
-    fontWeight: 'bold',  // not supported.
-    marginBottom: 5
+    fontWeight: 'bold', // not supported.
+    marginBottom: 5,
+    fontFamily: 'Rubis Bold',
   },
   lead: {
     fontSize: 17,
-    marginBottom: 5
+    marginBottom: 5,
+    fontFamily: 'Rubis Regular',
   },
   credit: {
-    fontSize: 12
+    fontSize: 12,
+    fontFamily: 'GT America Regular'
   },
   listitem: {
-    fontSize: 12
+    fontSize: 12,
+    fontFamily: 'Rubis Regular',
   },
   link: {
-    color: 'blue'
+    color: '#00508C',
+    fontSize: 12,
+    fontFamily: 'GT America Regular'
+  },
+  strong: {
+    color: '#000',
+    fontSize: 12,
+    fontFamily: 'Rubis Bold',
+    textDecoration: 'none'
   },
   missing: {
     backgroundColor: '#FF5555',
@@ -76,15 +82,27 @@ const styles = StyleSheet.create({
     flexGrow: 9
   },
   bulletPoint: {
-    fontSize: 12
+    fontSize: 12,
+    fontFamily: 'Rubis Regular'
   },
   itemContent: {
     fontSize: 10
   }
 })
 
+// These font files must be available in /lib/components/fonts,
+// otherwise things break.
+
 Font.register(`${__dirname}/fonts/gt-america-standard-regular.ttf`, {
   family: 'GT America Regular'
+})
+
+Font.register(`${__dirname}/fonts/rubis-regular.ttf`, {
+  family: 'Rubis Regular'
+})
+
+Font.register(`${__dirname}/fonts/rubis-bold.ttf`, {
+  family: 'Rubis Bold'
 })
 
 export const MissingPdfNode = ({ node, children }) => (
@@ -95,8 +113,6 @@ export const MissingPdfNode = ({ node, children }) => (
     </Text>
   </View>
 )
-
-// Create Document Component
 
 export const TITLEBLOCK = ({ children, ...props }) => (
   <View {...props} style={styles.titleblock}>
@@ -117,15 +133,22 @@ export class P extends Component {
   render () {
     const { children } = this.props
     return (
-      <View style={styles.section}>
-        <Text ref={this.setRef} style={styles.text}>{children}</Text>
-      </View>
+      <Text ref={this.setRef} style={styles.text}>
+        {children}
+      </Text>
     )
   }
 }
 
-export const A = ({ children }) => {
-  return <Link style={styles.link}>{children}</Link>
+export const A = ({ children, href }) => {
+  return <Link style={styles.link} src={href}>{children}</Link>
+}
+
+export const STRONG = ({ children }) => {
+  // react-pdf's Text expects canonical inline children with a render() method,
+  // so let's abuse Link for now. We should eventually use some generic
+  // react-pdf compatible inline element.
+  return <Link style={styles.strong}>{children}</Link>
 }
 
 export const H1 = ({ children }) => {
@@ -138,7 +161,6 @@ export const LEAD = ({ children }) => {
 }
 
 export const CREDIT = ({ children }) => {
-  //console.log('CREDIT', children)
   return <Text style={styles.credit}>{children}</Text>
 }
 
@@ -147,12 +169,10 @@ export const IMG = ({ src }) => {
 }
 
 export const LIST = ({ data, children }) => {
-  //console.log('LIST', data)
   return <View style={styles.section}>{children}</View>
 }
 
 export const LISTITEM = ({ node, index, parent, children }) => {
-  //console.log('LISTITEM', parent.ordered)
   const bullet = parent.ordered ? `${index + 1}.` : '–'
   return (
     <View style={styles.item}>

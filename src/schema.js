@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Page, Text, View, Document, StyleSheet } from '@react-pdf/core'
-import { P, IMG, TITLEBLOCK, H1, LEAD, A, LIST, LISTITEM, LISTITEMP, CREDIT } from './components/index.js'
+import { P, IMG, TITLEBLOCK, H1, LEAD, A, LIST, LISTITEM, LISTITEMP, CREDIT, STRONG } from './components/index.js'
 
 import {
   matchType,
@@ -19,10 +19,11 @@ const link = {
     title: node.title,
     href: node.url
   }),
-  component: ({ children }) => children[0],
+  component: A,
   editorModule: 'link'
 }
 
+// TODO: Use break rule in text.
 const br = {
   matchMdast: matchType('break'),
   component: () => <br />,
@@ -34,18 +35,17 @@ const paragraph = {
   component: ({ children, ...props }) => <P {...props}>{children}</P>,
   editorModule: 'paragraph',
   editorOptions: {
-    //formatButtonText: 'Paragraph'
   },
   rules: [
-    /*br,
+    // TODO: br,
     {
       matchMdast: matchType('strong'),
-      component: ({ children, ...props }) => <Text {...props}>{children}</Text>,
+      component: ({ children, ...props }) => <STRONG {...props}>{children}</STRONG>,
       editorModule: 'mark',
       editorOptions: {
         type: 'strong'
       }
-    }*/
+    }
   ]
 }
 
@@ -69,7 +69,7 @@ const figure = {
       editorModule: 'figureImage',
       isVoid: true
     },
-    //figureCaption
+    // TODO: figureCaption
   ]
 }
 
@@ -86,7 +86,7 @@ const createSchema = (
       matchMdast: matchType('root'),
       component: ({ children, ...props }) => <View {...props}>{children}</View>,
       props: node => ({
-        meta: node.meta
+        //meta: node.meta
       }),
       editorModule: 'documentPlain',
       editorOptions: documentEditorOptions,
@@ -137,7 +137,7 @@ const createSchema = (
         figure,
         {
           matchMdast: matchZone('CENTER'),
-          component: ({ children, ...props }) => <View {...props}>{children}</View>,
+          component: ({ children, ...props }) => children,
           editorModule: 'center',
           rules: [
             /*{
@@ -149,7 +149,7 @@ const createSchema = (
               }
             },*/
             paragraph,
-            //figure
+            // TODO: figure
             {
               matchMdast: matchType('list'),
               component: LIST,
@@ -176,18 +176,9 @@ const createSchema = (
                       component: LISTITEMP,
                       editorModule: 'paragraph',
                       editorOptions: {
-                        //formatButtonText: 'Paragraph'
                       },
                       rules: [
-                        /*br,
-                        {
-                          matchMdast: matchType('strong'),
-                          component: ({ children, ...props }) => <Text {...props}>{children}</Text>,
-                          editorModule: 'mark',
-                          editorOptions: {
-                            type: 'strong'
-                          }
-                        }*/
+                        // TODO: br
                       ]
                     }
 

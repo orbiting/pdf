@@ -4,9 +4,7 @@ import React from 'react'
 import { Page, Text, View, Document, StyleSheet } from '@react-pdf/core'
 import ReactPDF from '@react-pdf/node'
 import { createApolloFetch } from 'apollo-fetch'
-//import gql from 'graphql-tag'
 import PdfDocument  from './components/PdfDocument.js'
-//const PdfDocument = require('../components/PdfDocument.js')
 
 import { createElement, pdf, PDFRenderer } from '@react-pdf/core';
 
@@ -44,7 +42,6 @@ server.use(express.static('static'))
 //http://localhost:3007/2017/12/08/daniels-artikel
 
 server.get('/:year/:month/:day/:slug*', async (req, res) => {
-  //console.log(req.params)
   const { year, month, day, slug } = req.params
   const variables = {
     slug: `${year}/${month}/${day}/${slug}`
@@ -56,8 +53,10 @@ server.get('/:year/:month/:day/:slug*', async (req, res) => {
   const container = createElement('ROOT')
   const node = PDFRenderer.createContainer(container)
 
+  // Remove paged prop to render everything on one page.
+  // TODO: Implement paging logic based on element heights.
   PDFRenderer.updateContainer(
-    <PdfDocument article={response.data.article} />,
+    <PdfDocument article={response.data.article} paged />,
     node,
     null
   )
@@ -80,10 +79,7 @@ server.get('/:year/:month/:day/:slug*', async (req, res) => {
   )
 
   const output = await pdf(container).toBuffer()
-
-  // res.end(buffer)
   output.pipe(res)
-  // return await pdf(container).toBuffer();
 })
 
 server.listen(PORT, err => {

@@ -12,31 +12,29 @@ const util = require('util')
 
 const styles = StyleSheet.create({
   page: {
-    //flexDirection: 'row',
     backgroundColor: '#fff',
     marginTop: 50,
     marginLeft: 50
-    //padding: 20,
-  },
-  pageTitle: {
-    fontSize: 10,
-    align: 'center',
-    width: 500
   }
 })
 
-const PdfDocument = ({ article }) => {
-  //console.log('CONTENT', article.content)
+const PdfDocument = ({ article, paged=false }) => {
+  // If paged is true, we break each mdast child to a new page for demo reasons.
+  // This should eventually become some smart logic based on element heights.
   const schema = createSchema()
-  const pageTitle = `PDF proof-of-concept for: ${article.meta.title}`
   const mdast = renderMdast(article.content, schema, { MissingNode: MissingPdfNode })
-  // console.log(util.inspect(mdast, {depth: null}))
   return (
     <Document>
+     {paged && mdast.props.children.map(child => (
       <Page size="A4" style={styles.page}>
-        <Text style={styles.pageTitle}>{pageTitle}</Text>
+        {child}
+      </Page>
+      ))}
+     {!paged && (
+      <Page size="A4" style={styles.page}>
         {mdast}
       </Page>
+      )}
     </Document>
   )
 }
