@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import {
   Page,
   Text,
@@ -104,12 +104,24 @@ export const TITLEBLOCK = ({ children, ...props }) => (
   </View>
 )
 
-export const P = ({ children }) => {
-  return (
-    <View style={styles.section}>
-      <Text style={styles.text}>{children}</Text>
-    </View>
-  )
+export class P extends Component {
+  constructor (...args) {
+    super(...args)
+    this.setRef = ref => {
+      this.p = ref
+    }
+  }
+  componentDidMount () {
+    console.log(this.p.getHeight(400))
+  }
+  render () {
+    const { children } = this.props
+    return (
+      <View style={styles.section}>
+        <Text ref={this.setRef} style={styles.text}>{children}</Text>
+      </View>
+    )
+  }
 }
 
 export const A = ({ children }) => {
