@@ -8,14 +8,13 @@ import { createApolloFetch } from 'apollo-fetch'
 import PdfDocument  from './components/PdfDocument.js'
 //const PdfDocument = require('../components/PdfDocument.js')
 
-
-const dotenv = require('dotenv')
+import { createElement, pdf, PDFRenderer } from '@react-pdf/core';
 
 const DEV = process.env.NODE_ENV
   ? process.env.NODE_ENV !== 'production'
   : true
 if (DEV || process.env.DOTENV) {
-  dotenv.config()
+  require('dotenv').config()
 }
 
 import express from 'express'
@@ -44,7 +43,7 @@ const server = express()
 server.use(express.static('static'))
 //http://localhost:3007/2017/12/08/daniels-artikel
 
-server.get('/:year/:month/:day/:slug*', (req, res) => {
+server.get('/:year/:month/:day/:slug*', async (req, res) => {
   //console.log(req.params)
   const { year, month, day, slug } = req.params
   const variables = {
@@ -52,24 +51,26 @@ server.get('/:year/:month/:day/:slug*', (req, res) => {
   }
 
   const apolloFetch = createApolloFetch({ uri: process.env.API_URL })
-  apolloFetch({ query, variables })
-    .then(data => {
-      //console.log('data', data.data.article.content)
-      const filename = `${__dirname}/files/${year}-${month}-${day}-${slug}.pdf`
+  const response = await apolloFetch({ query, variables })
 
-      ReactPDF.render(<PdfDocument article={data.data.article} />, filename)
-        .then(
-          // TODO: use stream
-          //res.set('Content-Type', 'application/pdf')
-          //setTimeout(undefined, 3000)
-          res.sendFile(filename)
-        )
-        .catch(error => {
-          console.log(error)
-          return res.send('Error')
-        })
-    })
-    .catch(e => console.log(e))
+  console.log(response)
+
+  const container = createElement('ROOT')
+  const node = PDFRenderer.createContainer(container)
+
+  PDFRenderer.updateContainer(
+    <PdfDocument article={response.data.article} />,
+    node,
+    null
+  )
+
+  // require('util').inspect(node, {depth: null})
+
+  const output = await pdf(container).toBuffer()
+
+  // res.end(buffer)
+  output.pipe(res)
+  // return await pdf(container).toBuffer();
 })
 
 server.listen(PORT, err => {

@@ -30,7 +30,7 @@ const PdfDocument = ({ article }) => {
   const schema = createSchema()
   const pageTitle = `PDF proof-of-concept for: ${article.meta.title}`
   const mdast = renderMdast(article.content, schema, { MissingNode: MissingPdfNode })
-  console.log(util.inspect(mdast, {depth: null}))
+  // console.log(util.inspect(mdast, {depth: null}))
   return (
     <Document>
       <Page size="A4" style={styles.page}>
