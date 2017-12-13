@@ -53,8 +53,6 @@ server.get('/:year/:month/:day/:slug*', async (req, res) => {
   const apolloFetch = createApolloFetch({ uri: process.env.API_URL })
   const response = await apolloFetch({ query, variables })
 
-  console.log(response)
-
   const container = createElement('ROOT')
   const node = PDFRenderer.createContainer(container)
 
@@ -64,7 +62,22 @@ server.get('/:year/:month/:day/:slug*', async (req, res) => {
     null
   )
 
-  // require('util').inspect(node, {depth: null})
+  // measure text here
+  console.log(
+    node.containerInfo.document.root.heightOfString('Hallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo Hallo', {
+      width: 400
+    })
+  )
+
+  // walk tree
+  console.log(
+    require('util').inspect(
+      node.containerInfo.document
+        .children[0] // Page
+        .children[1], // Mdast Root
+      {depth: 3}
+    )
+  )
 
   const output = await pdf(container).toBuffer()
 
