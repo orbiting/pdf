@@ -28,20 +28,20 @@ const styles = StyleSheet.create({
   },
   text: {
     columns: 2,
-    width: 400,
+    width: 500,
     fontSize: 12,
     lineHeight: 2, // not supported.
     //align: 'justify'
     fontFamily: 'Rubis Regular',
   },
   headline: {
-    fontSize: 24,
+    fontSize: 28,
     fontWeight: 'bold', // not supported.
     marginBottom: 5,
-    fontFamily: 'Rubis Bold',
+    fontFamily: 'Republik',
   },
   lead: {
-    fontSize: 17,
+    fontSize: 16,
     marginBottom: 5,
     fontFamily: 'Rubis Regular',
   },
@@ -50,17 +50,17 @@ const styles = StyleSheet.create({
     fontFamily: 'GT America Regular'
   },
   listitem: {
-    fontSize: 12,
+    fontSize: 13,
     fontFamily: 'Rubis Regular',
   },
   link: {
     color: '#00508C',
-    fontSize: 12,
+    fontSize: 13,
     fontFamily: 'GT America Regular'
   },
   strong: {
     color: '#000',
-    fontSize: 12,
+    fontSize: 13,
     fontFamily: 'Rubis Bold',
     textDecoration: 'none'
   },
@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
     flexGrow: 9
   },
   bulletPoint: {
-    fontSize: 12,
+    fontSize: 13,
     fontFamily: 'Rubis Regular'
   },
   itemContent: {
@@ -103,6 +103,10 @@ Font.register(`${__dirname}/fonts/rubis-regular.ttf`, {
 
 Font.register(`${__dirname}/fonts/rubis-bold.ttf`, {
   family: 'Rubis Bold'
+})
+
+Font.register(`${__dirname}/fonts/RepublikSerif-Black.ttf`, {
+  family: 'Republik'
 })
 
 export const MissingPdfNode = ({ node, children }) => (

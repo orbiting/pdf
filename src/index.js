@@ -56,7 +56,7 @@ server.get('/:year/:month/:day/:slug*', async (req, res) => {
   // Remove paged prop to render everything on one page.
   // TODO: Implement paging logic based on element heights.
   PDFRenderer.updateContainer(
-    <PdfDocument article={response.data.article} paged />,
+    <PdfDocument article={response.data.article} paged={!!req.query.paged} />,
     node,
     null
   )

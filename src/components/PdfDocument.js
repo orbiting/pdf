@@ -23,9 +23,10 @@ const PdfDocument = ({ article, paged=false }) => {
   // This should eventually become some smart logic based on element heights.
   const schema = createSchema()
   const mdast = renderMdast(article.content, schema, { MissingNode: MissingPdfNode })
+
   return (
     <Document>
-     {paged && mdast.props.children.map(child => (
+     {!!paged && mdast.props.children.map(child => (
       <Page size="A4" style={styles.page}>
         {child}
       </Page>
