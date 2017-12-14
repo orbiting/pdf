@@ -1,2 +1,16 @@
-# poc-pdf
-ReactPDF Proof of Concept
+# Proof of Concept to Render Mdast as PDF
+
+Implemented with [`react-pdf`](https://github.com/diegomura/react-pdf).
+
+```
+npm i
+npm run dev
+
+open http://localhost:3007/example
+```
+
+## Env
+
+```
+API_URL=http://localhost:3020/graphql
+```
