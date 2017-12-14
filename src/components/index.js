@@ -9,7 +9,6 @@ import {
   Image,
   Link
 } from '@react-pdf/core'
-import ReactPDF from '@react-pdf/node'
 
 const styles = StyleSheet.create({
   page: {
@@ -31,37 +30,37 @@ const styles = StyleSheet.create({
     width: 500,
     fontSize: 12,
     lineHeight: 2, // not supported.
-    //align: 'justify'
-    fontFamily: 'Rubis Regular',
+    // align: 'justify'
+    // fontFamily: 'Rubis Regular',
   },
   headline: {
     fontSize: 28,
     fontWeight: 'bold', // not supported.
     marginBottom: 5,
-    fontFamily: 'Republik',
+    // fontFamily: 'Republik',
   },
   lead: {
     fontSize: 16,
     marginBottom: 5,
-    fontFamily: 'Rubis Regular',
+    // fontFamily: 'Rubis Regular',
   },
   credit: {
     fontSize: 12,
-    fontFamily: 'GT America Regular'
+    // fontFamily: 'GT America Regular'
   },
   listitem: {
     fontSize: 13,
-    fontFamily: 'Rubis Regular',
+    // fontFamily: 'Rubis Regular',
   },
   link: {
     color: '#00508C',
     fontSize: 13,
-    fontFamily: 'GT America Regular'
+    // fontFamily: 'GT America Regular'
   },
   strong: {
     color: '#000',
     fontSize: 13,
-    fontFamily: 'Rubis Bold',
+    // fontFamily: 'Rubis Bold',
     textDecoration: 'none'
   },
   missing: {
@@ -83,7 +82,7 @@ const styles = StyleSheet.create({
   },
   bulletPoint: {
     fontSize: 13,
-    fontFamily: 'Rubis Regular'
+    // fontFamily: 'Rubis Regular'
   },
   itemContent: {
     fontSize: 10
@@ -93,21 +92,21 @@ const styles = StyleSheet.create({
 // These font files must be available in /lib/components/fonts,
 // otherwise things break.
 
-Font.register(`${__dirname}/fonts/gt-america-standard-regular.ttf`, {
-  family: 'GT America Regular'
-})
+// Font.register(`${__dirname}/fonts/gt-america-standard-regular.ttf`, {
+//   family: 'GT America Regular'
+// })
 
-Font.register(`${__dirname}/fonts/rubis-regular.ttf`, {
-  family: 'Rubis Regular'
-})
+// Font.register(`${__dirname}/fonts/rubis-regular.ttf`, {
+//   family: 'Rubis Regular'
+// })
 
-Font.register(`${__dirname}/fonts/rubis-bold.ttf`, {
-  family: 'Rubis Bold'
-})
+// Font.register(`${__dirname}/fonts/rubis-bold.ttf`, {
+//   family: 'Rubis Bold'
+// })
 
-Font.register(`${__dirname}/fonts/RepublikSerif-Black.ttf`, {
-  family: 'Republik'
-})
+// Font.register(`${__dirname}/fonts/RepublikSerif-Black.ttf`, {
+//   family: 'Republik'
+// })
 
 export const MissingPdfNode = ({ node, children }) => (
   <View style={styles.section}>
@@ -124,6 +123,7 @@ export const TITLEBLOCK = ({ children, ...props }) => (
   </View>
 )
 
+// trying out refs
 export class P extends Component {
   constructor (...args) {
     super(...args)
@@ -132,7 +132,7 @@ export class P extends Component {
     }
   }
   componentDidMount () {
-    console.log(this.p.getHeight(400))
+    // console.log(this.p.getHeight(400))
   }
   render () {
     const { children } = this.props

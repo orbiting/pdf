@@ -1,0 +1,304 @@
+{
+  "data": {
+    "document": {
+      "content": {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "alt": null,
+                    "title": null,
+                    "type": "image",
+                    "url": "https://api.publikator.republik.love/assets/republik-test/article-irrtum/images/2e5d00480903ad4c3dd59eff6349edafacef3be8.jpeg?size=2000x1125"
+                  }
+                ],
+                "type": "paragraph"
+              },
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Die Crew der Republik"
+                  }
+                ],
+                "type": "paragraph"
+              }
+            ],
+            "data": {},
+            "identifier": "FIGURE",
+            "type": "zone"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Republik: Stand der Arbeit, Stand des Irrtums"
+                  }
+                ],
+                "depth": 1,
+                "type": "heading"
+              },
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Nicht Perfektion ist das Ziel bei unserem Start, sondern Perfektionierbarkeit."
+                  }
+                ],
+                "type": "paragraph"
+              },
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Ein Brief von der Redaktion (Text), "
+                  },
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Laurent Burst"
+                      }
+                    ],
+                    "title": "Laurent Burst",
+                    "type": "link",
+                    "url": "/~140cec76-47c2-458e-93c9-7ecac8085b9b"
+                  },
+                  {
+                    "type": "text",
+                    "value": " (Bilder) und "
+                  },
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Kollaborator"
+                      }
+                    ],
+                    "title": null,
+                    "type": "link",
+                    "url": "https://republik.love/~kollaborator"
+                  },
+                  {
+                    "type": "text",
+                    "value": " (☄️), 4. Dezember 2017"
+                  }
+                ],
+                "type": "paragraph"
+              }
+            ],
+            "data": {},
+            "identifier": "TITLE",
+            "type": "zone"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Es ist bald Zeit, anderes zu schreiben als Geschäftsbriefe wie diesen, zum Beispiel Weihnachtskarten oder Magazin-Geschichten. Aber erst bald. Hier also unsere letzten Unternehmensnachrichten vor dem Start der «Republik», die mit aller Wahrscheinlichkeit wie eine Rakete starten wird. Weniger, weil der Start so fadengerade wird, sondern weil er in Stufen erfolgt. Das liegt in der Natur der Publikation. Eine gedruckte Zeitung oder ein Print-Magazin taucht quasi fertig designt auf, aus einem harmonischen Guss, so wie Roger Federer einst in Wimbledon 2003. Ein Magazin im Netz dagegen gleicht Stan Wawrinka. Dieser tätowierte sich ein Motto von Beckett auf den Unterarm: «Ever tried. Ever failed. No matter. Try again. Fail again. Fail better.» "
+                  }
+                ],
+                "type": "paragraph"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "alt": null,
+                        "title": null,
+                        "type": "image",
+                        "url": "https://api.publikator.republik.love/assets/republik-test/article-irrtum/images/7ea85b84861637b705398f468e1f0f6e66407f86.jpeg?size=2000x1331"
+                      }
+                    ],
+                    "type": "paragraph"
+                  },
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Manifest von Project R"
+                      }
+                    ],
+                    "type": "paragraph"
+                  }
+                ],
+                "data": {},
+                "identifier": "FIGURE",
+                "type": "zone"
+              },
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Wir werden im Januar ähnlich agieren: «Versucht. Gescheitert. Egal. Erneut versuchen. Erneut scheitern. Besser scheitern.» Und die «Republik» in Stufen starten – wir beginnen mit dem Notwendigen und schalten dann Funktion um Funktion, Kolumne um Kolumne, Erweiterung um Erweiterung auf. Nicht Perfektion ist das Ziel bei unserem Start, sondern Perfektionierbarkeit. "
+                  }
+                ],
+                "type": "paragraph"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "«Nicht Perfektion ist das Ziel bei unserem Start, sondern Perfektionierbarkeit»"
+                      }
+                    ],
+                    "type": "paragraph"
+                  },
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Constantin Seibt"
+                      }
+                    ],
+                    "type": "paragraph"
+                  }
+                ],
+                "data": {
+                  "size": "narrow"
+                },
+                "identifier": "QUOTE",
+                "type": "zone"
+              },
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Dies zum Teil, weil unser Team erst nach und nach an Bord kommt. Aber auch, weil ein Magazin im Netz das Privileg hat, sich schneller verändern zu können. Wir müssen unseren Vorteil nutzen. Denn so schlank die «Republik» ist, hat sie doch den Vorteil, eine mit rund 14’500 Verlegerinnen und Verlegern (zumindest nach der Zahl der Köpfe) weit überlegene Teppichetage zu haben. Wir werden Ihre Geduld, Ihre Neugier, Ihre Kritik brauchen können. "
+                  }
+                ],
+                "type": "paragraph"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "https://twitter.com/RepublikMagazin/status/857218186986520576"
+                          }
+                        ],
+                        "title": null,
+                        "type": "link",
+                        "url": "https://twitter.com/RepublikMagazin/status/857218186986520576"
+                      }
+                    ],
+                    "type": "paragraph"
+                  }
+                ],
+                "data": {
+                  "__typename": "TwitterEmbed",
+                  "createdAt": "2017-04-26T13:01:56.000Z",
+                  "html": "Danke! Republik geht dank eurer Unterstützung 2018 definitiv an den Start! Gemeinsam schaffen wir noch mehr - wir sammeln weiter! <a href=\"https://t.co/25b3Yul7zF\" target=\"_blank\" rel=\"noopener noreferrer\">t.co/25b3Yul7zF</a>",
+                  "id": "857218186986520576",
+                  "image": "https://pbs.twimg.com/media/C-VzYvFXgAACAR0.jpg",
+                  "more": null,
+                  "playable": false,
+                  "retrievedAt": "2017-12-04T14:16:25.869Z",
+                  "text": "Danke! Republik geht dank eurer Unterstützung 2018 definitiv an den Start! Gemeinsam schaffen wir noch mehr - wir sammeln weiter! https://t.co/25b3Yul7zF",
+                  "userId": "786282996223598592",
+                  "userName": "Republik",
+                  "userProfileImageUrl": "https://pbs.twimg.com/profile_images/851190311267307521/W2kHAHvv_normal.jpg",
+                  "userScreenName": "RepublikMagazin"
+                },
+                "identifier": "EMBEDTWITTER",
+                "type": "zone"
+              },
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Und ja, wir haben ein Startdatum. Es ist der XX. Januar 2018, Punkt XX Uhr morgens. Und ja, wir sind auch gespannt, wie das Magazin dann wird. Sogar sehr. Und ja, es wäre eine gute Idee, diesen Brief zu beenden und sich an die Arbeit zu machen. In der Redaktion laufen die fieberhaften Vorbereitungen für den Start. Reportagen werden in Auftrag gegeben, Recherchen geplant, Formate erfunden, Ideen geprüft, umgesetzt oder verworfen. Es gibt noch viel zu tun bis Januar."
+                  }
+                ],
+                "type": "paragraph"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Republik"
+                      }
+                    ],
+                    "depth": 3,
+                    "type": "heading"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "alt": null,
+                            "title": null,
+                            "type": "image",
+                            "url": "https://api.publikator.republik.love/assets/republik-test/article-irrtum/images/ae754d37e5d09a8d9d3dd744889a4086a1f6929a.jpeg?size=4928x3280"
+                          }
+                        ],
+                        "type": "paragraph"
+                      },
+                      {
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "Das Rothaus"
+                          }
+                        ],
+                        "type": "paragraph"
+                      }
+                    ],
+                    "data": {},
+                    "identifier": "FIGURE",
+                    "type": "zone"
+                  },
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Das digitale Magazin Republik geht im Januar 2018 an den Start. Alle sind gespannt –  allen voran die Macherinnen der Republik."
+                      }
+                    ],
+                    "type": "paragraph"
+                  }
+                ],
+                "data": {
+                  "figureSize": "M"
+                },
+                "identifier": "INFOBOX",
+                "type": "zone"
+              }
+            ],
+            "data": {},
+            "identifier": "CENTER",
+            "type": "zone"
+          }
+        ],
+        "meta": {
+          "auto": true,
+          "description": "Nicht Perfektion ist das Ziel bei unserem Start, sondern Perfektionierbarkeit.",
+          "publishDate": "2017-12-04T15:00:00.000Z",
+          "slug": "2017/12/04/republik-stand-der-arbeit-stand-des-irrtums",
+          "template": "article",
+          "title": "Republik: Stand der Arbeit, Stand des Irrtums"
+        },
+        "type": "root"
+      },
+      "meta": {
+        "slug": "2017/12/04/republik-stand-der-arbeit-stand-des-irrtums",
+        "title": "Republik: Stand der Arbeit, Stand des Irrtums"
+      }
+    }
+  }
+}

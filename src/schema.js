@@ -19,32 +19,16 @@ const link = {
     title: node.title,
     href: node.url
   }),
-  component: A,
-  editorModule: 'link'
-}
-
-// TODO: Use break rule in text.
-const br = {
-  matchMdast: matchType('break'),
-  component: () => <br />,
-  isVoid: true
+  component: A
 }
 
 const paragraph = {
   matchMdast: matchParagraph,
   component: ({ children, ...props }) => <P {...props}>{children}</P>,
-  editorModule: 'paragraph',
-  editorOptions: {
-  },
   rules: [
-    // TODO: br,
     {
       matchMdast: matchType('strong'),
-      component: ({ children, ...props }) => <STRONG {...props}>{children}</STRONG>,
-      editorModule: 'mark',
-      editorOptions: {
-        type: 'strong'
-      }
+      component: ({ children, ...props }) => <STRONG {...props}>{children}</STRONG>
     }
   ]
 }
@@ -55,9 +39,6 @@ const figure = {
   props: node => ({
     size: node.data.size
   }),
-  editorModule: 'figure',
-  editorOptions: {
-  },
   rules: [
     {
       matchMdast: matchImageParagraph,
@@ -66,69 +47,38 @@ const figure = {
         src: node.children[0].url.split('?')[0],  // ?size=... breaks it.
         alt: node.children[0].alt
       }),
-      editorModule: 'figureImage',
       isVoid: true
-    },
-    // TODO: figureCaption
+    }
   ]
 }
 
-const createSchema = (
-  {
-    documentEditorOptions = {},
-    titleBlockAppend = null,
-    repoPrefix = 'article-'
-  } = {}
-) => ({
-  repoPrefix,
+const schema = {
   rules: [
     {
       matchMdast: matchType('root'),
-      component: ({ children, ...props }) => <View {...props}>{children}</View>,
-      props: node => ({
-        //meta: node.meta
-      }),
-      editorModule: 'documentPlain',
-      editorOptions: documentEditorOptions,
+      component: ({ children }) => <View>{children}</View>,
       rules: [
-        {
-          matchMdast: () => false,
-          editorModule: 'meta',
-          editorOptions: {}
-        },
         {
           matchMdast: matchZone('TITLE'),
           component: TITLEBLOCK,
           props: (node, index, parent) => ({
             center: node.data.center
           }),
-          editorModule: 'title',
-          editorOptions: {
-          },
           rules: [
             {
               matchMdast: matchHeading(1),
               component: H1,
-              editorModule: 'headline',
-              editorOptions: {
-              }
             },
             
             {
               matchMdast: (node, index) => matchParagraph(node) && index === 1,
               component: LEAD,
-              editorModule: 'paragraph',
-              editorOptions: {
-              },
               rules: []
             },
             
             {
               matchMdast: matchParagraph,
               component: CREDIT,
-              editorModule: 'paragraph',
-              editorOptions: {
-              },
               rules: [link]
             }
             
@@ -138,18 +88,8 @@ const createSchema = (
         {
           matchMdast: matchZone('CENTER'),
           component: ({ children, ...props }) => children,
-          editorModule: 'center',
           rules: [
-            /*{
-              matchMdast: matchHeading(2),
-              component: ({ children, ...props }) => <Text {...props}>{children}</Text>,
-              editorModule: 'headline',
-              editorOptions: {
-               
-              }
-            },*/
             paragraph,
-            // TODO: figure
             {
               matchMdast: matchType('list'),
               component: LIST,
@@ -159,7 +99,6 @@ const createSchema = (
                   start: node.start
                 }
               }),
-              editorModule: 'list',
               rules: [
                 {
                   matchMdast: matchType('listItem'),
@@ -169,32 +108,21 @@ const createSchema = (
                     index: index,
                     parent: parent
                   }),
-                  editorModule: 'listItem',
                   rules: [
                     {
                       matchMdast: matchParagraph,
                       component: LISTITEMP,
-                      editorModule: 'paragraph',
-                      editorOptions: {
-                      },
-                      rules: [
-                        // TODO: br
-                      ]
+                      rules: []
                     }
-
                   ]
                 }
               ]
-            },
-            
+            }
           ]
-        },
-        {
-          editorModule: 'specialchars'
         }
       ]
     }
   ]
-})
+}
 
-export default createSchema
+export default schema

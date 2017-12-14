@@ -1,26 +1,24 @@
-import 'regenerator-runtime/runtime'
-
 import React from 'react'
-import { Page, Text, View, Document, StyleSheet } from '@react-pdf/core'
-import ReactPDF from '@react-pdf/node'
+import express from 'express'
+import fs from 'fs'
+import path from 'path'
+
+import 'regenerator-runtime/runtime'
+import {
+  createElement, pdf, PDFRenderer,
+  Page, Text, View, Document, StyleSheet
+} from '@react-pdf/core'
+
 import { createApolloFetch } from 'apollo-fetch'
 import PdfDocument  from './components/PdfDocument.js'
 
-import { createElement, pdf, PDFRenderer } from '@react-pdf/core';
+const PORT = process.env.PORT || 3007
+const DEV = process.env.NODE_ENV !== 'production'
 
-const DEV = process.env.NODE_ENV
-  ? process.env.NODE_ENV !== 'production'
-  : true
-if (DEV || process.env.DOTENV) {
+if (DEV) {
   require('dotenv').config()
 }
 
-import express from 'express'
-
-const PORT = process.env.PORT || 3007
-console.log('env', process.env.API_URL)
-
-//const uri = 'http://localhost:3020/graphql'
 const query = `
   query getDocument($slug: String!) {
     article: document(slug: $slug) {
@@ -38,8 +36,43 @@ const query = `
 
 const server = express()
 
-server.use(express.static('static'))
-//http://localhost:3007/2017/12/08/daniels-artikel
+const render = async (mdast, response, autoPage) => {
+  const container = createElement('ROOT')
+  const node = PDFRenderer.createContainer(container)
+
+  // Remove autoPage prop to render everything on one page
+  PDFRenderer.updateContainer(
+    <PdfDocument article={mdast} autoPage={autoPage} />,
+    node,
+    null
+  )
+
+  // we could measure text here
+  // console.log(
+  //   node.containerInfo.document.root.heightOfString('Als Gregor Samsa eines Morgens aus unruhigen Träumen erwachte, fand er sich in seinem Bett zu einem ungeheueren Ungeziefer verwandelt. Und es war ihnen wie eine Bestätigung ihrer neuen Träume und guten Absichten, als am Ziele ihrer Fahrt die Tochter als erste sich erhob und ihren jungen Körper dehnte.', {
+  //     width: 400
+  //   })
+  // )
+
+  // or walk and split tree here
+  // console.log(
+  //   require('util').inspect(
+  //     node.containerInfo.document
+  //       .children[0], // Page
+  //     {depth: 3}
+  //   )
+  // )
+
+  const output = await pdf(container).toBuffer()
+  output.pipe(response)
+}
+
+server.get('/example', (req, res) => {
+  const api = JSON.parse(
+    fs.readFileSync(path.join(__dirname, '..', 'fixtures', 'example.json'), 'utf8')
+  )
+  render(api.data.document, res, req.query.autoPage !== undefined)
+})
 
 server.get('/:year/:month/:day/:slug*', async (req, res) => {
   const { year, month, day, slug } = req.params
@@ -47,39 +80,15 @@ server.get('/:year/:month/:day/:slug*', async (req, res) => {
     slug: `${year}/${month}/${day}/${slug}`
   }
 
-  const apolloFetch = createApolloFetch({ uri: process.env.API_URL })
-  const response = await apolloFetch({ query, variables })
+  const apolloFetch = createApolloFetch({
+    uri: process.env.API_URL
+  })
+  const api = await apolloFetch({ query, variables })
 
-  const container = createElement('ROOT')
-  const node = PDFRenderer.createContainer(container)
-
-  // Remove paged prop to render everything on one page.
-  // TODO: Implement paging logic based on element heights.
-  PDFRenderer.updateContainer(
-    <PdfDocument article={response.data.article} paged={!!req.query.paged} />,
-    node,
-    null
-  )
-
-  // measure text here
-  console.log(
-    node.containerInfo.document.root.heightOfString('Hallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo HalloHallo Hallo', {
-      width: 400
-    })
-  )
-
-  // walk tree
-  console.log(
-    require('util').inspect(
-      node.containerInfo.document
-        .children[0] // Page
-        .children[1], // Mdast Root
-      {depth: 3}
-    )
-  )
-
-  const output = await pdf(container).toBuffer()
-  output.pipe(res)
+  if (!api.data.article) {
+    res.status(404).end('No Article')
+  }
+  render(api.data.article, res, req.query.autoPage !== undefined)
 })
 
 server.listen(PORT, err => {
