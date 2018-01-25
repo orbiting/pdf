@@ -11,7 +11,7 @@
                     "alt": null,
                     "title": null,
                     "type": "image",
-                    "url": "https://api.publikator.republik.love/assets/republik-test/article-irrtum/images/2e5d00480903ad4c3dd59eff6349edafacef3be8.jpeg?size=2000x1125"
+                    "url": "https://assets.publikator.project-r.construction/assets/orbiting/newsletter-countdown-newsletter/images/1bf89514d1a946e3412ea6e54e0d2c2ac1ee632e.jpeg?size=2000x1125&resize=2000x"
                   }
                 ],
                 "type": "paragraph"
@@ -114,7 +114,7 @@
                         "alt": null,
                         "title": null,
                         "type": "image",
-                        "url": "https://api.publikator.republik.love/assets/republik-test/article-irrtum/images/7ea85b84861637b705398f468e1f0f6e66407f86.jpeg?size=2000x1331"
+                        "url": "https://assets.publikator.project-r.construction/assets/orbiting/newsletter-countdown-newsletter/images/d849529f57953ecb7dfbbe5ba94762ee2ad9d4db.jpeg?size=2000x1125&resize=1200x"
                       }
                     ],
                     "type": "paragraph"
@@ -244,7 +244,7 @@
                             "alt": null,
                             "title": null,
                             "type": "image",
-                            "url": "https://api.publikator.republik.love/assets/republik-test/article-irrtum/images/ae754d37e5d09a8d9d3dd744889a4086a1f6929a.jpeg?size=4928x3280"
+                            "url": "https://assets.project-r.construction/images/rothaus_republik.jpg"
                           }
                         ],
                         "type": "paragraph"

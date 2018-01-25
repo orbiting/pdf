@@ -20,12 +20,12 @@ if (DEV) {
 }
 
 const query = `
-  query getDocument($slug: String!) {
-    article: document(slug: $slug) {
+  query getDocument($path: String!) {
+    article: document(path: $path) {
       content
       meta {
         template
-        slug
+        path
         title
         description
         image
@@ -74,10 +74,9 @@ server.get('/example', (req, res) => {
   render(api.data.document, res, req.query.autoPage !== undefined)
 })
 
-server.get('/:year/:month/:day/:slug*', async (req, res) => {
-  const { year, month, day, slug } = req.params
+server.get('/:path*', async (req, res) => {
   const variables = {
-    slug: `${year}/${month}/${day}/${slug}`
+    path: req.path
   }
 
   const apolloFetch = createApolloFetch({

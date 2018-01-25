@@ -1,6 +1,5 @@
 import React from 'react'
 import { Page, Text, View, Document, StyleSheet, Image } from '@react-pdf/core'
-import ReactPDF from '@react-pdf/node'
 
 import { renderMdast } from 'mdast-react-render'
 import schema from '../schema'
