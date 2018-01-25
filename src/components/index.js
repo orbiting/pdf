@@ -124,24 +124,28 @@ export const TITLEBLOCK = ({ children, ...props }) => (
 )
 
 // trying out refs
-export class P extends Component {
-  constructor (...args) {
-    super(...args)
-    this.setRef = ref => {
-      this.p = ref
-    }
-  }
-  componentDidMount () {
-    // console.log(this.p.getHeight(400))
-  }
-  render () {
-    const { children } = this.props
-    return (
-      <Text ref={this.setRef} style={styles.text}>
-        {children}
-      </Text>
-    )
-  }
+// export class P extends Component {
+//   constructor (...args) {
+//     super(...args)
+//     this.setRef = ref => {
+//       this.p = ref
+//     }
+//   }
+//   componentDidMount () {
+//     // console.log(this.p.getHeight(400))
+//   }
+//   render () {
+//     const { children } = this.props
+//     return (
+//       <Text ref={this.setRef} style={styles.text}>
+//         {children}
+//       </Text>
+//     )
+//   }
+// }
+
+export const P = ({ children }) => {
+  return <Text style={styles.text}>{children}</Text>
 }
 
 export const A = ({ children, href }) => {

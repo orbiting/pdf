@@ -24,11 +24,11 @@ const link = {
 
 const paragraph = {
   matchMdast: matchParagraph,
-  component: ({ children, ...props }) => <P {...props}>{children}</P>,
+  component: P,
   rules: [
     {
       matchMdast: matchType('strong'),
-      component: ({ children, ...props }) => <STRONG {...props}>{children}</STRONG>
+      component: STRONG
     }
   ]
 }
@@ -87,7 +87,7 @@ const schema = {
         figure,
         {
           matchMdast: matchZone('CENTER'),
-          component: ({ children, ...props }) => children,
+          component: ({ children, ...props }) => <View>{children}</View>,
           rules: [
             paragraph,
             {
