@@ -3,8 +3,8 @@
 Implemented with [`react-pdf`](https://github.com/diegomura/react-pdf).
 
 ```
-npm i
-npm run dev
+yarn
+yarn run dev
 
 open http://localhost:3007/example
 ```
@@ -14,3 +14,5 @@ open http://localhost:3007/example
 ```
 API_URL=https://api.republik.ch/graphql
 ```
+
+You can create a local `.env` file which will be auto loaded.
