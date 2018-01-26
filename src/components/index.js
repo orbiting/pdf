@@ -42,7 +42,11 @@ const styles = StyleSheet.create({
   },
   headline: {
     fontSize: 28,
-    fontWeight: 'bold', // not supported.
+    marginBottom: 5,
+    // fontFamily: 'Republik',
+  },
+  subheadline: {
+    fontSize: 22,
     marginBottom: 5,
     // fontFamily: 'Republik',
   },
@@ -137,6 +141,10 @@ export const Strong = ({ children }) => {
 
 export const H1 = ({ children }) => {
   return <Text style={styles.headline}>{children}</Text>
+}
+
+export const H2 = ({ children }) => {
+  return <Text style={styles.subheadline}>{children}</Text>
 }
 
 export const Lead = ({ children }) => {

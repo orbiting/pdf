@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { View } from '@react-pdf/core'
-import { P, Legend, Img, TitleBlock, H1, Lead, A, List, ListItem, ListItemP, Credit, Strong } from '../../components'
+import { P, Legend, Img, TitleBlock, H1, H2, Lead, A, List, ListItem, ListItemP, Credit, Strong } from '../../components'
 
 import {
   matchType,
@@ -94,6 +94,10 @@ const schema = {
           matchMdast: matchZone('CENTER'),
           component: ({ children, ...props }) => children,
           rules: [
+            {
+              matchMdast: matchHeading(2),
+              component: H2
+            },
             paragraph,
             figure,
             {
