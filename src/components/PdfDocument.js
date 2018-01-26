@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
   }
 })
 
-const logTree = (node, depth = 0) => {
+const logReactTree = (node, depth = 0) => {
   const prefix = range(depth).map(() => '-')
   if (typeof node === 'string') {
     console.log(prefix, `${node.slice(0, 40)}${node.length >= 40 ? '...' : ''}`)
@@ -32,13 +32,11 @@ const logTree = (node, depth = 0) => {
     node.key
   )
   if (node.props && node.props.children) {
-    node.props.children.map(c => logTree(c, depth + 1))
+    node.props.children.map(c => logReactTree(c, depth + 1))
   }
 }
 
-const PdfDocument = ({ article, autoPage = false }) => {
-  // If autoPage is true, we break each mdast child to a new page for demo reasons.
-  // This should eventually become some smart logic based on element heights.
+const PdfDocument = ({ article }) => {
   const mdast = renderMdast(
     article.content,
     schema,
@@ -47,22 +45,13 @@ const PdfDocument = ({ article, autoPage = false }) => {
     }
   )
 
-  // logTree(mdast)
+  // logReactTree(mdast)
 
   return (
     <Document>
-      {autoPage
-        ? mdast.props.children.map(child => (
-          <Page size='A4' style={styles.page}>
-            {child}
-          </Page>
-        ))
-        : (
-          <Page size='A4' style={styles.page} wrap>
-            {mdast.props.children}
-          </Page>
-        )
-      }
+      <Page size='A4' style={styles.page} wrap>
+        {mdast.props.children}
+      </Page>
     </Document>
   )
 }

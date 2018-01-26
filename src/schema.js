@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Page, Text, View, Document, StyleSheet } from '@react-pdf/core'
-import { P, Legend, IMG, TITLEBLOCK, H1, LEAD, A, LIST, LISTITEM, LISTITEMP, CREDIT, STRONG } from './components/index.js'
+import { P, Legend, Img, TitleBlock, H1, Lead, A, List, ListItem, ListItemP, Credit, Strong } from './components/index.js'
 
 import {
   matchType,
@@ -28,7 +28,7 @@ const paragraph = {
   rules: [
     {
       matchMdast: matchType('strong'),
-      component: STRONG
+      component: Strong
     },
     link
   ]
@@ -43,7 +43,7 @@ const figure = {
   rules: [
     {
       matchMdast: matchImageParagraph,
-      component: IMG,
+      component: Img,
       props: node => ({
         src: node.children[0].url.split('?')[0],  // ?size=... breaks it.
         alt: node.children[0].alt
@@ -65,7 +65,7 @@ const schema = {
       rules: [
         {
           matchMdast: matchZone('TITLE'),
-          component: TITLEBLOCK,
+          component: TitleBlock,
           props: (node, index, parent) => ({
             center: node.data.center
           }),
@@ -77,13 +77,13 @@ const schema = {
             
             {
               matchMdast: (node, index) => matchParagraph(node) && index === 1,
-              component: LEAD,
+              component: Lead,
               rules: []
             },
             
             {
               matchMdast: matchParagraph,
-              component: CREDIT,
+              component: Credit,
               rules: [link]
             }
             
@@ -98,7 +98,7 @@ const schema = {
             figure,
             {
               matchMdast: matchType('list'),
-              component: LIST,
+              component: List,
               props: node => ({
                 data: {
                   ordered: node.ordered,
@@ -108,7 +108,7 @@ const schema = {
               rules: [
                 {
                   matchMdast: matchType('listItem'),
-                  component: LISTITEM,
+                  component: ListItem,
                   props: (node, index, parent) => ({
                     node: node,
                     index: index,
@@ -117,7 +117,7 @@ const schema = {
                   rules: [
                     {
                       matchMdast: matchParagraph,
-                      component: LISTITEMP,
+                      component: ListItemP,
                       rules: []
                     }
                   ]

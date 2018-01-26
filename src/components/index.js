@@ -135,7 +135,7 @@ export const MissingPdfNode = ({ node, ancestors, children }) => {
   )
 }
 
-export const TITLEBLOCK = ({ children, ...props }) => (
+export const TitleBlock = ({ children, ...props }) => (
   <View {...props} style={styles.titleblock}>
     {children}
   </View>
@@ -173,7 +173,7 @@ export const A = ({ children, href }) => {
   return <Link style={styles.link} src={href}>{children}</Link>
 }
 
-export const STRONG = ({ children }) => {
+export const Strong = ({ children }) => {
   // react-pdf's Text expects canonical inline children with a render() method,
   // so let's abuse Link for now. We should eventually use some generic
   // react-pdf compatible inline element.
@@ -185,23 +185,23 @@ export const H1 = ({ children }) => {
 }
 
 // Create Document Component
-export const LEAD = ({ children }) => {
+export const Lead = ({ children }) => {
   return <Text style={styles.lead}>{children}</Text>
 }
 
-export const CREDIT = ({ children }) => {
+export const Credit = ({ children }) => {
   return <Text style={styles.credit}>{children}</Text>
 }
 
-export const IMG = ({ src }) => {
+export const Img = ({ src }) => {
   return <Image style={styles.image} src={src} />
 }
 
-export const LIST = ({ data, children }) => {
+export const List = ({ data, children }) => {
   return <View style={styles.section}>{children}</View>
 }
 
-export const LISTITEM = ({ node, index, parent, children }) => {
+export const ListItem = ({ node, index, parent, children }) => {
   const bullet = parent.ordered ? `${index + 1}.` : '–'
   return (
     <View style={styles.item}>
@@ -212,6 +212,6 @@ export const LISTITEM = ({ node, index, parent, children }) => {
     </View>
   )
 }
-export const LISTITEMP = ({ children }) => {
+export const ListItemP = ({ children }) => {
   return <Text style={styles.listitem}>{children}</Text>
 }

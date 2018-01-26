@@ -36,32 +36,15 @@ const query = `
 
 const server = express()
 
-const render = async (mdast, response, autoPage) => {
+const render = async (mdast, response) => {
   const container = createElement('ROOT')
   const node = PDFRenderer.createContainer(container)
 
-  // Remove autoPage prop to render everything on one page
   PDFRenderer.updateContainer(
-    <PdfDocument article={mdast} autoPage={autoPage} />,
+    <PdfDocument article={mdast} />,
     node,
     null
   )
-
-  // we could measure text here
-  // console.log(
-  //   node.containerInfo.document.root.heightOfString('Als Gregor Samsa eines Morgens aus unruhigen Träumen erwachte, fand er sich in seinem Bett zu einem ungeheueren Ungeziefer verwandelt. Und es war ihnen wie eine Bestätigung ihrer neuen Träume und guten Absichten, als am Ziele ihrer Fahrt die Tochter als erste sich erhob und ihren jungen Körper dehnte.', {
-  //     width: 400
-  //   })
-  // )
-
-  // or walk and split tree here
-  // console.log(
-  //   require('util').inspect(
-  //     node.containerInfo.document
-  //       .children[0], // Page
-  //     {depth: 3}
-  //   )
-  // )
 
   const output = await pdf(container).toBuffer()
   output.pipe(response)
@@ -71,7 +54,7 @@ server.get('/example', (req, res) => {
   const api = JSON.parse(
     fs.readFileSync(path.join(__dirname, '..', 'fixtures', 'example.json'), 'utf8')
   )
-  render(api.data.document, res, req.query.autoPage !== undefined)
+  render(api.data.document, res)
 })
 
 server.get('/:path*', async (req, res) => {
@@ -88,7 +71,7 @@ server.get('/:path*', async (req, res) => {
     res.status(404).end('No Article')
     return
   }
-  render(api.data.article, res, req.query.autoPage !== undefined)
+  render(api.data.article, res)
 })
 
 server.listen(PORT, err => {
