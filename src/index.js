@@ -39,7 +39,7 @@ const server = express()
 
 const render = async (mdast, response, autoPage) => {
   const buffer = await ReactPDF.renderToStream(
-    <PdfDocument article={mdast} autoPage={autoPage} />
+    <PdfDocument article={mdast} />
   );
 
   response.contentType('application/pdf');
@@ -50,7 +50,7 @@ server.get('/example', (req, res) => {
   const api = JSON.parse(
     fs.readFileSync(path.join(__dirname, '..', 'fixtures', 'example.json'), 'utf8')
   )
-  render(api.data.document, res, req.query.autoPage !== undefined)
+  render(api.data.document, res)
 })
 
 server.get('/:path*', async (req, res) => {
@@ -67,7 +67,7 @@ server.get('/:path*', async (req, res) => {
     res.status(404).end('No Article')
     return
   }
-  render(api.data.article, res, req.query.autoPage !== undefined)
+  render(api.data.article, res)
 })
 
 server.listen(PORT, err => {
