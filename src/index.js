@@ -86,6 +86,7 @@ server.get('/:path*', async (req, res) => {
 
   if (!api.data.article) {
     res.status(404).end('No Article')
+    return
   }
   render(api.data.article, res, req.query.autoPage !== undefined)
 })

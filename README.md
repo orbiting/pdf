@@ -12,5 +12,5 @@ open http://localhost:3007/example
 ## Env
 
 ```
-API_URL=http://localhost:3020/graphql
+API_URL=https://api.republik.ch/graphql
 ```
