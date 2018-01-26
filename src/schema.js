@@ -29,7 +29,8 @@ const paragraph = {
     {
       matchMdast: matchType('strong'),
       component: STRONG
-    }
+    },
+    link
   ]
 }
 

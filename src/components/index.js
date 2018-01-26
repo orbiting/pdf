@@ -67,6 +67,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#FF5555',
     fontSize: 12
   },
+  missingInline: {
+    color: '#FF5555',
+    fontSize: 13,
+  },
   image: { backgroundColor: 'grey', padding: 0, maxWidth: 500 },
   item: {
     flexDirection: 'row',
@@ -108,14 +112,21 @@ const styles = StyleSheet.create({
 //   family: 'Republik'
 // })
 
-export const MissingPdfNode = ({ node, children }) => (
-  <View style={styles.section}>
-    <Text style={styles.missing}>
-      Missing Markdown node type "{node.type}"
-      {node.identifier ? `with identifier "${node.identifier}"` : ''}{' '}
-    </Text>
-  </View>
-)
+export const MissingPdfNode = ({ node, ancestors, children }) => {
+  const message = `Missing Markdown node type "${node.type}" ${node.identifier ? `with identifier "${node.identifier}"` : ''} `
+
+  if (ancestors.find(parent => parent.type === 'paragraph')) {
+    return <Link style={styles.missingInline}>{message}</Link>
+  }
+
+  return (
+    <View style={styles.section}>
+      <Text style={styles.missing}>
+        {message}
+      </Text>
+    </View>
+  )
+}
 
 export const TITLEBLOCK = ({ children, ...props }) => (
   <View {...props} style={styles.titleblock}>
