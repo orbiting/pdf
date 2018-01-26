@@ -102,6 +102,17 @@
                   {
                     "type": "text",
                     "value": "Es ist bald Zeit, anderes zu schreiben als Geschäftsbriefe wie diesen, zum Beispiel Weihnachtskarten oder Magazin-Geschichten. Aber erst bald. Hier also unsere letzten Unternehmensnachrichten vor dem Start der «Republik», die mit aller Wahrscheinlichkeit wie eine Rakete starten wird. Weniger, weil der Start so fadengerade wird, sondern weil er in Stufen erfolgt. Das liegt in der Natur der Publikation. Eine gedruckte Zeitung oder ein Print-Magazin taucht quasi fertig designt auf, aus einem harmonischen Guss, so wie Roger Federer einst in Wimbledon 2003. Ein Magazin im Netz dagegen gleicht Stan Wawrinka. Dieser tätowierte sich ein Motto von Beckett auf den Unterarm: «Ever tried. Ever failed. No matter. Try again. Fail again. Fail better.» "
+                  },
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Boom!"
+                      }
+                    ],
+                    "title": null,
+                    "type": "link",
+                    "url": "https://example.com"
                   }
                 ],
                 "type": "paragraph"
