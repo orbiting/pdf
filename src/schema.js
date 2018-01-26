@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Page, Text, View, Document, StyleSheet } from '@react-pdf/core'
-import { P, IMG, TITLEBLOCK, H1, LEAD, A, LIST, LISTITEM, LISTITEMP, CREDIT, STRONG } from './components/index.js'
+import { P, Legend, IMG, TITLEBLOCK, H1, LEAD, A, LIST, LISTITEM, LISTITEMP, CREDIT, STRONG } from './components/index.js'
 
 import {
   matchType,
@@ -49,6 +49,10 @@ const figure = {
         alt: node.children[0].alt
       }),
       isVoid: true
+    },
+    {
+      ...paragraph,
+      component: Legend
     }
   ]
 }
@@ -88,9 +92,10 @@ const schema = {
         figure,
         {
           matchMdast: matchZone('CENTER'),
-          component: ({ children, ...props }) => <View>{children}</View>,
+          component: ({ children, ...props }) => children,
           rules: [
             paragraph,
+            figure,
             {
               matchMdast: matchType('list'),
               component: LIST,

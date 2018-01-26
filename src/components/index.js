@@ -25,10 +25,17 @@ const styles = StyleSheet.create({
     marginTop: 20,
     marginBottom: 40
   },
-  text: {
-    columns: 2,
+  legend: {
+    marginTop: 5,
+    marginBottom: 10,
     width: 500,
-    fontSize: 12,
+    fontSize: 12
+  },
+  text: {
+    // columns: 2,
+    width: 500,
+    fontSize: 14,
+    marginBottom: 10,
     lineHeight: 2, // not supported.
     // align: 'justify'
     // fontFamily: 'Rubis Regular',
@@ -157,6 +164,9 @@ export const TITLEBLOCK = ({ children, ...props }) => (
 
 export const P = ({ children }) => {
   return <Text style={styles.text}>{children}</Text>
+}
+export const Legend = ({ children }) => {
+  return <Text style={styles.legend}>{children}</Text>
 }
 
 export const A = ({ children, href }) => {
