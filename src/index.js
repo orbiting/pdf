@@ -5,12 +5,11 @@ import path from 'path'
 
 import 'regenerator-runtime/runtime'
 import {
-  createElement, pdf, PDFRenderer,
-  Page, Text, View, Document, StyleSheet
+  createElement, pdf, PDFRenderer
 } from '@react-pdf/core'
 
 import { createApolloFetch } from 'apollo-fetch'
-import PdfDocument  from './components/PdfDocument.js'
+import Document  from './components/Document'
 
 const PORT = process.env.PORT || 3007
 const DEV = process.env.NODE_ENV !== 'production'
@@ -41,7 +40,7 @@ const render = async (mdast, response) => {
   const node = PDFRenderer.createContainer(container)
 
   PDFRenderer.updateContainer(
-    <PdfDocument article={mdast} />,
+    <Document article={mdast} />,
     node,
     null
   )

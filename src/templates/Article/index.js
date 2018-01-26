@@ -1,7 +1,7 @@
 import React from 'react'
 
-import { Page, Text, View, Document, StyleSheet } from '@react-pdf/core'
-import { P, Legend, Img, TitleBlock, H1, Lead, A, List, ListItem, ListItemP, Credit, Strong } from './components/index.js'
+import { View } from '@react-pdf/core'
+import { P, Legend, Img, TitleBlock, H1, Lead, A, List, ListItem, ListItemP, Credit, Strong } from '../../components'
 
 import {
   matchType,

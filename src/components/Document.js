@@ -2,9 +2,9 @@ import React from 'react'
 import { Page, Text, View, Document, StyleSheet, Image } from '@react-pdf/core'
 
 import { renderMdast } from 'mdast-react-render'
-import schema from '../schema'
+import articleSchema from '../templates/Article'
 
-import { MissingPdfNode } from './index.js'
+import MissingNode from './MissingNode'
 
 import { range } from 'd3-array'
 
@@ -36,12 +36,22 @@ const logReactTree = (node, depth = 0) => {
   }
 }
 
-const PdfDocument = ({ article }) => {
+const MdastDocument = ({ article }) => {
+  if (article.meta.template !== 'article') {
+    return (
+      <Document>
+        <Page size='A4' style={styles.page}>
+          <Text>Template «{article.meta.template}» not supported</Text>
+        </Page>
+      </Document>
+    )
+  }
+
   const mdast = renderMdast(
     article.content,
-    schema,
+    articleSchema,
     {
-      MissingNode: MissingPdfNode
+      MissingNode
     }
   )
 
@@ -56,4 +66,4 @@ const PdfDocument = ({ article }) => {
   )
 }
 
-export default PdfDocument
+export default MdastDocument
