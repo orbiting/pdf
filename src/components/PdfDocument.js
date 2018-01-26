@@ -58,8 +58,8 @@ const PdfDocument = ({ article, autoPage = false }) => {
           </Page>
         ))
         : (
-          <Page size='A4' style={styles.page}>
-            {mdast}
+          <Page size='A4' style={styles.page} wrap>
+            {mdast.props.children}
           </Page>
         )
       }
