@@ -21,6 +21,12 @@
     request "^2.81.0"
     yoga-layout "^1.6.0"
 
+"@react-pdf/node@^0.6.3":
+  version "0.6.3"
+  resolved "https://registry.yarnpkg.com/@react-pdf/node/-/node-0.6.3.tgz#81e730901f2940e8a88080f1c06774f04c80375c"
+  dependencies:
+    "@react-pdf/core" "^0.6.3"
+
 "@types/zen-observable@0.5.3":
   version "0.5.3"
   resolved "https://registry.yarnpkg.com/@types/zen-observable/-/zen-observable-0.5.3.tgz#91b728599544efbb7386d8b6633693a3c2e7ade5"

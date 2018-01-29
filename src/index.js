@@ -4,6 +4,7 @@ import fs from 'fs'
 import path from 'path'
 
 import 'regenerator-runtime/runtime'
+import ReactPDF from '@react-pdf/node';
 import {
   createElement, pdf, PDFRenderer,
   Page, Text, View, Document, StyleSheet
@@ -37,34 +38,12 @@ const query = `
 const server = express()
 
 const render = async (mdast, response, autoPage) => {
-  const container = createElement('ROOT')
-  const node = PDFRenderer.createContainer(container)
+  const buffer = await ReactPDF.renderToStream(
+    <PdfDocument article={mdast} autoPage={autoPage} />
+  );
 
-  // Remove autoPage prop to render everything on one page
-  PDFRenderer.updateContainer(
-    <PdfDocument article={mdast} autoPage={autoPage} />,
-    node,
-    null
-  )
-
-  // we could measure text here
-  // console.log(
-  //   node.containerInfo.document.root.heightOfString('Als Gregor Samsa eines Morgens aus unruhigen Träumen erwachte, fand er sich in seinem Bett zu einem ungeheueren Ungeziefer verwandelt. Und es war ihnen wie eine Bestätigung ihrer neuen Träume und guten Absichten, als am Ziele ihrer Fahrt die Tochter als erste sich erhob und ihren jungen Körper dehnte.', {
-  //     width: 400
-  //   })
-  // )
-
-  // or walk and split tree here
-  // console.log(
-  //   require('util').inspect(
-  //     node.containerInfo.document
-  //       .children[0], // Page
-  //     {depth: 3}
-  //   )
-  // )
-
-  const output = await pdf(container).toBuffer()
-  output.pipe(response)
+  response.contentType('application/pdf');
+  buffer.pipe(response)
 }
 
 server.get('/example', (req, res) => {
