@@ -33,7 +33,6 @@ const styles = StyleSheet.create({
   },
   text: {
     // columns: 2,
-    width: 500,
     fontSize: 14,
     marginBottom: 10,
     lineHeight: 2, // not supported.
@@ -74,7 +73,11 @@ const styles = StyleSheet.create({
     // fontFamily: 'Rubis Bold',
     textDecoration: 'none'
   },
-  image: { backgroundColor: 'grey', padding: 0, maxWidth: 500 },
+  image: {
+    backgroundColor: 'grey',
+    maxWidth: 500,
+    marginBottom: 10,
+  },
   item: {
     flexDirection: 'row',
     marginBottom: 5
@@ -124,6 +127,7 @@ export const TitleBlock = ({ children, ...props }) => (
 export const P = ({ children }) => {
   return <Text style={styles.text}>{children}</Text>
 }
+
 export const Legend = ({ children }) => {
   return <Text style={styles.legend}>{children}</Text>
 }

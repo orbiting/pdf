@@ -10,9 +10,9 @@ import { range } from 'd3-array'
 
 const styles = StyleSheet.create({
   page: {
+    paddingVertical: 30,
+    paddingHorizontal: 50,
     backgroundColor: '#fff',
-    marginTop: 50,
-    marginLeft: 50
   }
 })
 

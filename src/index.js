@@ -38,7 +38,7 @@ const server = express()
 
 const render = async (mdast, response, autoPage) => {
   const buffer = await ReactPDF.renderToStream(
-    <PdfDocument article={mdast} />
+    <Document article={mdast} />
   );
 
   response.contentType('application/pdf');
