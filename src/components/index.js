@@ -16,7 +16,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff'
   },
   section: {
-    width: 500,
     marginTop: 10,
     marginBottom: 10
   },
@@ -74,7 +73,12 @@ const styles = StyleSheet.create({
     // fontFamily: 'Rubis Bold',
     textDecoration: 'none'
   },
-  image: { backgroundColor: 'grey', padding: 0, maxWidth: 500 },
+  image: {
+    backgroundColor: 'grey',
+    padding: 0,
+    maxWidth: 500,
+    marginBottom: 10,
+  },
   item: {
     flexDirection: 'row',
     marginBottom: 5

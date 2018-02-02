@@ -11,8 +11,8 @@ import { range } from 'd3-array'
 const styles = StyleSheet.create({
   page: {
     backgroundColor: '#fff',
-    marginTop: 50,
-    marginLeft: 50
+    paddingVertical: 30,
+    paddingHorizontal: 50
   }
 })
 
