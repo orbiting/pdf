@@ -11,10 +11,6 @@ import {
 } from '@react-pdf/core'
 
 const styles = StyleSheet.create({
-  page: {
-    //flexDirection: 'row',
-    backgroundColor: '#fff'
-  },
   section: {
     marginTop: 10,
     marginBottom: 10
@@ -120,7 +116,12 @@ const styles = StyleSheet.create({
 // })
 
 export const TitleBlock = ({ children, ...props }) => (
-  <View {...props} style={styles.titleblock}>
+  <View
+    style={[
+      styles.titleblock,
+      { textAlign: props.center ? 'center' : 'left' }
+    ]}
+    {...props}>
     {children}
   </View>
 )
@@ -156,10 +157,10 @@ export const Lead = ({ children }) => {
 }
 
 export const Credit = ({ children }) => {
-  return <Text style={styles.credit}>{children}</Text>
+  return <Text style={styles.credit} debug>{children}</Text>
 }
 
-export const Img = ({ src }) => {
+export const Img = ({ src, ...props }) => {
   return <Image style={styles.image} src={src} />
 }
 
