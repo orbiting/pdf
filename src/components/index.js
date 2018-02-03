@@ -157,10 +157,10 @@ export const Lead = ({ children }) => {
 }
 
 export const Credit = ({ children }) => {
-  return <Text style={styles.credit}>{children}</Text>
+  return <Text style={styles.credit} debug>{children}</Text>
 }
 
-export const Img = ({ src }) => {
+export const Img = ({ src, ...props }) => {
   return <Image style={styles.image} src={src} />
 }
 
