@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Children } from 'react'
 import {
   Page,
   Text,
@@ -11,12 +11,7 @@ import {
 } from '@react-pdf/core'
 
 const styles = StyleSheet.create({
-  page: {
-    //flexDirection: 'row',
-    backgroundColor: '#fff'
-  },
   section: {
-    width: 500,
     marginTop: 10,
     marginBottom: 10
   },
@@ -42,7 +37,11 @@ const styles = StyleSheet.create({
   },
   headline: {
     fontSize: 28,
-    fontWeight: 'bold', // not supported.
+    marginBottom: 5,
+    // fontFamily: 'Republik',
+  },
+  subheadline: {
+    fontSize: 22,
     marginBottom: 5,
     // fontFamily: 'Republik',
   },
@@ -70,15 +69,12 @@ const styles = StyleSheet.create({
     // fontFamily: 'Rubis Bold',
     textDecoration: 'none'
   },
-  missing: {
-    backgroundColor: '#FF5555',
-    fontSize: 12
+  image: {
+    backgroundColor: 'grey',
+    padding: 0,
+    maxWidth: 500,
+    marginBottom: 10,
   },
-  missingInline: {
-    color: '#FF5555',
-    fontSize: 13,
-  },
-  image: { backgroundColor: 'grey', padding: 0, maxWidth: 500 },
   item: {
     flexDirection: 'row',
     marginBottom: 5
@@ -97,7 +93,21 @@ const styles = StyleSheet.create({
   },
   itemContent: {
     fontSize: 10
-  }
+  },
+  infobox: {
+    flexDirection: 'row',
+    marginVertical: 20,
+  },
+  infoboxImage: {
+    marginRight: 10,
+  },
+  infoboxheading: {
+    fontSize: 18,
+    paddingTop: 5,
+    marginBottom: 5,
+    borderTopWidth: 1,
+    borderTopColor: 'black',
+  },
 })
 
 // These font files must be available in /lib/components/fonts,
@@ -119,48 +129,16 @@ const styles = StyleSheet.create({
 //   family: 'Republik'
 // })
 
-export const MissingPdfNode = ({ node, ancestors, children }) => {
-  const message = `Missing Markdown node type "${node.type}" ${node.identifier ? `with identifier "${node.identifier}"` : ''} `
-
-  if (ancestors.find(parent => parent.type === 'paragraph')) {
-    return <Link style={styles.missingInline}>{message}</Link>
-  }
-
-  return (
-    <View style={styles.section}>
-      <Text style={styles.missing}>
-        {message}
-      </Text>
-    </View>
-  )
-}
-
-export const TITLEBLOCK = ({ children, ...props }) => (
-  <View {...props} style={styles.titleblock}>
+export const TitleBlock = ({ children, ...props }) => (
+  <View
+    style={[
+      styles.titleblock,
+      { textAlign: props.center ? 'center' : 'left' }
+    ]}
+    {...props}>
     {children}
   </View>
 )
-
-// trying out refs
-// export class P extends Component {
-//   constructor (...args) {
-//     super(...args)
-//     this.setRef = ref => {
-//       this.p = ref
-//     }
-//   }
-//   componentDidMount () {
-//     // console.log(this.p.getHeight(400))
-//   }
-//   render () {
-//     const { children } = this.props
-//     return (
-//       <Text ref={this.setRef} style={styles.text}>
-//         {children}
-//       </Text>
-//     )
-//   }
-// }
 
 export const P = ({ children }) => {
   return <Text style={styles.text}>{children}</Text>
@@ -173,7 +151,7 @@ export const A = ({ children, href }) => {
   return <Link style={styles.link} src={href}>{children}</Link>
 }
 
-export const STRONG = ({ children }) => {
+export const Strong = ({ children }) => {
   // react-pdf's Text expects canonical inline children with a render() method,
   // so let's abuse Link for now. We should eventually use some generic
   // react-pdf compatible inline element.
@@ -184,24 +162,73 @@ export const H1 = ({ children }) => {
   return <Text style={styles.headline}>{children}</Text>
 }
 
-// Create Document Component
-export const LEAD = ({ children }) => {
+export const H2 = ({ children }) => {
+  return <Text style={styles.subheadline}>{children}</Text>
+}
+
+export const Lead = ({ children }) => {
   return <Text style={styles.lead}>{children}</Text>
 }
 
-export const CREDIT = ({ children }) => {
+export const Credit = ({ children }) => {
   return <Text style={styles.credit}>{children}</Text>
 }
 
-export const IMG = ({ src }) => {
+export const Img = ({ src, ...props }) => {
   return <Image style={styles.image} src={src} />
 }
 
-export const LIST = ({ data, children }) => {
+export const List = ({ data, children }) => {
   return <View style={styles.section}>{children}</View>
 }
 
-export const LISTITEM = ({ node, index, parent, children }) => {
+export const InfoBox = ({ children }) => {
+  const image = Children.toArray(children).filter(child => child.type === InfoBoxFigure);
+  const childs = Children.toArray(children).filter(child => child.type !== InfoBoxFigure);
+
+  return (
+    <View style={styles.infobox}>
+      {image}
+      <View style={{ flex: 1 }}>
+        {childs}
+      </View>
+    </View>
+  );
+}
+
+export const InfoBoxFigure = ({ children, ...props }) => (
+  <View>
+    {React.Children.map(children, child => (
+      React.cloneElement(child, { ...props }))
+    )}
+  </View>
+);
+
+export const InfoBoxHeading = ({ children }) => {
+  return <Text style={styles.infoboxheading}>{children}</Text>
+}
+
+export const InfoBoxImage = ({ figureSize, src }) => {
+  let width;
+
+  switch (figureSize) {
+    case 'XS':
+      width = 70;
+      break;
+    case 'S':
+      width = 100;
+      break;
+    case 'M':
+      width = 160;
+      break;
+    default:
+      width = 200;
+  }
+
+  return <Image style={[styles.infoboxImage, { width }]} src={src} />
+}
+
+export const ListItem = ({ node, index, parent, children }) => {
   const bullet = parent.ordered ? `${index + 1}.` : '–'
   return (
     <View style={styles.item}>
@@ -212,6 +239,6 @@ export const LISTITEM = ({ node, index, parent, children }) => {
     </View>
   )
 }
-export const LISTITEMP = ({ children }) => {
+export const ListItemP = ({ children }) => {
   return <Text style={styles.listitem}>{children}</Text>
 }
