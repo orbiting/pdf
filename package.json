@@ -21,7 +21,6 @@
   },
   "homepage": "https://github.com/orbiting/poc-pdf#readme",
   "dependencies": {
-    "@react-pdf/core": "^0.6.3",
     "apollo-fetch": "^0.7.0",
     "d3-array": "^1.2.1",
     "express": "^4.16.2",
