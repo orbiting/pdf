@@ -9,6 +9,7 @@ import {
   Image,
   Link
 } from '@react-pdf/core'
+import { fontFamilies } from '../lib/fonts'
 
 const styles = StyleSheet.create({
   section: {
@@ -33,40 +34,40 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     lineHeight: 2, // not supported.
     // align: 'justify'
-    // fontFamily: 'Rubis Regular',
+    fontFamily: fontFamilies.serifRegular
   },
   headline: {
     fontSize: 28,
     marginBottom: 5,
-    // fontFamily: 'Republik',
+    fontFamily: fontFamilies.serifTitle
   },
   subheadline: {
     fontSize: 22,
     marginBottom: 5,
-    // fontFamily: 'Republik',
+    fontFamily: fontFamilies.serifTitle
   },
   lead: {
     fontSize: 16,
     marginBottom: 5,
-    // fontFamily: 'Rubis Regular',
+    fontFamily: fontFamilies.serifRegular
   },
   credit: {
     fontSize: 12,
-    // fontFamily: 'GT America Regular'
+    fontFamily: fontFamilies.sansSerifRegular
   },
   listitem: {
     fontSize: 13,
-    // fontFamily: 'Rubis Regular',
+    fontFamily: fontFamilies.serifRegular
   },
   link: {
     color: '#00508C',
     fontSize: 13,
-    // fontFamily: 'GT America Regular'
+    fontFamily: fontFamilies.sansSerifRegular
   },
   strong: {
     color: '#000',
     fontSize: 13,
-    // fontFamily: 'Rubis Bold',
+    fontFamily: fontFamilies.serifBold,
     textDecoration: 'none'
   },
   image: {
@@ -109,25 +110,6 @@ const styles = StyleSheet.create({
     borderTopColor: 'black',
   },
 })
-
-// These font files must be available in /lib/components/fonts,
-// otherwise things break.
-
-// Font.register(`${__dirname}/fonts/gt-america-standard-regular.ttf`, {
-//   family: 'GT America Regular'
-// })
-
-// Font.register(`${__dirname}/fonts/rubis-regular.ttf`, {
-//   family: 'Rubis Regular'
-// })
-
-// Font.register(`${__dirname}/fonts/rubis-bold.ttf`, {
-//   family: 'Rubis Bold'
-// })
-
-// Font.register(`${__dirname}/fonts/RepublikSerif-Black.ttf`, {
-//   family: 'Republik'
-// })
 
 export const TitleBlock = ({ children, ...props }) => (
   <View
