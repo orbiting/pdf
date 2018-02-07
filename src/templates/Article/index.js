@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { View } from '@react-pdf/core'
-import { P, Legend, Img, TitleBlock, H1, H2, Lead, A, List, ListItem, ListItemP, Credit, Strong } from '../../components'
+import { P, Legend, Img, TitleBlock, H1, H2, Lead, A, List, ListItem, ListItemP, Credit, Strong, InfoBox, InfoBoxImage, InfoBoxHeading, InfoBoxFigure } from '../../components'
 
 import {
   matchType,
@@ -57,6 +57,40 @@ const figure = {
   ]
 }
 
+const infobox = {
+  matchMdast: matchZone('INFOBOX'),
+  component: InfoBox,
+  rules: [
+    {
+      matchMdast: matchZone('FIGURE'),
+      props: (node, index, parent) => ({
+        size: parent.data.size,
+        figureSize: parent.data.figureSize,
+        figureFloat: parent.data.figureFloat,
+      }),
+      component: InfoBoxFigure,
+      rules: [
+        {
+          matchMdast: matchImageParagraph,
+          component: InfoBoxImage,
+          props: (node, index, parent) => {
+            return {
+              src: node.children[0].url.split('?')[0],  // ?size=... breaks it.
+              alt: node.children[0].alt
+            };
+          },
+          isVoid: true
+        },
+      ]
+    },
+    {
+      matchMdast: matchHeading(3),
+      component: InfoBoxHeading,
+    },
+    paragraph
+  ]
+}
+
 const schema = {
   rules: [
     {
@@ -74,19 +108,16 @@ const schema = {
               matchMdast: matchHeading(1),
               component: H1,
             },
-            
             {
               matchMdast: (node, index) => matchParagraph(node) && index === 1,
               component: Lead,
               rules: []
             },
-            
             {
               matchMdast: matchParagraph,
               component: Credit,
               rules: [link]
             }
-            
           ]
         },
         figure,
@@ -100,6 +131,7 @@ const schema = {
             },
             paragraph,
             figure,
+            infobox,
             {
               matchMdast: matchType('list'),
               component: List,

@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Children } from 'react'
 import {
   Page,
   Text,
@@ -93,7 +93,21 @@ const styles = StyleSheet.create({
   },
   itemContent: {
     fontSize: 10
-  }
+  },
+  infobox: {
+    flexDirection: 'row',
+    marginVertical: 20,
+  },
+  infoboxImage: {
+    marginRight: 10,
+  },
+  infoboxheading: {
+    fontSize: 18,
+    paddingTop: 5,
+    marginBottom: 5,
+    borderTopWidth: 1,
+    borderTopColor: 'black',
+  },
 })
 
 // These font files must be available in /lib/components/fonts,
@@ -160,12 +174,58 @@ export const Credit = ({ children }) => {
   return <Text style={styles.credit}>{children}</Text>
 }
 
-export const Img = ({ src }) => {
+export const Img = ({ src, ...props }) => {
   return <Image style={styles.image} src={src} />
 }
 
 export const List = ({ data, children }) => {
   return <View style={styles.section}>{children}</View>
+}
+
+export const InfoBox = ({ children }) => {
+  const image = Children.toArray(children).filter(child => child.type === InfoBoxFigure);
+  const childs = Children.toArray(children).filter(child => child.type !== InfoBoxFigure);
+
+  return (
+    <View style={styles.infobox}>
+      {image}
+      <View style={{ flex: 1 }}>
+        {childs}
+      </View>
+    </View>
+  );
+}
+
+export const InfoBoxFigure = ({ children, ...props }) => (
+  <View>
+    {React.Children.map(children, child => (
+      React.cloneElement(child, { ...props }))
+    )}
+  </View>
+);
+
+export const InfoBoxHeading = ({ children }) => {
+  return <Text style={styles.infoboxheading}>{children}</Text>
+}
+
+export const InfoBoxImage = ({ figureSize, src }) => {
+  let width;
+
+  switch (figureSize) {
+    case 'XS':
+      width = 70;
+      break;
+    case 'S':
+      width = 100;
+      break;
+    case 'M':
+      width = 160;
+      break;
+    default:
+      width = 200;
+  }
+
+  return <Image style={[styles.infoboxImage, { width }]} src={src} />
 }
 
 export const ListItem = ({ node, index, parent, children }) => {
