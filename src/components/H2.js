@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
   subheadline: {
     fontSize: 22,
     marginBottom: 5,
-    fontFamily: fontFamilies.serifBold
+    fontFamily: fontFamilies.serifTitle
   }
 })
 

@@ -58,3 +58,4 @@ typings/
 .env
 
 /lib
+/src/lib/fonts-cache*
