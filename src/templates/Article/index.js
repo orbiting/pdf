@@ -1,63 +1,74 @@
-import React from 'react'
-
-import { View } from '@react-pdf/core'
-import { P, Legend, Img, TitleBlock, H1, H2, Lead, A, List, ListItem, ListItemP, Credit, Strong, InfoBox, InfoBoxImage, InfoBoxHeading, InfoBoxFigure } from '../../components'
-
+import React from 'react';
+import { View } from '@react-pdf/core';
 import {
   matchType,
   matchZone,
   matchHeading,
   matchParagraph,
-  matchImageParagraph
+  matchImageParagraph,
 } from 'mdast-react-render/lib/utils'
+import {
+  Paragraph,
+  Legend,
+  Image,
+  TitleBlock,
+  H1,
+  H2,
+  Lead,
+  Anchor,
+  List,
+  Credit,
+  Strong,
+  Infobox,
+} from '../../components'
 
 const link = {
   matchMdast: matchType('link'),
   props: node => ({
     title: node.title,
-    href: node.url
+    href: node.url,
   }),
-  component: A
-}
+  component: Anchor,
+};
 
 const paragraph = {
   matchMdast: matchParagraph,
-  component: P,
+  component: Paragraph,
   rules: [
     {
       matchMdast: matchType('strong'),
-      component: Strong
+      component: Strong,
     },
-    link
-  ]
-}
+    link,
+  ],
+};
 
 const figure = {
   matchMdast: matchZone('FIGURE'),
   component: ({ children, ...props }) => <View {...props}>{children}</View>,
   props: node => ({
-    size: node.data.size
+    size: node.data.size,
   }),
   rules: [
     {
       matchMdast: matchImageParagraph,
-      component: Img,
+      component: Image,
       props: node => ({
         src: node.children[0].url.split('?')[0], // ?size=... breaks it.
         alt: node.children[0].alt
       }),
-      isVoid: true
+      isVoid: true,
     },
     {
       ...paragraph,
-      component: Legend
-    }
-  ]
-}
+      component: Legend,
+    },
+  ],
+};
 
 const infobox = {
   matchMdast: matchZone('INFOBOX'),
-  component: InfoBox,
+  component: Infobox,
   rules: [
     {
       matchMdast: matchZone('FIGURE'),
@@ -66,28 +77,26 @@ const infobox = {
         figureSize: parent.data.figureSize,
         figureFloat: parent.data.figureFloat
       }),
-      component: InfoBoxFigure,
+      component: Infobox.Figure,
       rules: [
         {
           matchMdast: matchImageParagraph,
-          component: InfoBoxImage,
-          props: (node, index, parent) => {
-            return {
-              src: node.children[0].url.split('?')[0], // ?size=... breaks it.
-              alt: node.children[0].alt
-            }
-          },
-          isVoid: true
-        }
-      ]
+          component: Infobox.Image,
+          props: node => ({
+            src: node.children[0].url.split('?')[0], // ?size=... breaks it.
+            alt: node.children[0].alt,
+          }),
+          isVoid: true,
+        },
+      ],
     },
     {
       matchMdast: matchHeading(3),
-      component: InfoBoxHeading
+      component: Infobox.Heading,
     },
-    paragraph
-  ]
-}
+    paragraph,
+  ],
+};
 
 const schema = {
   rules: [
@@ -98,8 +107,8 @@ const schema = {
         {
           matchMdast: matchZone('TITLE'),
           component: TitleBlock,
-          props: (node, index, parent) => ({
-            center: node.data.center
+          props: node => ({
+            center: node.data.center,
           }),
           rules: [
             {
@@ -109,23 +118,23 @@ const schema = {
             {
               matchMdast: (node, index) => matchParagraph(node) && index === 1,
               component: Lead,
-              rules: []
+              rules: [],
             },
             {
               matchMdast: matchParagraph,
               component: Credit,
-              rules: [link]
-            }
-          ]
+              rules: [link],
+            },
+          ],
         },
         figure,
         {
           matchMdast: matchZone('CENTER'),
-          component: ({ children, ...props }) => children,
+          component: ({ children }) => children,
           rules: [
             {
               matchMdast: matchHeading(2),
-              component: H2
+              component: H2,
             },
             paragraph,
             figure,
@@ -136,33 +145,33 @@ const schema = {
               props: node => ({
                 data: {
                   ordered: node.ordered,
-                  start: node.start
-                }
+                  start: node.start,
+                },
               }),
               rules: [
                 {
                   matchMdast: matchType('listItem'),
-                  component: ListItem,
+                  component: List.Item,
                   props: (node, index, parent) => ({
-                    node: node,
-                    index: index,
-                    parent: parent
+                    node,
+                    index,
+                    parent,
                   }),
                   rules: [
                     {
                       matchMdast: matchParagraph,
-                      component: ListItemP,
-                      rules: []
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  ]
-}
+                      component: List.ItemContent,
+                      rules: [],
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+  ],
+};
 
-export default schema
+export default schema;
