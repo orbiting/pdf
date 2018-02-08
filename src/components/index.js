@@ -1,14 +1,5 @@
-import React, { Component, Children } from 'react'
-import {
-  Page,
-  Text,
-  View,
-  Document,
-  StyleSheet,
-  Font,
-  Image,
-  Link
-} from '@react-pdf/core'
+import React, { Children } from 'react'
+import { StyleSheet, Text, Image, View, Link } from '@react-pdf/core'
 
 const styles = StyleSheet.create({
   section: {
@@ -31,36 +22,36 @@ const styles = StyleSheet.create({
     width: 500,
     fontSize: 14,
     marginBottom: 10,
-    lineHeight: 2, // not supported.
+    lineHeight: 2 // not supported.
     // align: 'justify'
     // fontFamily: 'Rubis Regular',
   },
   headline: {
     fontSize: 28,
-    marginBottom: 5,
+    marginBottom: 5
     // fontFamily: 'Republik',
   },
   subheadline: {
     fontSize: 22,
-    marginBottom: 5,
+    marginBottom: 5
     // fontFamily: 'Republik',
   },
   lead: {
     fontSize: 16,
-    marginBottom: 5,
+    marginBottom: 5
     // fontFamily: 'Rubis Regular',
   },
   credit: {
-    fontSize: 12,
+    fontSize: 12
     // fontFamily: 'GT America Regular'
   },
   listitem: {
-    fontSize: 13,
+    fontSize: 13
     // fontFamily: 'Rubis Regular',
   },
   link: {
     color: '#00508C',
-    fontSize: 13,
+    fontSize: 13
     // fontFamily: 'GT America Regular'
   },
   strong: {
@@ -73,7 +64,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'grey',
     padding: 0,
     maxWidth: 500,
-    marginBottom: 10,
+    marginBottom: 10
   },
   item: {
     flexDirection: 'row',
@@ -88,7 +79,7 @@ const styles = StyleSheet.create({
     flexGrow: 9
   },
   bulletPoint: {
-    fontSize: 13,
+    fontSize: 13
     // fontFamily: 'Rubis Regular'
   },
   itemContent: {
@@ -96,18 +87,18 @@ const styles = StyleSheet.create({
   },
   infobox: {
     flexDirection: 'row',
-    marginVertical: 20,
+    marginVertical: 20
   },
   infoboxImage: {
-    marginRight: 10,
+    marginRight: 10
   },
   infoboxheading: {
     fontSize: 18,
     paddingTop: 5,
     marginBottom: 5,
     borderTopWidth: 1,
-    borderTopColor: 'black',
-  },
+    borderTopColor: 'black'
+  }
 })
 
 // These font files must be available in /lib/components/fonts,
@@ -183,8 +174,8 @@ export const List = ({ data, children }) => {
 }
 
 export const InfoBox = ({ children }) => {
-  const image = Children.toArray(children).filter(child => child.type === InfoBoxFigure);
-  const childs = Children.toArray(children).filter(child => child.type !== InfoBoxFigure);
+  const image = Children.toArray(children).filter(child => child.type === InfoBoxFigure)
+  const childs = Children.toArray(children).filter(child => child.type !== InfoBoxFigure)
 
   return (
     <View style={styles.infobox}>
@@ -193,7 +184,7 @@ export const InfoBox = ({ children }) => {
         {childs}
       </View>
     </View>
-  );
+  )
 }
 
 export const InfoBoxFigure = ({ children, ...props }) => (
@@ -202,27 +193,27 @@ export const InfoBoxFigure = ({ children, ...props }) => (
       React.cloneElement(child, { ...props }))
     )}
   </View>
-);
+)
 
 export const InfoBoxHeading = ({ children }) => {
   return <Text style={styles.infoboxheading}>{children}</Text>
 }
 
 export const InfoBoxImage = ({ figureSize, src }) => {
-  let width;
+  let width
 
   switch (figureSize) {
     case 'XS':
-      width = 70;
-      break;
+      width = 70
+      break
     case 'S':
-      width = 100;
-      break;
+      width = 100
+      break
     case 'M':
-      width = 160;
-      break;
+      width = 160
+      break
     default:
-      width = 200;
+      width = 200
   }
 
   return <Image style={[styles.infoboxImage, { width }]} src={src} />

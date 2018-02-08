@@ -11,8 +11,6 @@ import {
   matchImageParagraph
 } from 'mdast-react-render/lib/utils'
 
-const matchLast = (node, index, parent) => index === parent.children.length - 1
-
 const link = {
   matchMdast: matchType('link'),
   props: node => ({
@@ -45,7 +43,7 @@ const figure = {
       matchMdast: matchImageParagraph,
       component: Img,
       props: node => ({
-        src: node.children[0].url.split('?')[0],  // ?size=... breaks it.
+        src: node.children[0].url.split('?')[0], // ?size=... breaks it.
         alt: node.children[0].alt
       }),
       isVoid: true
@@ -66,7 +64,7 @@ const infobox = {
       props: (node, index, parent) => ({
         size: parent.data.size,
         figureSize: parent.data.figureSize,
-        figureFloat: parent.data.figureFloat,
+        figureFloat: parent.data.figureFloat
       }),
       component: InfoBoxFigure,
       rules: [
@@ -75,17 +73,17 @@ const infobox = {
           component: InfoBoxImage,
           props: (node, index, parent) => {
             return {
-              src: node.children[0].url.split('?')[0],  // ?size=... breaks it.
+              src: node.children[0].url.split('?')[0], // ?size=... breaks it.
               alt: node.children[0].alt
-            };
+            }
           },
           isVoid: true
-        },
+        }
       ]
     },
     {
       matchMdast: matchHeading(3),
-      component: InfoBoxHeading,
+      component: InfoBoxHeading
     },
     paragraph
   ]
@@ -106,7 +104,7 @@ const schema = {
           rules: [
             {
               matchMdast: matchHeading(1),
-              component: H1,
+              component: H1
             },
             {
               matchMdast: (node, index) => matchParagraph(node) && index === 1,

@@ -7,8 +7,15 @@
     "start": "cross-env NODE_ENV=production node lib/index.js",
     "build": "babel src --out-dir lib",
     "heroku-postbuild": "npm run build",
+    "precommit": "lint-staged",
     "dev": "babel -w src --out-dir lib & nodemon lib/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "lint-staged": {
+    "*.js": [
+      "standard --fix",
+      "git add"
+    ]
   },
   "repository": {
     "type": "git",
@@ -34,12 +41,24 @@
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.1",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-3": "^6.24.1",
     "cross-env": "^5.1.1",
     "dotenv": "^4.0.0",
+    "eslint": "^4.17.0",
+    "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint-config-standard-react": "^5.0.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^6.0.0",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-react": "^7.6.1",
+    "eslint-plugin-standard": "^3.0.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^6.1.0",
     "nodemon": "^1.12.5",
-    "rimraf": "^2.6.2"
+    "rimraf": "^2.6.2",
+    "standard": "^10.0.3"
   }
 }

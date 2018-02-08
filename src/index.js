@@ -9,7 +9,7 @@ import {
 } from '@react-pdf/core'
 
 import { createApolloFetch } from 'apollo-fetch'
-import Document  from './components/Document'
+import Document from './components/Document'
 
 const PORT = process.env.PORT || 3007
 const DEV = process.env.NODE_ENV !== 'production'
