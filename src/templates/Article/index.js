@@ -1,8 +1,5 @@
 import React from 'react'
-
 import { View } from '@react-pdf/core'
-import { P, Legend, Img, TitleBlock, H1, H2, Lead, A, List, ListItem, ListItemP, Credit, Strong, InfoBox, InfoBoxImage, InfoBoxHeading, InfoBoxFigure } from '../../components'
-
 import {
   matchType,
   matchZone,
@@ -10,6 +7,20 @@ import {
   matchParagraph,
   matchImageParagraph
 } from 'mdast-react-render/lib/utils'
+import {
+  Paragraph,
+  Legend,
+  Image,
+  TitleBlock,
+  H1,
+  H2,
+  Lead,
+  Anchor,
+  List,
+  Credit,
+  Strong,
+  Infobox
+} from '../../components'
 
 const link = {
   matchMdast: matchType('link'),
@@ -17,12 +28,12 @@ const link = {
     title: node.title,
     href: node.url
   }),
-  component: A
+  component: Anchor
 }
 
 const paragraph = {
   matchMdast: matchParagraph,
-  component: P,
+  component: Paragraph,
   rules: [
     {
       matchMdast: matchType('strong'),
@@ -41,7 +52,7 @@ const figure = {
   rules: [
     {
       matchMdast: matchImageParagraph,
-      component: Img,
+      component: Image,
       props: node => ({
         src: node.children[0].url.split('?')[0], // ?size=... breaks it.
         alt: node.children[0].alt
@@ -57,7 +68,7 @@ const figure = {
 
 const infobox = {
   matchMdast: matchZone('INFOBOX'),
-  component: InfoBox,
+  component: Infobox,
   rules: [
     {
       matchMdast: matchZone('FIGURE'),
@@ -66,24 +77,22 @@ const infobox = {
         figureSize: parent.data.figureSize,
         figureFloat: parent.data.figureFloat
       }),
-      component: InfoBoxFigure,
+      component: Infobox.Figure,
       rules: [
         {
           matchMdast: matchImageParagraph,
-          component: InfoBoxImage,
-          props: (node, index, parent) => {
-            return {
-              src: node.children[0].url.split('?')[0], // ?size=... breaks it.
-              alt: node.children[0].alt
-            }
-          },
+          component: Infobox.Image,
+          props: node => ({
+            src: node.children[0].url.split('?')[0], // ?size=... breaks it.
+            alt: node.children[0].alt
+          }),
           isVoid: true
         }
       ]
     },
     {
       matchMdast: matchHeading(3),
-      component: InfoBoxHeading
+      component: Infobox.Heading
     },
     paragraph
   ]
@@ -98,7 +107,7 @@ const schema = {
         {
           matchMdast: matchZone('TITLE'),
           component: TitleBlock,
-          props: (node, index, parent) => ({
+          props: node => ({
             center: node.data.center
           }),
           rules: [
@@ -121,7 +130,7 @@ const schema = {
         figure,
         {
           matchMdast: matchZone('CENTER'),
-          component: ({ children, ...props }) => children,
+          component: ({ children }) => children,
           rules: [
             {
               matchMdast: matchHeading(2),
@@ -142,16 +151,16 @@ const schema = {
               rules: [
                 {
                   matchMdast: matchType('listItem'),
-                  component: ListItem,
+                  component: List.Item,
                   props: (node, index, parent) => ({
-                    node: node,
-                    index: index,
-                    parent: parent
+                    node,
+                    index,
+                    parent
                   }),
                   rules: [
                     {
                       matchMdast: matchParagraph,
-                      component: ListItemP,
+                      component: List.ItemContent,
                       rules: []
                     }
                   ]
