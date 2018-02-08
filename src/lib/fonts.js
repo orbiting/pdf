@@ -13,13 +13,11 @@ import https from 'https'
 import fs from 'fs'
 import { basename, join } from 'path'
 
-const { NODE_ENV, FONTS = "{}" } = process.env
-
-if (NODE_ENV !== 'production') {
+if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config()
 }
 
-const fonts = JSON.parse(FONTS || "{}")
+const fonts = JSON.parse(process.env.FONTS || "{}")
 
 Object.keys(fonts).forEach(key => {
   const font = fonts[key]
@@ -29,7 +27,6 @@ Object.keys(fonts).forEach(key => {
     })
   }
 })
-
 
 export const fontFamilies = Object.keys(fonts)
   .reduce((acc, key) => ({ ...acc, [key]: fonts[key].family }), {})
