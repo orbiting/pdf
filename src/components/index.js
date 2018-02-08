@@ -6,11 +6,6 @@ const styles = StyleSheet.create({
     marginTop: 10,
     marginBottom: 10
   },
-  titleblock: {
-    width: 500,
-    marginTop: 20,
-    marginBottom: 40
-  },
   legend: {
     marginTop: 5,
     marginBottom: 10,
@@ -119,17 +114,6 @@ const styles = StyleSheet.create({
 // Font.register(`${__dirname}/fonts/RepublikSerif-Black.ttf`, {
 //   family: 'Republik'
 // })
-
-export const TitleBlock = ({ children, ...props }) => (
-  <View
-    style={[
-      styles.titleblock,
-      { textAlign: props.center ? 'center' : 'left' }
-    ]}
-    {...props}>
-    {children}
-  </View>
-)
 
 export const P = ({ children }) => {
   return <Text style={styles.text}>{children}</Text>
