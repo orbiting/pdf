@@ -1,22 +1,22 @@
-import React, { Children } from 'react';
-import { Text, View, StyleSheet, Image } from '@react-pdf/core';
+import React, { Children } from 'react'
+import { Text, View, StyleSheet, Image } from '@react-pdf/core'
 
 const styles = StyleSheet.create({
   infobox: {
     flexDirection: 'row',
-    marginVertical: 20,
+    marginVertical: 20
   },
   image: {
-    marginRight: 10,
+    marginRight: 10
   },
   heading: {
     fontSize: 18,
     paddingTop: 5,
     marginBottom: 5,
     borderTopWidth: 1,
-    borderTopColor: 'black',
-  },
-});
+    borderTopColor: 'black'
+  }
+})
 
 const InfoboxFigure = ({ children, ...props }) => (
   <View>
@@ -24,35 +24,35 @@ const InfoboxFigure = ({ children, ...props }) => (
       React.cloneElement(child, { ...props })))
     }
   </View>
-);
+)
 
 const InfoboxHeading = ({ children }) => (
   <Text style={styles.heading}>{children}</Text>
-);
+)
 
 const InfoboxImage = ({ figureSize, src }) => {
-  let width;
+  let width
 
   switch (figureSize) {
     case 'XS':
-      width = 70;
-      break;
+      width = 70
+      break
     case 'S':
-      width = 100;
-      break;
+      width = 100
+      break
     case 'M':
-      width = 160;
-      break;
+      width = 160
+      break
     default:
-      width = 200;
+      width = 200
   }
 
-  return <Image style={[styles.image, { width }]} src={src} />;
-};
+  return <Image style={[styles.image, { width }]} src={src} />
+}
 
 const Infobox = ({ children }) => {
-  const image = Children.toArray(children).filter(child => child.type === InfoboxFigure);
-  const childs = Children.toArray(children).filter(child => child.type !== InfoboxFigure);
+  const image = Children.toArray(children).filter(child => child.type === InfoboxFigure)
+  const childs = Children.toArray(children).filter(child => child.type !== InfoboxFigure)
 
   return (
     <View style={styles.infobox}>
@@ -61,11 +61,11 @@ const Infobox = ({ children }) => {
         {childs}
       </View>
     </View>
-  );
-};
+  )
+}
 
-Infobox.Image = InfoboxImage;
-Infobox.Figure = InfoboxFigure;
-Infobox.Heading = InfoboxHeading;
+Infobox.Image = InfoboxImage
+Infobox.Figure = InfoboxFigure
+Infobox.Heading = InfoboxHeading
 
-export default Infobox;
+export default Infobox

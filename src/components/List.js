@@ -1,39 +1,39 @@
-import React from 'react';
-import { View, Text, StyleSheet } from '@react-pdf/core';
+import React from 'react'
+import { View, Text, StyleSheet } from '@react-pdf/core'
 
 const styles = StyleSheet.create({
   listitem: {
-    fontSize: 13,
+    fontSize: 13
     // fontFamily: 'Rubis Regular',
   },
   item: {
     flexDirection: 'row',
-    marginBottom: 5,
+    marginBottom: 5
   },
   itemLeftColumn: {
     flexDirection: 'column',
-    marginRight: 10,
+    marginRight: 10
   },
   itemRightColumn: {
     flexDirection: 'column',
-    flexGrow: 9,
+    flexGrow: 9
   },
   bulletPoint: {
-    fontSize: 13,
+    fontSize: 13
     // fontFamily: 'Rubis Regular'
-  },
-});
+  }
+})
 
 const List = ({ children }) => (
   <View style={styles.section}>{children}</View>
-);
+)
 
 export const ListItem = ({
   index,
   parent,
-  children,
+  children
 }) => {
-  const bullet = parent.ordered ? `${index + 1}.` : '–';
+  const bullet = parent.ordered ? `${index + 1}.` : '–'
 
   return (
     <View style={styles.item}>
@@ -42,15 +42,14 @@ export const ListItem = ({
       </View>
       <View style={styles.itemRightColumn}>{children}</View>
     </View>
-  );
-};
+  )
+}
 
 export const ListItemContent = ({ children }) => (
   <Text style={styles.listitem}>{children}</Text>
-);
+)
 
+List.Item = ListItem
+List.ItemContent = ListItemContent
 
-List.Item = ListItem;
-List.ItemContent = ListItemContent;
-
-export default List;
+export default List

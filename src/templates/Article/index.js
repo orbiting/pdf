@@ -1,11 +1,11 @@
-import React from 'react';
-import { View } from '@react-pdf/core';
+import React from 'react'
+import { View } from '@react-pdf/core'
 import {
   matchType,
   matchZone,
   matchHeading,
   matchParagraph,
-  matchImageParagraph,
+  matchImageParagraph
 } from 'mdast-react-render/lib/utils'
 import {
   Paragraph,
@@ -19,17 +19,17 @@ import {
   List,
   Credit,
   Strong,
-  Infobox,
+  Infobox
 } from '../../components'
 
 const link = {
   matchMdast: matchType('link'),
   props: node => ({
     title: node.title,
-    href: node.url,
+    href: node.url
   }),
-  component: Anchor,
-};
+  component: Anchor
+}
 
 const paragraph = {
   matchMdast: matchParagraph,
@@ -37,17 +37,17 @@ const paragraph = {
   rules: [
     {
       matchMdast: matchType('strong'),
-      component: Strong,
+      component: Strong
     },
-    link,
-  ],
-};
+    link
+  ]
+}
 
 const figure = {
   matchMdast: matchZone('FIGURE'),
   component: ({ children, ...props }) => <View {...props}>{children}</View>,
   props: node => ({
-    size: node.data.size,
+    size: node.data.size
   }),
   rules: [
     {
@@ -57,14 +57,14 @@ const figure = {
         src: node.children[0].url.split('?')[0], // ?size=... breaks it.
         alt: node.children[0].alt
       }),
-      isVoid: true,
+      isVoid: true
     },
     {
       ...paragraph,
-      component: Legend,
-    },
-  ],
-};
+      component: Legend
+    }
+  ]
+}
 
 const infobox = {
   matchMdast: matchZone('INFOBOX'),
@@ -84,19 +84,19 @@ const infobox = {
           component: Infobox.Image,
           props: node => ({
             src: node.children[0].url.split('?')[0], // ?size=... breaks it.
-            alt: node.children[0].alt,
+            alt: node.children[0].alt
           }),
-          isVoid: true,
-        },
-      ],
+          isVoid: true
+        }
+      ]
     },
     {
       matchMdast: matchHeading(3),
-      component: Infobox.Heading,
+      component: Infobox.Heading
     },
-    paragraph,
-  ],
-};
+    paragraph
+  ]
+}
 
 const schema = {
   rules: [
@@ -108,7 +108,7 @@ const schema = {
           matchMdast: matchZone('TITLE'),
           component: TitleBlock,
           props: node => ({
-            center: node.data.center,
+            center: node.data.center
           }),
           rules: [
             {
@@ -118,14 +118,14 @@ const schema = {
             {
               matchMdast: (node, index) => matchParagraph(node) && index === 1,
               component: Lead,
-              rules: [],
+              rules: []
             },
             {
               matchMdast: matchParagraph,
               component: Credit,
-              rules: [link],
-            },
-          ],
+              rules: [link]
+            }
+          ]
         },
         figure,
         {
@@ -134,7 +134,7 @@ const schema = {
           rules: [
             {
               matchMdast: matchHeading(2),
-              component: H2,
+              component: H2
             },
             paragraph,
             figure,
@@ -145,8 +145,8 @@ const schema = {
               props: node => ({
                 data: {
                   ordered: node.ordered,
-                  start: node.start,
-                },
+                  start: node.start
+                }
               }),
               rules: [
                 {
@@ -155,23 +155,23 @@ const schema = {
                   props: (node, index, parent) => ({
                     node,
                     index,
-                    parent,
+                    parent
                   }),
                   rules: [
                     {
                       matchMdast: matchParagraph,
                       component: List.ItemContent,
-                      rules: [],
-                    },
-                  ],
-                },
-              ],
-            },
-          ],
-        },
-      ],
-    },
-  ],
-};
+                      rules: []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
 
-export default schema;
+export default schema
