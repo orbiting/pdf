@@ -1,5 +1,5 @@
 import React from 'react'
-import { Page, Text, View, Document, StyleSheet, Image } from '@react-pdf/core'
+import { StyleSheet, Document, Page, Text } from '@react-pdf/core'
 
 import { renderMdast } from 'mdast-react-render'
 import articleSchema from '../templates/Article'
