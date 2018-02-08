@@ -19,26 +19,7 @@ if (DEV) {
   require('dotenv').config()
 }
 
-const FONTS = process.env.FONTS
-
-const fonts = {
-  serifTitle: {
-    family: undefined
-  },
-  serifRegular: {
-    family: undefined,
-  },
-  serifBold: {
-    family: undefined,
-  },
-  sansSerifRegular: {
-    family: undefined
-  },
-  sansSerifMedium: {
-    family: undefined
-  },
-  ...(FONTS && JSON.parse(FONTS))
-}
+const FONTS = JSON.parse(process.env.FONTS);
 
 const cacheFont = (url, bname, cb) => {
   const dest = join(__dirname, `fonts-cache-${bname || basename(url)}`)
@@ -59,8 +40,8 @@ const cacheFont = (url, bname, cb) => {
 }
 
 export const registerFonts = () => {
-  Object.keys(fonts).forEach(key => {
-    const font = fonts[key]
+  Object.keys(FONTS).forEach(key => {
+    const font = FONTS[key]
     if (font.url) {
       cacheFont(font.url, font.basename, file => {
         Font.register(file, {
@@ -73,8 +54,5 @@ export const registerFonts = () => {
 
 registerFonts()
 
-export const fontFamilies = Object.keys(fonts)
-  .reduce((index, key) => {
-    index[key] = fonts[key].family
-    return index
-  }, {})
+export const fontFamilies = Object.keys(FONTS)
+  .reduce((acc, key) => ({ ...acc, [key]: FONTS[key].family }), {})
