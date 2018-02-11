@@ -1,23 +1,12 @@
 import {
-  Page,
-  Text,
-  View,
-  Document,
-  StyleSheet,
-  Font,
-  Image,
-  Link
+  Font
 } from '@react-pdf/core'
-
-import https from 'https'
-import fs from 'fs'
-import { basename, join } from 'path'
 
 if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config()
 }
 
-const fonts = JSON.parse(process.env.FONTS || "{}")
+const fonts = JSON.parse(process.env.FONTS || '{}')
 
 Object.keys(fonts).forEach(key => {
   const font = fonts[key]
