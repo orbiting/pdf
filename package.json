@@ -8,7 +8,7 @@
     "build": "babel src --out-dir lib",
     "heroku-postbuild": "npm run build",
     "precommit": "lint-staged",
-    "dev": "babel -w src --out-dir lib & nodemon lib/index.js",
+    "dev": "rimraf lib && npm run build && (babel -w src --out-dir lib & nodemon -w lib -w .env lib/index.js)",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "lint-staged": {

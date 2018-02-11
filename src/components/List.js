@@ -1,10 +1,11 @@
 import React from 'react'
 import { View, Text, StyleSheet } from '@react-pdf/core'
+import { fontFamilies } from '../lib/fonts'
 
 const styles = StyleSheet.create({
   listitem: {
-    fontSize: 13
-    // fontFamily: 'Rubis Regular',
+    fontSize: 13,
+    fontFamily: fontFamilies.serifRegular
   },
   item: {
     flexDirection: 'row',
@@ -19,8 +20,8 @@ const styles = StyleSheet.create({
     flexGrow: 9
   },
   bulletPoint: {
-    fontSize: 13
-    // fontFamily: 'Rubis Regular'
+    fontSize: 13,
+    fontFamily: fontFamilies.serifRegular
   }
 })
 

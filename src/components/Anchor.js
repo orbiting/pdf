@@ -1,11 +1,12 @@
 import React from 'react'
 import { Link, StyleSheet } from '@react-pdf/core'
+import { fontFamilies } from '../lib/fonts'
 
 const styles = StyleSheet.create({
   link: {
     color: '#00508C',
-    fontSize: 13
-    // fontFamily: 'GT America Regular'
+    fontSize: 13,
+    fontFamily: fontFamilies.sansSerifRegular
   }
 })
 

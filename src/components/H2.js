@@ -1,11 +1,12 @@
 import React from 'react'
 import { Text, StyleSheet } from '@react-pdf/core'
+import { fontFamilies } from '../lib/fonts'
 
 const styles = StyleSheet.create({
   subheadline: {
     fontSize: 22,
-    marginBottom: 5
-    // fontFamily: 'Republik',
+    marginBottom: 5,
+    fontFamily: fontFamilies.serifBold
   }
 })
 

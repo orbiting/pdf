@@ -1,11 +1,12 @@
 import React from 'react'
 import { Link, StyleSheet } from '@react-pdf/core'
+import { fontFamilies } from '../lib/fonts'
 
 const styles = StyleSheet.create({
   strong: {
     color: '#000',
     fontSize: 13,
-    // fontFamily: 'Rubis Bold',
+    fontFamily: fontFamilies.serifBold,
     textDecoration: 'none'
   }
 })
