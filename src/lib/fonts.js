@@ -1,6 +1,10 @@
 import { Font } from '@react-pdf/core'
 
-require('dotenv').config()
+const DEV = process.env.NODE_ENV !== 'production'
+
+if (DEV || process.env.DOTENV) {
+  require('dotenv').config()
+}
 
 const fonts = JSON.parse(process.env.FONTS || '{}')
 

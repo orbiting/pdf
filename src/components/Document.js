@@ -16,12 +16,6 @@ const styles = StyleSheet.create({
   }
 })
 
-const logReactTree = (node, depth = 0) => {
-  if (node.props && node.props.children) {
-    node.props.children.map(c => logReactTree(c, depth + 1))
-  }
-}
-
 const MdastDocument = ({ article }) => {
   if (article.meta.template !== 'article') {
     return (
@@ -40,8 +34,6 @@ const MdastDocument = ({ article }) => {
       MissingNode
     }
   )
-
-  // logReactTree(mdast)
 
   return (
     <Document>
