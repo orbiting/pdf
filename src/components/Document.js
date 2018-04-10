@@ -1,12 +1,12 @@
 import React from 'react'
-import { StyleSheet, Document, Page, Text } from '@react-pdf/core'
-
+import { StyleSheet, Document, Page, Text, Font } from '@react-pdf/core'
 import { renderMdast } from 'mdast-react-render'
+import hyphenationCallback from '../lib/Hyphenation'
 import articleSchema from '../templates/Article'
-
 import MissingNode from './MissingNode'
 
-import { range } from 'd3-array'
+// Register custom hyphenation algorithm
+Font.registerHyphenationCallback(hyphenationCallback)
 
 const styles = StyleSheet.create({
   page: {
@@ -17,20 +17,6 @@ const styles = StyleSheet.create({
 })
 
 const logReactTree = (node, depth = 0) => {
-  const prefix = range(depth).map(() => '-')
-  if (typeof node === 'string') {
-    console.log(prefix, `${node.slice(0, 40)}${node.length >= 40 ? '...' : ''}`)
-    return
-  }
-  console.log(
-    prefix,
-    node.displayName || (
-      node.type && node.type.displayName
-        ? node.type.displayName
-        : node.type
-    ),
-    node.key
-  )
   if (node.props && node.props.children) {
     node.props.children.map(c => logReactTree(c, depth + 1))
   }
