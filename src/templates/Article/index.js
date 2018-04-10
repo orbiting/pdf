@@ -22,6 +22,11 @@ import {
   Infobox
 } from '../../components'
 
+const h2 = {
+  matchMdast: matchHeading(2),
+  component: H2
+}
+
 const link = {
   matchMdast: matchType('link'),
   props: node => ({
@@ -40,6 +45,30 @@ const paragraph = {
       component: Strong
     },
     link
+  ]
+}
+
+const title = {
+  matchMdast: matchZone('TITLE'),
+  component: TitleBlock,
+  props: node => ({
+    center: node.data.center
+  }),
+  rules: [
+    {
+      matchMdast: matchHeading(1),
+      component: H1
+    },
+    {
+      matchMdast: (node, index) => matchParagraph(node) && index === 1,
+      component: Lead,
+      rules: []
+    },
+    {
+      matchMdast: matchParagraph,
+      component: Credit,
+      rules: [link]
+    }
   ]
 }
 
@@ -98,77 +127,70 @@ const infobox = {
   ]
 }
 
+const listItem = {
+  matchMdast: matchType('listItem'),
+  component: List.Item,
+  props: (node, index, parent) => ({
+    node,
+    index,
+    parent
+  }),
+  rules: [
+    {
+      matchMdast: matchParagraph,
+      component: List.ItemContent,
+      rules: []
+    }
+  ]
+}
+
+const list = {
+  matchMdast: matchType('list'),
+  component: List,
+  props: node => ({
+    data: {
+      ordered: node.ordered,
+      start: node.start
+    }
+  }),
+  rules: [
+    listItem
+  ]
+}
+
+const quote = {
+  matchMdast: matchZone('QUOTE'),
+  component: ({ children }) => <View>{children}</View>
+}
+
+const embedTweet = {
+  matchMdast: matchZone('EMBEDTWITTER'),
+  component: ({ children }) => <View>{children}</View>
+}
+
+const center = {
+  matchMdast: matchZone('CENTER'),
+  component: ({ children }) => children,
+  rules: [
+    h2,
+    paragraph,
+    figure,
+    infobox,
+    list,
+    quote,
+    embedTweet
+  ]
+}
+
 const schema = {
   rules: [
     {
       matchMdast: matchType('root'),
       component: ({ children }) => <View>{children}</View>,
       rules: [
-        {
-          matchMdast: matchZone('TITLE'),
-          component: TitleBlock,
-          props: node => ({
-            center: node.data.center
-          }),
-          rules: [
-            {
-              matchMdast: matchHeading(1),
-              component: H1
-            },
-            {
-              matchMdast: (node, index) => matchParagraph(node) && index === 1,
-              component: Lead,
-              rules: []
-            },
-            {
-              matchMdast: matchParagraph,
-              component: Credit,
-              rules: [link]
-            }
-          ]
-        },
+        title,
         figure,
-        {
-          matchMdast: matchZone('CENTER'),
-          component: ({ children }) => children,
-          rules: [
-            {
-              matchMdast: matchHeading(2),
-              component: H2
-            },
-            paragraph,
-            figure,
-            infobox,
-            {
-              matchMdast: matchType('list'),
-              component: List,
-              props: node => ({
-                data: {
-                  ordered: node.ordered,
-                  start: node.start
-                }
-              }),
-              rules: [
-                {
-                  matchMdast: matchType('listItem'),
-                  component: List.Item,
-                  props: (node, index, parent) => ({
-                    node,
-                    index,
-                    parent
-                  }),
-                  rules: [
-                    {
-                      matchMdast: matchParagraph,
-                      component: List.ItemContent,
-                      rules: []
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
+        center
       ]
     }
   ]

@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     width: 500,
     fontSize: 12,
-    fontFamily: fontFamilies.sansSerifRegular
+    fontFamily: fontFamilies.serifRegular
   }
 })
 

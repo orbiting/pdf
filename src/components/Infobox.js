@@ -1,5 +1,6 @@
 import React, { Children } from 'react'
 import { Text, View, StyleSheet, Image } from '@react-pdf/core'
+import { fontFamilies } from '../lib/fonts'
 
 const styles = StyleSheet.create({
   infobox: {
@@ -14,7 +15,8 @@ const styles = StyleSheet.create({
     paddingTop: 5,
     marginBottom: 5,
     borderTopWidth: 1,
-    borderTopColor: 'black'
+    borderTopColor: 'black',
+    fontFamily: fontFamilies.serifTitle
   }
 })
 
@@ -51,11 +53,11 @@ const InfoboxImage = ({ figureSize, src }) => {
 }
 
 const Infobox = ({ children }) => {
-  const image = Children.toArray(children).filter(child => child.type === InfoboxFigure)
-  const childs = Children.toArray(children).filter(child => child.type !== InfoboxFigure)
+  const image = Children.toArray(children).filter(child => child.type === InfoboxImage)
+  const childs = Children.toArray(children).filter(child => child.type !== InfoboxImage)
 
   return (
-    <View style={styles.infobox}>
+    <View style={styles.infobox} wrap={false}>
       {image}
       <View style={{ flex: 1 }}>
         {childs}
