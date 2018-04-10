@@ -1,6 +1,10 @@
 import React from 'react'
 import { Image, StyleSheet } from '@react-pdf/core'
 
+import {
+  imageResizeUrl
+} from 'mdast-react-render/lib/utils'
+
 const styles = StyleSheet.create({
   image: {
     backgroundColor: 'grey',
@@ -11,5 +15,5 @@ const styles = StyleSheet.create({
 })
 
 export default ({ src }) => (
-  <Image style={styles.image} src={src} />
+  <Image style={styles.image} src={imageResizeUrl(src, '2000x')} />
 )

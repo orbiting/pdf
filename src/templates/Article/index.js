@@ -54,7 +54,7 @@ const figure = {
       matchMdast: matchImageParagraph,
       component: Image,
       props: node => ({
-        src: node.children[0].url.split('?')[0], // ?size=... breaks it.
+        src: node.children[0].url,
         alt: node.children[0].alt
       }),
       isVoid: true
