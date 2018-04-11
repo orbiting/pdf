@@ -1,5 +1,5 @@
 import createHyphenator from 'hyphen'
-import patterns from 'hyphen/patterns/de'
+import patterns from 'hyphen/patterns/de-ch'
 
 const SOFT_HYPHEN = '\u00AD'
 
