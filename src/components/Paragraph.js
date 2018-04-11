@@ -8,8 +8,8 @@ const styles = StyleSheet.create({
     fontSize: 14,
     marginBottom: 10,
     lineHeight: 2, // not supported.
-    fontFamily: fontFamilies.serifRegular
-    // align: 'justify'
+    fontFamily: fontFamilies.serifRegular,
+    textAlign: 'justify'
   }
 })
 

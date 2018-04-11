@@ -1,8 +1,8 @@
-import {
-  Font
-} from '@react-pdf/core'
+import { Font } from '@react-pdf/core'
 
-if (process.env.NODE_ENV !== 'production') {
+const DEV = process.env.NODE_ENV !== 'production'
+
+if (DEV || process.env.DOTENV) {
   require('dotenv').config()
 }
 
