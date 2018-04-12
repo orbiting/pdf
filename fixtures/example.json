@@ -8,10 +8,10 @@
               {
                 "children": [
                   {
-                    "alt": "dreckiges Auto mit einem zerfledderten Handtusch als Sonnenschutz",
+                    "alt": null,
                     "title": null,
                     "type": "image",
-                    "url": "https://cdn.republik.space/s3/republik-assets/github/republik/article-usa-3-deep-south/images/ead034f861a898028697fb2df87835d812cd27ba.jpeg?size=3700x2467"
+                    "url": "https://assets.publikator.project-r.construction/assets/orbiting/newsletter-countdown-newsletter/images/1bf89514d1a946e3412ea6e54e0d2c2ac1ee632e.jpeg?size=2000x1125&resize=2000x"
                   }
                 ],
                 "type": "paragraph"
@@ -20,7 +20,7 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "Während in Houston, Texas, ein Hurrikan gerade alles zerstört hat, glauben die Menschen in New Orleans, Louisiana, ein Krieg könnte alles in Schutt und Asche legen."
+                    "value": "Die Crew der Republik"
                   }
                 ],
                 "type": "paragraph"
@@ -36,7 +36,7 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "The Deep South"
+                    "value": "Republik: Stand der Arbeit, Stand des Irrtums"
                   }
                 ],
                 "depth": 1,
@@ -46,7 +46,7 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "Keiner der fünfzig US-Bundesstaaten verzeichnet mehr Kriminalität, keiner steckt mehr Menschen ins Gefängnis. Die Waffengesetze – lasch. In Louisiana reden selbst Pastoren erwartungsvoll von Bürgerkrieg. Und gehandelt wird auch: Rechtsextreme Milizen rüsten sich für den Kampf ebenso wie junge Feministinnen in Texas."
+                    "value": "Nicht Perfektion ist das Ziel bei unserem Start, sondern Perfektionierbarkeit."
                   }
                 ],
                 "type": "paragraph"
@@ -55,52 +55,37 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "Von "
+                    "value": "Ein Brief von der Redaktion (Text), "
                   },
                   {
                     "children": [
                       {
                         "type": "text",
-                        "value": "Anja Conzett"
+                        "value": "Laurent Burst"
                       }
                     ],
-                    "title": "Anja Conzett",
+                    "title": "Laurent Burst",
                     "type": "link",
-                    "url": "/~acon"
+                    "url": "/~140cec76-47c2-458e-93c9-7ecac8085b9b"
                   },
                   {
                     "type": "text",
-                    "value": ", "
+                    "value": " (Bilder) und "
                   },
                   {
                     "children": [
                       {
                         "type": "text",
-                        "value": "Yvonne Kunz"
-                      }
-                    ],
-                    "title": "Yvonne Kunz",
-                    "type": "link",
-                    "url": "/~ykunz"
-                  },
-                  {
-                    "type": "text",
-                    "value": " (Text) und "
-                  },
-                  {
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Reto Sterchi"
+                        "value": "Kollaborator"
                       }
                     ],
                     "title": null,
                     "type": "link",
-                    "url": "/~retosterchi"
+                    "url": "https://republik.love/~kollaborator"
                   },
                   {
                     "type": "text",
-                    "value": " (Bilder), 24.01.2018"
+                    "value": " (☄️), 4. Dezember 2017"
                   }
                 ],
                 "type": "paragraph"
@@ -116,32 +101,18 @@
                 "children": [
                   {
                     "type": "text",
-                    "value": "Kein Geist, nur Körper"
-                  }
-                ],
-                "depth": 2,
-                "type": "heading"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Tag 9, "
+                    "value": "Es ist bald Zeit, anderes zu schreiben als Geschäftsbriefe wie diesen, zum Beispiel Weihnachtskarten oder Magazin-Geschichten. Aber erst bald. Hier also unsere letzten Unternehmensnachrichten vor dem Start der «Republik», die mit aller Wahrscheinlichkeit wie eine Rakete starten wird. Weniger, weil der Start so fadengerade wird, sondern weil er in Stufen erfolgt. Das liegt in der Natur der Publikation. Eine gedruckte Zeitung oder ein Print-Magazin taucht quasi fertig designt auf, aus einem harmonischen Guss, so wie Roger Federer einst in Wimbledon 2003. Ein Magazin im Netz dagegen gleicht Stan Wawrinka. Dieser tätowierte sich ein Motto von Beckett auf den Unterarm: «Ever tried. Ever failed. No matter. Try again. Fail again. Fail better.» "
                   },
                   {
                     "children": [
                       {
                         "type": "text",
-                        "value": "Anja Conzett"
+                        "value": "Boom!"
                       }
                     ],
-                    "title": "Anja Conzett",
+                    "title": null,
                     "type": "link",
-                    "url": "/~acon"
-                  },
-                  {
-                    "type": "text",
-                    "value": ", New Orleans, Louisiana"
+                    "url": "https://example.com"
                   }
                 ],
                 "type": "paragraph"
@@ -149,8 +120,35 @@
               {
                 "children": [
                   {
+                    "children": [
+                      {
+                        "alt": null,
+                        "title": null,
+                        "type": "image",
+                        "url": "https://assets.publikator.project-r.construction/assets/orbiting/newsletter-countdown-newsletter/images/d849529f57953ecb7dfbbe5ba94762ee2ad9d4db.jpeg?size=2000x1125&resize=1200x"
+                      }
+                    ],
+                    "type": "paragraph"
+                  },
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Manifest von Project R"
+                      }
+                    ],
+                    "type": "paragraph"
+                  }
+                ],
+                "data": {},
+                "identifier": "FIGURE",
+                "type": "zone"
+              },
+              {
+                "children": [
+                  {
                     "type": "text",
-                    "value": "Wir kommen am Samstagabend an. Benommen straucheln wir durch die überfüllten Gassen des French Quarter, der Touristenmeile von New Orleans, auf der gerade das Wochenende tobt. Wir sind müde, wollen nicht lange suchen und setzen uns in eine Touristenabsteige, dekoriert mit Schwemmholz und ausgestopften Alligatoren. Die Bloody Marys kommen aus dem Tetrapak. Aber immerhin wird ein Drink angeboten, dessen Erlös den Opfern von Hurrikan Harvey zugutekommen soll, der vor ein paar Tagen Houston verwüstet hat. Katastrophen sind gut fürs Geschäft. Sofern sie nicht hier geschehen. "
+                    "value": "Wir werden im Januar ähnlich agieren: «Versucht. Gescheitert. Egal. Erneut versuchen. Erneut scheitern. Besser scheitern.» Und die «Republik» in Stufen starten – wir beginnen mit dem Notwendigen und schalten dann Funktion um Funktion, Kolumne um Kolumne, Erweiterung um Erweiterung auf. Nicht Perfektion ist das Ziel bei unserem Start, sondern Perfektionierbarkeit. "
                   }
                 ],
                 "type": "paragraph"
@@ -161,7 +159,89 @@
                     "children": [
                       {
                         "type": "text",
-                        "value": "New Orleans, Louisiana"
+                        "value": "«Nicht Perfektion ist das Ziel bei unserem Start, sondern Perfektionierbarkeit»"
+                      }
+                    ],
+                    "type": "paragraph"
+                  },
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Constantin Seibt"
+                      }
+                    ],
+                    "type": "paragraph"
+                  }
+                ],
+                "data": {
+                  "size": "narrow"
+                },
+                "identifier": "QUOTE",
+                "type": "zone"
+              },
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Dies zum Teil, weil unser Team erst nach und nach an Bord kommt. Aber auch, weil ein Magazin im Netz das Privileg hat, sich schneller verändern zu können. Wir müssen unseren Vorteil nutzen. Denn so schlank die «Republik» ist, hat sie doch den Vorteil, eine mit rund 14’500 Verlegerinnen und Verlegern (zumindest nach der Zahl der Köpfe) weit überlegene Teppichetage zu haben. Wir werden Ihre Geduld, Ihre Neugier, Ihre Kritik brauchen können. "
+                  }
+                ],
+                "type": "paragraph"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "https://twitter.com/RepublikMagazin/status/857218186986520576"
+                          }
+                        ],
+                        "title": null,
+                        "type": "link",
+                        "url": "https://twitter.com/RepublikMagazin/status/857218186986520576"
+                      }
+                    ],
+                    "type": "paragraph"
+                  }
+                ],
+                "data": {
+                  "__typename": "TwitterEmbed",
+                  "createdAt": "2017-04-26T13:01:56.000Z",
+                  "html": "Danke! Republik geht dank eurer Unterstützung 2018 definitiv an den Start! Gemeinsam schaffen wir noch mehr - wir sammeln weiter! <a href=\"https://t.co/25b3Yul7zF\" target=\"_blank\" rel=\"noopener noreferrer\">t.co/25b3Yul7zF</a>",
+                  "id": "857218186986520576",
+                  "image": "https://pbs.twimg.com/media/C-VzYvFXgAACAR0.jpg",
+                  "more": null,
+                  "playable": false,
+                  "retrievedAt": "2017-12-04T14:16:25.869Z",
+                  "text": "Danke! Republik geht dank eurer Unterstützung 2018 definitiv an den Start! Gemeinsam schaffen wir noch mehr - wir sammeln weiter! https://t.co/25b3Yul7zF",
+                  "userId": "786282996223598592",
+                  "userName": "Republik",
+                  "userProfileImageUrl": "https://pbs.twimg.com/profile_images/851190311267307521/W2kHAHvv_normal.jpg",
+                  "userScreenName": "RepublikMagazin"
+                },
+                "identifier": "EMBEDTWITTER",
+                "type": "zone"
+              },
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Und ja, wir haben ein Startdatum. Es ist der XX. Januar 2018, Punkt XX Uhr morgens. Und ja, wir sind auch gespannt, wie das Magazin dann wird. Sogar sehr. Und ja, es wäre eine gute Idee, diesen Brief zu beenden und sich an die Arbeit zu machen. In der Redaktion laufen die fieberhaften Vorbereitungen für den Start. Reportagen werden in Auftrag gegeben, Recherchen geplant, Formate erfunden, Ideen geprüft, umgesetzt oder verworfen. Es gibt noch viel zu tun bis Januar."
+                  }
+                ],
+                "type": "paragraph"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Republik"
                       }
                     ],
                     "depth": 3,
@@ -175,2184 +255,38 @@
                             "alt": null,
                             "title": null,
                             "type": "image",
-                            "url": "https://cdn.republik.space/s3/republik-assets/github/republik/article-usa-3-deep-south/images/97afd5ea2fc2484b9d8f2c3e264a177e5d385af0.png?size=748x508"
+                            "url": "https://assets.project-r.construction/images/rothaus_republik.jpg"
                           }
                         ],
                         "type": "paragraph"
-                      }
-                    ],
-                    "data": {},
-                    "identifier": "FIGURE",
-                    "type": "zone"
-                  }
-                ],
-                "data": {
-                  "figureSize": "M"
-                },
-                "identifier": "INFOBOX",
-                "type": "zone"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Eine Tageszeitung, die auf dem Tresen liegt, schreibt in ihrer Titelgeschichte davon, dass die Stadt die letzten Schäden von Hurrikan Katrina beseitigt hat, zwölf Jahre nachdem der Sturm rund 1800 Menschen tötete – mehrheitlich im schwarzen Armenviertel Lower Ninth Ward. Das French Quarter, die pittoreske Touristenmeile, war damals in kürzester Zeit wieder hergerichtet. Noch bevor Polizei und Armee alle Leichen aus den am härtesten betroffenen Quartieren bergen konnten."
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Ich frage mich, ob «zynischer Kapitalismus» ein Pleonasmus ist, ein weisser Schimmel, und verspüre den plötzlichen Drang, mich über alle Massen zu betrinken. Du bist müde und willst ins Bett. Also verschwinde ich mit der ehemaligen Cheerleaderin, mit der ich angefangen habe zu flirten, während du deinen Salat gegessen hast. Du ermahnst mich, daran zu denken, dass wir am nächsten Morgen in die Kirche wollten, wie jeden Sonntag. Ich nicke und lasse mich von der Cheerleaderin in einen Club abseits der Touristenmeile an der Frenchmen Street führen."
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Im «Blue Nile» sind an diesem Abend fast nur Schwarze. Die Band spielt einen teuflisch rauen Jazz. Ich trinke Whiskey Sour, tanze mit der Cheerleaderin, trinke den zweiten Whiskey Sour, tanze, trinke, tanze, bis ich nur noch Körper, kein Geist mehr bin. Tanze, trinke, tanze. Bis ich am Mittag mit bleischwerem Kopf in unserem Hotel erwache. Keine Ahnung, wie ich dahin gekommen bin."
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Ich werfe ein Alka-Seltzer ein und finde dich am Pool. Du ziehst eine Braue hoch."
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Wir beschliessen, die Kirche zu verschieben und den Tag im Hotel zu verbringen. Du liest in einem der vier Bücher, die du mitgebracht hast, ich lese in dem einen Buch, das ich mitgebracht habe, Howard Zinns «A People’s History of the United States». Dazu höre ich Grateful Dead, "
-                  },
-                  {
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "«I Need a Miracle»"
-                      }
-                    ],
-                    "title": null,
-                    "type": "link",
-                    "url": "https://open.spotify.com/user/21r3ehh7y7zek5vx4lgaemyhy/playlist/5Wu9DtzaIAJOByGatrXvbk?si=2GVWDD_aTwaU4tI_TXNFjg"
-                  },
-                  {
-                    "type": "text",
-                    "value": " im Repeat und wünsche mir, ich wüsste den Namen der Cheerleaderin noch."
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Am Abend ist es immer noch heiss, aber ruhiger. Die betrunkenen Footballfans und Junggesellinnen sind abgereist. Wir streifen durch die Gassen, über denen Farne von gusseisernen Balkonen hängen, Wahrsagerinnen bieten ihre Dienste feil, von überall her erklingt Musik."
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "children": [
-                      {
-                        "alt": "Mixson Lovejoy sitzt auf dem Trottoir und tippt auf seiner Schreibmaschine",
-                        "title": null,
-                        "type": "image",
-                        "url": "https://cdn.republik.space/s3/republik-assets/github/republik/article-usa-3-deep-south/images/a04bcf8d22973a67f0f4c35a9970f8da0aa49604.jpeg?size=3840x2565"
-                      }
-                    ],
-                    "type": "paragraph"
-                  },
-                  {
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Clash der Kulturen: Jeden Abend baut sich Mixson Lovejoy auf einem Trottoir im French Quarter von New Orleans mit seiner Schreibmaschine auf. Zwischen Junggesellinnenabschieden und trunkenen Touristen textet er seine Poesie. "
-                      }
-                    ],
-                    "type": "paragraph"
-                  }
-                ],
-                "data": {
-                  "size": "breakout"
-                },
-                "identifier": "FIGURE",
-                "type": "zone"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Bei einem Strassenpoeten, der mit seiner Schreibmaschine auf dem Trottoir sitzt, kaufe ich uns für vierzig Dollar ein Gedicht, das den Titel unserer Reportage trägt:"
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Race, Class, Guns, God"
-                  }
-                ],
-                "depth": 2,
-                "type": "heading"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Under the governing thumb,"
-                  },
-                  {
-                    "type": "break"
-                  },
-                  {
-                    "type": "text",
-                    "value": "The trigger, controlling"
-                  },
-                  {
-                    "type": "break"
-                  },
-                  {
-                    "type": "text",
-                    "value": "Motions and money, slavery"
-                  },
-                  {
-                    "type": "break"
-                  },
-                  {
-                    "type": "text",
-                    "value": "Has been disguised, a moustache"
-                  },
-                  {
-                    "type": "break"
-                  },
-                  {
-                    "type": "text",
-                    "value": "On the clink, class is crass"
-                  },
-                  {
-                    "type": "break"
-                  },
-                  {
-                    "type": "text",
-                    "value": "And murder in a white tie"
-                  },
-                  {
-                    "type": "break"
-                  },
-                  {
-                    "type": "text",
-                    "value": "God counts dead presidents"
-                  },
-                  {
-                    "type": "break"
-                  },
-                  {
-                    "type": "text",
-                    "value": "Inside the flatscreens"
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Wir laufen zurück zum Hotel. Ich habe mir vorgenommen, unseren Disput von Atlanta aufzuklären. Im Zug habe ich lange darüber nachgedacht. Natürlich gibt es mehrere Formen von Diskriminierung. Eine schwarze Frau hat mit anderen Problemen zu kämpfen als eine weisse Frau oder ein schwarzer Mann. Ein körperlich behinderter weisser Arbeiter erlebt eine andere Diskriminierung als eine körperlich behinderte Latina der Oberschicht. Entsprechend «intersektional» müssen die Problemstellungen angegangen werden. Und ja – natürlich geht es einem schwarzen Arbeiter schlechter als einem weissen Arbeiter! Aber darum geht es doch nicht, oder?"
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Statt darüber zu diskutieren, wer das grösste Opfer ist – sollten wir unsere Kräfte nicht für eine aufgeklärte Diskussion darüber einsetzen, welches Problem die benachteiligten Gruppen Amerikas gemeinsam haben? Darüber sprechen, was der grösste Hebel ist? Und sind das nicht der mangelhafte Sozialstaat und die miserablen Arbeitsgesetze?"
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Darüber hätte ich gern mit dir diskutiert. Mein Mund hat andere Pläne. Unser Gespräch beginnt holprig, und irgendwann reisse ich einen blöden Spruch darüber, wie lustfeindlich und humorlos Linksaktivismus doch oftmals ist. Gott, ich bin ein unsensibles Arschloch, wenn ich einen Kater habe. Ich sehe in deinem Blick, dass du den Spruch persönlich nimmst. «Anja, ich glaube, es ist besser, wenn wir auf dieser Reise überhaupt nicht mehr über dieses Thema reden.» Das ist nur fair."
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Ich bleibe alleine draussen sitzen, rauche eine Zigarette, trinke ein Bier und tröste mich mit Lynn Anderson, "
-                  },
-                  {
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "«I Never Promised You a Rose Garden»"
-                      }
-                    ],
-                    "title": null,
-                    "type": "link",
-                    "url": "https://open.spotify.com/user/21r3ehh7y7zek5vx4lgaemyhy/playlist/5Wu9DtzaIAJOByGatrXvbk?si=2GVWDD_aTwaU4tI_TXNFjg"
-                  },
-                  {
-                    "type": "text",
-                    "value": "."
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Stronger and Stranger"
-                  }
-                ],
-                "depth": 2,
-                "type": "heading"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Tag 9, "
-                  },
-                  {
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Yvonne Kunz"
-                      }
-                    ],
-                    "title": "Yvonne Kunz",
-                    "type": "link",
-                    "url": "/~ykunz"
-                  },
-                  {
-                    "type": "text",
-                    "value": ", New Orleans, Louisiana"
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Anja ist ein «badass», eine Femme fatale von Format. Schnell im Kopf, leidenschaftlich, mit wildem Lachen und charmanter Unverschämtheit. Würde ich leben wie sie, ich wäre tot. Sie haut die Drinks doppelt so schnell weg, raucht zweieinhalb Zigaretten, wenn ich die eine schmauche. Um sie wird es nie langweilig, aber auch selten gemütlich und nur ruhig, wenn sie schläft. Während ich meine Meinungen noch umständlich durch fünfzehn Grautöne dekliniere, ist sie schon bei fünfzehn wohlklingenden Wahrheiten angelangt – und ich bin im Differenzierungsstress. Rede plötzlich selbst in Grundsätzlichkeiten, die ich so gar nicht vertrete. "
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "children": [
-                      {
-                        "alt": "Saxophonspieler in einer leeren Bar",
-                        "title": null,
-                        "type": "image",
-                        "url": "https://cdn.republik.space/s3/republik-assets/github/republik/article-usa-3-deep-south/images/2be793ce036da1230e8dcbc7dad3b0d33153dd46.jpeg?size=3840x2565"
-                      }
-                    ],
-                    "type": "paragraph"
-                  }
-                ],
-                "data": {
-                  "size": "breakout"
-                },
-                "identifier": "FIGURE",
-                "type": "zone"
-              },
-              {
-                "children": [
-                  {
-                    "children": [
-                      {
-                        "alt": "Schaufenster mit schrillen Partyklamotten",
-                        "title": null,
-                        "type": "image",
-                        "url": "https://cdn.republik.space/s3/republik-assets/github/republik/article-usa-3-deep-south/images/e6966032f64c632d8dc330fb7151b05358d777e1.jpeg?size=3840x2565"
-                      }
-                    ],
-                    "type": "paragraph"
-                  },
-                  {
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "New Orleans ist eine blühende Insel der Kultur, umgeben von einem konservativen Staat in desolatem Zustand: Immer wieder landet Louisiana auf dem letzten Platz der lebenswerten Orte in den USA.     "
-                      }
-                    ],
-                    "type": "paragraph"
-                  }
-                ],
-                "data": {
-                  "size": "breakout"
-                },
-                "identifier": "FIGURE",
-                "type": "zone"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "All das sage ich ihr bei einem Bier in einer Bar. Sie versteht. Sie sagt, das sei ihre Art zu diskutieren, ich solle ihre Wahrheiten als Thesen sehen. «Im Sozialismus ist Rassismus nicht vorgesehen», sagt sie. Ich will fragen, ob das auch eine These sei, aber da ist sie schon weg. Durchgebrannt mit der ehemaligen Cheerleaderin, die sie vor zehn Minuten kennengelernt hat. Deren Tasche auf dem Barhocker neben mir liegt. Na toll."
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "«I Got Bourbon Faced on Shit Street» besagt ein beliebtes Touristen-T-Shirt. Bourbon Street ist eine schwirrende, stinkende Touri-Saufmeile. Wie die Zürcher Langstrasse mal Niederdorf hoch zehn. Und derzeit Hochburg des Katastrophen-Kapitalismus. Viele Floridians sind in town, geflüchtet vor dem nächsten Hurrikan, Irma. Jetzt schlürfen sie Irma-Shots und tanzen den Irma-Shake. Das ist dieser brutalokapitalistische Mindset, der jetzt auch in Gestalt einer Kellnerin neben mir Platz genommen hat. Wir reden darüber, wie das so war, Hurrikan Katrina. Wie das French Quarter, wo wir gerade sind, praktisch unversehrt blieb, während im Ninth Ward Hunderte Afroamerikaner und Afroamerikanerinnen in ihren Häusern ertranken. Die Flutschutzsysteme waren so ausgerichtet. Schulterzucken. Ah well. New Orleans brauche das French Quarter eben mehr als den Ninth Ward."
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Im Süden der USA scheinen die Klänge klarer, die Farben tiefer, die Persönlichkeiten greller, der Gestank beissender. Alles ist stärker, sogar die Erdanziehung. Die Stadt zieht dich nicht einfach runter, auf den Boden, sie verschluckt dich. Es zieht mich weiter, ich will hin, wo sich Engel und Dämonen gute Nacht sagen, an die Frenchmen Street. In den Armen eines Malers lerne ich den «Texas Two Step». Vor einer Bar verwette ich einen Kuss an einen Obdachlosen, während die Band drinnen durch eine satte Version von "
-                  },
-                  {
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "«Proud Mary»"
-                      }
-                    ],
-                    "title": null,
-                    "type": "link",
-                    "url": "https://open.spotify.com/user/21r3ehh7y7zek5vx4lgaemyhy/playlist/5Wu9DtzaIAJOByGatrXvbk?si=2GVWDD_aTwaU4tI_TXNFjg"
-                  },
-                  {
-                    "type": "text",
-                    "value": " stürmt: «Rollin’, rollin’ on the river». Um die Ecke finde ich zwei Tage später Anja wieder, sie sitzt am Boden neben dem Strassenpoeten Mixson Lovejoy. Ich mache ein Foto von ihr. Ihr Blick saugt die Nacht auf, am Ende ihrer Zigarette leuchtet die Glut. "
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Der Superchrist"
-                  }
-                ],
-                "depth": 2,
-                "type": "heading"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Tag 10 und 11, "
-                  },
-                  {
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Anja Conzett"
-                      }
-                    ],
-                    "title": "Anja Conzett",
-                    "type": "link",
-                    "url": "/~acon"
-                  },
-                  {
-                    "type": "text",
-                    "value": ", New Orleans, Louisiana"
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "An diesem Montag jährt sich der Anschlag auf das World Trade Center. Überall in der Stadt finden Gedenkgottesdienste statt, und so ersetzen wir die von mir verschlafene Messe vom Sonntag mit einem Memorial. Wir fahren zu einer katholischen Kirche etwas ausserhalb der Stadt, wo eine Andacht für die Opfer von 9/11 und alle First Responders abgehalten wird, für Nothelfer, Feuerwehrfrauen, Polizisten, Helden in Zivil. In der Kirche, einer Art orangefarbenem Disneylandschloss, verlieren sich an die dreissig Leute auf den Holzbänken."
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "children": [
-                      {
-                        "alt": "Gruppenbild der Familie Beane in Uniform",
-                        "title": null,
-                        "type": "image",
-                        "url": "https://cdn.republik.space/s3/republik-assets/github/republik/article-usa-3-deep-south/images/cabfa6e83a565fb1d05e81a9f729ac31adfb7866.jpeg?size=3840x2563"
-                      }
-                    ],
-                    "type": "paragraph"
-                  }
-                ],
-                "data": {
-                  "size": "breakout"
-                },
-                "identifier": "FIGURE",
-                "type": "zone"
-              },
-              {
-                "children": [
-                  {
-                    "children": [
-                      {
-                        "alt": "Leo Beane in Uniform auf einer Schaukel",
-                        "title": null,
-                        "type": "image",
-                        "url": "https://cdn.republik.space/s3/republik-assets/github/republik/article-usa-3-deep-south/images/89216edad9b5d423a7fa0e788ac7c23d83b10227.jpeg?size=3840x2563"
-                      }
-                    ],
-                    "type": "paragraph"
-                  },
-                  {
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Pater Larry Beane, seine Frau Grace und der Sohn Leo glauben an Gott, Nachbarschaftshilfe und Verschwörungstheorien. Den Medien trauen sie genauso wenig wie den Schulen. Der Sohn wird zu Hause unterrichtet. "
-                      }
-                    ],
-                    "type": "paragraph"
-                  }
-                ],
-                "data": {
-                  "size": "breakout"
-                },
-                "identifier": "FIGURE",
-                "type": "zone"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Eine Familie fällt auf: der Sohn in der Uniform eines Kadetten, die Mutter in der Uniform einer Luftwaffenhelferin, der Vater in der Uniform eines Feuerwehrmannes. So stehen sie da, singen stramm und leidenschaftlich. Nach dem Gottesdienst spreche ich sie an: Pater Larry Beane, Pfarrer einer lutheranischen Gemeinde einige Blocks weiter, seine Frau Grace und ihren Sohn Leo. "
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Er traue den Medien nicht, sagt Larry Beane, sagt es mit leicht zuckendem Lächeln, das Gewicht des Körpers auf den Zehenspitzen balancierend. Aber es würde gegen das Prinzip der südlichen Gastfreundschaft verstossen, uns nicht zu empfangen. Also lädt er uns ein, ihn am nächsten Tag in seiner Kirche zu besuchen, einem trostlosen Betonklotz aus den Sechzigern. Die bunten Glasfenster sind so ausgerichtet, dass die Sonne fast nie hindurchscheint, drinnen riecht es nach Staub, schimmelnden Sitzpolstern und der nahenden Apokalypse. Seine Frau und seinen Sohn hat der Pater mitgebracht und als stumme Dekoration über fünf Bänke in der leeren Kirche verteilt."
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "In einem früheren Leben war Larry Beane Computertechniker. Aber eigentlich war er – Sohn einer Südstaaten-Mutter und eines Nordstaaten-Vaters – schon immer ein Mann Gottes, lange bevor er sich das Kollar umlegte. Ein gebildeter Mann, der den Versailler Vertrag analysiert, beiläufig aus George Orwell «1984» zitiert und seinen Sohn dazu erzieht, «Excuse me» zu sagen, bevor der sich in das Gespräch von Erwachsenen einmischt. Doch in seiner Freizeit zieht Pater Beane in Anzug und Kampfstiefeln los, um gegen den Abriss von Denkmälern von Konföderierten-Generälen zu protestieren, den Generälen, die im Amerikanischen Bürgerkrieg für die Südstaaten kämpften. Das hat ihm den Spitznamen «Pater Tactical» eingebracht."
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Mit Rassismus, sagt Beane, hätten diese Denkmäler nichts zu tun. «Es sind Denkmäler eines verlorenen Unabhängigkeitskriegs, der in erster Linie nicht den Erhalt der Sklaverei zum Ziel hatte, sondern sich gegen staatliche Bevormundung richtete.» Nein, sagt Pater Beane, es gebe in Amerika keine Nazis. Die Männer, die vor den Denkmälern Swastika-Fahnen schwenkten, würden dafür bezahlt. Von den Demokraten, den Liberalen, den linken Medien."
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Welches meine Lieblingsstelle in der Bibel sei, fragt Pater Beane, nachdem ich ihm erzählt habe, dass mein Vater ebenfalls Pastor sei. Ich versuche ihn aus der Reserve zu locken und zitiere: «Es ist leichter, dass ein Kamel durch ein Nadelöhr geht, als dass ein Reicher in das Reich Gottes kommt.» Pater Larry Beane hält Kommunismus für ein Werkzeug des Teufels. Doch nur eine Sekunde lang ist der Pastor ausser Balance."
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Dann sagt er mit stoischem Lächeln, dass eine Segregation der USA unvermeidbar sei. Die Aufspaltung des Landes kurz bevorstehe. Zu weit seien Kalifornien, New York und Connecticut von dem christlich geprägten, traditionellen Amerika entfernt, für das er eintritt. Er bete dafür, dass die Spaltung friedlich verlaufe. Dass es keinen Bürgerkrieg gebe, wenn es so weit sei."
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "children": [
-                      {
-                        "alt": "Kreuz auf dem Fenstersims ",
-                        "title": null,
-                        "type": "image",
-                        "url": "https://cdn.republik.space/s3/republik-assets/github/republik/article-usa-3-deep-south/images/a02e337670ce1677d47961a82da34595f3f35386.jpeg?size=3840x2563"
-                      }
-                    ],
-                    "type": "paragraph"
-                  }
-                ],
-                "data": {
-                  "size": "breakout"
-                },
-                "identifier": "FIGURE",
-                "type": "zone"
-              },
-              {
-                "children": [
-                  {
-                    "children": [
-                      {
-                        "alt": "Innenansicht der Kirche mit Altar",
-                        "title": null,
-                        "type": "image",
-                        "url": "https://cdn.republik.space/s3/republik-assets/github/republik/article-usa-3-deep-south/images/21724d1bf970643e8a10a0c8ce923046e6322c6b.jpeg?size=3840x2563"
-                      }
-                    ],
-                    "type": "paragraph"
-                  },
-                  {
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Pater Larry Beanes lutheranische Gemeinde ist im Begriff auszusterben. Doch landesweit feiern konservative Christen, die wie der Pastor für ein Verbot von Abtreibungen und muslimischer Einwanderung einstehen, eine Renaissance, seit Trump an der Macht ist. "
-                      }
-                    ],
-                    "type": "paragraph"
-                  }
-                ],
-                "data": {
-                  "size": "breakout"
-                },
-                "identifier": "FIGURE",
-                "type": "zone"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "So radikal er denkt, so höflich ist er. Galant verabschiedet er uns. Später, zurück im Hotel, schaue ich mir sein Facebook-Profil genauer an. Beane postet dort Artikel über die «Feminazisierung» der Kirche, über Chelsea Clintons angebliche Grussbotschaft an die «Kirche Satans», über den «IS-Terroristen», den London zum Bürgermeister gewählt hat. Fake-News und Hasstiraden: Im Netz ist der nette Pastor ein Hetzer. Er zählt zu den Superchristen, die in den USA zuletzt rasant an Einfluss gewonnen haben – Hardcore-Evangelikale, die Tugendhaftigkeit für Nächstenliebe halten und das Jüngste Gericht herbeisehnen, weil sie an keine andere Gerechtigkeit glauben können als an die von Himmel und Hölle."
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Und so ist auch Pater Beane einer jener Menschen, die dieses Land unaufhaltsam implodieren lassen. Die sich so weit in den Narrenkäfig ihres Weltbildes zurückgezogen haben, dass die Realität nur noch ein ferner Schimmer ist. Natürlich, sagt Pater Beane, unterstütze er Trump. Ja, ihm sei dessen ungehobeltes Benehmen zuwider. Er bedaure, dass Trump nicht nach christlichen Werten lebt. Aber immerhin schütze er sie. Er bete oft für den Präsidenten."
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Der Bürgerkrieger"
-                  }
-                ],
-                "depth": 2,
-                "type": "heading"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Tag 12, "
-                  },
-                  {
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Anja Conzett"
-                      }
-                    ],
-                    "title": "Anja Conzett",
-                    "type": "link",
-                    "url": "/~acon"
-                  },
-                  {
-                    "type": "text",
-                    "value": ", New Orleans, Louisiana"
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Es ist der dritte Morgen in New Orleans, ein heisser, sonniger Tag, und das einzige Mal auf dieser Reise bin ich nervös. Mir graut vor dieser Begegnung. Vor Monaten ist mir Kanjaksha Kumar Katta erstmals aufgefallen – auf einer Website, die zum bewaffneten Kampf aufruft. Dagegen, dass nun Demokraten und anderes linkes Gesocks die Konföderierten-Denkmäler abreissen wollen. Wir freundeten uns auf Facebook an. Seither füllte er meinen Feed mit Hassbotschaften und Selfies vor erlegten Alligatoren. Per Livestream habe ich mitverfolgt, wie er zusammen mit Gleichgesinnten eine «eroberte» Anarchistenfahne verbrannte. "
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "New Orleans ist laut, bunt und lebendig, viele Amerikanerinnen machen hier Ferien, weil sie das europäische Flair schätzen. Doch zehn Autominuten ausserhalb des flirrenden Zentrums zeigt Louisiana sein wahres Gesicht. Sumpflandschaften, über denen Moskitoschwärme hängen, Trailerparks, endlose Reihen von Fast-Food-Restaurants entlang der Highways. Louisiana nimmt unter den 50 Staaten der USA einen der hintersten Plätze ein. In einem aktuellen Ranking liegt es auf Platz 45 in Sachen Gesundheit, auf Platz 46 in Sachen Bildung, auf Platz 48 in Sachen wirtschaftlicher Chancen, auf Platz 50 in Sachen Kriminalität. Kein Staat sperrt mehr Menschen weg. "
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Kanjaksha Kumar Katta, 29 Jahre alt, 1,56 Meter klein, gedrungen und vollbärtig, ist vor vier Jahren von New York hergezogen, weil Louisiana einer der Staaten mit den liberalsten Waffengesetzen ist. "
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Er empfängt uns in einem Wohnwagenanhänger, seinen Oberkörper beschützt eine fünfzehn Kilogramm schwere schusssichere Weste. Ein Bett, ein kleines Spülbecken, ein ausklappbarer Tisch mit drei überquellenden Aschenbechern. Vor dem einzigen Fenster hängt eine gehäkelte Amerikaflagge, daneben die Flagge der Konföderierten. Draussen sind es 37 Grad, drinnen ein paar mehr. Seine schwangere Freundin Shirloa sitzt neben ihm auf dem Bett. Shirloa hat rot-weiss-blau bemalte Zehennägel, einen Vier-Monate-Babybauch und einen so tiefen Südstaatenakzent, dass wir es irgendwann aufgeben, sie zu verstehen. Er raucht Kette und trinkt Bier. "
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "children": [
-                      {
-                        "alt": "KKK mit halbautomatischen Gewehr und in Tarnmontour vor seinem Trailer",
-                        "title": null,
-                        "type": "image",
-                        "url": "https://cdn.republik.space/s3/republik-assets/github/republik/article-usa-3-deep-south/images/7684871c4984b7af3caa819ff80ad9d15e95187d.jpeg?size=3840x2563"
-                      }
-                    ],
-                    "type": "paragraph"
-                  },
-                  {
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Kanjaksha Kumar Katta ist ein dunkelhäutiger Konföderierter. Im Alter von siebzehn Jahren wird er von der amerikanischen Armee als Scharfschütze ausgebildet. Auch die vier Söhne sollen einmal in den Krieg ziehen, sagt der Vater. "
-                      }
-                    ],
-                    "type": "paragraph"
-                  }
-                ],
-                "data": {
-                  "size": "breakout"
-                },
-                "identifier": "FIGURE",
-                "type": "zone"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Kanjaksha Kumar Katta möchte, dass man ihn mit KKK anspricht – denselben Initialen, die hier für den Ku-Klux-Klan stehen. Er wohnt zusammen mit zwei Frauen – seiner schwangeren Freundin und seiner zweiten Ex-Frau – und fünf Kindern zwischen eins und achtzehn in einem 120 Quadratmeter grossen Bungalow und diesem stickigen Wohnwagen im Vorgarten. Wovon er lebt, wird nicht klar; hin und wieder jobbt er als Sicherheitsmann, doch lieber verbringt er seine Zeit damit, Alligatoren zu fangen, Waffennarren zum Barbecue zu laden und zu demonstrieren. 1550 Kilometer fuhr er, um in Charlottesville mitmarschieren zu können. Charlottesville, jene Stadt in Virginia, wo der Abriss eines Konföderierten-Denkmals zu einem Aufmarsch von Rechtsradikalen führte; einer von ihnen pflügte mit seinem Auto durch den linken Gegenprotest und tötete eine 32-Jährige. "
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Kanjaksha Kumar Katta erfüllt sämtliche Klischees des White Trash – der ungebildeten, arbeitslosen, weissen, ruralen Unterschicht der USA, die bis heute johlend hinter Trump steht. Nur eines passt nicht: KKK ist nicht weiss. Seine Eltern stammen aus Indien. Das Bild, auf dem er im Frühling in New Orleans in voller Kampfmontur zwischen seinen als Konföderierten verkleideten Mitstreitern posierte, schaffte es bis ins indische Fernsehen. "
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "KKK und seine schwangere Freundin sind Mitglieder der Louisiana Patriots – einer von rund 300 paramilitärischen Gruppierungen in den USA, die sich rüsten für den kommenden Bürgerkrieg. Linksextreme Gruppen, rechtsextreme Gruppen. Hier die Redneck Revolt, dort die League of the South. Alle massiv bewaffnet. Unter ihnen viele Ex-Soldaten."
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "KKK war siebzehn Jahre alt, als er als Scharfschütze nach Afghanistan ging. Zwölf bestätigte Abschüsse von menschlichen Zielen. Das Militär sei scheisse gewesen. Und geil, denn: fast nur Männer unter sich und endlos Munition. Auf seinem rechten Unterarm steht das Wort «Infidel», Ungläubiger – in arabischer Schrift. Auf seinem linken Oberarm: «I love bacon», ebenfalls in Arabisch. "
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Eine Tochter streckt den Kopf in den Wohnwagen. Was sie mit dem Öl aus der Fritteuse machen soll? Kipp es ins Gebüsch, meint Mutter Shirloa."
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "KKK ist Hindu. Ich frage, wie er es finde, dass die Gruppen in Chorälen über Juden herzogen. Er sagt, es sei idiotisch, jemanden wegen seiner Religion oder seiner Hautfarbe zu diskriminieren – «bis auf Muslime, die sind der Feind». Er ist überzeugt, dass es bei Rallys wie denjenigen in Charlottesville nicht um Ethnien geht. Er marschiere gegen den Kommunismus und für möglichst wenig Staat und Gesetz. Die Denkmäler der Generäle, die abgerissen werden sollen? Für ihn sind es Kriegsveteranen, die für ihr Land ihr Leben riskiert haben und deren Andenken man nun in den Dreck zieht."
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Nein, er sei nicht einverstanden mit den Rassisten, den Nazis, dem Klan. Aber er sei bereit, ihre Redefreiheit mit seinem Leben zu verteidigen. «Voltaire», sage ich. «Huh?», fragt er. Never mind."
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Gerade kommt KKK aus Houston und will nun weiter nach Florida: Hurrikanhilfe. Das heisst für ihn, schwer bewaffnet durch die Strassen zu patrouillieren und das Privateigentum Fremder gegen Plünderung zu schützen."
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Das nächste Rally, die nächste Demonstration von Rechtsradikalen, ist fest geplant. Dieses Mal in New Orleans, das Motto: «Unite the Right». Das wird ein Spass, sagt KKK. Ja, sagt auch er, es werde einen Bürgerkrieg geben. Er hoffe es. Kurz zögert er. Dann: Es sei nötig. So gehe das nicht weiter. All diese Arschlöcher, die mit ihren Gesetzen guten, ehrlichen Männern vorschreiben wollen, was sie zu tun hätten. Ich frage KKK was er tun würde, wenn er keine Feinde mehr hätte. Er grinst spöttisch. «Es gibt immer einen Feind.»"
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Später, im Garten, posiert Ethen, sein neunjähriger Sohn, mit einem der halbautomatischen Gewehre seines Vaters, einem AR-15. Die Waffe ist fast so gross wie das Kind. Es wächst schon noch hinein, denke ich. Ich blicke in die brennende Sonne über Louisiana, presse die Lider zusammen. Rotes Rauschen. Egal was passiert, dieses Kind wird in einer Welt voller Feinde aufwachsen. "
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "children": [
-                      {
-                        "alt": "Ethen mit halbautomatischem Gewehr",
-                        "title": null,
-                        "type": "image",
-                        "url": "https://cdn.republik.space/s3/republik-assets/github/republik/article-usa-3-deep-south/images/5f3573e0e02e01a6825bd30bdbd3bf014a9666c7.jpeg?size=2563x3840"
-                      }
-                    ],
-                    "type": "paragraph"
-                  },
-                  {
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Ethen ist neun und weiss, wie man ein halbautomatisches Gewehr abfeuert. Wenn Papas Gewehr ausser Reichweite ist, nimmt er ein Stück Holz in die Hand: seinen «Kommunistenstock».  "
-                      }
-                    ],
-                    "type": "paragraph"
-                  }
-                ],
-                "data": {},
-                "identifier": "FIGURE",
-                "type": "zone"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Auf der Rückfahrt zittere ich vor Erschöpfung. Sich auf jemandem wie KKK einzulassen, zwingt mich in die Knie. Er sagt, die Hautfarbe von Menschen sei ihm gleichgültig. Dass er Rosa Parks, die grosse Civil-Rights-Kämpferin, verehre. Und trotzdem marschiert er an der Seite von Nazis. Ja, lässt sich als Quotenschwarzer instrumentalisieren, als Blackwasher. Hasst Muslime. Er hat uns vom Hochgefühl erzählt, als er das erste Mal eine Waffe abfeuerte. Hätte er genauso gefühlt, wenn er nicht der schmächtige Sohn indischer Einwanderer gewesen wäre? Aussenseiter, die auf Aussenseiter dreschen – das älteste Gesetz eines jeden Pausenplatzes. "
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Während vor dem Autofenster die Hafenkräne, Backsteinkamine und Autobahnschlaufen vorbeiziehen, denke ich laut darüber nach, was es mit einem Menschen macht, wenn er mit siebzehn töten lernt; ob KKK ohne acht Jahre Krieg ein anderer geworden wäre."
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Du sagst: «Nein.»"
-                  },
-                  {
-                    "type": "break"
-                  },
-                  {
-                    "type": "text",
-                    "value": "«Dann hältst du ihn einfach für dumm?»"
-                  },
-                  {
-                    "type": "break"
-                  },
-                  {
-                    "type": "text",
-                    "value": "Du sagst: «Ja.»"
-                  },
-                  {
-                    "type": "break"
-                  },
-                  {
-                    "type": "text",
-                    "value": "«Ist seine Dummheit nicht die Summe seiner Biografie?»"
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Du sagst, das spiele keine Rolle. Sich mit solchen Menschen abzugeben, sei vergebene Liebesmühe. Du sagst, dass du dir nicht vorstellen kannst, wie KKK und seine wirren Aussagen Platz in dieser Geschichte haben sollen. Während des Interviews hast du keinen Hehl aus deiner Ablehnung für ihn gemacht. Umso freundlicher musste ich zu KKK sein, um zu verhindern, dass er zumacht oder – noch schlimmer – uns mit der Flinte von seinem Grundstück jagt.  "
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Jetzt würde ich dich gerne etwas fragen: Wie mit Menschen umzugehen ist, die dumm geboren werden und nichts dazugelernt haben. Ich würde dir gerne sagen, dass ich glaube, dass KKK nicht weniger Mensch ist als ich. Dass ich glaube, dass er nicht böse ist, nur fernab von gut. Dass ich es für gefährlich halte, ihn als Monster zu entmenschlichen. «Self-fulfilling prophecy», würde ich dir sagen. "
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Ich höre "
-                  },
-                  {
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "«Tango Till They’re Sore»"
-                      }
-                    ],
-                    "title": null,
-                    "type": "link",
-                    "url": "https://open.spotify.com/user/21r3ehh7y7zek5vx4lgaemyhy/playlist/5Wu9DtzaIAJOByGatrXvbk?si=2GVWDD_aTwaU4tI_TXNFjg"
-                  },
-                  {
-                    "type": "text",
-                    "value": " von Tom Waits und suche deinen Blick im Rückspiegel. Auch wenn sich unsere Blicke treffen würden, sähen wir einander in diesem Moment nicht. Zum ersten Mal ahne ich, dass wir nicht nur eine Meinungs-, sondern eine Haltungsverschiedenheit haben. "
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "An der Tankstelle bitte ich dich, ein Bild von mir zu schiessen, wie ich aus einem Bier trinke, das in einer Papiertüte steckt. Ich poste das Bild mit einem smarten Spruch auf Instagram. "
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Am Abend sage ich dir, dass ich von nun an getrennte Zimmer möchte."
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Irgendwann, lange nach dem Gespräch, dass du und ich nie führten, postet Katta auf Facebook: «Ich wollte immer schon ein Soldat sein. Jetzt kann ich nichts mehr anderes sein. Ich bereue es zutiefst. Der einzige Ort, an dem ich kein Versager bin, ist das Schlachtfeld. Das Monster, das ich bin, wird mich für immer jagen.» "
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Frankenstein 3.0"
-                  }
-                ],
-                "depth": 2,
-                "type": "heading"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Tag 12, "
-                  },
-                  {
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Yvonne Kunz"
-                      }
-                    ],
-                    "title": "Yvonne Kunz",
-                    "type": "link",
-                    "url": "/~ykunz"
-                  },
-                  {
-                    "type": "text",
-                    "value": ", New Orleans, Louisiana"
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Das halbautomatische Gewehr liegt auf dem Bett, auf dem Tisch stehen Plastikbecher mit aufgedruckten Konföderierten-Flaggen. Wir haben uns zu fünft in einen winzigen Trailer auf der Wiese neben dem Blechhaus von Kanjaksha Kumar Katta, aka KKK, gezwängt. Wehmütig denkt der Ex-Militär an seine Zeit im Krieg von Afghanistan zurück. «Wir sind Männer, wir hatten unsere Gewehre.» Und es scheint, als wollte er heute seinen Lifestyle so nah wie möglich an den Kriegsalltag heranführen. Er braucht Testosteron und Adrenalin für sein High. Für ihn wird der Krieg nie zu Ende sein."
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Er sieht sich als den lockersten Kerl aller Zeiten. Irgendwie sind alle anderen schlecht drauf. Rassismus, Homophobie, Sexismus? Alles gar kein Thema. Im Militär habe er mit Schwulen, Frauen und sogar Transgender-Leuten gedient. «Einen feuchten Scheiss kümmerte uns das. Wir sind alle gleich, wir sind alle Menschen.» Aber dann musste Obama ja unbedingt die Praxis «Don’t ask, don’t tell» beenden: Seit 2010 können alle offen dienen. Niemand muss mehr seine sexuelle Identität verstecken. Das habe viel Wut entfacht. "
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "An diesem Punkt stellt sich mir immer dieselbe Frage: Warum sollen angebliche Selbstverständlichkeiten ein solches Problem sein, wenn sie Gesetz werden? Und von da an ist es immer dieselbe Leier: Das Problem ist dann nicht die offenbar doch verbreitete Homophobie, sondern liberale Identitätspolitik, die gleiche Rechte für alle festschreiben will. "
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "children": [
-                      {
-                        "alt": "KKK in der Tür seines Trailers",
-                        "title": null,
-                        "type": "image",
-                        "url": "https://cdn.republik.space/s3/republik-assets/github/republik/article-usa-3-deep-south/images/1ef88fef18f38bdd2c0b70c56b71ca66d64cc9c9.jpeg?size=3840x2563"
-                      }
-                    ],
-                    "type": "paragraph"
-                  },
-                  {
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Der Wohnwagenanhänger, in dem KKK und seine schwangere Freundin schlafen, ist immer mit dabei, wenn die beiden zu rechtsradikalen Demonstrationen ausserhalb Louisianas fahren.    "
-                      }
-                    ],
-                    "type": "paragraph"
-                  }
-                ],
-                "data": {
-                  "size": "breakout"
-                },
-                "identifier": "FIGURE",
-                "type": "zone"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Trump ein Rassist? Kann nicht sein, gleich zweimal hat der doch eine Ausländerin geheiratet. Er zitiert einen Fake-News-Artikel: Trump habe gar der legendären schwarzen Bürgerrechtlerin Rosa Parks eine Medaille verliehen. Und die Börsenkurse seien auch so hoch wie nie. Ein ehrlicher Mann sei das, dieser Trump, der all seine Wahlversprechen einhalte. Und was ist mit der Steuererklärung, frage ich, die er veröffentlichen wollte. «Okay», grinst KKK. «Ich rede von den Wahlversprechen, die mir wichtig sind.» "
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "In den Synapsen dieses Mannes lebt ein neuartiger Frankenstein, ein Neuro-Monster aus der virtuellen Welt hat das Kommando übernommen. Frankenstein steht im gleichnamigen Roman ja auch als Warnung vor der Entgrenzung menschlicher Vernunft – die sich dann selbst zu Gott macht und anmasst, neue Geschöpfe zu kreieren. "
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "KKK wirkt wie eine Cartoonfigur, deren Denken sich aus Versatzstücken der Rechtsaussen-Propagandakiste und gängigen Feindbildern von illegal zugewanderten Sozialisten und Muslimen wie Obama zusammensetzt. All das wird zusammengehalten von einem Geflecht aus paläokonservativen Werten wie Minimalstaatlichkeit und Antikommunismus und machoider Männlichkeit. Wie Blut fliesst der stete Redefluss ultrapatriotischer Talkshow-Hosts und Facebook-Hass durch seine Hirnwindungen. Für Typen wie ihn ist die Verfassung die Heilige Schrift der USA. Und sie legen sie so strikt und eindimensional aus wie Islamisten den Koran. "
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Soweit ich die politische Grundidee der «Second Amendment people» verstanden habe, sehen sich diese bewaffneten Bürger als eine Art fünfte Macht im Land. Allzeit bereit, einen übergriffigen Staat in die Schranken zu weisen – möglichst mit dem Arsenal einer Armee. "
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Behaupten sie. Doch dann verteidigen sie doch nur wieder ihre Vorstellung von Amerika gegen alles, was anders denkt. Auch KKK sieht sich derzeit als Unterstützer einer Polizei, die von den Kommunisten bedroht ist. Unterstützung für die Border Patrol gegen all die Einwanderer. Gegen den IS. Sein derzeitiger Lieblingsfeind: die Antifa. Deshalb ist er Anti-Antifa. Ist so einer schon ein Faschist oder nur eine verlorene Seele?"
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Nach unserem Gespräch stehen die andern noch bei KKK und spielen mit seinen Kindern, die wie ein Schwarm Fliegen um die Erwachsenen surren. Wie ich höre, wollen wir morgen Abend Alligatoren jagen und Bier trinken mit KKKs Truppe. Fischen mit dem Feind? Oh, please no. "
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Derweil versuche ich die ältere der beiden Frauen des 29-jährigen Freestyle-Milizen in ein Gespräch zu verwickeln. Sie hat unseren eineinhalbstündigen Besuch mit einem Baby auf dem Arm aus dem Hintergrund beobachtet. Auch jetzt weicht sie meinem Blick und meinen Worten aus, bis wir beide nur noch auf das Baby schauen. «Neun Monate», sagt sie. Wie es heisst? «Das ist KKK jr.» Ein Baby namens KKK jr. "
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Als ich ins Auto steige, kann ich mich nicht entscheiden, ob ich mit schwarzem Humor oder suizidaler Bestürzung reagieren soll. Wir alle sind völlig platt, wie wir vom verwahrlosten Plot Land der Katta-Sippe wegfahren. Ist das jetzt eine durchgeknallte Flintstones-Nummer oder der Abgrund der Sinnlosigkeit, in den die Welt gerade stürzt? Anja zittert, flucht und stöhnt. Reto schüttelt stumm den Kopf."
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "children": [
-                      {
-                        "alt": "Anja und Yvonne unterhalten sich mit KKK und seiner Frau",
-                        "title": null,
-                        "type": "image",
-                        "url": "https://cdn.republik.space/s3/republik-assets/github/republik/article-usa-3-deep-south/images/a64cd0416342487d7e2db635f0c5bcabd0b531c9.jpeg?size=3840x2563"
-                      }
-                    ],
-                    "type": "paragraph"
-                  },
-                  {
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Meinungs- oder Haltungsverschiedenheit? Yvonne Kunz (l.) und Anja Conzett sind sich nicht einig, ob man Menschen wie KKK und seiner Freundin Shirloa zuhören sollte oder nicht. "
-                      }
-                    ],
-                    "type": "paragraph"
-                  }
-                ],
-                "data": {},
-                "identifier": "FIGURE",
-                "type": "zone"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Hic sunt alligatores"
-                  }
-                ],
-                "depth": 2,
-                "type": "heading"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Tag 13, "
-                  },
-                  {
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Anja Conzett"
-                      }
-                    ],
-                    "title": "Anja Conzett",
-                    "type": "link",
-                    "url": "/~acon"
-                  },
-                  {
-                    "type": "text",
-                    "value": ", Lake Charles, Louisiana"
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Bevor wir die Stadt verlassen, bitte ich darum, vor einer der Konföderierten-Statuen anzuhalten, für die KKK auf die Strasse geht. Die Bronzebüste auf der vier Meter hohen Steinsäule zeigt General Albert Pike, Brigadier des Konföderierten Heeres, der drei Regimenter der indianischen Kavallerie, berüchtigt für das Skalpieren von Gegnern bei lebendigem Leib, anführte. Und der verdächtigt wird, ein Mitgründer des Ku-Klux-Klans zu sein. Du bleibst im Auto."
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Die Büste steht an einer viel befahrenen Strasse, am Eingang eines Arbeiterviertels. Zwei ältere schwarze Herren sitzen auf der anderen Seite des Platzes im Schatten der Platanen und trinken Bier aus der Papiertüte. Ich setze mich zu ihnen auf die Sitzbank und frage, ob sie wüssten, wer der Mann sei. Sie wissen es nicht. Ich erkläre es ihnen. Joe verzieht das Gesicht. Nicht schon wieder die Statuendiskussion. Er findet es falsch, dass die Denkmäler abgerissen werden, das sorge nur für böses Blut. Sein Freund Tucker ist anderer Meinung. Er erzählt mir, dass er erst in der Highschool von der Geschichte der Sklaverei in den USA erfuhr, damals, als die Jim-Crow-Segregationsgesetze noch galten."
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Tucker hält es für falsch, die Statuen ohne Kontext stehen zu lassen. Und er hält es für falsch, sie abzureissen. Er wünschte sich, sie würden in ein Museum gestellt, in den richtigen Rahmen gesetzt werden. Ich sage ihm, dass das der beste Lösungsvorschlag ist, den ich bislang gehört habe. Joe bietet mir einen Schluck aus seiner Dose an. Dann sage ich ihnen, wie schockiert ich über den Rassismus sei, der mir bislang auf meiner Reise begegnet sei. Dass ich mich frage, was passieren müsse, damit sich das ändere. Tucker lächelt mich mit seinen gelben, krummen Zähnen an. «Oh honey, das wird sich niemals ändern.» Jetzt brauche ich den Schluck aus Joes Dose."
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Während ich zum Auto zurücklaufe, frage ich mich, wie verheerend ein Umstand sein muss, damit er die höchste Stufe der Dringlichkeit erreicht. Rede ich etwa gerade in einem fort davon, dass man mehr Rettungsschwimmerinnen anstellen sollte, während just vor meinen Augen jemand ertrinkt? Ist es das, was du meinst, wenn du sagst, Rassismus sei das drängendste Problem der USA? Ich würde dich gerne fragen, aber wir sprechen nicht mehr über dieses Thema."
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "children": [
-                      {
-                        "alt": "Denkmal von Albert Pike",
-                        "title": null,
-                        "type": "image",
-                        "url": "https://cdn.republik.space/s3/republik-assets/github/republik/article-usa-3-deep-south/images/a6d8dbfded42a53be9aaec0eb65b97a0fda3b7bc.jpeg?size=3840x2563"
-                      }
-                    ],
-                    "type": "paragraph"
-                  },
-                  {
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Gegen den Abriss von Denkmälern wie diesem von General Albert Pike marschiert KKK bis an die Zähne bewaffnet auf. "
-                      }
-                    ],
-                    "type": "paragraph"
-                  }
-                ],
-                "data": {
-                  "size": "breakout"
-                },
-                "identifier": "FIGURE",
-                "type": "zone"
-              },
-              {
-                "children": [
-                  {
-                    "children": [
-                      {
-                        "alt": "Hotelobby mit ausgestelltem Auto",
-                        "title": null,
-                        "type": "image",
-                        "url": "https://cdn.republik.space/s3/republik-assets/github/republik/article-usa-3-deep-south/images/50a5f815a2b8704820580d6808ef7759bdbb0aa5.jpeg?size=3840x2565"
-                      }
-                    ],
-                    "type": "paragraph"
-                  },
-                  {
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Der Zwangsstopp im Casino-Hotel zeigt, was Amerikas untere Mittelklasse unter Luxus versteht. Trump-Ästhetik und die Hoffnung auf schnellen Reichtum. "
-                      }
-                    ],
-                    "type": "paragraph"
-                  }
-                ],
-                "data": {
-                  "size": "breakout"
-                },
-                "identifier": "FIGURE",
-                "type": "zone"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Auf dem Highway zwischen New Orleans und Houston stehen wir vier Stunden im Stau. Eine Frontalkollision, drei Unfallwagen, sechs Tote. Die Hitze der Abendsonne lässt die Moskitos in Bällen aus dem hohen Sumpfgras steigen. Ich laufe neben dem rollenden Auto her und rauche eine Zigarette, aus den Lautsprechern klingt Bob Segers «Running Against the Wind», und ich frage mich, was Tucker erlebt haben muss, dass er die Hoffnung auf eine gleichgestellte Gesellschaft aufgegeben hat. Und wie viele Alligatoren wohl in den Sümpfen neben der Strasse lauern. Bis der Stau sich löst, ist es Nacht, wir müssen am Rand des Highways übernachten."
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Der Parkplatz des «L’Auberge Casino Resort» ist gefüllt mit Offroadern, Pick-up-Trucks und Traktoren, die unseren geräumigen Mietwagen wie eine Sardinenbüchse aussehen lassen."
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Die goldene Fassade des Hotelresorts gleisst in der Abendsonne. 26 Stockwerke, tausend Zimmer, Pool, 18-Loch-Golfanlage, sechs Restaurants. In der Lobby steht ein SUV auf Plastikfelsen, Hauptgewinn einer Lotterie, im Kamin brennt echtes Feuer auf unechtem Holz. Amerikaner in Hawaiihemden und Flipflops führen ihre Hündchen in den Gängen spazieren. Ein Hotel, wie es von Trump hätte erbaut werden können. Stellt sich so die untere amerikanische Mittelklasse Luxus vor? Ein deprimierender Gedanke."
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Wir essen im asiatischen Restaurant, das den berauschend unambitionierten Titel «Asia» trägt, und ziehen uns erschöpft auf unsere Zimmer zurück. Ich kann nicht schlafen. KKK und Pater Larry Beane lassen mich nicht los. Meine Gedanken kreisen darum, wie das Internet, die sozialen Medien zur fortschreitenden Granularisierung der Gesellschaft beitragen."
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Ich komme auf keinen grünen Zweig, zu gross die Erschöpfung. Ich ziehe mich wieder an und laufe durch die dunkelgrünen Gänge zurück in die Lobby. Es ist zwei Uhr, die einzige Bar, die noch offen hat, ist die des Casinos. Die Spielautomaten blinken, quietschen, scheppern, Garçons im roten Jackett rufen die Nummern am Roulettetisch aus. 24, Rot gewinnt. Eine Bachelorparty mit bunten Papphüten jubelt über dem Würfeltisch, Menschen stieren, ohne zu blinzeln, in die Bildschirme von einarmigen Banditen."
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Casinos widern mich an. Plastikgoldene Opiumhöhlen. Ich beschliesse, mir lieber am Kiosk ein Bier zu kaufen. An der Kasse hinter mir steht ein Mann, ein paar Jahre älter als ich, Shorts, Baseballcap, Palmblätter auf dem T-Shirt, blonder Bart. Er sieht aus wie ein zu alt gewordenes Mitglied einer College-Bruderschaft aus einem Hollywoodfilm. Er schwankt schon ein bisschen. Deutet auf meine Brüste und lallt: «Madam, verzeihen Sie die Unterbrechung, aber Sie scheinen einen ausgezeichneten Musikgeschmack zu haben.» Ich erinnere mich daran, dass ich ein The-Doors-T-Shirt trage, und fordere ihn heraus."
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "«Led Zeppelin? ZZ Top? Cream?»"
-                  },
-                  {
-                    "type": "break"
-                  },
-                  {
-                    "type": "text",
-                    "value": "«Of course.»"
-                  },
-                  {
-                    "type": "break"
-                  },
-                  {
-                    "type": "text",
-                    "value": "«Bestes Album von Patti Smith?»"
-                  },
-                  {
-                    "type": "break"
-                  },
-                  {
-                    "type": "text",
-                    "value": "«‹Gone Again›.»"
-                  },
-                  {
-                    "type": "break"
-                  },
-                  {
-                    "type": "text",
-                    "value": "«Lieblingssong von Leonard Cohen?»"
-                  },
-                  {
-                    "type": "break"
-                  },
-                  {
-                    "type": "text",
-                    "value": "«‹Bird on a Wire›.»"
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Motherfucker."
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Wir beschliessen, dass wir einen Abend lang Freunde sein werden, und laufen zum Steg hinter dem Hotel, der zum Industriehafen führt. Sein Name ist Colin. Er macht sich darüber lustig, dass ich meine Beine nicht ins trübe Brackwasser baumeln lasse, weil ich Alligatoren darin vermute. Ich glaube ihm nicht, dass er Manager bei JPMorgan Chase, der grössten Bank der USA, ist – zuständig für die Bundesstaaten Texas, Oklahoma und Louisiana –, bis er mir triumphierend sein Linkedin-Profil zeigt. Ich schäme mich für meine Vorurteile und erzähle ihm von dem Disput, der uns seit Atlanta begleitet. Race or class? Colin überlegt einen Augenblick. Und sagt, darauf habe er keine Antwort. Aber es fallen ihm zwei Geschichten ein."
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Seine Bank gibt hin und wieder Motivationskurse an Schulen in armen Gegenden. Colin fand das eine gute Sache und meldete sich freiwillig. Um die Kinder bei der Stange zu halten, überlegte er sich, dass er jede Frage, die ein Kind stellte, mit einem Dollar belohnt. Was er nicht wusste: Die Schule war in einem rein schwarzen Viertel. Da stand er also vor einer Klasse schwarzer Kinder, wedelte mit Dollarnoten und fühlte sich schrecklich. Ein reicher weisser Mann, der armen schwarzen Kindern erzählte, was sie zu tun hätten. Er hatte dort nichts zu suchen."
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Die zweite Geschichte geht so: Colin kauft immer wieder dasselbe Festzelt beim selben Grosshändler für seine Barbecues. Das Zelt hat Mängel, schon ein halbes Dutzend Mal hat er es zurückgebracht, die Kundenbetreuung hat es jedes Mal ohne Beanstandung ersetzt. Einmal trug er statt seines Hugo-Boss-Anzugs einen ausgeleierten Sweater. Der Kundendienst verweigerte die Rücknahme. Mehr noch, als er das Zelt wieder heraustragen wollte, kam die Security und wollte die Quittung sehen. Er kam sich vor wie der letzte Dreck. Kaum hatte er – rein äusserlich – seine Klassenzugehörigkeit gewechselt, herrschte ein anderer Ton. Und galten plötzlich andere Gesetze."
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Der Portier will den Hintereingang des Hotels schliessen und bestätigt, dass Alligatoren im Brackwasser schwimmen. Colin begleitet mich zum Fahrstuhl. Dass er mich nicht fragt, ob er noch mit ins Zimmer kommen darf, dass die Umarmung keine Sekunde zu lange dauert, seine Hand nicht auf meine Hüfte rutscht, rechne ich ihm hoch an. Gleichzeitig frustriert es mich, dass ich das Gefühl habe, es ihm hoch anrechnen zu müssen. Ich schlafe zu Leonard Cohens "
-                  },
-                  {
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "«Bird on a Wire»"
-                      }
-                    ],
-                    "title": null,
-                    "type": "link",
-                    "url": "https://open.spotify.com/user/21r3ehh7y7zek5vx4lgaemyhy/playlist/5Wu9DtzaIAJOByGatrXvbk?si=2GVWDD_aTwaU4tI_TXNFjg"
-                  },
-                  {
-                    "type": "text",
-                    "value": ", schlafe tief und fest. "
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Styropor und Rotwein"
-                  }
-                ],
-                "depth": 2,
-                "type": "heading"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Tag 13, "
-                  },
-                  {
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Yvonne Kunz"
-                      }
-                    ],
-                    "title": "Yvonne Kunz",
-                    "type": "link",
-                    "url": "/~ykunz"
-                  },
-                  {
-                    "type": "text",
-                    "value": ", Lake Charles, Louisiana"
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Wir wollten es an diesem Tag bis nach Texas schaffen. Doch ein riesiger Stau nach einem Unfall bringt unsere Fahrt jäh zum Stillstand. So lange, bis die Leute rauchend auf der Fahrbahn stehen. Als wir endlich weiterfahren, ist die Stimmung im Auto gedrückt. Der Anblick der aufgefrästen Fahrzeuge im Strassengraben, die Lichter all der Ambulanzen und Polizeiwagen, die in das letzte Licht des Tages blinken, macht uns flau. Fiebrig tippen alle auf ihren Telefonen auf der Suche nach dem besten Hoteldeal. Wir landen in Lake Charles, im «L’Auberge Casino Resort», einem unsäglichen Unort. Eine trashige Luxusattrappe irgendwo im Nirgendwo an der Grenze zwischen Louisiana und Texas. Der Versuch, edel zu wirken, muss bei allen mit zentraleuropäischem Stilempfinden eine sofortige Depression auslösen. "
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "children": [
-                      {
-                        "alt": "vielspuriger Freeway mit viel Verkehr",
-                        "title": null,
-                        "type": "image",
-                        "url": "https://cdn.republik.space/s3/republik-assets/github/republik/article-usa-3-deep-south/images/8e04a60fb9a3c7e7b2b03a4a54f9d7ae7269d5c3.jpeg?size=3840x2563"
-                      }
-                    ],
-                    "type": "paragraph"
-                  },
-                  {
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Tausende kehren nach Hurrikan Harvey ins zerstörte Houston zurück. Besonders hart vom Sturm getroffen sind die tiefer liegenden Quartiere der mehrheitlich dunkelhäutigen Arbeiterklasse. "
-                      }
-                    ],
-                    "type": "paragraph"
-                  }
-                ],
-                "data": {
-                  "size": "breakout"
-                },
-                "identifier": "FIGURE",
-                "type": "zone"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Ich war bereits nicht mehr ganz bei Sinnen, als ich im chinesischen Restaurant des Tausend-Betten-Hauses einen Rotwein bestelle. Acht Dollar drücke ich der Frau an der Theke dafür in die Hand, sie reicht mir einen Styroporbecher mit Plastikdeckel, in dessen Mitte ein Strohhalm steckt. Na dann prost. Durch die Gänge schlendern die vielen Gäste, fast ausschliesslich übergewichtige Weisse, vorbei an Kleiderläden und Souvenirshops, über Böden, die ausschliesslich von Afroamerikanern gewischt werden. Reto und Anja sitzen schon draussen, im Garten hinter dem Hotel. Es ist spät, die Tikibar schon lange zu, nur noch das Pool-Licht erhellt unsere Gesichter. Die beiden lachen mich mit je einem Bier in der Hand aus. Ich bemühe mich um Belanglosigkeit, stosse mit meinen Mitreisenden auf meine ultimative Erfahrung amerikanischer Stillosigkeit an. Going all the way, baby."
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Fasziniert grüble ich der Tatsache nach, dass sich die Geschmäcke von Styropor und schlechtem Merlot in meinem Mund nicht zu etwas Neuem verbinden, sondern sauber nebeneinander existieren. Wie Anja und ich. Wir hatten gedacht, wir könnten uns zu einer magischen Mischung vereinen. Sie, die feurige Reporterin mit dem Instinkt eines Spürhunds, ein quecksilbriger Mensch des Moments. Ich, die kühle Beobachterin, die abends in den mitgeschleppten Büchern die grossen Zusammenhänge, den Kanon sucht. Aber wir schaffen es immer weniger, uns zu verbinden. Wir stossen einander ab wie elektrisch gleichartig geladene Teilchen. Sosehr wir uns bemühen, unsere Persönlichkeiten, Worte, Argumente perlen voneinander ab.  "
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Houston, Texas"
-                      }
-                    ],
-                    "depth": 3,
-                    "type": "heading"
-                  },
-                  {
-                    "children": [
-                      {
-                        "children": [
-                          {
-                            "alt": null,
-                            "title": null,
-                            "type": "image",
-                            "url": "https://cdn.republik.space/s3/republik-assets/github/republik/article-usa-3-deep-south/images/99ff8e116e2ec4f89f64ba9abfe4242e106ba54a.png?size=748x508"
-                          }
-                        ],
-                        "type": "paragraph"
-                      }
-                    ],
-                    "data": {},
-                    "identifier": "FIGURE",
-                    "type": "zone"
-                  }
-                ],
-                "data": {
-                  "figureSize": "M"
-                },
-                "identifier": "INFOBOX",
-                "type": "zone"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Guns and Gender"
-                  }
-                ],
-                "depth": 2,
-                "type": "heading"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Tag 14, "
-                  },
-                  {
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Yvonne Kunz"
-                      }
-                    ],
-                    "title": "Yvonne Kunz",
-                    "type": "link",
-                    "url": "/~ykunz"
-                  },
-                  {
-                    "type": "text",
-                    "value": ", Houston, Texas"
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Warum eigentlich bewaffnen sich nun auch schwarze Frauenrechtlerinnen? Frauen wie Niecee X. Sie hat die Black Women’s Defense League gegründet, eine feministische Eingreiftruppe am Rande der Mehrheitsgesellschaft – eine militante Feministin, Antikapitalistin, Youtube-Philosophin und Community-Aktivistin. Die Gründungsmission: «move out services». Mit ihren fünfzehn Mitstreiterinnen bewacht sie misshandelte Frauen am heikelsten Punkt ihrer gewalttätigen Beziehungen: wenn sie gehen. "
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Wochenlang versuchen wir, einen Interviewtermin mit ihr zu vereinbaren. Niecee sagt zu, ab, wieder zu, und schliesslich: «Okay, kommt nach Houston, kommt nach Tidwell.» Das ist, wie wir auf der zweieinhalbstündigen Fahrt feststellen, ein von Hurrikan Harvey zwei Wochen zuvor zerstörtes Viertel am Stadtrand. Im Schlamm stecken Autos, vor den Häusern türmen sich Möbel, Kleidung, Puppen, Tapeten, Teppiche. Alles muss raus. Binnen Tagen würde in diesem feuchtheissen Klima alles zu schimmeln beginnen. "
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Und dort steht sie endlich. Niecee X, 26 Jahre alt. Eine 1-Meter-80-Frau mit der körperlichen Wucht einer Schwerathletin, silbernen Dreadlocks, die Arme in die Seiten gestemmt. Sie hat Vögel auf die Hand tätowiert und einen Ring in der Nase. Ihren Van parkt sie quer über mehrere Felder. Sie gäbe eine tolle Marvel-Comic-Heldin. Für den alltäglichen Schmalspur-Rassismus hat Niecee keine Zeit – sie will das System zerschlagen. "
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "children": [
-                      {
-                        "alt": "Nahaufnahme von Niecee X",
-                        "title": null,
-                        "type": "image",
-                        "url": "https://cdn.republik.space/s3/republik-assets/github/republik/article-usa-3-deep-south/images/69c4f57d5bb7f3cb911a3a7e72d77a3f81763681.jpeg?size=2563x3611"
-                      }
-                    ],
-                    "type": "paragraph"
-                  },
-                  {
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Die Aktivistin Niecee X weiss sich in Szene zu setzen. Trotz unverhohlener Abneigung gegenüber Journalisten.  "
-                      }
-                    ],
-                    "type": "paragraph"
-                  }
-                ],
-                "data": {},
-                "identifier": "FIGURE",
-                "type": "zone"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Als wir auf sie zugehen, blickt sie abwartend, fast misstrauisch, lässt durchblicken, für wen sie uns hält: weiss, privilegiert, Medien. Bittet uns in dezenter Gereiztheit, unsere Kameras nicht einfach jedem ins Gesicht zu halten. Doch schon bald drückt bei ihr auch der Mindset des mediengewandten Millennials durch: Sie ist geschmeichelt vom Interesse der internationalen Presse.  "
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "«Was wollt ihr hier? Meine Perspektive auf die USA?», fragt sie. «Mit ihm solltet ihr reden», sagt sie und nickt hinüber zu einem Mann, der schon die ganze Zeit schräg hinter ihr steht. Eduardo ist ihr lokaler Kontakt, er folgt ihr wie ein Schatten. "
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Okay, let’s do it. Sogleich rattert Eduardo im latinoamerikanischen Stakkato los. «Man muss jeden Tag das Richtige tun. Jeden Tag! Und es gibt so viel zu tun, man weiss gar nicht, wo anfangen.» Weder Vertreter der Stadt noch der nationalen Katastrophenbehörde FEMA hätten sich nach dem Hurrikan hier blicken lassen. «Wir sind auf uns gestellt. Ich dachte, wir schaffen das nicht.» Dann kreuzte Niecee auf, mit ihrer Crew. «Die nahmen mir so viel Gewicht von den Schultern. It was crazy! It was cool!»"
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "children": [
-                      {
-                        "alt": "unversehrter Briefkasten inmitten von Trümmern",
-                        "title": null,
-                        "type": "image",
-                        "url": "https://cdn.republik.space/s3/republik-assets/github/republik/article-usa-3-deep-south/images/a3b6057f836b39eef9a84250457f2163298e7848.jpeg?size=3840x2563"
-                      }
-                    ],
-                    "type": "paragraph"
-                  }
-                ],
-                "data": {
-                  "size": "breakout"
-                },
-                "identifier": "FIGURE",
-                "type": "zone"
-              },
-              {
-                "children": [
-                  {
-                    "children": [
-                      {
-                        "alt": "Portrait von Eduardo",
-                        "title": null,
-                        "type": "image",
-                        "url": "https://cdn.republik.space/s3/republik-assets/github/republik/article-usa-3-deep-south/images/f1879660fefd3f1e7f62fd4707d8fdcd77421f3b.jpeg?size=3840x2563"
-                      }
-                    ],
-                    "type": "paragraph"
-                  },
-                  {
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Eduardo ist Schreiner und seit dem Hurrikan im Dauereinsatz in seinem Quartier. Zurück zu seinem Job will er auch nach den Aufräumarbeiten nicht. Er plant die Revolution durch Nachbarschaftshilfe.  "
-                      }
-                    ],
-                    "type": "paragraph"
-                  }
-                ],
-                "data": {
-                  "size": "breakout"
-                },
-                "identifier": "FIGURE",
-                "type": "zone"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "«Ahhh, thank you», schnurrt Niecee jetzt. Wir stehen neben ihrem Lieferwagen voller Windeln und Spielzeug, Putzzeug und Javelwasser. Gespendete Ware, die sie mit ihren Frauen aufgetrieben hat. Längst macht die Organisation alles Mögliche: Sie helfen Prostituierten oder helfen bei Katastrophen. Niecee schätzt, dass bis zu dreissig weitere Kleinorganisationen im Einsatz sind. The American Dream is dead, long live American Action. "
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Nachdem wir geholfen haben, ihre Hilfsgüter abzuladen, haben alle Hunger. Niecee listet auf: Burger King, Pizza Hut, Applebee’s. Die kleineren Restaurants hätten nach der Flut noch nicht wieder offen. «Das ist Amerika: Die finden immer einen Weg, dir diesen Frass reinzudrücken», sagt sie.   "
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Ob sie eine Waffe trage, fragen wir, als wir im Diner unsere Limonaden schlürfen. Ach, das sei nicht von Belang, sagt Niecee. Sie habe eigentlich gar keinen Bock «auf diesen ganzen Scheiss». Das Second Amendment sei ihr schnurzpiepegal. «Die Verfassung», sagt sie, «ist nichts weiter als eine Liste mit Privilegien für weisse Typen.» Sie trage Waffen, um zu überleben. Aber das sei nun mal die Realität, in der sie lebe. «Schwarze haben in den USA keine Rechte.» "
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Die Vorstellung von Schwarz und Weiss, die Hand in Hand wie ein Paar zum Altar in eine gleichberechtigte Zukunft schreiten, hat Niecee aufgegeben. Sie hat ihr Vertrauen verloren. Selbst wenn sie an die weissen Feministinnen denkt, blickt sie in leere Schnittmengen. In Niecees Wortschatz sind sie alle «neverlutionaries». Zu unterschiedlich seien all ihre Realitäten, zu unterschiedlich deshalb auch die Aufgaben, die sich stellen. Zu oft hat sie erlebt, dass bei den Weissen der ehrliche Wille, helfen zu wollen, am Unwillen scheitert, jegliche Privilegien loszulassen. Wohl deshalb können weisse Frauen in ihrer Organisation, bei der BWDL, nicht mitmachen. «Aber du kannst natürlich unsere Komplizin sein.»"
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Aus ihrer Sicht steht die weisse Hautfarbe für das System. Für das Privileg, das Weisssein noch immer mit sich bringt. Für Kolonialismus und Kapitalismus. Für die Fortführung eines Systems, das ohne die Unterdrückung von dunkelhäutigen Menschen nicht funktioniere. Rassismus ist in ihren Augen ein Werkzeug des Kapitalismus."
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Und die abgewrackte weisse Unterklasse auf den ausgehöhlten Kohlebergen im Norden? Der es mindestens so mies geht wie den Schwarzen in ihren Ghettos? «Die dann so doof sind und Trump wählen?», fragt Niecee zurück. Weil sie doch glauben, Börsenhaussen seien irgendwie Good News für sie. Wenn der Reichtum hinuntersickert, dann zu ihnen. Sich an sein Weisssein zu klammern, das ist für Niecee die grösste amerikanische Psychose überhaupt. "
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Bis hierhin wählt sie ihre Worte mit Bedacht, als würde sie in einem Politologieseminar dozieren. Sie hält diese Menschen nicht mal per se für Rassisten – aber der trumpsche Rassismus war auch kein Grund, ihn nicht zu wählen. Arbeiterromantik und gepolterte Kampfansagen an das Establishment reichten. «Sicher gibt es sehr arme Weisse.» Doch mit dem nächsten Satz überspringt ihre Stimme ein paar Tonlagen: «Aber man kann das nicht vergleichen! Wir reden von 200, 300 Jahren Sklaverei und Unterdrückung, von der gesetzlichen Rassentrennung im Süden.» Sie hält inne, bläst etwas Luft durch die Nase und guckt aus dem Fenster. Auf ihrem Public-Enemy-Shirt steht: «Fight the Power». "
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Was ist dein amerikanischer Traum, Niecee? Ohne Zögern sagt sie: «Dass wir gar nie hierhergebracht worden wären.» Sie blickt in eine Welt voll von «diesem ganzen neokolonialen Bullshit». Schwarze seien in einem 200-Jahre-Time-out gewesen, in dem sie sich nicht selbstbestimmt entwickeln konnten. «Wir müssen uns entkolonialisieren. Und das muss ein ganz bewusster Prozess sein.»"
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Wenn sich nichts ändert, fürchtet Niecee, wird irgendwann jede Gruppe dunkelhäutiger Menschen auf der Welt angepisst sein. Begreifen, dass sie die Mehrheit sind, dass sie ausgeplündert wurden. «All diese Leute werden nicht mehr mitmachen. Sie werden nicht mehr in euren Armeen dienen, wir werden uns einfach nehmen, was von Anfang an uns gehörte. Und es spielt keine Rolle, ob es dabei Tote gibt.» "
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Harte Worte, in ruhigem Ton vorgetragen. «Martin Luther King hat nett gefragt, Malcolm X war vehementer … und sie sind beide tot.» Aus Niecee spricht weniger gewaltbereite Wut als schlichte Resignation. Schwarze hätten auf so unterschiedliche Arten für ihre Rechte gekämpft. Dennoch bleibt die Unterdrückung tief im System verankert, ändert nicht im Grundsatz, nur in der Gestalt. Gestern gesetzliche Rassentrennung, heute Masseninhaftierung von Afroamerikanern. Wenns nicht anders geht, helfen vielleicht nur noch Waffen – wie bei den Frauen, die ihre Organisation BWDL vor deren gewalttätigen Männern rettet."
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Das Gespräch wird heftiger. Anja wehrt sich mit zunehmender Schimpfwort-Dichte gegen Niecees Behauptung, Weisse hätten es von vornherein besser. "
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Klar ist das weisse Privileg relativ, denke auch ich. Es kommt schon drauf an, wer fragt. In der Schweiz gehören wir beide sicher nicht zu den Gewinnerinnen der Klassenlotterie. Wir stammen beide aus einfachen Verhältnissen. Unsere Familienkassen sind nicht prall gefüllt, wir müssen uns erarbeiten, was wir haben. Aber global sind wir als Schweizerinnen dennoch privilegienverwöhnte Prinzessinnen. Look at us: Wir werden gerade dafür bezahlt, durch die USA zu cruisen und ein politisches Roadmovie zu schreiben. «Snobismus ist, das eigene Privileg nicht zu sehen», sagte Anja einmal. Ein kluger Satz, mit dem ich mich immer mal wieder selbst ertappe. "
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Ich führe solche Interviews nicht kontrovers. Mein Ansatz ist nicht, die Widersprüche meines Gegenübers festzunageln. In meiner Erfahrung sind sich die Niecees dieser Welt ihrer Widersprüche meist bewusst. Niecee ist in einem liebevollen, mittelständischen Elternhaus aufgewachsen, der Vater wählt republikanisch, die Mutter singt Jazz. Sie stellt ihr Privileg gar nicht infrage und weist darauf hin, dass ihre Identität als Frau und Afroamerikanerin mitunter auch Vorteile bringt. Ihr Gospel ist: Man muss sein Privileg nutzen! Als Waffe, wenn nötig, bis es kein Privileg mehr gibt. "
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Es ist auch für mich unangenehm, wenn plötzlich jemand die Privilegien des Weissseins anprangert. Die weisse Haut war bislang meist unsichtbar. Der globale Standard, die Norm. Millionen von Frauen in Afrika und Indien benutzen hautbleichende Mittel. Die acht reichsten Weissen besitzen so viel wie die ärmere Hälfte der Welt zusammen. Es geht nicht um weisse Schuld. Aber die verzweifelte Suche nach weisser Unschuld ist auch kein Weg. "
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Niecees Telefon surrt. Eine weitere Hilfslieferung der Black Women’s Defense League trifft ein. Niecee koordiniert am Telefon Termine und Treffpunkte. Sie muss los. Inzwischen ist die Dämmerung über Houston hereingebrochen, ein paar Blocks weiter rauscht die Autobahn. Beim Abschied vor der Tür sagt Niecee noch, sie sei ja sehr skeptisch gewesen, als wir sie kontaktiert hatten. Aber jetzt sei sie zuversichtlich, dass das was wird. "
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Ich bin es weniger denn je, als ich ihr und Eduardo zum Abschied zuwinke. Bis hierher hatten Anja und ich uns in den Interviews stets gut ergänzt. Wir hatten es geschafft, mit den unterschiedlichen Ansätzen verschiedene Facetten unserer Gegenüber einzufangen. Offen, interessiert. Nun hat sich die Stimmung gewendet, der Blickwinkel unserer Fragen wird enger, wir hören nicht mehr unvoreingenommen zu. Gesprächspartner werden zu Kronzeugen für den einen oder anderen Standpunkt – statt einen eigenen zu haben. Wir redeten mit Niecee, aber auch mit uns selbst. "
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Auch Anja wirkt ungewöhnlich zerknirscht. Wir reden eine Zigarette lang, dann ist es beschlossen: Wegen unserer so unterschiedlichen Perspektiven werden wir unsere Reportage nicht zusammen, sondern einzeln schreiben. Ich drehe mich weg, gehe zurück ins Restaurant, zur Toilette. Ich stosse die Schwingtür mit solcher Wucht auf, dass ich die Frau, die mir auf der anderen Seite entgegenkommt, fast ausknocke. Sorry. Ich haste an ihr vorbei, schliesse mich in ein Abteil und kicke den Tamponeimer gegen die Wand."
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Zu viel Wut. Zu wenig Wut"
-                  }
-                ],
-                "depth": 2,
-                "type": "heading"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Tag 14, "
-                  },
-                  {
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Anja Conzett"
-                      }
-                    ],
-                    "title": "Anja Conzett",
-                    "type": "link",
-                    "url": "/~acon"
-                  },
-                  {
-                    "type": "text",
-                    "value": ", Houston, Texas"
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Niecee X hat sich nach Malcolm X benannt und führt uns in ein Arbeiterviertel der Stadt Houston, das mehrheitlich von Latinos und Schwarzen bewohnt wird und besonders hart vom Hurrikan getroffen wurde. Hierhin bringt Niecee X die Hilfsgüter, die sie in ihrer Heimatstadt Dallas gesammelt hat. Windeln, Putzmittel, Schutzmasken, Werkzeug, Tücher, Arbeitskleidung. Während du draussen mit ihr sprichst, stehe ich dort, wo vor ein paar Tagen noch Abels Stube stand. Abel ist Vater zweier Kinder und hat alles verloren. Das Wasser stand bis zum Dach, auf dem die Familie mehrere Stunden ausharren musste, bis Nachbarn sie auf ihr Boot liessen."
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Er und sein Sohn sind gerade dabei, mit Schutzmasken die Wände herauszureissen. Es stinkt nach Schlamm und Abwasser. 80’000 Dollar, sagt Abel, betragen die Schäden, 40’000 habe die Versicherung zugesagt. Abels Geist ist dennoch ungebrochen. Er zeigt das einzige Stück im Haus, das die Flut überlebt hat: ein Ikonenbild der heiligen Mutter Maria. Das kleine Stück Papier wirkt unberührt, die Familienbilder, die daneben hingen, sind alle zerstört. Abel wertet das als Zeichen. Gott ist mit ihnen."
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "children": [
-                      {
-                        "alt": "Abel inmitten seiner aus dem Haus geretteten Habseligkeiten",
-                        "title": null,
-                        "type": "image",
-                        "url": "https://cdn.republik.space/s3/republik-assets/github/republik/article-usa-3-deep-south/images/3205fe1a6d100fe709a2657fe226483bd75e75f6.jpeg?size=3500x2336"
-                      }
-                    ],
-                    "type": "paragraph"
-                  },
-                  {
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Im Garten türmt sich Hab und Gut. Abel und seine Familie haben alles verloren. Dennoch ist der Verkäufer voller Hoffnung."
-                      }
-                    ],
-                    "type": "paragraph"
-                  }
-                ],
-                "data": {
-                  "size": "breakout"
-                },
-                "identifier": "FIGURE",
-                "type": "zone"
-              },
-              {
-                "children": [
-                  {
-                    "children": [
-                      {
-                        "alt": "Ables Sohn vor gerettetem Hausrat",
-                        "title": null,
-                        "type": "image",
-                        "url": "https://cdn.republik.space/s3/republik-assets/github/republik/article-usa-3-deep-south/images/a9b185e7cc8253a1dc23e066b72e630b79df663f.jpeg?size=3840x2563"
-                      }
-                    ],
-                    "type": "paragraph"
-                  },
-                  {
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Abels Sohn schweigt, während sein Vater von Zeichen und Wundern erzählt. Der Game-Designer hat drei Jahre Arbeit auf einer Harddisk verloren, weil die Familie entgegen den Prognosen nur noch ihre Haut retten konnte. "
-                      }
-                    ],
-                    "type": "paragraph"
-                  }
-                ],
-                "data": {
-                  "size": "breakout"
-                },
-                "identifier": "FIGURE",
-                "type": "zone"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Abel, der klein gewachsene Verkäufer, verweigert sich stoisch jeder Wut auf die Stadt, welche die Hochwasserablaufsysteme des Viertels, die direkt hinter seinem Haus verlaufen, nicht repariert hat, obwohl er und andere Nachbarn über Jahre mehrmals darauf hingewiesen haben, dass sie nicht mehr funktionieren. Er ist nicht wütend, dass die staatliche Nothilfe nur kurz durchs Quartier streunte, ohne mit jemandem zu sprechen. Abel freut sich lieber über die neu entstandene Nachbarschaftshilfe, die er gerade erlebt. Über den Mechaniker beispielsweise, der jetzt kostenlos die Fahrzeuge im Quartier flickt. Den Schreiner, der von Haus zu Haus zieht und Anleitungen gibt, wie die Häuser korrekt auszuhöhlen sind. Wütend? Nein, das will Abel nicht sein. Warum nicht, frage ich, ohne meine Überraschung verbergen zu können. Was würde das bringen, fragt er gelassen zurück. Veränderung, vielleicht? Hoffentlich? "
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Ich stosse wieder zu euch und zweifle daran, dass sich Niecee X überhaupt mit uns unterhalten will. Ich finde die Energie nicht, mich bei ihr anzubiedern, helfe stattdessen, Hilfsgüter auszuladen, während ich mich frage, ob man das als Journalist eigentlich darf oder nicht. Scheiss drauf. Als ihr bereit zum Aufbruch seid, spiele ich gerade mit einem Jungen und seinem Welpen auf einem Müllhaufen von Erinnerungen. Der Junge bereut vor allem, dass seine Playstation futsch ist. Wir fahren zu einem der wenigen Restaurants, die noch geöffnet sind. Niecee X parkiert ihren Van quer über fünf Parkplätze. Demonstrativ. Du findest es cool, ich finde es peinlich."
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Abel hat zu wenig Wut, Niecee hat zu viel Wut."
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Trotzdem verstehe ich mich gut mit ihr. Wir fluchen beide gerne, wir diskutieren beide gerne. Hart, herausfordernd. Und vieles, was sie sagt, ist äusserst klug."
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Aber nicht alles. Sie sagt, Weisse könnten keine wahren Verbündeten im Kampf gegen Rassismus sein. Höchstens Unterstützer. Am besten finanzielle Unterstützer."
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Muss man Opfer eines Unrechts werden, damit man es mit allen Mitteln bekämpfen kann? Widerspricht das nicht jedem Grundprinzip des Rechtsstaates, und spricht man Menschen damit nicht die Fähigkeit ab, empathisch zu sein?"
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Sie sagt, Weisse seien Schwarzen gegenüber grundsätzlich bevorteilt. Aber ist Privileg nicht genauso fluid und facettenreich wie Identität? Ich frage sie, ob es einem Superstar wie Beyoncé dreckiger gehe als einer weissen alleinerziehenden Mutter der Unterschicht. Sie sagt, man dürfe diese Dinge nicht gegeneinander ausspielen. Meine Rede, würde ich gerne sagen und verkneife es mir."
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Nach dem Gespräch ist die Stimmung schlecht. Ich habe Niecee X mit zweimaligem Nachfragen die Aussage entlockt, dass sie Rassismus für ein Werkzeug des Kapitalismus hält. Es war eine Provokation. Vor allem an dich gerichtet. Jetzt ist es mir peinlich: Es war unprofessionell. Ich will mich entschuldigen. Bevor es dazu kommt, blockst du ab und sagst, dass es dir lieber wäre, nicht mehr mit mir über das Erlebte zu sprechen, generell. Dass du dir deine eigenen Gedanken machen willst. Ich erwidere, dass es schwierig werden dürfte, einen Text zusammen zu schreiben, wenn wir nicht miteinander reden. Du schlägst vor, dass wir lieber zwei Texte schreiben sollten, jede ihren eigenen. Ich nicke."
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Wir lassen Houston hinter uns. Willie Nelson singt aus dem Autoradio "
-                  },
-                  {
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "«On the Road Again»"
-                      }
-                    ],
-                    "title": null,
-                    "type": "link",
-                    "url": "https://open.spotify.com/user/21r3ehh7y7zek5vx4lgaemyhy/playlist/5Wu9DtzaIAJOByGatrXvbk?si=2GVWDD_aTwaU4tI_TXNFjg"
-                  },
-                  {
-                    "type": "text",
-                    "value": ". Wir fahren vorbei an Flaggen vom Lone Star, von Red, White and Blue. Flaggen, grösser als das Dach des Hauses, in dem ich aufgewachsen bin."
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Die Worte von Niecee X hallen in mir nach: «Mein amerikanischer Traum ist, dass wir (Afrikaner) nie hierher gebracht worden wären.» Ich stelle mir vor, wie Niecee X den gleichen Satz zu Jafar Ali sagt. Dem Äthiopier, der mir vor anderthalb Jahren in Como erzählte, wie er während seiner Überfahrt auf dem Mittelmeer miterleben musste, wie fünf leblose Körper, darunter der einer Schwangeren, ins Wasser gestossen wurden. Der Ghanaerin Cherish, die mir die Narben zeigte, die ein Jahr Zwangsprostitution in der Flüchtlingshölle Libyen hinterlassen. Der siebzehnjährigen Eritreerin, die mir zuflüsterte, wie sie sich mit einer Mischung aus Sand und Kot bestrich, damit die Schlepper sie während der Reise durch die Sahara nicht vergewaltigten. "
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Niecee, sag, wen meinst du, wenn du von «uns» sprichst? "
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Ich starre aus dem Fenster und sehe, wie unglaublich einfach es ist, in diese Falle zu tappen. Wie schnell man versucht ist, jemandem nicht mehr zuhören zu wollen, nur weil es jemand anderem dreckiger geht. Aber so einfach ist es nicht. Niecee X hat ein Anrecht auf ihre Wut, auf ihre Entrüstung und ihr Misstrauen."
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Der Kontext, in dem sich Niecee X bewegt, legitimiert ihre Extremposition. Gleichsam widerlegt er das Urteil, das sie über die Sorgen der weissen Arbeiterklasse fällt, von deren Leid sie nichts mehr hören will. Nur weil der Missstand andernorts grösser ist, verliert man nicht das Anrecht auf Verzweiflung."
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Der Zorn von Niecee X ist ein Gegengewicht zum weissen Rassismus, der in den USA immer noch zu viel Macht hat. Er ist verständlich. Aber wie förderlich kann Zorn einer Sache sein? Und solange wir uns mit biologistischen Merkmalen identifizieren, statt uns mit Ideen zu solidarisieren, sind wir dann nicht mitunter Teil des Problems? "
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Wir fahren am Ort La Grange vorbei und hören "
-                  },
-                  {
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "«La Grange»"
-                      }
-                    ],
-                    "title": null,
-                    "type": "link",
-                    "url": "https://open.spotify.com/user/21r3ehh7y7zek5vx4lgaemyhy/playlist/5Wu9DtzaIAJOByGatrXvbk?si=2GVWDD_aTwaU4tI_TXNFjg"
-                  },
-                  {
-                    "type": "text",
-                    "value": " von ZZ Top. Du singst, ich singe, und wir singen nicht zusammen: «Just let me know / If you wanna go / To that home out on the range.»"
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "type": "text",
-                    "value": "Wir sind unterwegs nach Bandera, in die blauen Hügel von Texas. Ich wäre lieber nach Colorado gefahren. In den Staat, dem es vor ein paar Jahren noch ähnlich ging wie West Virginia – bis er den Anbau und Verkauf von Cannabis entkriminalisierte. Nach Colorado, wo die widerspenstigste Fraktion der Republikaner zu Hause ist – zu den konservativen Trump-Gegnern. Aber ich vertraue deinem Gespür für Subkulturen. Und so erreichen wir spätabends die Hütte am Waldrand und werden von einem Schild begrüsst: «Don’t mess with Texas.»"
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Diese Reportage wurde zur Entwicklung eines Serien-Prototyps aus dem Etat für grosse Recherchen, grosse Geschichten und grosse Ideen der Project R Genossenschaft realisiert."
-                      }
-                    ],
-                    "type": "sup"
-                  }
-                ],
-                "type": "paragraph"
-              },
-              {
-                "children": [
-                  {
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Debatte: Was führte zur Wahl von Donald Trump – Rassismus oder Klassenkampf?"
-                      }
-                    ],
-                    "depth": 3,
-                    "type": "heading"
-                  },
-                  {
-                    "children": [
-                      {
-                        "type": "text",
-                        "value": "Heute dominieren zwei Erklärungsansätze. War es ein Aufstand des weissen Amerikas? Oder waren es die zunehmenden Einkommensunterschiede, der Niedergang der Mittelschicht, die Trump ermöglicht haben? Diskutieren Sie mit den beiden Autorinnen Anja Conzett und Yvonne Kunz – hier gehts zur "
                       },
                       {
                         "children": [
                           {
                             "type": "text",
-                            "value": "Debatte"
+                            "value": "Das Rothaus"
                           }
                         ],
-                        "title": "USA-Serie: Was führte zur Wahl von Donald Trump – Rassismus oder Klassenkampf?",
-                        "type": "link",
-                        "url": "/2018/01/29/usa-serie-debatte/diskussion"
-                      },
+                        "type": "paragraph"
+                      }
+                    ],
+                    "data": {},
+                    "identifier": "FIGURE",
+                    "type": "zone"
+                  },
+                  {
+                    "children": [
                       {
                         "type": "text",
-                        "value": "."
+                        "value": "Das digitale Magazin Republik geht im Januar 2018 an den Start. Alle sind gespannt –  allen voran die Macherinnen der Republik."
                       }
                     ],
                     "type": "paragraph"
                   }
                 ],
-                "data": {},
+                "data": {
+                  "figureSize": "M"
+                },
                 "identifier": "INFOBOX",
                 "type": "zone"
               }
@@ -2363,33 +297,19 @@
           }
         ],
         "meta": {
-          "coverText": {
-            "anchor": "middle",
-            "color": "#fff",
-            "fontSize": "100px",
-            "offset": "-5%"
-          },
-          "description": "In Louisiana reden selbst Pastoren erwartungsvoll von Bürgerkrieg. Und gehandelt wird auch: Rechtsextreme Milizen rüsten sich für den Kampf ebenso wie junge Feministinnen in Texas.",
-          "discussion": "https://github.com/republik/discussion-debatte-usa",
-          "facebookDescription": "In Louisiana reden selbst Pastoren erwartungsvoll von Bürgerkrieg. Und gehandelt wird auch: Rechtsextreme Milizen rüsten sich für den Kampf ebenso wie junge Feministinnen in Texas.",
-          "feed": true,
-          "image": "https://cdn.republik.space/s3/republik-assets/github/republik/article-usa-3-deep-south/images/49c75cb17f71a67af36ed0e81cc3aafffd039c19.jpeg?size=1500x844",
-          "path": "/2018/01/24/usa-serie-3",
-          "publishDate": "2018-01-24T03:40:00.000Z",
-          "series": "https://github.com/republik/article-usa-auftakt",
-          "slug": "usa-serie-3",
+          "auto": true,
+          "description": "Nicht Perfektion ist das Ziel bei unserem Start, sondern Perfektionierbarkeit.",
+          "publishDate": "2017-12-04T15:00:00.000Z",
+          "slug": "2017/12/04/republik-stand-der-arbeit-stand-des-irrtums",
           "template": "article",
-          "title": "USA-Serie, Episode 3 - The Deep South",
-          "twitterDescription": "In Louisiana reden selbst Pastoren erwartungsvoll von Bürgerkrieg. Und gehandelt wird auch: Rechte Milizen rüsten sich für den Kampf ebenso wie junge Feministinnen in Texas."
+          "title": "Republik: Stand der Arbeit, Stand des Irrtums"
         },
         "type": "root"
       },
       "meta": {
-        "description": "In Louisiana reden selbst Pastoren erwartungsvoll von Bürgerkrieg. Und gehandelt wird auch: Rechtsextreme Milizen rüsten sich für den Kampf ebenso wie junge Feministinnen in Texas.",
-        "image": "https://cdn.republik.space/s3/republik-assets/github/republik/article-usa-3-deep-south/images/49c75cb17f71a67af36ed0e81cc3aafffd039c19.jpeg?size=1500x844",
-        "path": "/2018/01/24/usa-serie-3",
         "template": "article",
-        "title": "USA-Serie, Episode 3 - The Deep South"
+        "slug": "2017/12/04/republik-stand-der-arbeit-stand-des-irrtums",
+        "title": "Republik: Stand der Arbeit, Stand des Irrtums"
       }
     }
   }

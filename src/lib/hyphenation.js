@@ -19,6 +19,16 @@ const endsOnLigature = (part) => {
   return glyph ? ligatures.includes(glyph.name) : false
 }
 
+const getGlyphIndex = (string, index) => {
+  let result = string.glyphIndexForStringIndex(index)
+
+  if (!result || result === Infinity || result === -Infinity) {
+    result = 0
+  }
+
+  return result
+}
+
 const hyphenateWord = (glyphString) => {
   const hyphenated = hyphenateString(glyphString.string)
 
@@ -28,13 +38,15 @@ const hyphenateWord = (glyphString) => {
 
   for (var i = 0; i < hyphenated.length; i++) {
     const part = hyphenated[i]
+    const isLast = i === hyphenated.length - 1
+
     offset += part.length
 
-    const startIndex = glyphString.glyphIndexForStringIndex(index)
-    const endIndex = glyphString.glyphIndexForStringIndex(index + offset)
+    const startIndex = getGlyphIndex(glyphString, index)
+    const endIndex = getGlyphIndex(glyphString, index + offset)
     const res = glyphString.slice(startIndex, endIndex)
 
-    if (!endsOnLigature(res)) {
+    if (isLast || !endsOnLigature(res)) {
       index += offset
       offset = 0
       parts.push(res)
@@ -44,8 +56,8 @@ const hyphenateWord = (glyphString) => {
   return parts
 }
 
-const hyphenationCallback = (words) => {
-  return words.map(word => hyphenateWord(word))
-}
+const hyphenationCallback = (words) => (
+  words.map(word => hyphenateWord(word))
+)
 
 export default hyphenationCallback
