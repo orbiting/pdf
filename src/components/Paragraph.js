@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 14,
     marginBottom: 10,
-    lineHeight: 2, // not supported.
+    lineHeight: 2,
     fontFamily: fontFamilies.serifRegular,
     textAlign: 'justify'
   }
