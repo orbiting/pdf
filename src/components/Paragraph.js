@@ -4,7 +4,6 @@ import { fontFamilies } from '../lib/fonts'
 
 const styles = StyleSheet.create({
   text: {
-    width: 500,
     fontSize: 14,
     marginBottom: 10,
     lineHeight: 2, // not supported.
