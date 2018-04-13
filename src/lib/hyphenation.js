@@ -1,5 +1,6 @@
 import createHyphenator from 'hyphen'
 import patterns from 'hyphen/patterns/de-ch'
+import ligatures from './ligatures'
 
 const SOFT_HYPHEN = '\u00AD'
 
@@ -13,15 +14,44 @@ const hyphenateString = (string) => {
   return hypenator(string).split(SOFT_HYPHEN)
 }
 
+const endsOnLigature = (part) => {
+  const glyph = part.glyphAtIndex(part.length - 1)
+  return glyph ? ligatures.includes(glyph.name) : false
+}
+
+const getGlyphIndex = (string, index) => {
+  let result = string.glyphIndexForStringIndex(index)
+
+  if (!result || result === Infinity || result === -Infinity) {
+    result = 0
+  }
+
+  return result
+}
+
 const hyphenateWord = (glyphString) => {
   const hyphenated = hyphenateString(glyphString.string)
 
   let index = 0
-  const parts = hyphenated.map(part => {
-    const res = glyphString.slice(index, index + part.length)
-    index += part.length
-    return res
-  })
+  let offset = 0
+  const parts = []
+
+  for (var i = 0; i < hyphenated.length; i++) {
+    const part = hyphenated[i]
+    const isLast = i === hyphenated.length - 1
+
+    offset += part.length
+
+    const startIndex = getGlyphIndex(glyphString, index)
+    const endIndex = getGlyphIndex(glyphString, index + offset)
+    const res = glyphString.slice(startIndex, endIndex)
+
+    if (isLast || !endsOnLigature(res)) {
+      index += offset
+      offset = 0
+      parts.push(res)
+    }
+  }
 
   return parts
 }
