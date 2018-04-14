@@ -36,6 +36,11 @@ const link = {
   component: Anchor
 }
 
+const breakType = {
+  matchMdast: matchType('break'),
+  component: () => '\n'
+}
+
 const paragraph = {
   matchMdast: matchParagraph,
   component: Paragraph,
@@ -44,7 +49,8 @@ const paragraph = {
       matchMdast: matchType('strong'),
       component: Strong
     },
-    link
+    link,
+    breakType
   ]
 }
 
