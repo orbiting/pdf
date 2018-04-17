@@ -4,11 +4,11 @@ import { fontFamilies } from '../lib/fonts'
 
 const styles = StyleSheet.create({
   text: {
-    fontSize: 14,
+    fontSize: 10,
+    lineHeight: 1.3,
     marginBottom: 10,
-    lineHeight: 2,
-    fontFamily: fontFamilies.serifRegular,
-    textAlign: 'justify'
+    textAlign: 'justify',
+    fontFamily: fontFamilies.serifRegular
   }
 })
 

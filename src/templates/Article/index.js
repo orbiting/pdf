@@ -19,7 +19,8 @@ import {
   List,
   Credit,
   Strong,
-  Infobox
+  Infobox,
+  Center
 } from '../../components'
 
 const h2 = {
@@ -176,7 +177,7 @@ const embedTweet = {
 
 const center = {
   matchMdast: matchZone('CENTER'),
-  component: ({ children }) => children,
+  component: Center,
   rules: [
     h2,
     paragraph,
