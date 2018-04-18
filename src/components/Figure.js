@@ -11,10 +11,12 @@ const styles = StyleSheet.create({
   }
 })
 
-const Figure = ({ size, inCenter, children }) => {
+const Figure = ({ size, width, inCenter, children }) => {
   let sizeClassName
 
-  if (inCenter && size === 'breakout') {
+  if (width) {
+    sizeClassName = { width }
+  } else if (inCenter && size === 'breakout') {
     sizeClassName = styles.fullWidth
   } else {
     sizeClassName = styles.columnWidth

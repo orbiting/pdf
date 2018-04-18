@@ -22,6 +22,7 @@ import {
   Strong,
   Infobox,
   Figure,
+  FigureGroup,
   Center,
   Quote,
   EmbedTwitter
@@ -92,11 +93,13 @@ const figure = {
   matchMdast: matchZone('FIGURE'),
   component: Figure,
   props: (node, index, parent, { ancestors }) => {
+    const columns = parent.data && parent.data.columns
     const inCenter = !!ancestors.find(matchZone('CENTER'))
 
     return {
       inCenter,
-      size: node.data.size
+      size: node.data.size,
+      width: columns ? `${(100 - columns) / columns}%` : null
     }
   },
   rules: [
@@ -113,6 +116,14 @@ const figure = {
       ...paragraph,
       component: Legend
     }
+  ]
+}
+
+const figureGroup = {
+  matchMdast: matchZone('FIGUREGROUP'),
+  component: FigureGroup,
+  rules: [
+    figure
   ]
 }
 
@@ -198,6 +209,7 @@ const center = {
     pullQuote,
     paragraph,
     figure,
+    figureGroup,
     infobox,
     list,
     embedTweet,
