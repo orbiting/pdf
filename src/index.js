@@ -23,6 +23,15 @@ const query = `
         title
         description
         image
+        color
+        format {
+          meta {
+            path
+            title
+            color
+            kind
+          }
+        }
       }
     }
   }

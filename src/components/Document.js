@@ -17,9 +17,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 40
   },
   decorator: {
-    height: 2,
+    height: 1,
     marginBottom: 10,
-    backgroundColor: '#3cb842'
+    backgroundColor: '#000'
   },
   footer: {
     left: 30,
@@ -49,10 +49,26 @@ const MdastDocument = ({ article }) => {
     }
   )
 
+  const meta = article.meta
+  const formatMeta = meta.template === 'format'
+    ? meta
+    : meta.format && meta.format.meta
+
+  const formatColor = formatMeta && formatMeta.color
+  const decoratorStyle = formatColor
+    ? StyleSheet.create({
+      decorator: {
+        height: 2,
+        marginBottom: 10,
+        backgroundColor: formatColor
+      }
+    }).decorator
+    : styles.decorator
+
   return (
     <Document>
       <Page size='A4' style={styles.page} wrap>
-        <View fixed style={styles.decorator} />
+        <View fixed style={decoratorStyle} />
         {mdast.props.children}
         <Text fixed style={styles.footer}>REPUBLIK</Text>
       </Page>
