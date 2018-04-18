@@ -22,6 +22,7 @@ import {
   Infobox,
   Figure,
   Center,
+  Quote,
   EmbedTwitter
 } from '../../components'
 
@@ -84,9 +85,14 @@ const title = {
 const figure = {
   matchMdast: matchZone('FIGURE'),
   component: Figure,
-  props: node => ({
-    size: node.data.size
-  }),
+  props: (node, index, parent, { ancestors }) => {
+    const inCenter = !!ancestors.find(matchZone('CENTER'))
+
+    return {
+      inCenter,
+      size: node.data.size
+    }
+  },
   rules: [
     {
       matchMdast: matchImageParagraph,
@@ -167,9 +173,9 @@ const list = {
   ]
 }
 
-const quote = {
+const pullQuote = {
   matchMdast: matchZone('QUOTE'),
-  component: ({ children }) => <View>{children}</View>
+  component: Quote
 }
 
 const embedTweet = {
@@ -183,11 +189,11 @@ const center = {
   component: Center,
   rules: [
     h2,
+    pullQuote,
     paragraph,
     figure,
     infobox,
     list,
-    quote,
     embedTweet
   ]
 }
