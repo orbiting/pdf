@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
   },
   decorator: {
     height: 1,
-    marginBottom: 10,
+    marginBottom: 15,
     backgroundColor: '#000'
   },
   footer: {
@@ -59,7 +59,7 @@ const MdastDocument = ({ article }) => {
     ? StyleSheet.create({
       decorator: {
         height: 2,
-        marginBottom: 10,
+        marginBottom: 15,
         backgroundColor: formatColor
       }
     }).decorator

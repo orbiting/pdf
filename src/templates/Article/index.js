@@ -20,7 +20,9 @@ import {
   Credit,
   Strong,
   Infobox,
-  Center
+  Figure,
+  Center,
+  EmbedTwitter
 } from '../../components'
 
 const h2 = {
@@ -81,7 +83,7 @@ const title = {
 
 const figure = {
   matchMdast: matchZone('FIGURE'),
-  component: ({ children, ...props }) => <View {...props}>{children}</View>,
+  component: Figure,
   props: node => ({
     size: node.data.size
   }),
@@ -119,7 +121,7 @@ const infobox = {
           matchMdast: matchImageParagraph,
           component: Infobox.Image,
           props: node => ({
-            src: node.children[0].url.split('?')[0], // ?size=... breaks it.
+            src: node.children[0].url,
             alt: node.children[0].alt
           }),
           isVoid: true
@@ -172,7 +174,8 @@ const quote = {
 
 const embedTweet = {
   matchMdast: matchZone('EMBEDTWITTER'),
-  component: ({ children }) => <View>{children}</View>
+  props: node => node.data,
+  component: EmbedTwitter
 }
 
 const center = {

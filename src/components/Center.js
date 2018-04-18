@@ -7,8 +7,8 @@ const styles = StyleSheet.create({
   }
 })
 
-const Anchor = ({ children, href }) => (
+const Center = ({ children, href }) => (
   <View style={styles.center}>{children}</View>
 )
 
-export default Anchor
+export default Center

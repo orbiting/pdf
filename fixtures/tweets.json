@@ -1,0 +1,123 @@
+{
+  "data": {
+    "document": {
+      "content": {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Tweet with images"
+                  }
+                ],
+                "depth": 2,
+                "type": "heading"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "https://twitter.com/RepublikMagazin/status/857218186986520576"
+                          }
+                        ],
+                        "title": null,
+                        "type": "link",
+                        "url": "https://twitter.com/RepublikMagazin/status/857218186986520576"
+                      }
+                    ],
+                    "type": "paragraph"
+                  }
+                ],
+                "data": {
+                  "__typename": "TwitterEmbed",
+                  "createdAt": "2017-04-26T13:01:56.000Z",
+                  "html": "Danke! Republik geht dank eurer Unterstützung 2018 definitiv an den Start! Gemeinsam schaffen wir noch mehr - wir sammeln weiter! <a href=\"https://t.co/25b3Yul7zF\" target=\"_blank\" rel=\"noopener noreferrer\">t.co/25b3Yul7zF</a>",
+                  "id": "857218186986520576",
+                  "image": "https://pbs.twimg.com/media/C-VzYvFXgAACAR0.jpg",
+                  "more": null,
+                  "playable": false,
+                  "retrievedAt": "2017-12-04T14:16:25.869Z",
+                  "text": "Danke! Republik geht dank eurer Unterstützung 2018 definitiv an den Start! Gemeinsam schaffen wir noch mehr - wir sammeln weiter! https://t.co/25b3Yul7zF",
+                  "userId": "786282996223598592",
+                  "userName": "Republik",
+                  "userProfileImageUrl": "https://pbs.twimg.com/profile_images/946926085152952323/QoqcM5v9_400x400.jpg",
+                  "userScreenName": "RepublikMagazin"
+                },
+                "identifier": "EMBEDTWITTER",
+                "type": "zone"
+              },
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Tweet without images"
+                  }
+                ],
+                "depth": 2,
+                "type": "heading"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "https://twitter.com/elonmusk/status/985655249745592320"
+                          }
+                        ],
+                        "title": null,
+                        "type": "link",
+                        "url": "https://twitter.com/elonmusk/status/985655249745592320"
+                      }
+                    ],
+                    "type": "paragraph"
+                  }
+                ],
+                "data": {
+                  "__typename": "TwitterEmbed",
+                  "createdAt": "2018-04-15T13:01:56.000Z",
+                  "id": "985655249745592320",
+                  "more": null,
+                  "playable": false,
+                  "retrievedAt": "2017-12-04T14:16:25.869Z",
+                  "text": "SpaceX will try to bring rocket upper stage back from orbital velocity using a giant party balloon",
+                  "userId": "786282996223598592",
+                  "userName": "Elon Musk",
+                  "userProfileImageUrl": "https://pbs.twimg.com/profile_images/972170159614906369/0o9cdCOp_400x400.jpg",
+                  "userScreenName": "elonmusk"
+                },
+                "identifier": "EMBEDTWITTER",
+                "type": "zone"
+              }
+            ],
+            "data": {},
+            "identifier": "CENTER",
+            "type": "zone"
+          }
+        ],
+        "meta": {
+          "auto": true,
+          "description": "Nicht Perfektion ist das Ziel bei unserem Start, sondern Perfektionierbarkeit.",
+          "publishDate": "2017-12-04T15:00:00.000Z",
+          "slug": "2017/12/04/republik-stand-der-arbeit-stand-des-irrtums",
+          "template": "article",
+          "title": "Republik: Stand der Arbeit, Stand des Irrtums"
+        },
+        "type": "root"
+      },
+      "meta": {
+        "template": "article",
+        "slug": "2017/12/04/republik-stand-der-arbeit-stand-des-irrtums",
+        "title": "Republik: Stand der Arbeit, Stand des Irrtums"
+      }
+    }
+  }
+}
