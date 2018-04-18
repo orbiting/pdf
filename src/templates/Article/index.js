@@ -14,6 +14,7 @@ import {
   TitleBlock,
   H1,
   H2,
+  HR,
   Lead,
   Anchor,
   List,
@@ -56,6 +57,11 @@ const paragraph = {
     link,
     breakType
   ]
+}
+
+const horizontalRule = {
+  matchMdast: matchType('thematicBreak'),
+  component: HR
 }
 
 const title = {
@@ -194,7 +200,8 @@ const center = {
     figure,
     infobox,
     list,
-    embedTweet
+    embedTweet,
+    horizontalRule
   ]
 }
 
