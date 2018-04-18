@@ -7,10 +7,9 @@ import {
 
 const styles = StyleSheet.create({
   image: {
-    backgroundColor: 'grey',
     padding: 0,
-    maxWidth: 500,
-    marginBottom: 10
+    marginBottom: 5,
+    backgroundColor: 'grey'
   }
 })
 
