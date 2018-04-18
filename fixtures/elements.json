@@ -1,0 +1,1124 @@
+{
+  "data": {
+    "document": {
+      "content": {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "PDF Fixture"
+                  }
+                ],
+                "depth": 1,
+                "type": "heading"
+              },
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "We have many elements. Some are obvious others aren't. Generally the PDF needs to be feature complete. But not variation complete."
+                  }
+                ],
+                "type": "paragraph"
+              },
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Von "
+                  },
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Thomas Preusse"
+                      }
+                    ],
+                    "title": null,
+                    "type": "link",
+                    "url": "/~tpreusse"
+                  },
+                  {
+                    "type": "text",
+                    "value": " (Text) und Kollaborator, 16. April 2018"
+                  }
+                ],
+                "type": "paragraph"
+              }
+            ],
+            "data": {},
+            "identifier": "TITLE",
+            "type": "zone"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Let's start simple. This is a paragraph."
+                  }
+                ],
+                "type": "paragraph"
+              },
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Some marks and inline elements: "
+                  },
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "bold"
+                      }
+                    ],
+                    "type": "strong"
+                  },
+                  {
+                    "type": "text",
+                    "value": ", "
+                  },
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "italic"
+                      }
+                    ],
+                    "type": "emphasis"
+                  },
+                  {
+                    "type": "text",
+                    "value": ", "
+                  },
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "sub"
+                      }
+                    ],
+                    "type": "sub"
+                  },
+                  {
+                    "type": "text",
+                    "value": ", "
+                  },
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "sup"
+                      }
+                    ],
+                    "type": "sup"
+                  },
+                  {
+                    "type": "text",
+                    "value": " and a link."
+                  }
+                ],
+                "type": "paragraph"
+              },
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Next special chars: «quote ‹things›» – a n-dash, and unbreakable spaces can be used."
+                  }
+                ],
+                "type": "paragraph"
+              },
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Typographical block elements:"
+                  }
+                ],
+                "type": "paragraph"
+              },
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "A Subheadline"
+                  }
+                ],
+                "depth": 2,
+                "type": "heading"
+              },
+              {
+                "children": [
+                  {
+                    "checked": null,
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "unordered"
+                          }
+                        ],
+                        "type": "paragraph"
+                      }
+                    ],
+                    "loose": false,
+                    "type": "listItem"
+                  },
+                  {
+                    "checked": null,
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "list"
+                          }
+                        ],
+                        "type": "paragraph"
+                      }
+                    ],
+                    "loose": false,
+                    "type": "listItem"
+                  }
+                ],
+                "loose": false,
+                "ordered": false,
+                "start": null,
+                "type": "list"
+              },
+              {
+                "children": [
+                  {
+                    "checked": null,
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "an"
+                          }
+                        ],
+                        "type": "paragraph"
+                      }
+                    ],
+                    "loose": false,
+                    "type": "listItem"
+                  },
+                  {
+                    "checked": null,
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "ordered"
+                          }
+                        ],
+                        "type": "paragraph"
+                      }
+                    ],
+                    "loose": false,
+                    "type": "listItem"
+                  },
+                  {
+                    "checked": null,
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "list"
+                          }
+                        ],
+                        "type": "paragraph"
+                      }
+                    ],
+                    "loose": false,
+                    "type": "listItem"
+                  }
+                ],
+                "loose": false,
+                "ordered": true,
+                "start": 1,
+                "type": "list"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "a note, small text noting things"
+                      }
+                    ],
+                    "type": "paragraph"
+                  }
+                ],
+                "data": {},
+                "identifier": "NOTE",
+                "type": "zone"
+              },
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "thematic break"
+                  }
+                ],
+                "type": "paragraph"
+              },
+              {
+                "type": "thematicBreak"
+              },
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "the figure"
+                  }
+                ],
+                "type": "paragraph"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "alt": null,
+                        "title": null,
+                        "type": "image",
+                        "url": "https://cdn.republik.pink/s3/republik-assets-staging/github/republik-test/article-pdf-fixture/images/89a3e9ad5f83c81251564785ddac6dfeb7f867be.jpeg?size=2010x1342"
+                      }
+                    ],
+                    "type": "paragraph"
+                  },
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Renders column-width: Barren land, wild land, free land - and for the two reporters the longest impasse in the world."
+                      },
+                      {
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "Reto Sterchi"
+                          }
+                        ],
+                        "type": "emphasis"
+                      }
+                    ],
+                    "type": "paragraph"
+                  }
+                ],
+                "data": {},
+                "identifier": "FIGURE",
+                "type": "zone"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "alt": null,
+                        "title": null,
+                        "type": "image",
+                        "url": "https://cdn.republik.pink/s3/republik-assets-staging/github/republik-test/article-pdf-fixture/images/89a3e9ad5f83c81251564785ddac6dfeb7f867be.jpeg?size=2010x1342"
+                      }
+                    ],
+                    "type": "paragraph"
+                  },
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Renders full-width"
+                      },
+                      {
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "Reto Sterchi"
+                          }
+                        ],
+                        "type": "emphasis"
+                      }
+                    ],
+                    "type": "paragraph"
+                  }
+                ],
+                "data": {
+                  "size": "breakout"
+                },
+                "identifier": "FIGURE",
+                "type": "zone"
+              }
+            ],
+            "data": {},
+            "identifier": "CENTER",
+            "type": "zone"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "alt": null,
+                    "title": null,
+                    "type": "image",
+                    "url": "https://cdn.republik.pink/s3/republik-assets-staging/github/republik-test/article-pdf-fixture/images/89a3e9ad5f83c81251564785ddac6dfeb7f867be.jpeg?size=2010x1342"
+                  }
+                ],
+                "type": "paragraph"
+              },
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Renders full-width"
+                  },
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Reto Sterchi"
+                      }
+                    ],
+                    "type": "emphasis"
+                  }
+                ],
+                "type": "paragraph"
+              }
+            ],
+            "data": {},
+            "identifier": "FIGURE",
+            "type": "zone"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "figure group with 2 columns"
+                  }
+                ],
+                "type": "paragraph"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "alt": null,
+                            "title": null,
+                            "type": "image",
+                            "url": "https://cdn.republik.pink/s3/republik-assets-staging/github/republik-test/article-pdf-fixture/images/39101b03cf4caef8edee8b42948a0bc7b05f3e5a.jpeg?size=2010x1005"
+                          }
+                        ],
+                        "type": "paragraph"
+                      },
+                      {
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "legend 1"
+                          },
+                          {
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "credit 1"
+                              }
+                            ],
+                            "type": "emphasis"
+                          }
+                        ],
+                        "type": "paragraph"
+                      }
+                    ],
+                    "data": {},
+                    "identifier": "FIGURE",
+                    "type": "zone"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "alt": null,
+                            "title": null,
+                            "type": "image",
+                            "url": "https://cdn.republik.pink/s3/republik-assets-staging/github/republik-test/article-pdf-fixture/images/e9b17ede50a7ec89def01bf38fc4aab88d3cd1a1.jpeg?size=2010x1005"
+                          }
+                        ],
+                        "type": "paragraph"
+                      },
+                      {
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "legend 2"
+                          },
+                          {
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "credit 2"
+                              }
+                            ],
+                            "type": "emphasis"
+                          }
+                        ],
+                        "type": "paragraph"
+                      }
+                    ],
+                    "data": {},
+                    "identifier": "FIGURE",
+                    "type": "zone"
+                  },
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "legend global"
+                      },
+                      {
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "Reto Sterchi"
+                          }
+                        ],
+                        "type": "emphasis"
+                      }
+                    ],
+                    "type": "paragraph"
+                  }
+                ],
+                "data": {
+                  "columns": 2,
+                  "module": "figuregroup"
+                },
+                "identifier": "FIGUREGROUP",
+                "type": "zone"
+              },
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "figure group with 3 columns"
+                  }
+                ],
+                "type": "paragraph"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "alt": null,
+                            "title": null,
+                            "type": "image",
+                            "url": "https://cdn.republik.pink/s3/republik-assets-staging/github/republik-test/article-pdf-fixture/images/39101b03cf4caef8edee8b42948a0bc7b05f3e5a.jpeg?size=2010x1005"
+                          }
+                        ],
+                        "type": "paragraph"
+                      },
+                      {
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "l1"
+                          }
+                        ],
+                        "type": "paragraph"
+                      }
+                    ],
+                    "data": {},
+                    "identifier": "FIGURE",
+                    "type": "zone"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "alt": null,
+                            "title": null,
+                            "type": "image",
+                            "url": "https://cdn.republik.pink/s3/republik-assets-staging/github/republik-test/article-pdf-fixture/images/e9b17ede50a7ec89def01bf38fc4aab88d3cd1a1.jpeg?size=2010x1005"
+                          }
+                        ],
+                        "type": "paragraph"
+                      },
+                      {
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "l2"
+                          }
+                        ],
+                        "type": "paragraph"
+                      }
+                    ],
+                    "data": {},
+                    "identifier": "FIGURE",
+                    "type": "zone"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "alt": null,
+                            "title": null,
+                            "type": "image",
+                            "url": "https://cdn.republik.pink/s3/republik-assets-staging/github/republik-test/article-pdf-fixture/images/ccbd881aff87f100425b32a45be8daeac19f8451.jpeg?size=2010x1005"
+                          }
+                        ],
+                        "type": "paragraph"
+                      },
+                      {
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "l3"
+                          }
+                        ],
+                        "type": "paragraph"
+                      }
+                    ],
+                    "data": {},
+                    "identifier": "FIGURE",
+                    "type": "zone"
+                  },
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "3 columns"
+                      },
+                      {
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "credit"
+                          }
+                        ],
+                        "type": "emphasis"
+                      }
+                    ],
+                    "type": "paragraph"
+                  }
+                ],
+                "data": {
+                  "columns": 3,
+                  "module": "figuregroup"
+                },
+                "identifier": "FIGUREGROUP",
+                "type": "zone"
+              },
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "figure group with 4 columns"
+                  }
+                ],
+                "type": "paragraph"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "alt": null,
+                            "title": null,
+                            "type": "image",
+                            "url": "https://cdn.republik.pink/s3/republik-assets-staging/github/republik-test/article-pdf-fixture/images/39101b03cf4caef8edee8b42948a0bc7b05f3e5a.jpeg?size=2010x1005"
+                          }
+                        ],
+                        "type": "paragraph"
+                      },
+                      {
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "l1"
+                          },
+                          {
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "c1"
+                              }
+                            ],
+                            "type": "emphasis"
+                          }
+                        ],
+                        "type": "paragraph"
+                      }
+                    ],
+                    "data": {},
+                    "identifier": "FIGURE",
+                    "type": "zone"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "alt": null,
+                            "title": null,
+                            "type": "image",
+                            "url": "https://cdn.republik.pink/s3/republik-assets-staging/github/republik-test/article-pdf-fixture/images/e9b17ede50a7ec89def01bf38fc4aab88d3cd1a1.jpeg?size=2010x1005"
+                          }
+                        ],
+                        "type": "paragraph"
+                      },
+                      {
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "l2"
+                          },
+                          {
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "c2"
+                              }
+                            ],
+                            "type": "emphasis"
+                          }
+                        ],
+                        "type": "paragraph"
+                      }
+                    ],
+                    "data": {},
+                    "identifier": "FIGURE",
+                    "type": "zone"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "alt": null,
+                            "title": null,
+                            "type": "image",
+                            "url": "https://cdn.republik.pink/s3/republik-assets-staging/github/republik-test/article-pdf-fixture/images/ccbd881aff87f100425b32a45be8daeac19f8451.jpeg?size=2010x1005"
+                          }
+                        ],
+                        "type": "paragraph"
+                      },
+                      {
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "l3"
+                          },
+                          {
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "c3"
+                              }
+                            ],
+                            "type": "emphasis"
+                          }
+                        ],
+                        "type": "paragraph"
+                      }
+                    ],
+                    "data": {},
+                    "identifier": "FIGURE",
+                    "type": "zone"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "alt": null,
+                            "title": null,
+                            "type": "image",
+                            "url": "https://cdn.republik.pink/s3/republik-assets-staging/github/republik-test/article-pdf-fixture/images/4dcdb82ade1838a1ed0e0c47f6fab0c42a5eb083.jpeg?size=1330x665"
+                          }
+                        ],
+                        "type": "paragraph"
+                      },
+                      {
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "l4"
+                          },
+                          {
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "c4"
+                              }
+                            ],
+                            "type": "emphasis"
+                          }
+                        ],
+                        "type": "paragraph"
+                      }
+                    ],
+                    "data": {},
+                    "identifier": "FIGURE",
+                    "type": "zone"
+                  },
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "4 columns"
+                      },
+                      {
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "credit"
+                          }
+                        ],
+                        "type": "emphasis"
+                      }
+                    ],
+                    "type": "paragraph"
+                  }
+                ],
+                "data": {
+                  "columns": 4,
+                  "module": "figuregroup"
+                },
+                "identifier": "FIGUREGROUP",
+                "type": "zone"
+              },
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "block quote"
+                  }
+                ],
+                "type": "paragraph"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "a block quote"
+                          }
+                        ],
+                        "type": "paragraph"
+                      }
+                    ],
+                    "type": "blockquote"
+                  },
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "can have a legend"
+                      },
+                      {
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "with credits"
+                          }
+                        ],
+                        "type": "emphasis"
+                      }
+                    ],
+                    "type": "paragraph"
+                  }
+                ],
+                "data": {},
+                "identifier": "BLOCKQUOTE",
+                "type": "zone"
+              },
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "pull quote"
+                  }
+                ],
+                "type": "paragraph"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "alt": null,
+                            "title": null,
+                            "type": "image",
+                            "url": "https://cdn.republik.pink/s3/republik-assets-staging/github/republik-test/article-pdf-fixture/images/9aa0b52283d8ca40d695fa0840fabd80fe0ba2ea.png?size=768x781"
+                          }
+                        ],
+                        "type": "paragraph"
+                      },
+                      {
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "Illustration"
+                          },
+                          {
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "Alex Solman"
+                              }
+                            ],
+                            "type": "emphasis"
+                          }
+                        ],
+                        "type": "paragraph"
+                      }
+                    ],
+                    "data": {},
+                    "identifier": "FIGURE",
+                    "type": "zone"
+                  },
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "«Pull quotes can have an image.»"
+                      }
+                    ],
+                    "type": "paragraph"
+                  },
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Thomas"
+                      }
+                    ],
+                    "type": "paragraph"
+                  }
+                ],
+                "data": {},
+                "identifier": "QUOTE",
+                "type": "zone"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "«But they can also not have an image.»"
+                      }
+                    ],
+                    "type": "paragraph"
+                  },
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Thomas"
+                      }
+                    ],
+                    "type": "paragraph"
+                  }
+                ],
+                "data": {},
+                "identifier": "QUOTE",
+                "type": "zone"
+              },
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "infobox"
+                  }
+                ],
+                "type": "paragraph"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "An Info Box with an Image"
+                      }
+                    ],
+                    "depth": 3,
+                    "type": "heading"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "alt": null,
+                            "title": null,
+                            "type": "image",
+                            "url": "https://cdn.republik.pink/s3/republik-assets-staging/github/republik-test/article-pdf-fixture/images/b3ff6e6aedf716f0e1972793a424cc9eeec23277.png?size=768x655"
+                          }
+                        ],
+                        "type": "paragraph"
+                      },
+                      {
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "a cartoon"
+                          },
+                          {
+                            "children": [
+                              {
+                                "type": "text",
+                                "value": "sany"
+                              }
+                            ],
+                            "type": "emphasis"
+                          }
+                        ],
+                        "type": "paragraph"
+                      }
+                    ],
+                    "data": {},
+                    "identifier": "FIGURE",
+                    "type": "zone"
+                  },
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Jadi jadi jadi jadi jadi jadi text is jadi jadi jadi jadi jadi jadi jadi text is jadi jadi jadi jadi jadi jadi jadi text is jadi jadi jadi jadi jadi jadi jadi text is jadi jadi jadi jadi jadi jadi jadi text is jadi jadi jadi jadi jadi jadi jadi text is jadi jadi jadi jadi jadi jadi jadi text is jadi jadi jadi"
+                      }
+                    ],
+                    "type": "paragraph"
+                  }
+                ],
+                "data": {},
+                "identifier": "INFOBOX",
+                "type": "zone"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "An Info Box without an Image"
+                      }
+                    ],
+                    "depth": 3,
+                    "type": "heading"
+                  },
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Jadi jadi jadi jadi jadi jadi text is jadi jadi jadi jadi jadi jadi jadi text is jadi jadi jadi jadi jadi jadi jadi text is jadi jadi jadi jadi jadi jadi jadi text is jadi jadi jadi jadi jadi jadi jadi text is jadi jadi jadi jadi jadi jadi jadi text is jadi jadi jadi jadi jadi jadi jadi text is jadi jadi jadi"
+                      }
+                    ],
+                    "type": "paragraph"
+                  },
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "But two paragraphs!"
+                      }
+                    ],
+                    "type": "paragraph"
+                  }
+                ],
+                "data": {},
+                "identifier": "INFOBOX",
+                "type": "zone"
+              }
+            ],
+            "data": {},
+            "identifier": "CENTER",
+            "type": "zone"
+          }
+        ],
+        "meta": {
+          "auto": true,
+          "description": "We have many elements. Some are obvious others aren't. Generally the PDF needs to be feature complete. But not variation complete.",
+          "feed": true,
+          "path": "/2018/04/16/pdf-fixture",
+          "publishDate": "2018-04-16T17:07:02.709Z",
+          "slug": "pdf-fixture",
+          "template": "article",
+          "title": "PDF Fixture"
+        },
+        "type": "root"
+      },
+      "meta": {
+        "color": null,
+        "credits": [
+          {
+            "type": "text",
+            "value": "Von "
+          },
+          {
+            "children": [
+              {
+                "type": "text",
+                "value": "Thomas Preusse"
+              }
+            ],
+            "title": null,
+            "type": "link",
+            "url": "/~tpreusse"
+          },
+          {
+            "type": "text",
+            "value": " (Text) und Kollaborator, 16. April 2018"
+          }
+        ],
+        "description": "We have many elements. Some are obvious others aren't. Generally the PDF needs to be feature complete. But not variation complete.",
+        "discussionId": null,
+        "emailSubject": null,
+        "facebookDescription": null,
+        "facebookImage": null,
+        "facebookTitle": null,
+        "feed": true,
+        "image": null,
+        "kind": null,
+        "path": "/2018/04/16/pdf-fixture",
+        "publishDate": "2018-04-16T17:07:02.709Z",
+        "slug": "pdf-fixture",
+        "template": "article",
+        "title": "PDF Fixture",
+        "twitterDescription": null,
+        "twitterImage": null,
+        "twitterTitle": null
+      }
+    }
+  }
+}

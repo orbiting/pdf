@@ -44,9 +44,17 @@ const render = async (mdast, response) => {
   output.pipe(response)
 }
 
-server.get('/example', (req, res) => {
+server.get('/fixtures/:path', (req, res) => {
+  const fixturePath = path.join(
+    __dirname, '..', 'fixtures',
+    `${req.path}.json`
+  )
+  if (!fs.existsSync(fixturePath)) {
+    res.status(404).end('No Fixture Found')
+    return
+  }
   const api = JSON.parse(
-    fs.readFileSync(path.join(__dirname, '..', 'fixtures', 'example.json'), 'utf8')
+    fs.readFileSync(fixturePath, 'utf8')
   )
   render(api.data.document, res)
 })
@@ -62,7 +70,7 @@ server.get('/:path*', async (req, res) => {
   const api = await apolloFetch({ query, variables })
 
   if (!api.data.article) {
-    res.status(404).end('No Article')
+    res.status(404).end('No Article Found')
     return
   }
   render(api.data.article, res)
