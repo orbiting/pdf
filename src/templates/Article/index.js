@@ -192,7 +192,17 @@ const list = {
 
 const pullQuote = {
   matchMdast: matchZone('QUOTE'),
-  component: Quote
+  component: Quote,
+  props: node => ({
+    size: node.data.size
+  }),
+  rules: [
+    figure,
+    {
+      matchMdast: matchParagraph,
+      component: Quote.Text
+    }
+  ]
 }
 
 const embedTweet = {

@@ -1,10 +1,25 @@
 import React from 'react'
-import { View } from '@react-pdf/core'
+import { Text, View, StyleSheet } from '@react-pdf/core'
+import { fontFamilies } from '../lib/fonts'
 
-const Quote = ({ children, ...props }) => {
-  return (
-    <View>{children}</View>
-  )
-}
+const styles = StyleSheet.create({
+  container: {
+    marginVertical: 20
+  },
+  text: {
+    fontFamily: fontFamilies.serifTitle,
+    textAlign: 'center'
+  }
+})
+
+const QuoteText = ({ children, ...props }) => (
+  <Text style={styles.text}>{children}</Text>
+)
+
+const Quote = ({ children }) => (
+  <View style={styles.container}>{children}</View>
+)
+
+Quote.Text = QuoteText
 
 export default Quote
