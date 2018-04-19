@@ -8,6 +8,7 @@ const styles = StyleSheet.create({
     lineHeight: 1.3,
     marginBottom: 10,
     textAlign: 'justify',
+    position: 'relative',
     fontFamily: fontFamilies.serifRegular
   }
 })

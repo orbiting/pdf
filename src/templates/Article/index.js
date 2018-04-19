@@ -15,6 +15,8 @@ import {
   H1,
   H2,
   HR,
+  Sup,
+  Sub,
   Lead,
   Anchor,
   List,
@@ -27,6 +29,20 @@ import {
   Quote,
   EmbedTwitter
 } from '../../components'
+
+const globalInlines = [
+  {
+    matchMdast: matchType('sub'),
+    component: Sub
+  },
+  {
+    matchMdast: matchType('sup'),
+    component: Sup
+  },
+  {
+    matchMdast: matchType('break')
+  }
+]
 
 const h2 = {
   matchMdast: matchHeading(2),
@@ -56,7 +72,8 @@ const paragraph = {
       component: Strong
     },
     link,
-    breakType
+    breakType,
+    ...globalInlines
   ]
 }
 

@@ -1,6 +1,8 @@
 export { default as H1 } from './H1'
 export { default as H2 } from './H2'
 export { default as HR } from './HR'
+export { default as Sup } from './Sup'
+export { default as Sub } from './Sub'
 export { default as Lead } from './Lead'
 export { default as List } from './List'
 export { default as Image } from './Image'
