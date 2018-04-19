@@ -63,14 +63,16 @@ const breakType = {
   component: () => '\n'
 }
 
+const strong = {
+  matchMdast: matchType('strong'),
+  component: Strong
+}
+
 const paragraph = {
   matchMdast: matchParagraph,
   component: Paragraph,
   rules: [
-    {
-      matchMdast: matchType('strong'),
-      component: Strong
-    },
+    strong,
     link,
     breakType,
     ...globalInlines
@@ -186,9 +188,8 @@ const listItem = {
   }),
   rules: [
     {
-      matchMdast: matchParagraph,
-      component: List.ItemContent,
-      rules: []
+      ...paragraph,
+      component: List.ItemContent
     }
   ]
 }
