@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@babel/code-frame@7.0.0-beta.44", "@babel/code-frame@^7.0.0-beta.40":
+"@babel/code-frame@7.0.0-beta.44":
   version "7.0.0-beta.44"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.0.0-beta.44.tgz#2a02643368de80916162be70865c97774f3adbd9"
   dependencies:
@@ -55,7 +55,7 @@
     babylon "7.0.0-beta.44"
     lodash "^4.2.0"
 
-"@babel/traverse@^7.0.0-beta.40":
+"@babel/traverse@7.0.0-beta.44":
   version "7.0.0-beta.44"
   resolved "https://registry.yarnpkg.com/@babel/traverse/-/traverse-7.0.0-beta.44.tgz#a970a2c45477ad18017e2e465a0606feee0d2966"
   dependencies:
@@ -70,7 +70,7 @@
     invariant "^2.2.0"
     lodash "^4.2.0"
 
-"@babel/types@7.0.0-beta.44", "@babel/types@^7.0.0-beta.40":
+"@babel/types@7.0.0-beta.44":
   version "7.0.0-beta.44"
   resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.0.0-beta.44.tgz#6b1b164591f77dec0a0342aca995f2d046b3a757"
   dependencies:
@@ -78,25 +78,71 @@
     lodash "^4.2.0"
     to-fast-properties "^2.0.0"
 
-"@react-pdf/core@^0.7.6":
-  version "0.7.6"
-  resolved "https://registry.yarnpkg.com/@react-pdf/core/-/core-0.7.6.tgz#06c60142bd51a02537cac8f9f29c50c784b7b4dc"
+"@react-pdf/core@0.7.7-0":
+  version "0.7.7-0"
+  resolved "https://registry.yarnpkg.com/@react-pdf/core/-/core-0.7.7-0.tgz#79e5e8c533c4414939333421bd68944f04c73029"
   dependencies:
+    "@react-pdf/font-substitution" "1.0.2"
+    "@react-pdf/linebreaker" "1.0.0"
+    "@react-pdf/textkit" "^0.1.0"
     blob-stream "^0.1.3"
     fbjs "^0.8.4"
-    fontkit "^1.7.7"
+    fontkit "https://registry.npmjs.org/@react-pdf/fontkit/-/fontkit-1.7.9.tgz"
     is-url "^1.2.2"
+    lodash.groupby "^4.6.0"
     lodash.isfunction "^3.0.8"
     lodash.isnan "^3.0.2"
+    lodash.isnil "^4.0.0"
+    lodash.merge "^4.6.1"
     lodash.pick "^4.4.0"
     lodash.topairsin "^4.3.0"
     lodash.upperfirst "^4.3.1"
     media-engine "^1.0.3"
-    pdfkit "0.8.1"
+    pdfkit "https://registry.npmjs.org/@react-pdf/pdfkit/-/pdfkit-0.8.7.tgz"
     png-js "0.1.1"
     react-reconciler "^0.7.0"
     request "^2.81.0"
     yoga-layout "1.9.3"
+
+"@react-pdf/font-substitution@1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@react-pdf/font-substitution/-/font-substitution-1.0.2.tgz#810f0171915d5cc6a2d4057e6297d8cae7bd00bd"
+  dependencies:
+    "@react-pdf/pdfkit" "0.8.7"
+    "@react-pdf/textkit" "^0.1.0"
+
+"@react-pdf/linebreaker@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@react-pdf/linebreaker/-/linebreaker-1.0.0.tgz#eb0ecb2161291981be47a7bdef5ea551a792ce64"
+  dependencies:
+    hyphenation.en-us "^0.2.1"
+    hypher "^0.2.5"
+
+"@react-pdf/pdfkit@0.8.7":
+  version "0.8.7"
+  resolved "https://registry.yarnpkg.com/@react-pdf/pdfkit/-/pdfkit-0.8.7.tgz#b4e603698a34df5f00d71262c6aa0b6506a289b1"
+  dependencies:
+    fontkit "^1.0.0"
+    linebreak "^0.3.0"
+    png-js ">=0.1.0"
+
+"@react-pdf/textkit@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@react-pdf/textkit/-/textkit-0.1.0.tgz#e75f1c3fb9bf4aac8511d213a01172fe8d2c9b41"
+  dependencies:
+    cubic2quad "^1.1.0"
+    font-manager "^0.2.2"
+    fontkit "^1.7.7"
+    grapheme-breaker "^0.3.2"
+    hyphenation.en-us "^0.2.1"
+    hypher "^0.2.4"
+    iconv-lite "^0.4.13"
+    linebreak "^0.1.2"
+    lodash.clone "^4.5.0"
+    lodash.merge "^4.6.1"
+    pdfkit "^0.8.0"
+    svgpath "^2.2.0"
+    unicode-properties "^1.1.0"
 
 abbrev@1:
   version "1.1.1"
@@ -404,13 +450,13 @@ babel-core@^6.26.0:
     source-map "^0.5.6"
 
 babel-eslint@^8.2.1:
-  version "8.2.2"
-  resolved "http://registry.npmjs.org/babel-eslint/-/babel-eslint-8.2.2.tgz#1102273354c6f0b29b4ea28a65f97d122296b68b"
+  version "8.2.3"
+  resolved "https://registry.yarnpkg.com/babel-eslint/-/babel-eslint-8.2.3.tgz#1a2e6681cc9bc4473c32899e59915e19cd6733cf"
   dependencies:
-    "@babel/code-frame" "^7.0.0-beta.40"
-    "@babel/traverse" "^7.0.0-beta.40"
-    "@babel/types" "^7.0.0-beta.40"
-    babylon "^7.0.0-beta.40"
+    "@babel/code-frame" "7.0.0-beta.44"
+    "@babel/traverse" "7.0.0-beta.44"
+    "@babel/types" "7.0.0-beta.44"
+    babylon "7.0.0-beta.44"
     eslint-scope "~3.7.1"
     eslint-visitor-keys "^1.0.0"
 
@@ -1063,7 +1109,7 @@ babel-types@^6.19.0, babel-types@^6.24.1, babel-types@^6.26.0:
     lodash "^4.17.4"
     to-fast-properties "^1.0.3"
 
-babylon@7.0.0-beta.44, babylon@^7.0.0-beta.40:
+babylon@7.0.0-beta.44:
   version "7.0.0-beta.44"
   resolved "https://registry.yarnpkg.com/babylon/-/babylon-7.0.0-beta.44.tgz#89159e15e6e30c5096e22d738d8c0af8a0e8ca1d"
 
@@ -1080,8 +1126,8 @@ base64-js@0.0.8:
   resolved "https://registry.yarnpkg.com/base64-js/-/base64-js-0.0.8.tgz#1101e9544f4a76b1bc3b26d452ca96d7a35e7978"
 
 base64-js@^1.1.2:
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/base64-js/-/base64-js-1.2.3.tgz#fb13668233d9614cf5fb4bce95a9ba4096cdf801"
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/base64-js/-/base64-js-1.3.0.tgz#cab1e6118f051095e58b5281aea8c1cd22bfc0e3"
 
 base@^0.11.1:
   version "0.11.2"
@@ -1200,7 +1246,7 @@ braces@^2.3.0, braces@^2.3.1:
     split-string "^3.0.2"
     to-regex "^3.0.1"
 
-brfs@^1.3.0, brfs@^1.4.0:
+brfs@^1.2.0, brfs@^1.3.0, brfs@^1.4.0:
   version "1.6.1"
   resolved "https://registry.yarnpkg.com/brfs/-/brfs-1.6.1.tgz#b78ce2336d818e25eea04a0947cba6d4fb8849c3"
   dependencies:
@@ -1281,8 +1327,8 @@ camelcase@^4.0.0:
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-4.1.0.tgz#d545635be1e33c542649c69173e5de6acfae34dd"
 
 caniuse-lite@^1.0.30000792:
-  version "1.0.30000827"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000827.tgz#2dad2354e4810c3c9bb1cfc57f655c270c25fa52"
+  version "1.0.30000830"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000830.tgz#cb96b8a2dd3cbfe04acea2af3c4e894249095328"
 
 capture-stack-trace@^1.0.0:
   version "1.0.0"
@@ -1303,8 +1349,8 @@ chalk@^1.0.0, chalk@^1.1.1, chalk@^1.1.3:
     supports-color "^2.0.0"
 
 chalk@^2.0.0, chalk@^2.0.1, chalk@^2.1.0:
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/chalk/-/chalk-2.3.2.tgz#250dc96b07491bfd601e648d66ddf5f60c7a5c65"
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/chalk/-/chalk-2.4.0.tgz#a060a297a6b57e15b61ca63ce84995daa0fe6e52"
   dependencies:
     ansi-styles "^3.2.1"
     escape-string-regexp "^1.0.5"
@@ -1564,6 +1610,10 @@ cryptiles@3.x.x:
 crypto-random-string@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/crypto-random-string/-/crypto-random-string-1.0.0.tgz#a230f64f568310e1498009940790ec99545bca7e"
+
+cubic2quad@^1.1.0:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/cubic2quad/-/cubic2quad-1.1.1.tgz#69b19c61a3f5b41ecf2f1d5fae8fb03415aa8b15"
 
 d3-array@^1.2.1:
   version "1.2.1"
@@ -1931,10 +1981,9 @@ eslint-module-utils@^2.0.0, eslint-module-utils@^2.2.0:
     pkg-dir "^1.0.0"
 
 eslint-plugin-import@^2.8.0:
-  version "2.10.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-import/-/eslint-plugin-import-2.10.0.tgz#fa09083d5a75288df9c6c7d09fe12255985655e7"
+  version "2.11.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-import/-/eslint-plugin-import-2.11.0.tgz#15aeea37a67499d848e8e981806d4627b5503816"
   dependencies:
-    builtin-modules "^1.1.1"
     contains-path "^0.1.0"
     debug "^2.6.8"
     doctrine "1.5.0"
@@ -1944,6 +1993,7 @@ eslint-plugin-import@^2.8.0:
     lodash "^4.17.4"
     minimatch "^3.0.3"
     read-pkg-up "^2.0.0"
+    resolve "^1.6.0"
 
 eslint-plugin-import@~2.2.0:
   version "2.2.0"
@@ -2431,9 +2481,31 @@ flat-cache@^1.2.1:
     graceful-fs "^4.1.2"
     write "^0.2.1"
 
+font-manager@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/font-manager/-/font-manager-0.2.2.tgz#18a1c5b6ec7f91e22a17c71cbbaa0ea4e68e3a44"
+  dependencies:
+    nan "~2.2.0"
+
 fontkit@^1.0.0, fontkit@^1.7.7:
   version "1.7.7"
   resolved "https://registry.yarnpkg.com/fontkit/-/fontkit-1.7.7.tgz#ebaf2d8f3fedf302ae3c64b4beeaddc247fcdbb1"
+  dependencies:
+    babel-runtime "^6.11.6"
+    brfs "^1.4.0"
+    brotli "^1.2.0"
+    browserify-optional "^1.0.0"
+    clone "^1.0.1"
+    deep-equal "^1.0.0"
+    dfa "^1.0.0"
+    restructure "^0.5.3"
+    tiny-inflate "^1.0.2"
+    unicode-properties "^1.0.0"
+    unicode-trie "^0.3.0"
+
+"fontkit@https://registry.npmjs.org/@react-pdf/fontkit/-/fontkit-1.7.9.tgz":
+  version "1.7.9"
+  resolved "https://registry.npmjs.org/@react-pdf/fontkit/-/fontkit-1.7.9.tgz#b5a550ae3eef31d50220248728687b989107b6b3"
   dependencies:
     babel-runtime "^6.11.6"
     brfs "^1.4.0"
@@ -2664,9 +2736,16 @@ graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/graceful-readlink/-/graceful-readlink-1.0.1.tgz#4cafad76bc62f02fa039b2f94e9a3dd3a391a725"
 
+grapheme-breaker@^0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/grapheme-breaker/-/grapheme-breaker-0.3.2.tgz#5b9e6b78c3832452d2ba2bb1cb830f96276410ac"
+  dependencies:
+    brfs "^1.2.0"
+    unicode-trie "^0.3.1"
+
 graphql-tag@^2.6.0:
-  version "2.8.0"
-  resolved "https://registry.yarnpkg.com/graphql-tag/-/graphql-tag-2.8.0.tgz#52cdea07a842154ec11a2e840c11b977f9b835ce"
+  version "2.9.1"
+  resolved "https://registry.yarnpkg.com/graphql-tag/-/graphql-tag-2.9.1.tgz#1ab090ef7d3518b06d8c97d1393672145fe91587"
 
 har-schema@^1.0.5:
   version "1.0.5"
@@ -2828,11 +2907,21 @@ hyphen@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/hyphen/-/hyphen-1.0.2.tgz#cf5fefdff66a45d5183acaf285eaa4fe996ff502"
 
+hyphenation.en-us@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/hyphenation.en-us/-/hyphenation.en-us-0.2.1.tgz#6b937323ff40da474ecb8c07eaeb79d6ae28fed8"
+  dependencies:
+    hypher "*"
+
+hypher@*, hypher@^0.2.4, hypher@^0.2.5:
+  version "0.2.5"
+  resolved "https://registry.yarnpkg.com/hypher/-/hypher-0.2.5.tgz#2fe456ed2a3fd4ed0d9e428617181c59f9a6dd02"
+
 iconv-lite@0.4.19:
   version "0.4.19"
   resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.19.tgz#f7468f60135f5e5dad3399c0a81be9a1603a082b"
 
-iconv-lite@^0.4.17, iconv-lite@~0.4.13:
+iconv-lite@^0.4.13, iconv-lite@^0.4.17, iconv-lite@~0.4.13:
   version "0.4.21"
   resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.21.tgz#c47f8733d02171189ebc4a400f3218d348094798"
   dependencies:
@@ -3374,6 +3463,12 @@ levn@^0.3.0, levn@~0.3.0:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
 
+linebreak@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/linebreak/-/linebreak-0.1.2.tgz#67ef2db4a4698902e87eba9a0ee4f8490aa717e6"
+  dependencies:
+    unicode-trie "^0.1.1"
+
 linebreak@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/linebreak/-/linebreak-0.3.0.tgz#0526480a62c05bd679f3e9d99830e09c6a7d0ed6"
@@ -3480,9 +3575,17 @@ locate-path@^2.0.0:
     p-locate "^2.0.0"
     path-exists "^3.0.0"
 
+lodash.clone@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/lodash.clone/-/lodash.clone-4.5.0.tgz#195870450f5a13192478df4bc3d23d2dea1907b6"
+
 lodash.cond@^4.3.0:
   version "4.5.2"
   resolved "https://registry.yarnpkg.com/lodash.cond/-/lodash.cond-4.5.2.tgz#f471a1da486be60f6ab955d17115523dd1d255d5"
+
+lodash.groupby@^4.6.0:
+  version "4.6.0"
+  resolved "https://registry.yarnpkg.com/lodash.groupby/-/lodash.groupby-4.6.0.tgz#0b08a1dcf68397c397855c3239783832df7403d1"
 
 lodash.isfunction@^3.0.8:
   version "3.0.9"
@@ -3491,6 +3594,14 @@ lodash.isfunction@^3.0.8:
 lodash.isnan@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/lodash.isnan/-/lodash.isnan-3.0.2.tgz#82ed04a5f9ea8bd6226d0c26af0cac32f4507745"
+
+lodash.isnil@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/lodash.isnil/-/lodash.isnil-4.0.0.tgz#49e28cd559013458c814c5479d3c663a21bfaa6c"
+
+lodash.merge@^4.6.1:
+  version "4.6.1"
+  resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.1.tgz#adc25d9cb99b9391c59624f379fbba60d7111d54"
 
 lodash.pick@^4.4.0:
   version "4.4.0"
@@ -3692,6 +3803,10 @@ mute-stream@0.0.7:
 nan@^2.3.0, nan@^2.9.2:
   version "2.10.0"
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.10.0.tgz#96d0cd610ebd58d4b4de9cc0c6828cda99c7548f"
+
+nan@~2.2.0:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/nan/-/nan-2.2.1.tgz#d68693f6b34bb41d66bc68b3a4f9defc79d7149b"
 
 nanomatch@^1.2.9:
   version "1.2.9"
@@ -4087,9 +4202,17 @@ pause-stream@0.0.11:
   dependencies:
     through "~2.3"
 
-pdfkit@0.8.1:
-  version "0.8.1"
-  resolved "https://registry.yarnpkg.com/pdfkit/-/pdfkit-0.8.1.tgz#7c537e523084b144e2a9362882cd790be23281c9"
+pdfkit@^0.8.0:
+  version "0.8.3"
+  resolved "https://registry.yarnpkg.com/pdfkit/-/pdfkit-0.8.3.tgz#ec99a57fc55ca309726f856456da14418f5330e3"
+  dependencies:
+    fontkit "^1.0.0"
+    linebreak "^0.3.0"
+    png-js ">=0.1.0"
+
+"pdfkit@https://registry.npmjs.org/@react-pdf/pdfkit/-/pdfkit-0.8.7.tgz":
+  version "0.8.7"
+  resolved "https://registry.npmjs.org/@react-pdf/pdfkit/-/pdfkit-0.8.7.tgz#b4e603698a34df5f00d71262c6aa0b6506a289b1"
   dependencies:
     fontkit "^1.0.0"
     linebreak "^0.3.0"
@@ -4296,8 +4419,8 @@ react-apollo@^2.0.4:
     prop-types "^15.6.0"
 
 react-dom@^16.2.0:
-  version "16.3.1"
-  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.3.1.tgz#6a3c90a4fb62f915bdbcf6204422d93a7d4ca573"
+  version "16.3.2"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.3.2.tgz#cb90f107e09536d683d84ed5d4888e9640e0e4df"
   dependencies:
     fbjs "^0.8.16"
     loose-envify "^1.1.0"
@@ -4314,8 +4437,8 @@ react-reconciler@^0.7.0:
     prop-types "^15.6.0"
 
 react@^16.2.0:
-  version "16.3.1"
-  resolved "https://registry.yarnpkg.com/react/-/react-16.3.1.tgz#4a2da433d471251c69b6033ada30e2ed1202cfd8"
+  version "16.3.2"
+  resolved "https://registry.yarnpkg.com/react/-/react-16.3.2.tgz#fdc8420398533a1e58872f59091b272ce2f91ea9"
   dependencies:
     fbjs "^0.8.16"
     loose-envify "^1.1.0"
@@ -4535,15 +4658,9 @@ resolve@1.1.7, resolve@~1.1.7:
   version "1.1.7"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.1.7.tgz#203114d82ad2c5ed9e8e0411b3932875e889e97b"
 
-resolve@^1.1.5:
+resolve@^1.1.5, resolve@^1.1.6, resolve@^1.1.7, resolve@^1.3.3, resolve@^1.5.0, resolve@^1.6.0:
   version "1.7.1"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.7.1.tgz#aadd656374fd298aee895bc026b8297418677fd3"
-  dependencies:
-    path-parse "^1.0.5"
-
-resolve@^1.1.6, resolve@^1.1.7, resolve@^1.3.3, resolve@^1.5.0:
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.7.0.tgz#2bdf5374811207285df0df652b78f118ab8f3c5e"
   dependencies:
     path-parse "^1.0.5"
 
@@ -4608,8 +4725,8 @@ rx-lite@^3.1.2:
   resolved "https://registry.yarnpkg.com/rx-lite/-/rx-lite-3.1.2.tgz#19ce502ca572665f3b647b10939f97fd1615f102"
 
 rxjs@^5.4.2:
-  version "5.5.8"
-  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-5.5.8.tgz#b2b0809a57614ad6254c03d7446dea0d83ca3791"
+  version "5.5.10"
+  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-5.5.10.tgz#fde02d7a614f6c8683d0d1957827f492e09db045"
   dependencies:
     symbol-observable "1.0.1"
 
@@ -5016,10 +5133,14 @@ supports-color@^2.0.0:
   resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-2.0.0.tgz#535d045ce6b6363fa40117084629995e9df324c7"
 
 supports-color@^5.2.0, supports-color@^5.3.0:
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-5.3.0.tgz#5b24ac15db80fa927cf5227a4a33fd3c4c7676c0"
+  version "5.4.0"
+  resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-5.4.0.tgz#1c6b337402c2137605efe19f10fec390f6faab54"
   dependencies:
     has-flag "^3.0.0"
+
+svgpath@^2.2.0:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/svgpath/-/svgpath-2.2.1.tgz#0834bb67c89a76472b2bd06cc101fa7b517b222c"
 
 symbol-observable@1.0.1:
   version "1.0.1"
@@ -5194,14 +5315,18 @@ undefsafe@^2.0.2:
   dependencies:
     debug "^2.2.0"
 
-unicode-properties@^1.0.0:
+unicode-properties@^1.0.0, unicode-properties@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/unicode-properties/-/unicode-properties-1.1.0.tgz#7a96eef49f75682ea69d2315eec9ac43ffdf00c1"
   dependencies:
     brfs "^1.4.0"
     unicode-trie "^0.3.0"
 
-unicode-trie@^0.3.0:
+unicode-trie@^0.1.1:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/unicode-trie/-/unicode-trie-0.1.2.tgz#bd3c528bc3360cafdf71f0863cbec29fc0e84ec8"
+
+unicode-trie@^0.3.0, unicode-trie@^0.3.1:
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/unicode-trie/-/unicode-trie-0.3.1.tgz#d671dddd89101a08bac37b6a5161010602052085"
   dependencies:
@@ -5247,8 +5372,8 @@ upath@^1.0.0:
   resolved "https://registry.yarnpkg.com/upath/-/upath-1.0.4.tgz#ee2321ba0a786c50973db043a50b7bcba822361d"
 
 update-notifier@^2.3.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/update-notifier/-/update-notifier-2.4.0.tgz#f9b4c700fbfd4ec12c811587258777d563d8c866"
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/update-notifier/-/update-notifier-2.5.0.tgz#d0744593e13f161e406acb1d9408b72cad08aff6"
   dependencies:
     boxen "^1.2.1"
     chalk "^2.0.1"
