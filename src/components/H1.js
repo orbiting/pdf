@@ -4,8 +4,8 @@ import { fontFamilies } from '../lib/fonts'
 
 const styles = StyleSheet.create({
   headline: {
-    fontSize: 28,
-    marginBottom: 5,
+    fontSize: 30,
+    marginBottom: 10,
     fontFamily: fontFamilies.serifTitle
   }
 })

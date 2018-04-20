@@ -14,13 +14,36 @@ import {
   TitleBlock,
   H1,
   H2,
+  HR,
+  Sup,
+  Sub,
   Lead,
   Anchor,
   List,
   Credit,
   Strong,
-  Infobox
+  Cursive,
+  Infobox,
+  Figure,
+  FigureGroup,
+  Center,
+  Quote,
+  EmbedTwitter
 } from '../../components'
+
+const globalInlines = [
+  {
+    matchMdast: matchType('sub'),
+    component: Sub
+  },
+  {
+    matchMdast: matchType('sup'),
+    component: Sup
+  },
+  {
+    matchMdast: matchType('break')
+  }
+]
 
 const h2 = {
   matchMdast: matchHeading(2),
@@ -41,17 +64,25 @@ const breakType = {
   component: () => '\n'
 }
 
+const strong = {
+  matchMdast: matchType('strong'),
+  component: Strong
+}
+
 const paragraph = {
   matchMdast: matchParagraph,
   component: Paragraph,
   rules: [
-    {
-      matchMdast: matchType('strong'),
-      component: Strong
-    },
+    strong,
     link,
-    breakType
+    breakType,
+    ...globalInlines
   ]
+}
+
+const horizontalRule = {
+  matchMdast: matchType('thematicBreak'),
+  component: HR
 }
 
 const title = {
@@ -78,12 +109,24 @@ const title = {
   ]
 }
 
+const legendEmphasis = {
+  matchMdast: matchType('emphasis'),
+  component: Cursive
+}
+
 const figure = {
   matchMdast: matchZone('FIGURE'),
-  component: ({ children, ...props }) => <View {...props}>{children}</View>,
-  props: node => ({
-    size: node.data.size
-  }),
+  component: Figure,
+  props: (node, index, parent, { ancestors }) => {
+    const columns = parent.data && parent.data.columns
+    const inCenter = !!ancestors.find(matchZone('CENTER'))
+
+    return {
+      inCenter,
+      size: node.data.size,
+      width: columns ? `${(100 - columns) / columns}%` : null
+    }
+  },
   rules: [
     {
       matchMdast: matchImageParagraph,
@@ -95,9 +138,24 @@ const figure = {
       isVoid: true
     },
     {
-      ...paragraph,
-      component: Legend
+      matchMdast: matchParagraph,
+      component: Legend,
+      rules: [
+        legendEmphasis,
+        strong,
+        link,
+        breakType,
+        ...globalInlines
+      ]
     }
+  ]
+}
+
+const figureGroup = {
+  matchMdast: matchZone('FIGUREGROUP'),
+  component: FigureGroup,
+  rules: [
+    figure
   ]
 }
 
@@ -118,7 +176,7 @@ const infobox = {
           matchMdast: matchImageParagraph,
           component: Infobox.Image,
           props: node => ({
-            src: node.children[0].url.split('?')[0], // ?size=... breaks it.
+            src: node.children[0].url,
             alt: node.children[0].alt
           }),
           isVoid: true
@@ -143,9 +201,8 @@ const listItem = {
   }),
   rules: [
     {
-      matchMdast: matchParagraph,
-      component: List.ItemContent,
-      rules: []
+      ...paragraph,
+      component: List.ItemContent
     }
   ]
 }
@@ -164,27 +221,40 @@ const list = {
   ]
 }
 
-const quote = {
+const pullQuote = {
   matchMdast: matchZone('QUOTE'),
-  component: ({ children }) => <View>{children}</View>
+  component: Quote,
+  props: node => ({
+    size: node.data.size
+  }),
+  rules: [
+    figure,
+    {
+      matchMdast: matchParagraph,
+      component: Quote.Text
+    }
+  ]
 }
 
 const embedTweet = {
   matchMdast: matchZone('EMBEDTWITTER'),
-  component: ({ children }) => <View>{children}</View>
+  props: node => node.data,
+  component: EmbedTwitter
 }
 
 const center = {
   matchMdast: matchZone('CENTER'),
-  component: ({ children }) => children,
+  component: Center,
   rules: [
     h2,
+    pullQuote,
     paragraph,
     figure,
+    figureGroup,
     infobox,
     list,
-    quote,
-    embedTweet
+    embedTweet,
+    horizontalRule
   ]
 }
 

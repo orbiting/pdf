@@ -3,15 +3,15 @@ import { Text, StyleSheet } from '@react-pdf/core'
 import { fontFamilies } from '../lib/fonts'
 
 const styles = StyleSheet.create({
-  strong: {
+  cursive: {
     color: '#000',
     textDecoration: 'none',
-    fontFamily: fontFamilies.serifBold
+    fontFamily: fontFamilies.serifItalic
   }
 })
 
-const Strong = ({ children }) => (
-  <Text style={styles.strong}>{children}</Text>
+const Cursive = ({ children }) => (
+  <Text style={styles.cursive}>{children}</Text>
 )
 
-export default Strong
+export default Cursive

@@ -3,9 +3,9 @@ import { View, StyleSheet } from '@react-pdf/core'
 
 const styles = StyleSheet.create({
   titleblock: {
-    width: 500,
-    marginTop: 20,
-    marginBottom: 40
+    marginTop: 30,
+    marginBottom: 40,
+    paddingHorizontal: 90
   }
 })
 

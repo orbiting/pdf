@@ -5,15 +5,12 @@ import {
   StyleSheet,
   Link
 } from '@react-pdf/core'
-import { fontFamilies } from '../lib/fonts'
 
 const styles = StyleSheet.create({
   section: {
     backgroundColor: '#FF5555',
-    width: 500,
     marginTop: 10,
-    marginBottom: 10,
-    fontFamily: fontFamilies.serifTitle
+    marginBottom: 10
   },
   missingText: {
     fontSize: 13

@@ -11,7 +11,8 @@ const styles = StyleSheet.create({
     marginRight: 10
   },
   heading: {
-    fontSize: 18,
+    width: '100%',
+    fontSize: 10,
     paddingTop: 5,
     marginBottom: 5,
     borderTopWidth: 1,
@@ -28,9 +29,9 @@ const InfoboxFigure = ({ children, ...props }) => (
   </View>
 )
 
-const InfoboxHeading = ({ children }) => (
-  <Text style={styles.heading}>{children}</Text>
-)
+const InfoboxHeading = ({ children }) => {
+  return <Text style={styles.heading}>{children}</Text>
+}
 
 const InfoboxImage = ({ figureSize, src }) => {
   let width
@@ -53,12 +54,12 @@ const InfoboxImage = ({ figureSize, src }) => {
 }
 
 const Infobox = ({ children }) => {
-  const image = Children.toArray(children).filter(child => child.type === InfoboxImage)
-  const childs = Children.toArray(children).filter(child => child.type !== InfoboxImage)
+  const figure = Children.toArray(children).filter(child => child.type === InfoboxFigure)
+  const childs = Children.toArray(children).filter(child => child.type !== InfoboxFigure)
 
   return (
     <View style={styles.infobox} wrap={false}>
-      {image}
+      {figure}
       <View style={{ flex: 1 }}>
         {childs}
       </View>

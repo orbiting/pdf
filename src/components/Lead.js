@@ -4,7 +4,7 @@ import { fontFamilies } from '../lib/fonts'
 
 const styles = StyleSheet.create({
   lead: {
-    fontSize: 16,
+    fontSize: 12,
     marginBottom: 5,
     fontFamily: fontFamilies.serifRegular
   }

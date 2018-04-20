@@ -4,10 +4,8 @@ import { fontFamilies } from '../lib/fonts'
 
 const styles = StyleSheet.create({
   legend: {
-    marginTop: 5,
+    fontSize: 7,
     marginBottom: 10,
-    width: 500,
-    fontSize: 12,
     fontFamily: fontFamilies.sansSerifRegular
   }
 })

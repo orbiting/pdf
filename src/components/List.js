@@ -3,30 +3,29 @@ import { View, Text, StyleSheet } from '@react-pdf/core'
 import { fontFamilies } from '../lib/fonts'
 
 const styles = StyleSheet.create({
-  listitem: {
-    fontSize: 13,
-    fontFamily: fontFamilies.serifRegular
-  },
   item: {
     flexDirection: 'row',
-    marginBottom: 5
+    marginBottom: 5,
+    position: 'relative'
   },
-  itemLeftColumn: {
-    flexDirection: 'column',
-    marginRight: 10
-  },
-  itemRightColumn: {
-    flexDirection: 'column',
-    flexGrow: 9
+  listitem: {
+    flex: 1,
+    fontSize: 10,
+    textAlign: 'justify',
+    fontFamily: fontFamilies.serifRegular
   },
   bulletPoint: {
-    fontSize: 13,
+    width: 30,
+    left: -37,
+    fontSize: 10,
+    textAlign: 'right',
+    position: 'absolute',
     fontFamily: fontFamilies.serifRegular
   }
 })
 
 const List = ({ children }) => (
-  <View style={styles.section}>{children}</View>
+  <View>{children}</View>
 )
 
 export const ListItem = ({
@@ -38,10 +37,8 @@ export const ListItem = ({
 
   return (
     <View style={styles.item}>
-      <View style={styles.itemLeftColumn}>
-        <Text style={styles.bulletPoint}>{bullet}</Text>
-      </View>
-      <View style={styles.itemRightColumn}>{children}</View>
+      <Text style={styles.bulletPoint}>{bullet}</Text>
+      {children}
     </View>
   )
 }
