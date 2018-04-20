@@ -1,6 +1,6 @@
 import React from 'react'
-import format from 'date-fns/format'
-import deLocale from 'date-fns/locale/de'
+import { timeFormatLocale } from 'd3-time-format'
+import timeDefinition from 'd3-time-format/locale/de-CH'
 import { View, StyleSheet, Text, Image } from '@react-pdf/core'
 import { fontFamilies } from '../lib/fonts'
 
@@ -55,8 +55,11 @@ const styles = StyleSheet.create({
   }
 })
 
+const swissTime = timeFormatLocale(timeDefinition)
+const format = swissTime.format('%B %Y')
+
 const EmbedTwitter = ({ text, image, userName, userScreenName, userProfileImageUrl, createdAt }) => {
-  const date = format(createdAt, 'MMMM YYYY', { locale: deLocale })
+  const date = format(new Date(createdAt))
 
   return (
     <View style={styles.container} wrap={false}>
