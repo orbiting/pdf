@@ -22,6 +22,7 @@ import {
   List,
   Credit,
   Strong,
+  Cursive,
   Infobox,
   Figure,
   FigureGroup,
@@ -108,6 +109,11 @@ const title = {
   ]
 }
 
+const legendEmphasis = {
+  matchMdast: matchType('emphasis'),
+  component: Cursive
+}
+
 const figure = {
   matchMdast: matchZone('FIGURE'),
   component: Figure,
@@ -132,8 +138,15 @@ const figure = {
       isVoid: true
     },
     {
-      ...paragraph,
-      component: Legend
+      matchMdast: matchParagraph,
+      component: Legend,
+      rules: [
+        legendEmphasis,
+        strong,
+        link,
+        breakType,
+        ...globalInlines
+      ]
     }
   ]
 }
