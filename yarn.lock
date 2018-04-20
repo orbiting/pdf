@@ -78,11 +78,11 @@
     lodash "^4.2.0"
     to-fast-properties "^2.0.0"
 
-"@react-pdf/core@0.7.7-0":
-  version "0.7.7-0"
-  resolved "https://registry.yarnpkg.com/@react-pdf/core/-/core-0.7.7-0.tgz#79e5e8c533c4414939333421bd68944f04c73029"
+"@react-pdf/core@0.7.7-1":
+  version "0.7.7-1"
+  resolved "https://registry.yarnpkg.com/@react-pdf/core/-/core-0.7.7-1.tgz#ee47bcd92c41afc428ce1da323b035253d712096"
   dependencies:
-    "@react-pdf/font-substitution" "1.0.2"
+    "@react-pdf/font-substitution" "1.0.3"
     "@react-pdf/linebreaker" "1.0.0"
     "@react-pdf/textkit" "^0.1.0"
     blob-stream "^0.1.3"
@@ -104,9 +104,9 @@
     request "^2.81.0"
     yoga-layout "1.9.3"
 
-"@react-pdf/font-substitution@1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@react-pdf/font-substitution/-/font-substitution-1.0.2.tgz#810f0171915d5cc6a2d4057e6297d8cae7bd00bd"
+"@react-pdf/font-substitution@1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@react-pdf/font-substitution/-/font-substitution-1.0.3.tgz#e8e98b1ae8698393dac8af2f40310a0791aae6c7"
   dependencies:
     "@react-pdf/pdfkit" "0.8.7"
     "@react-pdf/textkit" "^0.1.0"
