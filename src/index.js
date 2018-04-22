@@ -56,7 +56,7 @@ const render = async (mdast, response) => {
 server.get('/fixtures/:path', (req, res) => {
   const fixturePath = path.join(
     __dirname, '..', 'fixtures',
-    `${req.path}.json`
+    `${req.params.path}.json`
   )
   if (!fs.existsSync(fixturePath)) {
     res.status(404).end('No Fixture Found')

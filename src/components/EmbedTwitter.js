@@ -4,8 +4,7 @@ import timeDefinition from 'd3-time-format/locale/de-CH'
 import { View, StyleSheet, Text, Image } from '@react-pdf/core'
 import { fontFamilies } from '../lib/fonts'
 
-// Temp URL
-const logoUrl = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC876PQpIQ0cswsYIJ6U9UN4TOjDuJ4D58vOl2uSG25XRWSlqT'
+const logoUrl = 'https://cdn.republik.space/s3/republik-assets/assets/pdf/twitter.png'
 
 const styles = StyleSheet.create({
   container: {
