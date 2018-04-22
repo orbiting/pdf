@@ -5,17 +5,19 @@ import path from 'path'
 import 'regenerator-runtime/runtime'
 import { createElement, pdf, PDFRenderer } from '@react-pdf/core'
 import { createApolloFetch } from 'apollo-fetch'
-import Document from './components/Document'
-
-const PORT = process.env.PORT || 3007
 
 if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config()
 }
 
+const PORT = process.env.PORT || 3007
+
+const Document = require('./components/Document').default
+
 const query = `
   query getDocument($path: String!) {
     article: document(path: $path) {
+      id
       content
       meta {
         template
@@ -39,12 +41,12 @@ const query = `
 
 const server = express()
 
-const render = async (mdast, response) => {
+const render = async (article, response) => {
   const container = createElement('ROOT')
   const node = PDFRenderer.createContainer(container)
 
   PDFRenderer.updateContainer(
-    <Document article={mdast} />,
+    <Document article={article} />,
     node,
     null
   )
