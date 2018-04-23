@@ -3,8 +3,8 @@ import { View, StyleSheet } from '@react-pdf/core'
 
 const styles = StyleSheet.create({
   fullWidth: {
-    width: '515',
-    marginLeft: -90
+    width: '455',
+    marginLeft: -60
   },
   columnWidth: {
     width: '100%'
