@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#000'
   },
   footer: {
-    left: 30,
+    left: 40,
     bottom: 25,
     fontSize: 10,
     position: 'absolute',
