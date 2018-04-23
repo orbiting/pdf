@@ -6,7 +6,6 @@ import {
 
 const styles = StyleSheet.create({
   image: {
-    backgroundColor: 'grey',
     marginTop: 10,
     marginBottom: 10
   }
@@ -25,7 +24,7 @@ export default ({ node, ancestors }) => {
     return parent.children.indexOf(all[index + 1] || node)
   })
 
-  const extractUrl = `${FRONTEND_BASE_URL}${rootNode.path}?extract=${ranges.join(':')}`
+  const extractUrl = `${FRONTEND_BASE_URL}${rootNode.path}?extract=${ranges.join(':')}&unpack=${ranges.length}`
   const renderUrl = `${ASSETS_SERVER_BASE_URL}/render?width=665&height=1&id=${encodeURIComponent(rootNode.id)}&url=${encodeURIComponent(extractUrl)}`
 
   return (
