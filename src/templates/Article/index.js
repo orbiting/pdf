@@ -118,7 +118,7 @@ const title = {
 
 const legendEmphasis = {
   matchMdast: matchType('emphasis'),
-  component: Cursive
+  component: Credit
 }
 
 const figure = {
