@@ -69,11 +69,17 @@ const strong = {
   component: Strong
 }
 
+const italic = {
+  matchMdast: matchType('emphasis'),
+  component: Cursive
+}
+
 const paragraph = {
   matchMdast: matchParagraph,
   component: Paragraph,
   rules: [
     strong,
+    italic,
     link,
     breakType,
     ...globalInlines
