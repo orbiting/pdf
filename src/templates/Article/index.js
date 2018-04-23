@@ -194,7 +194,8 @@ const infobox = {
             alt: node.children[0].alt
           }),
           isVoid: true
-        }
+        },
+        legend
       ]
     },
     {
