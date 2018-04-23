@@ -36,6 +36,10 @@ const InfoboxHeading = ({ children }) => {
 const InfoboxImage = ({ figureSize, src }) => {
   let width
 
+  if (!src) {
+    return null
+  }
+
   switch (figureSize) {
     case 'XS':
       width = 70

@@ -13,6 +13,10 @@ const styles = StyleSheet.create({
   }
 })
 
-export default ({ src }) => (
-  <Image style={styles.image} src={imageResizeUrl(src, '2000x')} />
-)
+export default ({ src }) => {
+  if (!src) {
+    return null
+  }
+
+  return <Image style={styles.image} src={imageResizeUrl(src, '2000x')} />
+}
