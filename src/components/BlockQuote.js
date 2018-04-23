@@ -1,13 +1,11 @@
 import React from 'react'
 import { Text, View, StyleSheet } from '@react-pdf/core'
-import { fontFamilies } from '../lib/fonts'
 
 const styles = StyleSheet.create({
   text: {
     padding: 10,
     marginBottom: 3,
-    backgroundColor: '#f7f7f7',
-    fontFamily: fontFamilies.serifTitle
+    backgroundColor: '#f7f7f7'
   }
 })
 

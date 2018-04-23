@@ -28,10 +28,13 @@ import {
   Figure,
   FigureGroup,
   Center,
-  Quote,
+  PullQuote,
   BlockQuote,
   EmbedTwitter
 } from '../../components'
+
+const matchFigure = matchZone('FIGURE')
+const matchLast = (node, index, parent) => index === parent.children.length - 1
 
 const globalInlines = [
   {
@@ -234,15 +237,32 @@ const list = {
 
 const pullQuote = {
   matchMdast: matchZone('QUOTE'),
-  component: Quote,
+  component: PullQuote,
   props: node => ({
     size: node.data.size
   }),
   rules: [
-    figure,
     {
-      matchMdast: matchParagraph,
-      component: Quote.Text
+      ...figure,
+      component: PullQuote.Figure
+    },
+    {
+      matchMdast: (node, index, parent) => (
+        matchParagraph(node) &&
+          (
+            index === 0 ||
+            (index === 1 && matchFigure(parent.children[0])) ||
+            !matchLast(node, index, parent)
+          )
+      ),
+      component: PullQuote.Text
+    },
+    {
+      matchMdast: (node, index, parent) =>
+        matchParagraph(node) &&
+        matchLast(node, index, parent),
+      component: PullQuote.Source,
+      rules: [...globalInlines, link]
     }
   ]
 }
