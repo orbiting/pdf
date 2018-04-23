@@ -121,6 +121,18 @@ const legendEmphasis = {
   component: Credit
 }
 
+const legend = {
+  matchMdast: matchParagraph,
+  component: Legend,
+  rules: [
+    legendEmphasis,
+    strong,
+    link,
+    breakType,
+    ...globalInlines
+  ]
+}
+
 const figure = {
   matchMdast: matchZone('FIGURE'),
   component: Figure,
@@ -144,17 +156,7 @@ const figure = {
       }),
       isVoid: true
     },
-    {
-      matchMdast: matchParagraph,
-      component: Legend,
-      rules: [
-        legendEmphasis,
-        strong,
-        link,
-        breakType,
-        ...globalInlines
-      ]
-    }
+    legend
   ]
 }
 
@@ -162,7 +164,8 @@ const figureGroup = {
   matchMdast: matchZone('FIGUREGROUP'),
   component: FigureGroup,
   rules: [
-    figure
+    figure,
+    legend
   ]
 }
 
