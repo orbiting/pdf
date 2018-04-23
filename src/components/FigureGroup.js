@@ -8,8 +8,8 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between'
   },
   fullWidth: {
-    width: '515',
-    marginLeft: -90
+    width: '455',
+    marginLeft: -60
   }
 })
 
