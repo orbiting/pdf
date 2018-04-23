@@ -1,6 +1,6 @@
 import React from 'react'
-import { Image, StyleSheet } from '@react-pdf/core'
-import { parse, format } from 'url'
+import { StyleSheet } from '@react-pdf/core'
+import SafeImage from './SafeImage'
 
 import {
   imageResizeUrl
@@ -15,14 +15,5 @@ const styles = StyleSheet.create({
 })
 
 export default ({ src }) => {
-  const url = parse(imageResizeUrl(src, '2000x'), true)
-  // force convert gif to png
-  // and ensure pngs are not interlaced
-  // - not supported by pdfkit
-  if (url.pathname.match(/\.(gif|png)$/)) {
-    url.query.format = 'png'
-    // ensure format calculates from query object
-    url.search = undefined
-  }
-  return <Image style={styles.image} src={format(url)} />
+  return <SafeImage style={styles.image} src={imageResizeUrl(src, '2000x')} />
 }

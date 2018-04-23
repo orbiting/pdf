@@ -3,8 +3,9 @@ import { timeFormatLocale } from 'd3-time-format'
 import timeDefinition from 'd3-time-format/locale/de-CH'
 import { View, StyleSheet, Text, Image } from '@react-pdf/core'
 import { fontFamilies } from '../lib/fonts'
+import SafeImage from './SafeImage'
 
-const logoUrl = 'https://cdn.republik.space/s3/republik-assets/assets/pdf/twitter.png'
+const LOGO_SRC = 'https://cdn.republik.space/s3/republik-assets/assets/pdf/twitter.png'
 
 const styles = StyleSheet.create({
   container: {
@@ -63,7 +64,7 @@ const EmbedTwitter = ({ text, image, userName, userScreenName, userProfileImageU
   return (
     <View style={styles.container} wrap={false}>
       <View style={styles.header}>
-        <Image style={styles.avatar} src={userProfileImageUrl} />
+        <SafeImage style={styles.avatar} src={userProfileImageUrl} />
         <View style={styles.tweetInfo}>
           <Text style={styles.userName}>
             {userName}
@@ -72,11 +73,11 @@ const EmbedTwitter = ({ text, image, userName, userScreenName, userProfileImageU
             {`@${userScreenName}, ${date}`}
           </Text>
         </View>
-        <Image style={styles.logo} src={logoUrl} />
+        <Image style={styles.logo} src={LOGO_SRC} />
       </View>
       <View style={styles.body}>
         <Text style={styles.text}>{text}</Text>
-        {image && <Image style={styles.image} src={image} />}
+        {image && <SafeImage style={styles.image} src={image} />}
       </View>
     </View>
   )
