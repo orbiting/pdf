@@ -18,6 +18,7 @@ import {
   Sup,
   Sub,
   Lead,
+  Note,
   Anchor,
   List,
   Credit,
@@ -248,6 +249,11 @@ const embedTweet = {
   component: EmbedTwitter
 }
 
+const note = {
+  matchMdast: matchZone('NOTE'),
+  component: Note
+}
+
 const center = {
   matchMdast: matchZone('CENTER'),
   component: Center,
@@ -259,6 +265,7 @@ const center = {
     figureGroup,
     infobox,
     list,
+    note,
     embedTweet,
     horizontalRule
   ]
