@@ -13,8 +13,8 @@ const styles = StyleSheet.create({
   }
 })
 
-const Paragraph = ({ children }) => (
-  <Text style={styles.text}>{children}</Text>
+const Paragraph = ({ style, children }) => (
+  <Text style={[style, styles.text]}>{children}</Text>
 )
 
 export default Paragraph
