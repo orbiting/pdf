@@ -50,8 +50,11 @@ const InfoboxImage = ({ figureSize, src }) => {
     case 'M':
       width = 160
       break
-    default:
+    case 'L':
       width = 200
+      break
+    default:
+      width = 100
   }
 
   return <Image style={[styles.image, { width }]} src={src} />
