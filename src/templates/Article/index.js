@@ -29,6 +29,7 @@ import {
   FigureGroup,
   Center,
   Quote,
+  BlockQuote,
   EmbedTwitter
 } from '../../components'
 
@@ -246,6 +247,18 @@ const pullQuote = {
   ]
 }
 
+const blockQuote = {
+  matchMdast: matchZone('BLOCKQUOTE'),
+  component: BlockQuote,
+  rules: [
+    {
+      matchMdast: matchType('blockquote'),
+      component: BlockQuote.Text
+    },
+    legend
+  ]
+}
+
 const embedTweet = {
   matchMdast: matchZone('EMBEDTWITTER'),
   props: node => node.data,
@@ -263,6 +276,7 @@ const center = {
   rules: [
     h2,
     pullQuote,
+    blockQuote,
     paragraph,
     figure,
     figureGroup,
