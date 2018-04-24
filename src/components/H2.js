@@ -5,6 +5,7 @@ import { fontFamilies } from '../lib/fonts'
 const styles = StyleSheet.create({
   subheadline: {
     fontSize: 13,
+    marginTop: 15,
     marginBottom: 5,
     fontFamily: fontFamilies.serifBold
   }

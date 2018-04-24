@@ -4,7 +4,8 @@ import { fontFamilies } from '../lib/fonts'
 
 const styles = StyleSheet.create({
   credit: {
-    fontSize: 6,
+    fontSize: 8,
+    lineHeight: 1.3,
     fontFamily: fontFamilies.sansSerifRegular
   }
 })
