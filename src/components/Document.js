@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import { StyleSheet, Document, Page, Text, Font, View } from '@react-pdf/core'
+import { StyleSheet, Document, Page, Text, Link, Font, View } from '@react-pdf/core'
 import { renderMdast } from 'mdast-react-render'
 import hyphenationCallback from '../lib/hyphenation'
 import articleSchema from '../templates/Article'
@@ -23,33 +23,42 @@ const styles = StyleSheet.create({
   },
   logo: {
     left: 40,
-    bottom: 25,
+    bottom: 23,
     fontSize: 10,
     position: 'absolute',
     fontFamily: fontFamilies.serifTitle
   },
   path: {
     left: 105,
-    bottom: 28,
+    bottom: 25,
     fontSize: 8,
     position: 'absolute',
-    fontFamily: fontFamilies.sansSerifRegular
+    color: '#000',
+    fontFamily: fontFamilies.sansSerifRegular,
+    textDecoration: 'none'
   },
   numbers: {
     right: 40,
     bottom: 25,
-    fontSize: 10,
+    fontSize: 8,
     position: 'absolute',
     fontFamily: fontFamilies.sansSerifRegular
   }
 })
+
+const {
+  FRONTEND_BASE_URL
+} = process.env
 
 const renderArticleLink = article => ({ pageNumber, totalPages }) => {
   if (
     pageNumber === 1 ||
     pageNumber === totalPages
   ) {
-    return `republik.ch${article.content.meta.path}`
+    return [
+      FRONTEND_BASE_URL.replace(/^https?:\/\/(www\.)?/, ''),
+      article.meta.path
+    ].join('')
   }
 
   return ''
@@ -62,7 +71,7 @@ const renderPageNumbers = ({ pageNumber, totalPages }) => (
 const Footer = ({ article }) => (
   <Fragment>
     <Text style={styles.logo} fixed>REPUBLIK</Text>
-    <Text style={styles.path} render={renderArticleLink(article)} fixed />
+    <Link style={styles.path} fixed render={renderArticleLink(article)} src={FRONTEND_BASE_URL + article.meta.path} />
     <Text style={styles.numbers} render={renderPageNumbers} fixed />
   </Fragment>
 )
@@ -109,7 +118,7 @@ const MdastDocument = ({ article }) => {
   return (
     <Document>
       <Page size='A4' style={styles.page} wrap>
-        <View style={decoratorStyle} fixed />
+        <View style={decoratorStyle} />
         {mdast.props.children}
         <Footer article={article} />
       </Page>
