@@ -34,9 +34,11 @@ const Figure = ({ size, width, inCenter, children }) => {
     style = styles.columnWidth
   }
 
-  return <View style={style} wrap={false}>
-    {children}
-  </View>
+  return (
+    <View style={style} wrap={false}>
+      {children}
+    </View>
+  )
 }
 
 export default Figure

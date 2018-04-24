@@ -1,11 +1,9 @@
 import React from 'react'
 import { StyleSheet, Text } from '@react-pdf/core'
+import { imageResizeUrl } from 'mdast-react-render/lib/utils'
 import SafeImage from './SafeImage'
+import { branch, renderComponent } from '../lib/hocs'
 import { fontFamilies } from '../lib/fonts'
-
-import {
-  imageResizeUrl
-} from 'mdast-react-render/lib/utils'
 
 const styles = StyleSheet.create({
   image: {
@@ -21,16 +19,21 @@ const styles = StyleSheet.create({
   }
 })
 
-export const Alt = ({children}) => (
-  <Text style={styles.alt}>{children}</Text>
+export const Alt = ({ children }) => (
+  <Text style={styles.alt}>
+    {children}
+  </Text>
 )
 
-export default ({ src, alt, skip, isCover }) => {
-  if (skip) {
-    return <Alt>
-      {`${isCover ? 'Cover' : 'Bild'}`}
-      {`${alt ? `: ${alt}` : ''}`}
-    </Alt>
-  }
-  return <SafeImage style={styles.image} src={imageResizeUrl(src, '2000x')} />
-}
+const Image = ({ src }) => (
+  <SafeImage style={styles.image} src={imageResizeUrl(src, '2000x')} />
+)
+
+const ImageAlt = ({ alt, isCover }) => (
+  <Alt>
+    {`${isCover ? 'Cover' : 'Bild'}`}
+    {`${alt ? `: ${alt}` : ''}`}
+  </Alt>
+)
+
+export default branch(props => props.skip, renderComponent(ImageAlt))(Image)

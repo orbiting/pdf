@@ -1,12 +1,9 @@
 import React from 'react'
 import { Image } from '@react-pdf/core'
 import { parse, format } from 'url'
+import { branch, renderNothing } from '../lib/hocs'
 
-export default ({ src, ...props }) => {
-  if (!src) {
-    return null
-  }
-
+const SafeImage = ({ src, ...props }) => {
   const url = parse(src, true)
   // force convert gif to png
   // and ensure pngs are not interlaced
@@ -18,3 +15,5 @@ export default ({ src, ...props }) => {
   }
   return <Image {...props} src={format(url)} />
 }
+
+export default branch(props => !props.src, renderNothing)(SafeImage)
