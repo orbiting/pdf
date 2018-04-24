@@ -1,16 +1,24 @@
 import React from 'react'
 import { Link, StyleSheet } from '@react-pdf/core'
-import { fontFamilies } from '../lib/fonts'
+
+const {
+  FRONTEND_BASE_URL
+} = process.env
 
 const styles = StyleSheet.create({
   link: {
-    color: '#000000',
-    fontFamily: fontFamilies.sansSerifRegular
+    color: '#000000'
   }
 })
 
 const Anchor = ({ children, href }) => (
-  <Link style={styles.link} src={href}>{children}</Link>
+  <Link style={styles.link} src={
+    href && href[0] === '/' // path urls
+      ? FRONTEND_BASE_URL + href
+      : href
+  }>
+    {children}
+  </Link>
 )
 
 export default Anchor

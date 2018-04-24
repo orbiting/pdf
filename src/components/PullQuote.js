@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
   source: {
     fontSize: 8,
     lineHeight: 1.3,
-    fontFamily: fontFamilies.serifRegular
+    fontFamily: fontFamilies.sansSerifRegular
   }
 })
 
