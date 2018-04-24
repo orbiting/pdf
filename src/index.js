@@ -41,12 +41,14 @@ const query = `
 
 const server = express()
 
-const render = async (article, response) => {
+const render = async (article, query, response) => {
   const container = createElement('ROOT')
   const node = PDFRenderer.createContainer(container)
 
   PDFRenderer.updateContainer(
-    <Document article={article} />,
+    <Document article={article} options={{
+      images: query.images !== '0'
+    }} />,
     node,
     null
   )
@@ -67,7 +69,7 @@ server.get('/fixtures/:path', (req, res) => {
   const api = JSON.parse(
     fs.readFileSync(fixturePath, 'utf8')
   )
-  render(api.data.document, res)
+  render(api.data.document, req.query, res)
 })
 
 server.get('/:path*', async (req, res) => {
@@ -84,7 +86,7 @@ server.get('/:path*', async (req, res) => {
     res.status(404).end('No Article Found')
     return
   }
-  render(api.data.article, res)
+  render(api.data.article, req.query, res)
 })
 
 server.listen(PORT, err => {

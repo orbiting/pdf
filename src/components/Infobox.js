@@ -2,6 +2,7 @@ import React, { Children } from 'react'
 import { Text, View, StyleSheet } from '@react-pdf/core'
 import { fontFamilies } from '../lib/fonts'
 import SafeImage from './SafeImage'
+import { Alt } from './Image'
 
 const styles = StyleSheet.create({
   infobox: {
@@ -10,6 +11,10 @@ const styles = StyleSheet.create({
   },
   image: {
     marginRight: 10
+  },
+  alt: {
+    marginRight: 10,
+    width: 70
   },
   heading: {
     width: '100%',
@@ -47,9 +52,16 @@ const InfoboxParagraph = ({ children }) => {
   return <Text style={styles.paragraph}>{children}</Text>
 }
 
-const InfoboxImage = ({ figureSize, src }) => {
-  let width
+const InfoboxImage = ({ figureSize, src, alt, skip }) => {
+  if (skip) {
+    return <View style={styles.alt}>
+      <Alt>
+        {`Bild${alt ? `: ${alt}` : ''}`}
+      </Alt>
+    </View>
+  }
 
+  let width
   switch (figureSize) {
     case 'XS':
       width = 70

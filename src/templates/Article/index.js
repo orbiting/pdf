@@ -140,27 +140,48 @@ const legend = {
   ]
 }
 
+const getImageProps = (node, index, parent, { ancestors }) => {
+  const rootNode = ancestors[ancestors.length - 1]
+  return {
+    src: node.children[0].url,
+    alt: node.children[0].alt,
+    skip: !rootNode.options.images,
+    isCover: (
+      ancestors.length === 2 &&
+      rootNode.children.indexOf(parent) === 0
+    )
+  }
+}
+
 const figure = {
   matchMdast: matchZone('FIGURE'),
-  component: Figure,
+  component: ({empty, ...props}) => empty
+    ? null
+    : <Figure {...props} />,
   props: (node, index, parent, { ancestors }) => {
+    const rootNode = ancestors[ancestors.length - 1]
     const columns = parent.data && parent.data.columns
     const inCenter = !!ancestors.find(matchZone('CENTER'))
 
     return {
       inCenter,
-      size: node.data.size,
-      width: columns ? `${(100 - columns) / columns}%` : null
+      size: rootNode.options.images
+        ? node.data.size
+        : undefined,
+      width: columns ? `${(100 - columns) / columns}%` : null,
+      empty: (
+        !rootNode.options.images &&
+        node.children.length === 1 &&
+        matchImageParagraph(node.children[0]) &&
+        !node.children[0].children[0].alt
+      )
     }
   },
   rules: [
     {
       matchMdast: matchImageParagraph,
       component: Image,
-      props: node => ({
-        src: node.children[0].url,
-        alt: node.children[0].alt
-      }),
+      props: getImageProps,
       isVoid: true
     },
     legend
@@ -192,10 +213,7 @@ const infobox = {
         {
           matchMdast: matchImageParagraph,
           component: Infobox.Image,
-          props: node => ({
-            src: node.children[0].url,
-            alt: node.children[0].alt
-          }),
+          props: getImageProps,
           isVoid: true
         },
         legend

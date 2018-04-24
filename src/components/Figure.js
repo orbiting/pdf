@@ -12,21 +12,31 @@ const styles = StyleSheet.create({
     width: '100%',
     marginTop: 5,
     marginBottom: 5
+  },
+  tinyWidth: {
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    width: '33%',
+    marginBottom: 5
   }
 })
 
 const Figure = ({ size, width, inCenter, children }) => {
-  let sizeClassName
+  let style
 
   if (width) {
-    sizeClassName = { width }
+    style = { width }
   } else if (inCenter && size === 'breakout') {
-    sizeClassName = styles.fullWidth
+    style = styles.fullWidth
+  } else if (size === 'tiny') {
+    style = styles.tinyWidth
   } else {
-    sizeClassName = styles.columnWidth
+    style = styles.columnWidth
   }
 
-  return <View style={sizeClassName}>{children}</View>
+  return <View style={style} wrap={false}>
+    {children}
+  </View>
 }
 
 export default Figure
