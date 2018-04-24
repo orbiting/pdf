@@ -76,7 +76,7 @@ const Footer = ({ article }) => (
   </Fragment>
 )
 
-const MdastDocument = ({ article }) => {
+const MdastDocument = ({ article, options }) => {
   if (article.meta.template !== 'article') {
     return (
       <Document>
@@ -90,6 +90,7 @@ const MdastDocument = ({ article }) => {
   const mdast = renderMdast(
     {
       ...article.content,
+      options,
       id: article.id,
       path: article.meta.path
     },
