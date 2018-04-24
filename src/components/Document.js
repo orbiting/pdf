@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import { StyleSheet, Document, Page, Text, Font, View } from '@react-pdf/core'
 import { renderMdast } from 'mdast-react-render'
-import hyphenationCallback from '../lib/Hyphenation'
+import hyphenationCallback from '../lib/hyphenation'
 import articleSchema from '../templates/Article'
 import MissingNode from './MissingNode'
 import { fontFamilies } from '../lib/fonts'
