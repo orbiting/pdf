@@ -4,7 +4,7 @@ import { fontFamilies } from '../lib/fonts'
 
 const styles = StyleSheet.create({
   link: {
-    color: '#00508C',
+    color: '#000000',
     fontFamily: fontFamilies.sansSerifRegular
   }
 })

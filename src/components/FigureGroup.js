@@ -3,13 +3,11 @@ import { View, StyleSheet } from '@react-pdf/core'
 
 const styles = StyleSheet.create({
   container: {
+    width: '455',
+    marginLeft: -60,
     flexWrap: 'wrap',
     flexDirection: 'row',
     justifyContent: 'space-between'
-  },
-  fullWidth: {
-    width: '515',
-    marginLeft: -90
   }
 })
 

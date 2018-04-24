@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
     marginBottom: 5,
     borderTopWidth: 1,
     borderTopColor: 'black',
-    fontFamily: fontFamilies.serifBold
+    fontFamily: fontFamilies.sansSerifMedium
   }
 })
 
@@ -47,8 +47,11 @@ const InfoboxImage = ({ figureSize, src }) => {
     case 'M':
       width = 160
       break
-    default:
+    case 'L':
       width = 200
+      break
+    default:
+      width = 100
   }
 
   return <SafeImage style={[styles.image, { width }]} src={src} />

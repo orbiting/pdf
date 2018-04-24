@@ -18,18 +18,23 @@ import {
   Sup,
   Sub,
   Lead,
+  Note,
   Anchor,
   List,
   Credit,
-  Strong,
-  Cursive,
   Infobox,
   Figure,
+  Editorial,
+  Interaction,
   FigureGroup,
   Center,
-  Quote,
+  PullQuote,
+  BlockQuote,
   EmbedTwitter
 } from '../../components'
+
+const matchFigure = matchZone('FIGURE')
+const matchLast = (node, index, parent) => index === parent.children.length - 1
 
 const globalInlines = [
   {
@@ -41,14 +46,10 @@ const globalInlines = [
     component: Sup
   },
   {
-    matchMdast: matchType('break')
+    matchMdast: matchType('break'),
+    component: () => '\n'
   }
 ]
-
-const h2 = {
-  matchMdast: matchHeading(2),
-  component: H2
-}
 
 const link = {
   matchMdast: matchType('link'),
@@ -59,25 +60,41 @@ const link = {
   component: Anchor
 }
 
-const breakType = {
-  matchMdast: matchType('break'),
-  component: () => '\n'
-}
+const interactionParagraphRules = [
+  ...globalInlines,
+  {
+    matchMdast: matchType('strong'),
+    component: Interaction.Emphasis
+  },
+  {
+    matchMdast: matchType('emphasis'),
+    component: Interaction.Cursive
+  },
+  link
+]
 
-const strong = {
-  matchMdast: matchType('strong'),
-  component: Strong
+const editorialParagraphRules = [
+  ...globalInlines,
+  {
+    matchMdast: matchType('strong'),
+    component: Editorial.Emphasis
+  },
+  {
+    matchMdast: matchType('emphasis'),
+    component: Editorial.Cursive
+  },
+  link
+]
+
+const h2 = {
+  matchMdast: matchHeading(2),
+  component: H2
 }
 
 const paragraph = {
   matchMdast: matchParagraph,
   component: Paragraph,
-  rules: [
-    strong,
-    link,
-    breakType,
-    ...globalInlines
-  ]
+  rules: editorialParagraphRules
 }
 
 const horizontalRule = {
@@ -111,7 +128,16 @@ const title = {
 
 const legendEmphasis = {
   matchMdast: matchType('emphasis'),
-  component: Cursive
+  component: Credit
+}
+
+const legend = {
+  matchMdast: matchParagraph,
+  component: Legend,
+  rules: [
+    legendEmphasis,
+    ...editorialParagraphRules
+  ]
 }
 
 const figure = {
@@ -137,17 +163,7 @@ const figure = {
       }),
       isVoid: true
     },
-    {
-      matchMdast: matchParagraph,
-      component: Legend,
-      rules: [
-        legendEmphasis,
-        strong,
-        link,
-        breakType,
-        ...globalInlines
-      ]
-    }
+    legend
   ]
 }
 
@@ -155,7 +171,8 @@ const figureGroup = {
   matchMdast: matchZone('FIGUREGROUP'),
   component: FigureGroup,
   rules: [
-    figure
+    figure,
+    legend
   ]
 }
 
@@ -180,7 +197,8 @@ const infobox = {
             alt: node.children[0].alt
           }),
           isVoid: true
-        }
+        },
+        legend
       ]
     },
     {
@@ -223,16 +241,46 @@ const list = {
 
 const pullQuote = {
   matchMdast: matchZone('QUOTE'),
-  component: Quote,
+  component: PullQuote,
   props: node => ({
-    size: node.data.size
+    size: node.data.size,
+    hasFigure: !!node.children.find(matchFigure)
   }),
   rules: [
-    figure,
     {
-      matchMdast: matchParagraph,
-      component: Quote.Text
+      ...figure,
+      component: PullQuote.Figure
+    },
+    {
+      matchMdast: (node, index, parent) => (
+        matchParagraph(node) &&
+          (
+            index === 0 ||
+            (index === 1 && matchFigure(parent.children[0])) ||
+            !matchLast(node, index, parent)
+          )
+      ),
+      component: PullQuote.Text
+    },
+    {
+      matchMdast: (node, index, parent) =>
+        matchParagraph(node) &&
+        matchLast(node, index, parent),
+      component: PullQuote.Source,
+      rules: [...globalInlines, link]
     }
+  ]
+}
+
+const blockQuote = {
+  matchMdast: matchZone('BLOCKQUOTE'),
+  component: BlockQuote,
+  rules: [
+    {
+      matchMdast: matchType('blockquote'),
+      component: BlockQuote.Text
+    },
+    legend
   ]
 }
 
@@ -242,17 +290,29 @@ const embedTweet = {
   component: EmbedTwitter
 }
 
+const note = {
+  matchMdast: matchZone('NOTE'),
+  component: props => props.children,
+  rules: [{
+    matchMdast: matchParagraph,
+    component: Note,
+    rules: interactionParagraphRules
+  }]
+}
+
 const center = {
   matchMdast: matchZone('CENTER'),
   component: Center,
   rules: [
     h2,
     pullQuote,
+    blockQuote,
     paragraph,
     figure,
     figureGroup,
     infobox,
     list,
+    note,
     embedTweet,
     horizontalRule
   ]
