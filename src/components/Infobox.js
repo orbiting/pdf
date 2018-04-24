@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
     marginBottom: 5,
     borderTopWidth: 1,
     borderTopColor: 'black',
-    fontFamily: fontFamilies.serifBold
+    fontFamily: fontFamilies.sansSerifMedium
   }
 })
 

@@ -5,13 +5,14 @@ import { fontFamilies } from '../lib/fonts'
 const styles = StyleSheet.create({
   note: {
     fontSize: 7,
+    marginBottom: 10,
     fontFamily: fontFamilies.sansSerifRegular
   }
 })
 
 const Note = ({ children }) => (
   <Text style={styles.note}>
-    {children[0].props.children}
+    {children}
   </Text>
 )
 

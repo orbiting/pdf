@@ -27,10 +27,10 @@ const styles = StyleSheet.create({
   }
 })
 
-const PullQuote = ({ size, children }) => {
-  const containerClass = size === 'narrow' && styles.narrowContainer
+const PullQuote = ({ size, hasFigure, children }) => {
   const figure = Children.toArray(children).filter(child => child.type === PullQuoteFigure)
   const childs = Children.toArray(children).filter(child => child.type !== PullQuoteFigure)
+  const containerClass = !hasFigure && styles.narrowContainer
 
   return (
     <View style={[styles.container, containerClass]}>

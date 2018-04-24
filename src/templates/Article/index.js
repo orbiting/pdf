@@ -22,10 +22,10 @@ import {
   Anchor,
   List,
   Credit,
-  Strong,
-  Cursive,
   Infobox,
   Figure,
+  Editorial,
+  Interaction,
   FigureGroup,
   Center,
   PullQuote,
@@ -46,14 +46,10 @@ const globalInlines = [
     component: Sup
   },
   {
-    matchMdast: matchType('break')
+    matchMdast: matchType('break'),
+    component: () => '\n'
   }
 ]
-
-const h2 = {
-  matchMdast: matchHeading(2),
-  component: H2
-}
 
 const link = {
   matchMdast: matchType('link'),
@@ -64,31 +60,41 @@ const link = {
   component: Anchor
 }
 
-const breakType = {
-  matchMdast: matchType('break'),
-  component: () => '\n'
-}
+const interactionParagraphRules = [
+  ...globalInlines,
+  {
+    matchMdast: matchType('strong'),
+    component: Interaction.Emphasis
+  },
+  {
+    matchMdast: matchType('emphasis'),
+    component: Interaction.Cursive
+  },
+  link
+]
 
-const strong = {
-  matchMdast: matchType('strong'),
-  component: Strong
-}
+const editorialParagraphRules = [
+  ...globalInlines,
+  {
+    matchMdast: matchType('strong'),
+    component: Editorial.Emphasis
+  },
+  {
+    matchMdast: matchType('emphasis'),
+    component: Editorial.Cursive
+  },
+  link
+]
 
-const italic = {
-  matchMdast: matchType('emphasis'),
-  component: Cursive
+const h2 = {
+  matchMdast: matchHeading(2),
+  component: H2
 }
 
 const paragraph = {
   matchMdast: matchParagraph,
   component: Paragraph,
-  rules: [
-    strong,
-    italic,
-    link,
-    breakType,
-    ...globalInlines
-  ]
+  rules: editorialParagraphRules
 }
 
 const horizontalRule = {
@@ -130,10 +136,7 @@ const legend = {
   component: Legend,
   rules: [
     legendEmphasis,
-    strong,
-    link,
-    breakType,
-    ...globalInlines
+    ...editorialParagraphRules
   ]
 }
 
@@ -240,7 +243,8 @@ const pullQuote = {
   matchMdast: matchZone('QUOTE'),
   component: PullQuote,
   props: node => ({
-    size: node.data.size
+    size: node.data.size,
+    hasFigure: !!node.children.find(matchFigure)
   }),
   rules: [
     {
@@ -288,7 +292,12 @@ const embedTweet = {
 
 const note = {
   matchMdast: matchZone('NOTE'),
-  component: Note
+  component: props => props.children,
+  rules: [{
+    matchMdast: matchParagraph,
+    component: Note,
+    rules: interactionParagraphRules
+  }]
 }
 
 const center = {
