@@ -1,5 +1,6 @@
 import React from 'react'
-import { Image, StyleSheet } from '@react-pdf/core'
+import { StyleSheet } from '@react-pdf/core'
+import SafeImage from './SafeImage'
 
 import {
   imageResizeUrl
@@ -14,9 +15,5 @@ const styles = StyleSheet.create({
 })
 
 export default ({ src }) => {
-  if (!src) {
-    return null
-  }
-
-  return <Image style={styles.image} src={imageResizeUrl(src, '2000x')} />
+  return <SafeImage style={styles.image} src={imageResizeUrl(src, '2000x')} />
 }
