@@ -1,39 +1,19 @@
 import React from 'react'
 import {
-  Text,
-  View,
-  StyleSheet,
-  Link
+  Text
 } from '@react-pdf/core'
-
-const styles = StyleSheet.create({
-  section: {
-    backgroundColor: '#FF5555',
-    marginTop: 10,
-    marginBottom: 10
-  },
-  missingText: {
-    fontSize: 13
-  },
-  missingInline: {
-    color: '#FF5555',
-    fontSize: 13
-  }
-})
+import RenderAsImage from './RenderAsImage'
 
 export default ({ node, ancestors, children }) => {
   const message = `Missing Markdown node type "${node.type}" ${node.identifier ? `with identifier "${node.identifier}"` : ''} `
+  console.warn(message)
 
-  // prevent illegal nesting
+  // ignore missing inline, render children (text)
   if (ancestors.find(parent => parent.type === 'paragraph')) {
-    return <Link style={styles.missingInline}>{message}</Link>
+    return <Text>{children}</Text>
   }
 
   return (
-    <View style={styles.section}>
-      <Text style={styles.missingText}>
-        {message}
-      </Text>
-    </View>
+    <RenderAsImage node={node} ancestors={ancestors} />
   )
 }

@@ -42,7 +42,11 @@ const MdastDocument = ({ article }) => {
   }
 
   const mdast = renderMdast(
-    article.content,
+    {
+      ...article.content,
+      id: article.id,
+      path: article.meta.path
+    },
     articleSchema,
     {
       MissingNode
