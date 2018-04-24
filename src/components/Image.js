@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
   }
 })
 
-export const Alt = ({alt, children}) => (
+export const Alt = ({children}) => (
   <Text style={styles.alt}>{children}</Text>
 )
 
