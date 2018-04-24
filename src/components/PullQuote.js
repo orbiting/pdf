@@ -22,7 +22,8 @@ const styles = StyleSheet.create({
     fontFamily: fontFamilies.serifTitle
   },
   source: {
-    fontSize: 10,
+    fontSize: 8,
+    lineHeight: 1.3,
     fontFamily: fontFamilies.serifRegular
   }
 })
@@ -33,7 +34,7 @@ const PullQuote = ({ size, hasFigure, children }) => {
   const childs = Children.toArray(children).filter(child => child.type !== PullQuoteFigure)
 
   return (
-    <View style={[styles.container, containerClass]}>
+    <View wrap={false} style={[styles.container, containerClass]}>
       {figure}
       <View style={{ flex: 1 }}>
         {childs}

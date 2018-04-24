@@ -121,14 +121,14 @@ const title = {
     {
       matchMdast: matchParagraph,
       component: Credit,
-      rules: [link]
+      rules: interactionParagraphRules
     }
   ]
 }
 
 const legendEmphasis = {
   matchMdast: matchType('emphasis'),
-  component: Credit
+  component: Legend.Credit
 }
 
 const legend = {
@@ -205,7 +205,11 @@ const infobox = {
       matchMdast: matchHeading(3),
       component: Infobox.Heading
     },
-    paragraph
+    {
+      matchMdast: matchParagraph,
+      component: Infobox.Paragraph,
+      rules: interactionParagraphRules
+    }
   ]
 }
 

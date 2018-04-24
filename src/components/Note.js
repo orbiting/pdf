@@ -5,6 +5,7 @@ import { fontFamilies } from '../lib/fonts'
 const styles = StyleSheet.create({
   note: {
     fontSize: 7,
+    marginTop: 5,
     marginBottom: 10,
     fontFamily: fontFamilies.sansSerifRegular
   }

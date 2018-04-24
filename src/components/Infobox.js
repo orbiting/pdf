@@ -13,12 +13,21 @@ const styles = StyleSheet.create({
   },
   heading: {
     width: '100%',
-    fontSize: 10,
+    fontSize: 11,
+    lineHeight: 1.2,
     paddingTop: 5,
     marginBottom: 5,
     borderTopWidth: 1,
     borderTopColor: 'black',
     fontFamily: fontFamilies.sansSerifMedium
+  },
+  paragraph: {
+    fontSize: 10,
+    lineHeight: 1.2,
+    fontFamily: fontFamilies.sansSerifRegular,
+    marginBottom: 10,
+    textAlign: 'justify',
+    position: 'relative'
   }
 })
 
@@ -32,6 +41,10 @@ const InfoboxFigure = ({ children, ...props }) => (
 
 const InfoboxHeading = ({ children }) => {
   return <Text style={styles.heading}>{children}</Text>
+}
+
+const InfoboxParagraph = ({ children }) => {
+  return <Text style={styles.paragraph}>{children}</Text>
 }
 
 const InfoboxImage = ({ figureSize, src }) => {
@@ -74,5 +87,6 @@ const Infobox = ({ children }) => {
 Infobox.Image = InfoboxImage
 Infobox.Figure = InfoboxFigure
 Infobox.Heading = InfoboxHeading
+Infobox.Paragraph = InfoboxParagraph
 
 export default Infobox
