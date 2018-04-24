@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { StyleSheet, Document, Page, Text, Font, View } from '@react-pdf/core'
 import { renderMdast } from 'mdast-react-render'
 import hyphenationCallback from '../lib/Hyphenation'
@@ -21,14 +21,51 @@ const styles = StyleSheet.create({
     marginBottom: 15,
     backgroundColor: '#000'
   },
-  footer: {
+  logo: {
     left: 40,
     bottom: 25,
     fontSize: 10,
     position: 'absolute',
     fontFamily: fontFamilies.serifTitle
+  },
+  path: {
+    left: 105,
+    bottom: 28,
+    fontSize: 8,
+    position: 'absolute',
+    fontFamily: fontFamilies.sansSerifRegular
+  },
+  numbers: {
+    right: 40,
+    bottom: 25,
+    fontSize: 10,
+    position: 'absolute',
+    fontFamily: fontFamilies.sansSerifRegular
   }
 })
+
+const renderArticleLink = article => ({ pageNumber, totalPages }) => {
+  if (
+    pageNumber === 1 ||
+    pageNumber === totalPages
+  ) {
+    return `republik.ch${article.content.meta.path}`
+  }
+
+  return ''
+}
+
+const renderPageNumbers = ({ pageNumber, totalPages }) => (
+  `${pageNumber} / ${totalPages}`
+)
+
+const Footer = ({ article }) => (
+  <Fragment>
+    <Text style={styles.logo} fixed>REPUBLIK</Text>
+    <Text style={styles.path} render={renderArticleLink(article)} fixed />
+    <Text style={styles.numbers} render={renderPageNumbers} fixed />
+  </Fragment>
+)
 
 const MdastDocument = ({ article }) => {
   if (article.meta.template !== 'article') {
@@ -72,9 +109,9 @@ const MdastDocument = ({ article }) => {
   return (
     <Document>
       <Page size='A4' style={styles.page} wrap>
-        <View fixed style={decoratorStyle} />
+        <View style={decoratorStyle} fixed />
         {mdast.props.children}
-        <Text fixed style={styles.footer}>REPUBLIK</Text>
+        <Footer article={article} />
       </Page>
     </Document>
   )
