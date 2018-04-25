@@ -9,7 +9,7 @@ import { timeFormatLocale } from 'd3-time-format'
 import timeDefinition from 'd3-time-format/locale/de-CH'
 
 const swissTime = timeFormatLocale(timeDefinition)
-const generationTimeFormat = swissTime.format(' (Generiert %d.%m.%Y %H:%M)')
+const generationTimeFormat = swissTime.format('%d.%m.%Y %H:%M')
 
 // Register custom hyphenation algorithm
 Font.registerHyphenationCallback(hyphenationCallback)
@@ -55,21 +55,20 @@ const {
   FRONTEND_BASE_URL
 } = process.env
 
-const renderOnEdge = text => ({ pageNumber, totalPages }) => {
-  if (
-    pageNumber === 1 ||
-    pageNumber === totalPages
-  ) {
-    return text
+const renderArticleLink = (article, now) => ({ pageNumber, totalPages }) => {
+  const isFirst = pageNumber === 1
+  const isLast = pageNumber === totalPages
+  if (isFirst || isLast) {
+    return [
+      [
+        FRONTEND_BASE_URL.replace(/^https?:\/\/(www\.)?/, ''),
+        article.meta.path
+      ].join(''),
+      isLast && `(PDF generiert: ${generationTimeFormat(now)})`
+    ].filter(Boolean).join(' ')
   }
-
   return ''
 }
-
-const renderArticleLink = (article, now) => renderOnEdge([
-  FRONTEND_BASE_URL.replace(/^https?:\/\/(www\.)?/, ''),
-  article.meta.path
-].join('') + ` ${generationTimeFormat(now)}`)
 
 const renderPageNumbers = ({ pageNumber, totalPages }) => (
   `${pageNumber} / ${totalPages}`
