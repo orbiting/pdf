@@ -57,10 +57,12 @@ const render = async (article, query, response) => {
   output.pipe(response)
 }
 
+const stripDotPdf = path => path.replace(/\.pdf$/, '')
+
 server.get('/fixtures/:path', (req, res) => {
   const fixturePath = path.join(
     __dirname, '..', 'fixtures',
-    `${req.params.path}.json`
+    `${stripDotPdf(req.params.path)}.json`
   )
   if (!fs.existsSync(fixturePath)) {
     res.status(404).end('No Fixture Found')
@@ -74,7 +76,7 @@ server.get('/fixtures/:path', (req, res) => {
 
 server.get('/:path*', async (req, res) => {
   const variables = {
-    path: req.path
+    path: stripDotPdf(req.path)
   }
 
   const apolloFetch = createApolloFetch({

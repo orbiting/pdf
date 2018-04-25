@@ -5,6 +5,11 @@ import hyphenationCallback from '../lib/hyphenation'
 import articleSchema from '../templates/Article'
 import MissingNode from './MissingNode'
 import { fontFamilies } from '../lib/fonts'
+import { timeFormatLocale } from 'd3-time-format'
+import timeDefinition from 'd3-time-format/locale/de-CH'
+
+const swissTime = timeFormatLocale(timeDefinition)
+const generationTimeFormat = swissTime.format('%d.%m.%Y %H:%M')
 
 // Register custom hyphenation algorithm
 Font.registerHyphenationCallback(hyphenationCallback)
@@ -50,17 +55,18 @@ const {
   FRONTEND_BASE_URL
 } = process.env
 
-const renderArticleLink = article => ({ pageNumber, totalPages }) => {
-  if (
-    pageNumber === 1 ||
-    pageNumber === totalPages
-  ) {
+const renderArticleLink = (article, now) => ({ pageNumber, totalPages }) => {
+  const isFirst = pageNumber === 1
+  const isLast = pageNumber === totalPages
+  if (isFirst || isLast) {
     return [
-      FRONTEND_BASE_URL.replace(/^https?:\/\/(www\.)?/, ''),
-      article.meta.path
-    ].join('')
+      [
+        FRONTEND_BASE_URL.replace(/^https?:\/\/(www\.)?/, ''),
+        article.meta.path
+      ].join(''),
+      isLast && `(PDF generiert: ${generationTimeFormat(now)})`
+    ].filter(Boolean).join(' ')
   }
-
   return ''
 }
 
@@ -71,7 +77,9 @@ const renderPageNumbers = ({ pageNumber, totalPages }) => (
 const Footer = ({ article }) => (
   <Fragment>
     <Text style={styles.logo} fixed>REPUBLIK</Text>
-    <Link style={styles.path} fixed render={renderArticleLink(article)} src={FRONTEND_BASE_URL + article.meta.path} />
+    <Link style={styles.path} fixed
+      render={renderArticleLink(article, new Date())}
+      src={FRONTEND_BASE_URL + article.meta.path} />
     <Text style={styles.numbers} render={renderPageNumbers} fixed />
   </Fragment>
 )
