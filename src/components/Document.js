@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 40
   },
   decorator: {
-    height: 1,
+    height: 2,
     marginBottom: 15,
     backgroundColor: '#000'
   },
