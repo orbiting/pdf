@@ -105,9 +105,16 @@ const horizontalRule = {
 const title = {
   matchMdast: matchZone('TITLE'),
   component: TitleBlock,
-  props: node => ({
-    center: node.data.center
-  }),
+  props: (node, index, parent, { ancestors }) => {
+    const rootNode = ancestors[ancestors.length - 1]
+    const { formatTitle, formatColor } = rootNode.options
+
+    return {
+      formatTitle,
+      formatColor,
+      center: node.data.center
+    }
+  },
   rules: [
     {
       matchMdast: matchHeading(1),
@@ -115,8 +122,7 @@ const title = {
     },
     {
       matchMdast: (node, index) => matchParagraph(node) && index === 1,
-      component: Lead,
-      rules: []
+      component: Lead
     },
     {
       matchMdast: matchParagraph,

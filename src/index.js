@@ -45,8 +45,15 @@ const render = async (article, query, response) => {
   const container = createElement('ROOT')
   const node = PDFRenderer.createContainer(container)
 
+  const format = article.meta.format || {}
+  const formatMeta = format.meta || {}
+  const formatTitle = formatMeta.title
+  const formatColor = formatMeta.color
+
   PDFRenderer.updateContainer(
     <Document article={article} options={{
+      formatTitle,
+      formatColor,
       images: query.images !== '0'
     }} />,
     node,
