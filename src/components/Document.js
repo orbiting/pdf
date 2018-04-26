@@ -26,14 +26,15 @@ const styles = StyleSheet.create({
   },
   logo: {
     left: 40,
-    bottom: 23,
+    top: 809,
     fontSize: 10,
     position: 'absolute',
     fontFamily: fontFamilies.serifTitle
   },
   path: {
     left: 105,
-    bottom: 25,
+    top: 807,
+    right: 65,
     fontSize: 8,
     position: 'absolute',
     color: '#000',
@@ -42,7 +43,7 @@ const styles = StyleSheet.create({
   },
   numbers: {
     right: 40,
-    bottom: 25,
+    top: 807,
     fontSize: 8,
     position: 'absolute',
     fontFamily: fontFamilies.sansSerifRegular
