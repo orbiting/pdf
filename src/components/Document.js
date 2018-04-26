@@ -22,9 +22,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 40
   },
   decorator: {
-    height: 2,
-    marginBottom: 15,
-    backgroundColor: '#000'
+    marginBottom: 15
   },
   logo: {
     left: 40,
@@ -114,20 +112,14 @@ const MdastDocument = ({ article, options }) => {
     : meta.format && meta.format.meta
 
   const formatColor = formatMeta && formatMeta.color
-  const decoratorStyle = formatColor
-    ? StyleSheet.create({
-      decorator: {
-        height: 2,
-        marginBottom: 15,
-        backgroundColor: formatColor
-      }
-    }).decorator
-    : styles.decorator
 
   return (
     <Document>
       <Page size='A4' style={styles.page} wrap>
-        <View style={decoratorStyle} />
+        <View style={[styles.decorator, {
+          backgroundColor: formatColor || '#000',
+          height: formatColor ? 2 : 1
+        }]} />
         {mdast.props.children}
         <Footer article={article} />
       </Page>
