@@ -9,6 +9,7 @@
     "heroku-postbuild": "npm run build",
     "precommit": "lint-staged",
     "dev": "rimraf lib && npm run build && (babel -w src --out-dir lib & nodemon -w lib -w .env lib/index.js)",
+    "cloc": "find . -name '*.js' -not -path \"./node_modules*\" -not -path \"./lib*\" | xargs wc -l",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "lint-staged": {
