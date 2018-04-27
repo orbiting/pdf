@@ -175,6 +175,7 @@ const figure = {
         ? node.data.size
         : undefined,
       width: columns ? `${(100 - columns) / columns}%` : null,
+      skip: !rootNode.options.images,
       empty: (
         !rootNode.options.images &&
         node.children.length === 1 &&

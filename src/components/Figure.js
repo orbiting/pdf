@@ -1,5 +1,6 @@
 import React from 'react'
 import { View, StyleSheet } from '@react-pdf/core'
+import Center from './Center'
 
 const styles = StyleSheet.create({
   fullWidth: {
@@ -21,7 +22,9 @@ const styles = StyleSheet.create({
   }
 })
 
-const Figure = ({ size, width, inCenter, children }) => {
+const Identity = ({ children }) => children
+
+const Figure = ({ size, width, skip, inCenter, children }) => {
   let style
 
   if (width) {
@@ -34,10 +37,14 @@ const Figure = ({ size, width, inCenter, children }) => {
     style = styles.columnWidth
   }
 
+  const Wrapper = skip && !inCenter ? Center : Identity
+
   return (
-    <View style={style} wrap={false}>
-      {children}
-    </View>
+    <Wrapper>
+      <View style={style} wrap={false}>
+        {children}
+      </View>
+    </Wrapper>
   )
 }
 
