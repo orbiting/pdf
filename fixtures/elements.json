@@ -832,15 +832,6 @@
                           }
                         ],
                         "type": "paragraph"
-                      },
-                      {
-                        "children": [
-                          {
-                            "type": "text",
-                            "value": "a block quote"
-                          }
-                        ],
-                        "type": "paragraph"
                       }
                     ],
                     "type": "blockquote"
