@@ -8,8 +8,7 @@ import { fontFamilies } from '../lib/fonts'
 const styles = StyleSheet.create({
   image: {
     padding: 0,
-    marginBottom: 5,
-    backgroundColor: 'grey'
+    marginBottom: 5
   },
   alt: {
     fontSize: 8,
