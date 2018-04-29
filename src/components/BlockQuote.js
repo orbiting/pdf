@@ -4,10 +4,13 @@ import { Text, View, StyleSheet } from '@react-pdf/core'
 const styles = StyleSheet.create({
   container: {
     marginBottom: 3,
+    paddingTop: 10,
+    paddingLeft: 10,
+    paddingRight: 10,
     backgroundColor: '#f7f7f7'
   },
   text: {
-    padding: 10
+    marginBottom: 10
   }
 })
 
