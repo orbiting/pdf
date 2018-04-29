@@ -1,6 +1,5 @@
 import createHyphenator from 'hyphen'
 import patterns from 'hyphen/patterns/de-ch'
-import ligatures from './ligatures'
 
 const SOFT_HYPHEN = '\u00AD'
 
@@ -16,7 +15,8 @@ const hyphenateString = (string) => {
 
 const endsOnLigature = (part) => {
   const glyph = part.glyphAtIndex(part.length - 1)
-  return glyph ? ligatures.includes(glyph.name) : false
+  // ToDo: use glyph.isLigature once available
+  return glyph.name.indexOf('_') !== -1
 }
 
 const getGlyphIndex = (string, index) => {
