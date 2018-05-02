@@ -8,10 +8,6 @@ import {
   matchImageParagraph
 } from 'mdast-react-render/lib/utils'
 import {
-  Paragraph,
-  Legend,
-  Image,
-  TitleBlock,
   H1,
   H2,
   HR,
@@ -19,17 +15,22 @@ import {
   Sub,
   Lead,
   Note,
-  Anchor,
   List,
+  Image,
+  Legend,
   Credit,
-  Infobox,
   Figure,
+  Center,
+  Anchor,
+  Infobox,
+  Paragraph,
+  PullQuote,
   Editorial,
+  TitleBlock,
+  BlockQuote,
+  EmbedVideo,
   Interaction,
   FigureGroup,
-  Center,
-  PullQuote,
-  BlockQuote,
   EmbedTwitter
 } from '../../components'
 
@@ -319,6 +320,21 @@ const embedTweet = {
   component: EmbedTwitter
 }
 
+const embedVideo = {
+  matchMdast: matchZone('EMBEDVIDEO'),
+  component: EmbedVideo,
+  props: (node, index, parent, { ancestors }) => {
+    const rootNode = ancestors[ancestors.length - 1]
+    return {
+      data: {
+        ...node.data,
+        url: node.children[0].children[0].url,
+        skip: !rootNode.options.images
+      }
+    }
+  }
+}
+
 const note = {
   matchMdast: matchZone('NOTE'),
   component: props => props.children,
@@ -343,6 +359,7 @@ const center = {
     list,
     note,
     embedTweet,
+    embedVideo,
     horizontalRule
   ]
 }
