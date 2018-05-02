@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
 })
 
 const PullQuote = ({ size, hasFigure, children }) => {
-  const containerClass = !hasFigure && styles.narrowContainer
+  const containerClass = !hasFigure && size === 'narrow' && styles.narrowContainer
   const figure = Children.toArray(children).filter(child => child.type === PullQuoteFigure)
   const childs = Children.toArray(children).filter(child => child.type !== PullQuoteFigure)
 
