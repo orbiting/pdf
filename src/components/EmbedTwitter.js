@@ -9,10 +9,15 @@ const LOGO_SRC = 'https://cdn.republik.space/s3/republik-assets/assets/pdf/twitt
 
 const styles = StyleSheet.create({
   container: {
-    paddingVertical: 10,
+    marginHorizontal: 30,
+    marginTop: 10,
+    marginBottom: 25
+  },
+  border: {
+    paddingVertical: 8,
     borderTopWidth: 1,
-    borderBottomWidth: 1,
     borderTopColor: 'black',
+    borderBottomWidth: 1,
     borderBottomColor: 'black'
   },
   header: {
@@ -20,7 +25,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row'
   },
   body: {
-    paddingTop: 15
+    paddingTop: 8
   },
   avatar: {
     height: 30,
@@ -46,8 +51,8 @@ const styles = StyleSheet.create({
     fontFamily: fontFamilies.sansSerifRegular
   },
   text: {
-    fontSize: 12,
-    lineHeight: 1.4,
+    fontSize: 10,
+    lineHeight: 1.3,
     fontFamily: fontFamilies.sansSerifRegular
   },
   image: {
@@ -63,21 +68,23 @@ const EmbedTwitter = ({ text, image, userName, userScreenName, userProfileImageU
 
   return (
     <View style={styles.container} wrap={false}>
-      <View style={styles.header}>
-        <SafeImage style={styles.avatar} src={userProfileImageUrl} />
-        <View style={styles.tweetInfo}>
-          <Text style={styles.userName}>
-            {userName}
-          </Text>
-          <Text style={styles.userHandle}>
-            {`@${userScreenName}, ${date}`}
-          </Text>
+      <View style={styles.border}>
+        <View style={styles.header}>
+          <SafeImage style={styles.avatar} src={userProfileImageUrl} />
+          <View style={styles.tweetInfo}>
+            <Text style={styles.userName}>
+              {userName}
+            </Text>
+            <Text style={styles.userHandle}>
+              {`@${userScreenName}, ${date}`}
+            </Text>
+          </View>
+          <Image style={styles.logo} src={LOGO_SRC} />
         </View>
-        <Image style={styles.logo} src={LOGO_SRC} />
-      </View>
-      <View style={styles.body}>
-        <Text style={styles.text}>{text}</Text>
-        {image && <SafeImage style={styles.image} src={image} />}
+        <View style={styles.body}>
+          <Text style={styles.text}>{text}</Text>
+          {image && <SafeImage style={styles.image} src={image} />}
+        </View>
       </View>
     </View>
   )
