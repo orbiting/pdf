@@ -3,7 +3,7 @@ import { Text, View, StyleSheet } from '@react-pdf/core'
 import { branch, renderComponent } from '../lib/hocs'
 import { fontFamilies } from '../lib/fonts'
 import SafeImage from './SafeImage'
-import { Alt } from './Image'
+import Alt from './Alt'
 
 const styles = StyleSheet.create({
   infobox: {
