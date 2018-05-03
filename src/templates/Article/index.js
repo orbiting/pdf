@@ -103,6 +103,7 @@ const horizontalRule = {
   component: HR
 }
 
+const mdastPlaceholder = '\u2063'
 const title = {
   matchMdast: matchZone('TITLE'),
   component: TitleBlock,
@@ -123,7 +124,16 @@ const title = {
     },
     {
       matchMdast: (node, index) => matchParagraph(node) && index === 1,
-      component: Lead
+      component: ({children, ...props}) => {
+        if (
+          children &&
+          children.length === 1 &&
+          children[0] === mdastPlaceholder
+        ) {
+          return null
+        }
+        return <Lead children={children} {...props} />
+      }
     },
     {
       matchMdast: matchParagraph,
