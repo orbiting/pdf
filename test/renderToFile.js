@@ -23,7 +23,7 @@ const {
 // }
 const docs = JSON.parse(rw.readFileSync('/dev/stdin', 'utf8')).data.documents.nodes
   .filter(doc => !doc.meta.template || doc.meta.template === 'article')
-  .slice(OFFSET)
+  .slice(+OFFSET)
 
 function fetchDoc (doc) {
   return fetch(`${BASE_URL}${doc.meta.path}`)
@@ -43,7 +43,7 @@ function fetchDoc (doc) {
     })
 }
 
-const q = queue(CONCURRENCY)
+const q = queue(+CONCURRENCY)
 docs.forEach(doc => q.defer((callback) => {
   fetchDoc(doc).then(() => callback(), () => callback())
 }))
