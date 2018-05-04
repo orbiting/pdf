@@ -8,6 +8,7 @@ const styles = StyleSheet.create({
     textAlign: 'center'
   },
   thumbnail: {
+    flex: 1,
     marginBottom: 5
   }
 })
@@ -24,7 +25,7 @@ const VideoThumbnail = ({ src, legend, skip }) => {
   }
 
   return (
-    <View>
+    <View style={{ flex: 1 }}>
       <Image style={styles.thumbnail} src={src} />
       <Legend>{legend}</Legend>
     </View>
