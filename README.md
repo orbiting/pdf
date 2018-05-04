@@ -1,4 +1,4 @@
-# Proof of Concept to Render Mdast as PDF
+# Render Mdast as PDF
 
 Implemented with [`react-pdf`](https://github.com/diegomura/react-pdf).
 
