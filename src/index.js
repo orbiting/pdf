@@ -1,49 +1,60 @@
-import express from 'express'
-import fs from 'fs'
-import path from 'path'
-import 'regenerator-runtime/runtime'
+const throng = require('throng')
 
 if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config()
 }
 
-const PORT = process.env.PORT || 3007
+const WEB_CONCURRENCY = process.env.WEB_CONCURRENCY || 1
 
-const { renderDocument } = require('./render')
-const { getDocument } = require('./fetch')
+const start = (workerId) => {
+  const express = require('express')
+  const fs = require('fs')
+  const path = require('path')
+  require('regenerator-runtime/runtime')
 
-const server = express()
+  const PORT = process.env.PORT || 3007
 
-const stripDotPdf = path => path.replace(/\.pdf$/, '')
+  const { renderDocument } = require('./render')
+  const { getDocument } = require('./fetch')
 
-server.get('/fixtures/:path', (req, res) => {
-  const fixturePath = path.join(
-    __dirname, '..', 'fixtures',
-    `${stripDotPdf(req.params.path)}.json`
-  )
-  if (!fs.existsSync(fixturePath)) {
-    res.status(404).end('No Fixture Found')
-    return
-  }
-  const api = JSON.parse(
-    fs.readFileSync(fixturePath, 'utf8')
-  )
-  renderDocument(api.data.document, req.query, res)
-})
+  const server = express()
 
-server.get('/:path*', async (req, res) => {
-  const api = await getDocument({
-    path: stripDotPdf(req.path)
+  const stripDotPdf = path => path.replace(/\.pdf$/, '')
+
+  server.get('/fixtures/:path', (req, res) => {
+    const fixturePath = path.join(
+      __dirname, '..', 'fixtures',
+      `${stripDotPdf(req.params.path)}.json`
+    )
+    if (!fs.existsSync(fixturePath)) {
+      res.status(404).end('No Fixture Found')
+      return
+    }
+    const api = JSON.parse(
+      fs.readFileSync(fixturePath, 'utf8')
+    )
+    renderDocument(api.data.document, req.query, res)
   })
 
-  if (!api.data.article) {
-    res.status(404).end('No Article Found')
-    return
-  }
-  renderDocument(api.data.article, req.query, res)
-})
+  server.get('/:path*', async (req, res) => {
+    const api = await getDocument({
+      path: stripDotPdf(req.path)
+    })
 
-server.listen(PORT, err => {
-  if (err) throw err
-  console.log(`> Ready on port ${PORT}`)
-})
+    if (!api.data.article) {
+      res.status(404).end('No Article Found')
+      return
+    }
+    renderDocument(api.data.article, req.query, res)
+  })
+
+  server.listen(PORT, err => {
+    if (err) throw err
+    console.log(`[${workerId}] Listening on ${PORT}`)
+  })
+}
+
+throng({
+  workers: WEB_CONCURRENCY,
+  lifetime: Infinity
+}, start)
