@@ -60,6 +60,18 @@ const render = async (article, query, response) => {
     null
   )
 
+  response.set('Content-Type', 'application/pdf')
+  if (query.download) {
+    const fileName = article.meta.path
+      .split('/')
+      .filter(Boolean)
+      .join('-')
+    response.set(
+      'Content-Disposition',
+      `attachment; filename="${fileName}.pdf"`
+    )
+  }
+
   const output = await pdf(container).toBuffer()
   output.pipe(response)
 }
