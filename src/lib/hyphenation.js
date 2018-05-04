@@ -21,7 +21,7 @@ const standardLigatureNames = [
 
 // ToDo: use glyph.isLigature once available
 const isLigature = (glyph) => (
- glyph.name.indexOf('_') !== -1 || standardLigatureNames.includes(glyph.name) 
+ glyph.name.indexOf('_') !== -1 || standardLigatureNames.includes(glyph.name)
 )
 
 const hyphenateString = (string) => {
@@ -34,7 +34,7 @@ const hyphenateString = (string) => {
 
 const endsOnLigature = (part) => {
   const glyph = part.glyphAtIndex(part.length - 1)
-  return isLigature(glyph)
+  return glyph && isLigature(glyph)
 }
 
 const getGlyphIndex = (string, index) => {
