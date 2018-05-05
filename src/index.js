@@ -1,10 +1,16 @@
-const throng = require('throng')
+const regiment = require('regiment')
 
 if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config()
 }
 
 const WEB_CONCURRENCY = process.env.WEB_CONCURRENCY || 1
+const WEB_MEMORY = process.env.WEB_MEMORY || 512
+const MIN_MEMORY = 100
+
+if (WEB_MEMORY < MIN_MEMORY * 2) {
+  console.warn('WEB_MEMORY too small! Server will constantly spawn new workers.', {WEB_MEMORY, MIN_MEMORY})
+}
 
 const start = (workerId) => {
   const express = require('express')
@@ -18,6 +24,8 @@ const start = (workerId) => {
   const { getDocument } = require('./fetch')
 
   const server = express()
+
+  server.use(regiment.middleware.MemoryFootprint(WEB_MEMORY - MIN_MEMORY))
 
   const stripDotPdf = path => path.replace(/\.pdf$/, '')
 
@@ -48,13 +56,13 @@ const start = (workerId) => {
     renderDocument(api.data.article, req.query, res)
   })
 
-  server.listen(PORT, err => {
+  return server.listen(PORT, err => {
     if (err) throw err
     console.log(`[${workerId}] Listening on ${PORT}`)
   })
 }
 
-throng({
-  workers: WEB_CONCURRENCY,
-  lifetime: Infinity
-}, start)
+regiment(start, {
+  numWorkers: WEB_CONCURRENCY,
+  deadline: 30000
+})

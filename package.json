@@ -42,7 +42,7 @@
     "react-apollo": "^2.0.4",
     "react-dom": "^16.2.0",
     "regenerator-runtime": "^0.11.1",
-    "throng": "^4.0.0"
+    "regiment": "https://github.com/orbiting/regiment"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
