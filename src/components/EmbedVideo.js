@@ -25,7 +25,7 @@ const VideoThumbnail = ({ src, legend, skip }) => {
   }
 
   return (
-    <View style={{ flex: 1 }}>
+    <View>
       <Image style={styles.thumbnail} src={src} />
       <Legend>{legend}</Legend>
     </View>
