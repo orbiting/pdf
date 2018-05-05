@@ -39,7 +39,6 @@ function fetchDoc (doc) {
     })
     .catch(err => {
       console.error('Broken', doc.meta.path, err)
-      process.exit()
     })
 }
 
