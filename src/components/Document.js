@@ -11,8 +11,9 @@ import timeDefinition from 'd3-time-format/locale/de-CH'
 const swissTime = timeFormatLocale(timeDefinition)
 const generationTimeFormat = swissTime.format('%d.%m.%Y %H:%M')
 
-// Register custom hyphenation algorithm
+// Register custom hyphenation algorithm & emoji source
 Font.registerHyphenationCallback(hyphenationCallback)
+Font.registerEmojiSource({ url: 'https://twemoji.maxcdn.com/2/72x72/' })
 
 const styles = StyleSheet.create({
   page: {
