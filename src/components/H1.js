@@ -11,7 +11,12 @@ const styles = StyleSheet.create({
 })
 
 const H1 = ({ children }) => (
-  <Text style={styles.headline} orphan={false}>{children}</Text>
+  <Text
+    minPresenceAhead={26}
+    style={styles.headline}
+  >
+    {children}
+  </Text>
 )
 
 export default H1
