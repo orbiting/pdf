@@ -6,7 +6,10 @@ const styles = StyleSheet.create({
   titleblock: {
     marginTop: 30,
     marginBottom: 40,
-    paddingHorizontal: 90
+    paddingHorizontal: 90,
+    '@media max-width: 420': {
+      paddingHorizontal: 30
+    }
   },
   formatTitle: {
     fontSize: 12,
