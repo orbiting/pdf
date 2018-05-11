@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
 })
 
 const HR = ({ children, href }) => (
-  <View style={styles.center}>{children}</View>
+  <View style={styles.center} wrap={false}>{children}</View>
 )
 
 export default HR
