@@ -12,7 +12,12 @@ const styles = StyleSheet.create({
 })
 
 const H2 = ({ children }) => (
-  <Text style={styles.subheadline} orphan={false}>{children}</Text>
+  <Text
+    minPresenceAhead={26}
+    style={styles.subheadline}
+  >
+    {children}
+  </Text>
 )
 
 export default H2
