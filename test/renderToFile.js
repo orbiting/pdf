@@ -39,14 +39,54 @@ function fetchDoc (doc) {
     })
     .catch(err => {
       console.error('Broken', doc.meta.path, err)
+      return {
+        doc,
+        err
+      }
     })
 }
 
-const q = queue(+CONCURRENCY)
-docs.forEach(doc => q.defer((callback) => {
-  fetchDoc(doc).then(() => callback(), () => callback())
-}))
-q.awaitAll((error) => {
-  if (error) throw error
-  console.log('All Done')
+const queueDocs = ({docs, onError, onFinish}) => {
+  const q = queue(+CONCURRENCY)
+  docs.forEach(doc => q.defer((callback) => {
+    fetchDoc(doc).then(
+      () => callback(),
+      (info) => {
+        onError && onError(info)
+        callback()
+      }
+    )
+  }))
+  q.awaitAll((error) => {
+    if (error) throw error
+    onFinish && onFinish()
+  })
+}
+
+const brokenDocs = []
+queueDocs({
+  docs,
+  onError: ({doc}) => {
+    brokenDocs.push(doc)
+  },
+  onFinish: () => {
+    if (brokenDocs.length) {
+      const retryFails = []
+      console.log(`Retrying ${brokenDocs.length} docs`)
+      queueDocs({
+        docs: brokenDocs,
+        onError: ({doc}) => {
+          retryFails.push(doc)
+        },
+        onFinish: () => {
+          if (retryFails.length) {
+            console.log(`Failed:\n${retryFails.map(doc => `- ${doc.meta.path}\n`)}`)
+          }
+          console.log(`${Math.round(retryFails.length / docs.length * 100)}% success`)
+        }
+      })
+      return
+    }
+    console.log('100% success')
+  }
 })
