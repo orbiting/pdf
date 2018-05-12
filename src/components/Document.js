@@ -15,6 +15,8 @@ const generationTimeFormat = swissTime.format('%d.%m.%Y %H:%M')
 Font.registerHyphenationCallback(hyphenationCallback)
 Font.registerEmojiSource({ url: 'https://twemoji.maxcdn.com/2/72x72/' })
 
+const SUPPORTED_PAGE_SIZES = ['A4', 'A5']
+
 const styles = StyleSheet.create({
   page: {
     backgroundColor: '#fff',
@@ -74,6 +76,10 @@ const renderPageNumbers = ({ pageNumber, totalPages }) => (
   `${pageNumber} / ${totalPages}`
 )
 
+const isValidPageSize = size => (
+  SUPPORTED_PAGE_SIZES.includes(size.toUpperCase())
+)
+
 const Footer = ({ article }) => (
   <Fragment>
     <Text style={styles.logo} fixed>REPUBLIK</Text>
@@ -85,10 +91,12 @@ const Footer = ({ article }) => (
 )
 
 const MdastDocument = ({ article, options }) => {
+  let pageSize = isValidPageSize(options.size) ? options.size.toUpperCase() : 'A4'
+
   if (article.meta.template !== 'article') {
     return (
       <Document>
-        <Page size='A4' style={styles.page}>
+        <Page size={pageSize} style={styles.page}>
           <Text>Template «{article.meta.template}» not supported</Text>
         </Page>
       </Document>
@@ -117,7 +125,7 @@ const MdastDocument = ({ article, options }) => {
 
   return (
     <Document>
-      <Page size='A4' style={styles.page} wrap>
+      <Page size={pageSize} style={styles.page} wrap>
         <View style={[styles.decorator, {
           backgroundColor: formatColor || '#000',
           height: formatColor ? 2 : 1

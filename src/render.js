@@ -15,7 +15,8 @@ export const renderDocument = async (article, query, response) => {
     <Document article={article} options={{
       formatTitle,
       formatColor,
-      images: query.images !== '0'
+      images: query.images !== '0',
+      size: query.size || 'A4'
     }} />,
     node,
     null

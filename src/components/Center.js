@@ -3,7 +3,10 @@ import { View, StyleSheet } from '@react-pdf/core'
 
 const styles = StyleSheet.create({
   center: {
-    paddingHorizontal: 90
+    paddingHorizontal: 90,
+    '@media max-width: 420': {
+      paddingHorizontal: 30
+    }
   }
 })
 
