@@ -8,7 +8,6 @@ const styles = StyleSheet.create({
     textAlign: 'center'
   },
   thumbnail: {
-    flex: 1,
     marginBottom: 5
   }
 })

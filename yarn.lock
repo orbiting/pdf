@@ -78,9 +78,9 @@
     lodash "^4.2.0"
     to-fast-properties "^2.0.0"
 
-"@react-pdf/core@0.7.7-28":
-  version "0.7.7-28"
-  resolved "https://registry.yarnpkg.com/@react-pdf/core/-/core-0.7.7-28.tgz#65675f48d6994c727fc901ef6a0e18f49855aa1a"
+"@react-pdf/core@0.7.7-29":
+  version "0.7.7-29"
+  resolved "https://registry.yarnpkg.com/@react-pdf/core/-/core-0.7.7-29.tgz#4975b4bfb1879a31db3cc56fbcb191df9f5c226f"
   dependencies:
     "@react-pdf/fontkit" "^1.7.9"
     "@react-pdf/pdfkit" "^0.8.7"

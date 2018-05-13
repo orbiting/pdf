@@ -179,8 +179,10 @@ const figure = {
     const rootNode = ancestors[ancestors.length - 1]
     const columns = parent.data && parent.data.columns
     const inCenter = !!ancestors.find(matchZone('CENTER'))
+    const isTitle = ancestors[0].type === 'root'
 
     return {
+      isTitle,
       inCenter,
       size: rootNode.options.images
         ? node.data.size
