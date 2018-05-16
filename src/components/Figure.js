@@ -19,29 +19,22 @@ const styles = StyleSheet.create({
     marginRight: 'auto',
     width: '33%',
     marginBottom: 5
-  },
-  titleImage: {
-    maxHeight: '66%'
   }
 })
 
 const Identity = ({ children }) => children
 
-const Figure = ({ size, width, skip, isTitle, inCenter, children }) => {
+const Figure = ({ size, width, skip, inCenter, children }) => {
   let style
 
   if (width) {
-    style = [{ width }]
+    style = { width }
   } else if (inCenter && size === 'breakout') {
-    style = [styles.fullWidth]
+    style = styles.fullWidth
   } else if (size === 'tiny') {
-    style = [styles.tinyWidth]
+    style = styles.tinyWidth
   } else {
-    style = [styles.columnWidth]
-  }
-
-  if (isTitle) {
-    style.push(styles.titleImage)
+    style = styles.columnWidth
   }
 
   const Wrapper = skip && !inCenter ? Center : Identity
