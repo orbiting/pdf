@@ -178,7 +178,7 @@ const figure = {
       return null
     }
 
-    if (isCover && aspectRatio && aspectRatio < 0.9) {
+    if (isCover && aspectRatio && aspectRatio < 0.9 && props.size !== 'tiny') {
       return (
         <Center>
           <Figure {...props} />
