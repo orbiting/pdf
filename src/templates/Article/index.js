@@ -5,7 +5,8 @@ import {
   matchZone,
   matchHeading,
   matchParagraph,
-  matchImageParagraph
+  matchImageParagraph,
+  imageSizeInfo
 } from 'mdast-react-render/lib/utils'
 import {
   H1,
@@ -172,16 +173,34 @@ const getImageProps = (node, index, parent, { ancestors }) => {
 
 const figure = {
   matchMdast: matchZone('FIGURE'),
-  component: ({empty, ...props}) => empty
-    ? null
-    : <Figure {...props} />,
+  component: ({empty, isCover, aspectRatio, ...props}) => {
+    if (empty) {
+      return null
+    }
+
+    if (isCover && aspectRatio && aspectRatio < 0.9) {
+      return (
+        <Center>
+          <Figure {...props} />
+        </Center>
+      )
+    }
+
+    return <Figure {...props} />
+  },
   props: (node, index, parent, { ancestors }) => {
     const rootNode = ancestors[ancestors.length - 1]
     const columns = parent.data && parent.data.columns
     const inCenter = !!ancestors.find(matchZone('CENTER'))
+    const isCover = ancestors[0].type === 'root'
+    const image = node.children.find(matchImageParagraph).children[0]
+    const srcSize = image && imageSizeInfo(image.url)
+    const aspectRatio = srcSize && srcSize.width / srcSize.height
 
     return {
+      isCover,
       inCenter,
+      aspectRatio,
       size: rootNode.options.images
         ? node.data.size
         : undefined,
