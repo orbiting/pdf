@@ -24,5 +24,5 @@ You can create a local `.env` file which will be auto loaded.
 This project includes a script that runs a batch of PDF generation processes. To run it, you should first get the `document.json` into the `test` folder, and then run:
 
 ```sh
-cat test/documents.json | node test/renderToFile.js
+cat test/documents.json | CONCURRENCY=1 node test/renderToFile.js
 ```

@@ -25,6 +25,8 @@ const docs = JSON.parse(rw.readFileSync('/dev/stdin', 'utf8')).data.documents.no
   .filter(doc => !doc.meta.template || doc.meta.template === 'article')
   .slice(+OFFSET)
 
+console.log(`Run ${CONCURRENCY}x, start index ${+OFFSET}, ${docs.length} docs`)
+
 function fetchDoc (doc) {
   return fetch(`${BASE_URL}${doc.meta.path}`)
     .then(res => res.buffer())
@@ -36,6 +38,9 @@ function fetchDoc (doc) {
       )
       fs.writeFileSync(file, buffer)
       console.log('Done', doc.meta.path)
+      return {
+        doc
+      }
     })
     .catch(err => {
       console.error('Broken', doc.meta.path, err)
@@ -49,13 +54,13 @@ function fetchDoc (doc) {
 const queueDocs = ({docs, onError, onFinish}) => {
   const q = queue(+CONCURRENCY)
   docs.forEach(doc => q.defer((callback) => {
-    fetchDoc(doc).then(
-      () => callback(),
-      (info) => {
-        onError && onError(info)
+    fetchDoc(doc)
+      .then((info) => {
+        if (info.err && onError) {
+          onError(info)
+        }
         callback()
-      }
-    )
+      })
   }))
   q.awaitAll((error) => {
     if (error) throw error
@@ -82,7 +87,8 @@ queueDocs({
           if (retryFails.length) {
             console.log(`Failed:\n${retryFails.map(doc => `- ${doc.meta.path}\n`)}`)
           }
-          console.log(`${Math.round(retryFails.length / docs.length * 100)}% success`)
+          const success = 1 - retryFails.length / docs.length
+          console.log(`${Math.round(success * 100)}% success`)
         }
       })
       return
