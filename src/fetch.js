@@ -29,6 +29,15 @@ const apolloFetch = createApolloFetch({
   uri: process.env.API_URL
 })
 
+apolloFetch.use(({ request, options }, next) => {
+  if (!options.headers) {
+    options.headers = {}
+  }
+  options.headers['Authorization'] = process.env.API_AUTHORIZATION_HEADER
+
+  next()
+})
+
 export const getDocument = ({ path }) => apolloFetch({
   query,
   variables: {
