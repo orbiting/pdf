@@ -136,9 +136,15 @@ const title = {
       component: Subject
     },
     {
-      matchMdast: (node, index, parent) => (
-        matchParagraph(node) && parent.children[index - 1].type === 'heading'
-      ),
+      matchMdast: (node, index, parent) => {
+        const numHeadings = parent.children.filter(
+          child => child.type === 'heading'
+        ).length
+        return (
+          matchParagraph(node) &&
+          index === numHeadings
+        )
+      },
       component: ({children, ...props}) => {
         if (
           children &&
