@@ -2,18 +2,23 @@ import React from 'react'
 import { Text, StyleSheet } from '@react-pdf/core'
 import { fontFamilies } from '../lib/fonts'
 
+const family = {
+  editorial: fontFamilies.serifTitle,
+  meta: fontFamilies.sansSerifMedium,
+  scribble: fontFamilies.cursiveTitle
+}
+
 const styles = StyleSheet.create({
   headline: {
     fontSize: 30,
-    marginBottom: 10,
-    fontFamily: fontFamilies.serifTitle
+    marginBottom: 10
   }
 })
 
-const H1 = ({ children }) => (
+const H1 = ({ children, kind }) => (
   <Text
     minPresenceAhead={26}
-    style={styles.headline}
+    style={[styles.headline, {fontFamily: family[kind] || family.editorial}]}
   >
     {children}
   </Text>
