@@ -14,6 +14,7 @@ import {
   HR,
   Sup,
   Sub,
+  Subject,
   Lead,
   Note,
   List,
@@ -121,10 +122,29 @@ const title = {
   rules: [
     {
       matchMdast: matchHeading(1),
-      component: H1
+      component: ({children, kind}) => <H1 kind={kind}>{children}</H1>,
+      props: (node, index, parent, { ancestors }) => {
+        const rootNode = ancestors[ancestors.length - 1]
+        const { formatKind } = rootNode.options
+        return {
+          kind: formatKind
+        }
+      }
     },
     {
-      matchMdast: (node, index) => matchParagraph(node) && index === 1,
+      matchMdast: matchHeading(2),
+      component: Subject
+    },
+    {
+      matchMdast: (node, index, parent) => {
+        const numHeadings = parent.children.filter(
+          child => child.type === 'heading'
+        ).length
+        return (
+          matchParagraph(node) &&
+          index === numHeadings
+        )
+      },
       component: ({children, ...props}) => {
         if (
           children &&
