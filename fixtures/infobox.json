@@ -1,0 +1,272 @@
+{
+  "data": {
+    "document": {
+      "content": {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Spicy jalapeno bacon ipsum dolor amet picanha cow meatloaf porchetta"
+                  }
+                ],
+                "depth": 1,
+                "type": "heading"
+              },
+              {
+                "children": [],
+                "depth": 2,
+                "type": "heading"
+              },
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Bresaola pork chop ball tip, sausage shoulder hamburger kielbasa strip steak ham hock."
+                  }
+                ],
+                "type": "paragraph"
+              },
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Von "
+                  },
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Peter Parker"
+                      }
+                    ],
+                    "title": null,
+                    "type": "link",
+                    "url": "peterparker"
+                  },
+                  {
+                    "type": "text",
+                    "value": ", 11.09.2018"
+                  }
+                ],
+                "type": "paragraph"
+              }
+            ],
+            "data": {},
+            "identifier": "TITLE",
+            "type": "zone"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Bacon ipsum dolor amet kevin tri-tip chicken"
+                      }
+                    ],
+                    "depth": 3,
+                    "type": "heading"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "Sausage brisket pastrami"
+                          },
+                          {
+                            "type": "break"
+                          }
+                        ],
+                        "type": "strong"
+                      },
+                      {
+                        "type": "text",
+                        "value": "Andouille rump ham hock tenderloin. Chuck short ribs meatball andouille sausage t-bone pig turducken brisket swine ball tip. Kevin andouille tongue spare ribs t-bone beef ribs drumstick ribeye. Strip steak porchetta short ribs salami meatloaf andouille leberkas chuck t-bone tenderloin beef pork chop kielbasa. Sausage brisket pastrami fatback porchetta ground round pork loin. Meatball corned beef ribeye hamburger tri-tip picanha buffalo ham hock cow drumstick short loin kevin ball tip. Ham hock meatball ground round buffalo tongue venison brisket. Ribeye short ribs kielbasa porchetta brisket boudin pork loin, t-bone fatback beef ribs. Hamburger kevin meatball sausage swine kielbasa andouille cupim rump flank chuck pork belly beef ribs. Landjaeger pig jerky, sausage pork belly burgdoggen venison shoulder chicken kevin buffalo frankfurter meatloaf tri-tip. Doner beef ribs tenderloin prosciutto. Turducken shankle venison pastrami pig tail turkey prosciutto porchetta burgdoggen."
+                      }
+                    ],
+                    "type": "paragraph"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "Leberkas prosciutto filet mignon"
+                          },
+                          {
+                            "type": "break"
+                          }
+                        ],
+                        "type": "strong"
+                      },
+                      {
+                        "type": "text",
+                        "value": "Venison buffalo t-bone, picanha beef pig drumstick swine pastrami fatback ham hock. Corned beef burgdoggen flank shoulder capicola meatloaf. Pancetta leberkas drumstick porchetta tongue shankle."
+                      }
+                    ],
+                    "type": "paragraph"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "Pancetta short loin beef ribs"
+                          },
+                          {
+                            "type": "break"
+                          }
+                        ],
+                        "type": "strong"
+                      },
+                      {
+                        "type": "text",
+                        "value": "Picanha salami kevin pork chop kielbasa prosciutto flank leberkas. Cupim shank boudin tri-tip salami. Ball tip pork loin ham capicola fatback shank. Doner short loin biltong flank, tongue pig bacon cupim beef pancetta. Turducken ball tip pork chop spare ribs strip steak. Tenderloin meatloaf pork ham ground round leberkas turkey shankle biltong.Shankle ham pork chop capicola chicken. Drumstick andouille short loin, filet mignon ham short ribs tongue ham hock boudin shankle turkey ground round alcatra. Brisket rump shoulder, alcatra bresaola sirloin chicken ham strip steak tail tenderloin. Sausage pork belly chuck tri-tip rump pork chop meatloaf bresaola cow sirloin. Hamburger ham strip steak turducken cow leberkas pancetta."
+                      }
+                    ],
+                    "type": "paragraph"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "Doner sausage pork venison"
+                          },
+                          {
+                            "type": "break"
+                          }
+                        ],
+                        "type": "strong"
+                      },
+                      {
+                        "type": "text",
+                        "value": "Kevin cow meatball kielbasa tenderloin filet mignon pancetta pork cupim beef ribs turducken jowl leberkas strip steak. T-bone beef ribs ham hock, turducken kevin pastrami turkey spare ribs pork belly. Filet mignon alcatra chicken fatback, pig swine salami turducken drumstick short ribs sausage porchetta. Flank ribeye biltong cow, turkey chuck sausage pork loin bresaola. Kielbasa pig cow leberkas, chicken chuck ham tenderloin filet mignon ground round rump beef strip steak. Swine tongue meatloaf boudin salami. Fatback brisket chuck meatloaf filet mignon strip steak venison prosciutto ground round jowl tri-tip hamburger ribeye. Meatloaf tenderloin ham, jowl tail meatball tongue. Doner sausage pork venison, andouille fatback pork chop leberkas boudin shankle pork belly bresaola jowl ground round. Ground round strip steak shank andouille."
+                      }
+                    ],
+                    "type": "paragraph"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "Short loin kevin shoulder"
+                          },
+                          {
+                            "type": "break"
+                          }
+                        ],
+                        "type": "strong"
+                      },
+                      {
+                        "type": "text",
+                        "value": "Capicola ham pig spare ribs short loin sausage andouille fatback rump, beef ribs corned beef. Tri-tip fatback meatball turkey rump pork frankfurter alcatra porchetta kielbasa pork loin. Rump ham hock corned beef porchetta. Meatloaf pancetta jerky, strip steak beef fatback pork swine rump ball tip corned beef chicken ham sausage. Boudin biltong flank ribeye tongue shank rump andouille jerky. Drumstick short loin jowl cow, t-bone meatball ham filet mignon short ribs. Ball tip pig doner tongue tail turducken ham pork loin short ribs burgdoggen bacon salami sirloin tenderloin pork chop."
+                      }
+                    ],
+                    "type": "paragraph"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "type": "text",
+                            "value": "Fatback biltong turducken"
+                          },
+                          {
+                            "type": "break"
+                          }
+                        ],
+                        "type": "strong"
+                      },
+                      {
+                        "type": "text",
+                        "value": "Fatback jowl pancetta venison picanha kevin meatloaf kielbasa boudin drumstick, shank buffalo landjaeger bacon pork chop. Tongue brisket sausage tail pork belly ground round. Fatback strip steak andouille drumstick, burgdoggen chicken pastrami kevin flank tail pork loin landjaeger frankfurter pork belly. Cupim ground round hamburger, prosciutto bresaola ball tip sirloin meatball pastrami shoulder strip steak frankfurter chicken leberkas turkey. Ribeye jerky turkey, cupim short ribs beef ribs bresaola alcatra rump short loin. Buffalo tenderloin venison, tri-tip pancetta biltong short loin tail ham landjaeger pork swine rump filet mignon. Porchetta sirloin prosciutto filet mignon chicken. Ham hock jerky flank ribeye alcatra picanha beef cupim. Pork chop filet mignon strip steak tri-tip, turkey biltong pastrami bresaola. Pork leberkas cow, turducken boudin meatball ribeye corned beef. Pork kevin shankle ribeye, doner buffalo kielbasa alcatra tenderloin tail tongue sausage."
+                      }
+                    ],
+                    "type": "paragraph"
+                  }
+                ],
+                "data": {},
+                "identifier": "INFOBOX",
+                "type": "zone"
+              }
+            ],
+            "data": {},
+            "identifier": "CENTER",
+            "type": "zone"
+          }
+        ],
+        "meta": {
+          "audioSource": null,
+          "authors": [
+            "Peter Parker"
+          ],
+          "credits": [
+            {
+              "type": "text",
+              "value": "From "
+            },
+            {
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Peter Parker"
+                }
+              ],
+              "title": null,
+              "type": "link",
+              "url": "foobar"
+            },
+            {
+              "type": "text",
+              "value": ", 11.09.2018"
+            }
+          ],
+          "description": "Prosciutto sirloin tri-tip turducken corned beef pork belly shoulder brisket bacon kielbasa chuck rump kevin tail.",
+          "facebookImage": "https://cdn.republik.space/s3/republik-assets/github/republik/article-unternhemenssteuerreform/images/ff62c3ad7d1731b6ab2301636a92d0fafd04199e.jpeg?size=1920x1080",
+          "feed": true,
+          "gallery": false,
+          "hasAudio": false,
+          "hasVideo": true,
+          "image": "https://cdn.republik.space/s3/republik-assets/github/republik/article-unternhemenssteuerreform/images/ff62c3ad7d1731b6ab2301636a92d0fafd04199e.jpeg?size=1920x1080",
+          "isSeriesEpisode": false,
+          "isSeriesMaster": false,
+          "path": "/2018/09/11/foobar",
+          "prepublication": false,
+          "publishDate": "2018-09-11T02:45:00.000Z",
+          "repoId": "foobar",
+          "scheduledAt": "2018-09-11T02:45:00.000Z",
+          "slug": "foobar",
+          "subject": "",
+          "template": "article",
+          "title": "Spicy jalapeno bacon ipsum dolor amet picanha cow meatloaf porchetta",
+          "twitterImage": "https://cdn.republik.space/s3/republik-assets/github/republik/article-unternhemenssteuerreform/images/ff62c3ad7d1731b6ab2301636a92d0fafd04199e.jpeg?size=1920x1080"
+        },
+        "type": "root"
+      },
+      "id": "a",
+      "meta": {
+        "color": null,
+        "description": "Prosciutto sirloin tri-tip turducken corned beef pork belly shoulder brisket bacon kielbasa chuck rump kevin tail.",
+        "format": null,
+        "image": "https://cdn.republik.space/s3/republik-assets/github/republik/article-unternhemenssteuerreform/images/ff62c3ad7d1731b6ab2301636a92d0fafd04199e.jpeg?size=1920x1080",
+        "path": "/2018/09/11/foobar",
+        "template": "article",
+        "title": "Spicy jalapeno bacon ipsum dolor amet picanha cow meatloaf porchetta"
+      }
+    }
+  }
+}

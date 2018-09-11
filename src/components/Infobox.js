@@ -93,7 +93,7 @@ const Infobox = ({ children }) => {
   const childs = Children.toArray(children).filter(child => child.type !== InfoboxFigure)
 
   return (
-    <View style={styles.infobox} wrap={false}>
+    <View style={styles.infobox} wrap={childs.length > 3}>
       {figure}
       <View style={{ flex: 1 }}>
         {childs}
