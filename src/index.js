@@ -25,6 +25,8 @@ const start = (workerId) => {
 
   const server = express()
 
+  server.disable('x-powered-by')
+
   server.use(regiment.middleware.MemoryFootprint(WEB_MEMORY - MIN_MEMORY))
 
   const stripDotPdf = path => path.replace(/\.pdf$/, '')
