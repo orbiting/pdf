@@ -1,8 +1,11 @@
 {
-  "name": "poc-pdf",
+  "name": "pdf",
   "version": "0.0.0",
-  "description": "ReactPDF Proof of Concept",
+  "description": "Generate PDF files of articles",
   "main": "index.js",
+  "engines": {
+    "node": "10"
+  },
   "scripts": {
     "start": "cross-env NODE_ENV=production node lib/index.js",
     "build": "babel src --out-dir lib",
@@ -20,14 +23,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/orbiting/poc-pdf.git"
+    "url": "git+https://github.com/orbiting/pdf.git"
   },
   "author": "",
   "license": "BSD-3-Clause",
   "bugs": {
-    "url": "https://github.com/orbiting/poc-pdf/issues"
+    "url": "https://github.com/orbiting/pdf/issues"
   },
-  "homepage": "https://github.com/orbiting/poc-pdf#readme",
+  "homepage": "https://github.com/orbiting/pdf#readme",
   "dependencies": {
     "@react-pdf/core": "0.7.7-32",
     "apollo-fetch": "^0.7.0",
