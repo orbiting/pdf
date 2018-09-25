@@ -1,5 +1,5 @@
 import React from 'react'
-import { View } from '@react-pdf/core'
+import { View } from '@react-pdf/renderer'
 import {
   matchType,
   matchZone,

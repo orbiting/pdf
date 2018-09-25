@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Image, StyleSheet } from '@react-pdf/core'
+import { View, Image, StyleSheet } from '@react-pdf/renderer'
 import Alt from './Alt'
 import Legend from './Legend'
 

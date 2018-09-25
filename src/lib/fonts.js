@@ -1,4 +1,4 @@
-import { Font } from '@react-pdf/core'
+import { Font } from '@react-pdf/renderer'
 
 const DEV = process.env.NODE_ENV !== 'production'
 

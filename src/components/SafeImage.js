@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image } from '@react-pdf/core'
+import { Image } from '@react-pdf/renderer'
 import { parse, format } from 'url'
 import { branch, renderNothing } from '../lib/hocs'
 

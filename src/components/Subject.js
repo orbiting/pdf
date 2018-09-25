@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, StyleSheet } from '@react-pdf/core'
+import { Text, StyleSheet } from '@react-pdf/renderer'
 import { fontFamilies } from '../lib/fonts'
 import colors from '../lib/colors'
 

@@ -1,29 +1,14 @@
 import React from 'react'
-import { createElement, pdf, PDFRenderer } from '@react-pdf/core'
+import ReactPDF from '@react-pdf/renderer'
 import Document from './components/Document'
 import colors from './lib/colors'
 
 export const renderDocument = async (article, query, response) => {
-  const container = createElement('ROOT')
-  const node = PDFRenderer.createContainer(container)
-
   const format = article.meta.format || {}
   const formatMeta = format.meta || {}
   const formatTitle = formatMeta.title
   const formatColor = formatMeta.color || colors[formatMeta.kind]
   const formatKind = formatMeta.kind
-
-  PDFRenderer.updateContainer(
-    <Document article={article} options={{
-      formatTitle,
-      formatColor,
-      formatKind,
-      images: query.images !== '0',
-      size: query.size || 'A4'
-    }} />,
-    node,
-    null
-  )
 
   response.set('Content-Type', 'application/pdf')
   if (query.download) {
@@ -37,6 +22,15 @@ export const renderDocument = async (article, query, response) => {
     )
   }
 
-  const output = await pdf(container).toBuffer()
+  const output = await ReactPDF.renderToStream(
+    <Document article={article} options={{
+      formatTitle,
+      formatColor,
+      formatKind,
+      images: query.images !== '0',
+      size: query.size || 'A4'
+    }} />
+  )
+
   output.pipe(response)
 }

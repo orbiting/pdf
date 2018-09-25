@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet } from '@react-pdf/core'
+import { StyleSheet } from '@react-pdf/renderer'
 import { imageResizeUrl } from 'mdast-react-render/lib/utils'
 import Alt from './Alt'
 import SafeImage from './SafeImage'
