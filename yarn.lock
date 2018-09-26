@@ -105,15 +105,15 @@
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@react-pdf/png-js/-/png-js-1.0.0.tgz#00fcb969dca4ce82a0a7673413ade039e47b361e"
 
-"@react-pdf/renderer@1.0.0-alpha.13":
-  version "1.0.0-alpha.13"
-  resolved "https://registry.yarnpkg.com/@react-pdf/renderer/-/renderer-1.0.0-alpha.13.tgz#1f556271cb1446caa9e0454913c0f295e8c74880"
+"@react-pdf/renderer@1.0.0-alpha.15":
+  version "1.0.0-alpha.15"
+  resolved "https://registry.yarnpkg.com/@react-pdf/renderer/-/renderer-1.0.0-alpha.15.tgz#af336f168d47e4c535f5ceab8706891e0f3954d1"
   dependencies:
     "@react-pdf/fontkit" "^1.11.0"
     "@react-pdf/pdfkit" "^1.2.0"
     "@react-pdf/png-js" "^1.0.0"
     "@react-pdf/script-itemizer" "^0.1.11"
-    "@react-pdf/textkit-core" "^0.1.18"
+    "@react-pdf/textkit-core" "^0.1.19"
     "@textkit/justification-engine" "^0.1.9"
     "@textkit/line-fragment-generator" "^0.1.9"
     "@textkit/linebreaker" "^0.1.9"
@@ -146,7 +146,7 @@
   dependencies:
     "@react-pdf/unicode-properties" "^2.2.0"
 
-"@react-pdf/textkit-core@^0.1.18":
+"@react-pdf/textkit-core@^0.1.19":
   version "0.1.21"
   resolved "https://registry.yarnpkg.com/@react-pdf/textkit-core/-/textkit-core-0.1.21.tgz#1697571d3543a31ffb19fc63c13c7e9754ebbb66"
   dependencies:
