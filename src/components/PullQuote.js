@@ -1,5 +1,5 @@
 import React, { Children } from 'react'
-import { Text, View, StyleSheet } from '@react-pdf/core'
+import { Text, View, StyleSheet } from '@react-pdf/renderer'
 import { fontFamilies } from '../lib/fonts'
 
 const styles = StyleSheet.create({

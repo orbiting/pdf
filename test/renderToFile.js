@@ -12,7 +12,8 @@ const {
 
 // GraphQL Query
 // {
-//   documents {
+//   documents(first: 1000, template: "article") {
+//     totalCount
 //     nodes {
 //       meta {
 //         path

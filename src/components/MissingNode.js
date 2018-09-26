@@ -1,7 +1,7 @@
 import React from 'react'
 import {
   Text
-} from '@react-pdf/core'
+} from '@react-pdf/renderer'
 import RenderAsImage from './RenderAsImage'
 
 export default ({ node, ancestors, children }) => {

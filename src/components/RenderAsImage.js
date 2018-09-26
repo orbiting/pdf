@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image, StyleSheet } from '@react-pdf/core'
+import { Image, StyleSheet } from '@react-pdf/renderer'
 
 const styles = StyleSheet.create({
   image: {

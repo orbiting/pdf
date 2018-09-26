@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, StyleSheet } from '@react-pdf/core'
+import { Link, StyleSheet } from '@react-pdf/renderer'
 
 const {
   FRONTEND_BASE_URL

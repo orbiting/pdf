@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, StyleSheet } from '@react-pdf/core'
+import { View, StyleSheet } from '@react-pdf/renderer'
 import Center from './Center'
 
 const styles = StyleSheet.create({

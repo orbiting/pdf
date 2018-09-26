@@ -1,7 +1,7 @@
 import React from 'react'
 import { timeFormatLocale } from 'd3-time-format'
 import timeDefinition from 'd3-time-format/locale/de-CH'
-import { View, StyleSheet, Text, Image } from '@react-pdf/core'
+import { View, StyleSheet, Text, Image } from '@react-pdf/renderer'
 import { fontFamilies } from '../lib/fonts'
 import SafeImage from './SafeImage'
 
