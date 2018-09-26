@@ -22,7 +22,7 @@ export const renderDocument = async (article, query, response) => {
     )
   }
 
-  const output = ReactPDF.renderToStream(
+  const output = await ReactPDF.renderToStream(
     <Document article={article} options={{
       formatTitle,
       formatColor,
