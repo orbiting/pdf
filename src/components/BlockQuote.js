@@ -1,5 +1,6 @@
 import React, { Children } from 'react'
 import { Text, View, StyleSheet } from '@react-pdf/renderer'
+import { fontFamilies } from '../lib/fonts'
 
 const styles = StyleSheet.create({
   container: {
@@ -10,7 +11,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#f7f7f7'
   },
   text: {
-    marginBottom: 10
+    marginBottom: 10,
+    fontFamily: fontFamilies.sansSerifRegular
   }
 })
 
