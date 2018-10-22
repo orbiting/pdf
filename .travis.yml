@@ -10,11 +10,14 @@ addons:
     sources:
       - ubuntu-toolchain-r-test
     packages:
-      - g++-5
+      - g++-4.9
 notifications:
   email: false
 node_js:
   - "10.4.1"
+before_install:
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then export CXX=g++-4.9 ; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then export CFLAGS="$CFLAGS -std=c99" ; fi
 before_script:
   - yarn build
   - yarn start
