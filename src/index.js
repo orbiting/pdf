@@ -4,7 +4,7 @@ if (process.env.NODE_ENV !== 'production' || process.env.DOTENV) {
   require('dotenv').config()
 }
 
-const WEB_CONCURRENCY = process.env.WEB_CONCURRENCY || 1
+const WEB_CONCURRENCY = process.env.WEB_CONCURRENCY || process.env.CONCURRENCY || 1
 const WEB_MEMORY = process.env.WEB_MEMORY || 512
 const MIN_MEMORY = 100
 
