@@ -51,13 +51,17 @@ const run = async () => {
 
   console.log(`Run ${CONCURRENCY}x, start index ${+OFFSET}, ${docs.length} docs`)
 
+  const outDir = path.join(__dirname, 'out')
+  if (!fs.existsSync(outDir)) {
+    fs.mkdirSync(outDir)
+  }
+
   function fetchDoc (doc) {
     return fetch(`${BASE_URL}${doc.meta.path}`)
       .then(res => res.buffer())
       .then(buffer => {
         const file = path.join(
-          __dirname,
-          'out',
+          outDir,
           `${doc.meta.path.replace(/\//g, ' ').trim().replace(/ /g, '-')}.pdf`
         )
         fs.writeFileSync(file, buffer)
