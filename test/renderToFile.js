@@ -62,7 +62,10 @@ const run = async () => {
       .then(buffer => {
         const file = path.join(
           outDir,
-          `${doc.meta.path.replace(/\//g, ' ').trim().replace(/ /g, '-')}.pdf`
+          `${doc.meta.path
+            .replace(/\//g, ' ')
+            .trim()
+            .replace(/ /g, '-')}.pdf`
         )
         fs.writeFileSync(file, buffer)
         console.log('Done', doc.meta.path)
@@ -79,18 +82,19 @@ const run = async () => {
       })
   }
 
-  const queueDocs = ({docs, onError, onFinish}) => {
+  const queueDocs = ({ docs, onError, onFinish }) => {
     const q = queue(+CONCURRENCY)
-    docs.forEach(doc => q.defer((callback) => {
-      fetchDoc(doc)
-        .then((info) => {
+    docs.forEach(doc =>
+      q.defer(callback => {
+        fetchDoc(doc).then(info => {
           if (info.err && onError) {
             onError(info)
           }
           callback()
         })
-    }))
-    q.awaitAll((error) => {
+      })
+    )
+    q.awaitAll(error => {
       if (error) throw error
       onFinish && onFinish()
     })
@@ -99,7 +103,7 @@ const run = async () => {
   const brokenDocs = []
   queueDocs({
     docs,
-    onError: ({doc}) => {
+    onError: ({ doc }) => {
       brokenDocs.push(doc)
     },
     onFinish: () => {
@@ -108,7 +112,7 @@ const run = async () => {
         console.log(`Retrying ${brokenDocs.length} docs`)
         queueDocs({
           docs: brokenDocs,
-          onError: ({doc}) => {
+          onError: ({ doc }) => {
             retryFails.push(doc)
           },
           onFinish: () => {

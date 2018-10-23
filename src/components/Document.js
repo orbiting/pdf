@@ -30,62 +30,64 @@ const styles = StyleSheet.create({
   logo: {
     left: 40,
     top: 809,
+    right: 40,
     fontSize: 10,
     position: 'absolute',
     fontFamily: fontFamilies.serifTitle
   },
+  link: {},
   path: {
+    fontSize: 8,
+    color: '#000',
     left: 105,
     top: 807,
     right: 65,
-    fontSize: 8,
     position: 'absolute',
-    color: '#000',
     fontFamily: fontFamilies.sansSerifRegular,
     textDecoration: 'none'
   },
   numbers: {
+    left: 40,
     right: 40,
     top: 807,
     fontSize: 8,
+    textAlign: 'right',
     position: 'absolute',
     fontFamily: fontFamilies.sansSerifRegular
   }
 })
 
-const {
-  FRONTEND_BASE_URL
-} = process.env
+const { FRONTEND_BASE_URL } = process.env
 
 const renderArticleLink = (article, now) => ({ pageNumber, totalPages }) => {
   const isFirst = pageNumber === 1
   const isLast = pageNumber === totalPages
   if (isFirst || isLast) {
     return [
-      [
-        FRONTEND_BASE_URL.replace(/^https?:\/\/(www\.)?/, ''),
-        article.meta.path
-      ].join(''),
+      [FRONTEND_BASE_URL.replace(/^https?:\/\/(www\.)?/, ''), article.meta.path].join(''),
       isLast && `(PDF generiert: ${generationTimeFormat(now)})`
-    ].filter(Boolean).join(' ')
+    ]
+      .filter(Boolean)
+      .join(' ')
   }
   return ''
 }
 
-const renderPageNumbers = ({ pageNumber, totalPages }) => (
-  `${pageNumber} / ${totalPages}`
-)
+const renderPageNumbers = ({ pageNumber, totalPages }) => `${pageNumber} / ${totalPages}`
 
-const isValidPageSize = size => (
-  SUPPORTED_PAGE_SIZES.includes(size.toUpperCase())
-)
+const isValidPageSize = size => SUPPORTED_PAGE_SIZES.includes(size.toUpperCase())
 
 const Footer = ({ article }) => (
   <Fragment>
-    <Text style={styles.logo} fixed>REPUBLIK</Text>
-    <Link style={styles.path} fixed
+    <Text style={styles.logo} fixed>
+      REPUBLIK
+    </Text>
+    <Link
+      style={styles.path}
+      src={FRONTEND_BASE_URL + article.meta.path}
       render={renderArticleLink(article, new Date())}
-      src={FRONTEND_BASE_URL + article.meta.path} />
+      fixed
+    />
     <Text style={styles.numbers} render={renderPageNumbers} fixed />
   </Fragment>
 )
@@ -117,19 +119,22 @@ const MdastDocument = ({ article, options }) => {
   )
 
   const meta = article.meta
-  const formatMeta = meta.template === 'format'
-    ? meta
-    : meta.format && meta.format.meta
+  const formatMeta = meta.template === 'format' ? meta : meta.format && meta.format.meta
 
   const formatColor = formatMeta && formatMeta.color
 
   return (
     <Document>
       <Page size={pageSize} style={styles.page} wrap>
-        <View style={[styles.decorator, {
-          backgroundColor: formatColor || '#000',
-          height: formatColor ? 2 : 1
-        }]} />
+        <View
+          style={[
+            styles.decorator,
+            {
+              backgroundColor: formatColor || '#000',
+              height: formatColor ? 2 : 1
+            }
+          ]}
+        />
         {mdast.props.children}
         <Footer article={article} />
       </Page>
