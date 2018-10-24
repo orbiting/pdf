@@ -35,14 +35,13 @@ const styles = StyleSheet.create({
     position: 'absolute',
     fontFamily: fontFamilies.serifTitle
   },
-  link: {},
   path: {
-    fontSize: 8,
-    color: '#000',
     left: 105,
     top: 807,
     right: 65,
+    fontSize: 8,
     position: 'absolute',
+    color: '#000',
     fontFamily: fontFamilies.sansSerifRegular,
     textDecoration: 'none'
   },
