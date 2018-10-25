@@ -118,9 +118,9 @@
   integrity sha1-APy5adykzoKgp2c0E63gOeR7Nh4=
 
 "@react-pdf/renderer@^1.0.0-alpha.21":
-  version "1.0.0-alpha.21"
-  resolved "https://registry.yarnpkg.com/@react-pdf/renderer/-/renderer-1.0.0-alpha.21.tgz#fdd94911139df04e28a1ffe194191d6702ccb834"
-  integrity sha512-j06cnQCNOy4OWVe8R1ErBM/tIyMafx3bBAcIaKhEM5i4H6hf8SiN56LL+DM06KzS8/48z3E8gjECheqTwRYm+w==
+  version "1.0.0-alpha.23"
+  resolved "https://registry.yarnpkg.com/@react-pdf/renderer/-/renderer-1.0.0-alpha.23.tgz#71edf0c17826d5e0b5db2a2ba7f45ce27efe924b"
+  integrity sha512-WmswlzhSS5MCojYE0DKeotFDR7p/YAy/SzbfCfUymJlmXHEvFfuo5V3chF5DkWisgbgwfxxJ8Xc7lv5VgN3rqA==
   dependencies:
     "@react-pdf/fontkit" "^1.11.0"
     "@react-pdf/pdfkit" "^1.2.0"

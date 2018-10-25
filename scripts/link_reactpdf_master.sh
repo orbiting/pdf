@@ -13,14 +13,11 @@ build_and_link_reactpdf() {
   cd ..
 }
 
-build_and_start_pdf_server() {
+link_reactpdf() {
   yarn remove @react-pdf/renderer
   yarn link @react-pdf/renderer
-  yarn build
-  yarn start &
-  sleep 3
 }
 
 prepare_test
 build_and_link_reactpdf
-build_and_start_pdf_server
+link_reactpdf

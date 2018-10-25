@@ -15,10 +15,18 @@ notifications:
   email: false
 node_js:
   - "10.4.1"
+matrix:
+  include:
+    - name: "react-pdf npm"
+      env: REACTPDF_MASTER=false
+    - name: "react-pdf master"
+      env: REACTPDF_MASTER=true
 before_install:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then export CXX=g++-4.9 ; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then export CFLAGS="$CFLAGS -std=c99" ; fi
-before_script: bash scripts/test.sh
+before_script:
+  - if [[ "$REACTPDF_MASTER" == "true" ]]; then bash scripts/link_reactpdf_master.sh ; fi
+  - bash scripts/background_server.sh
 script: yarn test
 git:
   depth: 1
