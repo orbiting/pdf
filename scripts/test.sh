@@ -21,11 +21,6 @@ build_and_start_pdf_server() {
   sleep 3
 }
 
-run_tests() {
-  DOTENV=1 yarn test
-}
-
 prepare_test
 build_and_link_reactpdf
 build_and_start_pdf_server
-run_tests
