@@ -105,9 +105,9 @@
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@react-pdf/png-js/-/png-js-1.0.0.tgz#00fcb969dca4ce82a0a7673413ade039e47b361e"
 
-"@react-pdf/renderer@^1.0.0-alpha.20":
-  version "1.0.0-alpha.20"
-  resolved "https://registry.yarnpkg.com/@react-pdf/renderer/-/renderer-1.0.0-alpha.20.tgz#7871c1720e4fd2c32bf5ab475491b1494d88000d"
+"@react-pdf/renderer@^1.0.0-alpha.21":
+  version "1.0.0-alpha.21"
+  resolved "https://registry.yarnpkg.com/@react-pdf/renderer/-/renderer-1.0.0-alpha.21.tgz#fdd94911139df04e28a1ffe194191d6702ccb834"
   dependencies:
     "@react-pdf/fontkit" "^1.11.0"
     "@react-pdf/pdfkit" "^1.2.0"

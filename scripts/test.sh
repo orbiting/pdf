@@ -14,6 +14,7 @@ build_and_link_reactpdf() {
 }
 
 build_and_start_pdf_server() {
+  yarn remove @react-pdf/renderer
   yarn link @react-pdf/renderer
   yarn build
   yarn start &
