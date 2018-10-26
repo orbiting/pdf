@@ -117,7 +117,7 @@
   resolved "https://registry.yarnpkg.com/@react-pdf/png-js/-/png-js-1.0.0.tgz#00fcb969dca4ce82a0a7673413ade039e47b361e"
   integrity sha1-APy5adykzoKgp2c0E63gOeR7Nh4=
 
-"@react-pdf/renderer@^1.0.0-alpha.21":
+"@react-pdf/renderer@^1.0.0-alpha.23":
   version "1.0.0-alpha.23"
   resolved "https://registry.yarnpkg.com/@react-pdf/renderer/-/renderer-1.0.0-alpha.23.tgz#71edf0c17826d5e0b5db2a2ba7f45ce27efe924b"
   integrity sha512-WmswlzhSS5MCojYE0DKeotFDR7p/YAy/SzbfCfUymJlmXHEvFfuo5V3chF5DkWisgbgwfxxJ8Xc7lv5VgN3rqA==
