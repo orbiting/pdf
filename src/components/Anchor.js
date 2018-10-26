@@ -1,9 +1,7 @@
 import React from 'react'
 import { Link, StyleSheet } from '@react-pdf/renderer'
 
-const {
-  FRONTEND_BASE_URL
-} = process.env
+const { FRONTEND_BASE_URL } = process.env
 
 const styles = StyleSheet.create({
   link: {
@@ -12,11 +10,14 @@ const styles = StyleSheet.create({
 })
 
 const Anchor = ({ children, href }) => (
-  <Link style={styles.link} src={
-    href && href[0] === '/' // path urls
-      ? FRONTEND_BASE_URL + href
-      : href
-  }>
+  <Link
+    style={styles.link}
+    src={
+      href && href[0] === '/' // path urls
+        ? FRONTEND_BASE_URL + href
+        : href
+    }
+  >
     {children}
   </Link>
 )
