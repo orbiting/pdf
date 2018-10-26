@@ -14,6 +14,7 @@ const styles = StyleSheet.create({
 const H2 = ({ children }) => (
   <Text
     minPresenceAhead={26}
+    hyphenationPenalty={10000}
     style={styles.subheadline}
   >
     {children}
