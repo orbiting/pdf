@@ -12,7 +12,12 @@ addons:
     packages:
       - g++-4.9
 notifications:
-  email: false
+  email:
+    recipients:
+      - diegomuracciole@gmail.com
+      - thomas.preusse@republik.ch
+    on_success: never
+    on_failure: always
 node_js:
   - "10.4.1"
 matrix:
