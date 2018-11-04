@@ -82,8 +82,7 @@ const EmbedTwitter = ({ text, image, userName, userScreenName, userProfileImageU
           <Image style={styles.logo} src={LOGO_SRC} />
         </View>
         <View style={styles.body}>
-          {/* Workaround for https://github.com/diegomura/react-pdf/issues/332 */}
-          <Text style={styles.text}>{text && text.replace('\n\n', ' ')}</Text>
+          <Text style={styles.text}>{text && text.replace(/&amp;/g, '&')}</Text>
           {image && <SafeImage style={styles.image} src={image} />}
         </View>
       </View>
