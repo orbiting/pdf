@@ -6,6 +6,10 @@ import { fontFamilies } from '../lib/fonts'
 import SafeImage from './SafeImage'
 
 const LOGO_SRC = 'https://cdn.republik.space/s3/republik-assets/assets/pdf/twitter.png'
+const LOGO_SIZE = 15
+
+const AVATAR_SIZE = 30
+const AVATAR_MARGIN = 8
 
 const styles = StyleSheet.create({
   container: {
@@ -21,26 +25,28 @@ const styles = StyleSheet.create({
     borderBottomColor: 'black'
   },
   header: {
-    position: 'relative',
-    flexDirection: 'row'
+    position: 'relative'
   },
   body: {
     paddingTop: 8
   },
   avatar: {
-    height: 30,
-    width: 30,
-    marginRight: 8
+    height: AVATAR_SIZE,
+    width: AVATAR_SIZE,
+    marginRight: AVATAR_MARGIN
   },
   logo: {
-    height: 15,
-    width: 15,
+    height: LOGO_SIZE,
+    width: LOGO_SIZE,
     position: 'absolute',
     right: 10,
     top: 6
   },
   tweetInfo: {
-    justifyContent: 'space-around'
+    position: 'absolute',
+    top: 0,
+    left: AVATAR_SIZE + AVATAR_MARGIN,
+    right: LOGO_SIZE * 2
   },
   userName: {
     fontSize: 14,
@@ -61,7 +67,7 @@ const styles = StyleSheet.create({
 })
 
 const swissTime = timeFormatLocale(timeDefinition)
-const format = swissTime.format('%B %Y')
+const format = swissTime.format('%d.%m.%Y')
 
 const EmbedTwitter = ({ text, image, userName, userScreenName, userProfileImageUrl, createdAt }) => {
   const date = format(new Date(createdAt))
@@ -82,8 +88,7 @@ const EmbedTwitter = ({ text, image, userName, userScreenName, userProfileImageU
           <Image style={styles.logo} src={LOGO_SRC} />
         </View>
         <View style={styles.body}>
-          {/* Workaround for https://github.com/diegomura/react-pdf/issues/332 */}
-          <Text style={styles.text}>{text && text.replace('\n\n', ' ')}</Text>
+          <Text style={styles.text}>{text && text.replace(/&amp;/g, '&')}</Text>
           {image && <SafeImage style={styles.image} src={image} />}
         </View>
       </View>
