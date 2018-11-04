@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
 })
 
 const swissTime = timeFormatLocale(timeDefinition)
-const format = swissTime.format('%B %Y')
+const format = swissTime.format('%d.%m.%Y')
 
 const EmbedTwitter = ({ text, image, userName, userScreenName, userProfileImageUrl, createdAt }) => {
   const date = format(new Date(createdAt))
