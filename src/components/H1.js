@@ -18,6 +18,7 @@ const styles = StyleSheet.create({
 const H1 = ({ children, kind }) => (
   <Text
     minPresenceAhead={26}
+    hyphenationPenalty={10000}
     style={[styles.headline, {fontFamily: family[kind] || family.editorial}]}
   >
     {children}
