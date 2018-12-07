@@ -91,7 +91,8 @@ const editorialParagraphRules = [
 
 const h2 = {
   matchMdast: matchHeading(2),
-  component: H2
+  component: H2,
+  rules: globalInlines
 }
 
 const paragraph = {
@@ -129,7 +130,8 @@ const title = {
         return {
           kind: formatKind
         }
-      }
+      },
+      rules: globalInlines
     },
     {
       matchMdast: matchHeading(2),
