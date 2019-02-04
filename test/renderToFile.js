@@ -3,6 +3,7 @@ const path = require('path')
 const fetch = require('node-fetch')
 const { queue } = require('d3-queue')
 const { createApolloFetch } = require('apollo-fetch')
+const { version } = require('@react-pdf/renderer')
 
 if (process.env.DOTENV) {
   require('dotenv').config()
@@ -49,7 +50,11 @@ const run = async () => {
     .filter(doc => !doc.meta.template || doc.meta.template === 'article')
     .slice(+OFFSET)
 
-  console.log(`Run ${CONCURRENCY}x, start index ${+OFFSET}, ${docs.length} docs`)
+  let docsCount = 0
+  const docsAmount = docs.length
+
+  console.log(`React-pdf version: ${version}`)
+  console.log(`Run ${CONCURRENCY}x, start index ${+OFFSET}, ${docsAmount} docs`)
 
   const outDir = path.join(__dirname, 'out')
   if (!fs.existsSync(outDir)) {
@@ -68,7 +73,7 @@ const run = async () => {
             .replace(/ /g, '-')}.pdf`
         )
         fs.writeFileSync(file, buffer)
-        console.log('Done', doc.meta.path)
+        console.log(`${++docsCount}/${docsAmount} -  Done ${doc.meta.path}`)
         return {
           doc
         }
