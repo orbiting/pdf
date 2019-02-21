@@ -115,37 +115,35 @@
   resolved "https://registry.yarnpkg.com/@react-pdf/png-js/-/png-js-1.0.0.tgz#00fcb969dca4ce82a0a7673413ade039e47b361e"
   integrity sha1-APy5adykzoKgp2c0E63gOeR7Nh4=
 
-"@react-pdf/renderer@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@react-pdf/renderer/-/renderer-1.0.0.tgz#4e638f7fd9a8a3b8ea812532324adbfe35657f0f"
-  integrity sha512-pQHFzJoAhV2fdyQ2AZ/A/c5K46U3Ubssil6fJOXscUrZumGQz1wVGH+7JVRYRRL7Ny5bjqOht5N2Zla6B7UnXg==
+"@react-pdf/renderer@^1.3.3":
+  version "1.3.3"
+  resolved "https://registry.yarnpkg.com/@react-pdf/renderer/-/renderer-1.3.3.tgz#4b5b5ab6f56ffcdb37398b56d3ef8711fd644b7e"
+  integrity sha512-zzfKIAE1SkUJ40JS07uJFrjiCItd8w+ksVS8RdlRAm4l4aclM15KJcRADhpvv3or4ZoIiUtviLumBL6593sxTg==
   dependencies:
     "@react-pdf/fontkit" "^1.13.0"
     "@react-pdf/pdfkit" "^1.2.0"
     "@react-pdf/png-js" "^1.0.0"
     "@react-pdf/script-itemizer" "^0.2.1"
-    "@react-pdf/textkit-core" "^0.2.0"
+    "@react-pdf/textkit-core" "0.2.3"
     "@textkit/justification-engine" "^0.1.9"
-    "@textkit/pdf-renderer" "^0.1.11"
+    "@textkit/pdf-renderer" "^0.1.12"
     "@textkit/text-decoration-engine" "^0.1.10"
     babel-runtime "^6.26.0"
     blob-stream "^0.1.3"
-    emoji-regex "^6.5.1"
-    fbjs "^0.8.4"
+    cross-fetch "^3.0.1"
+    emoji-regex "^7.0.3"
     hyphenation.en-us "^0.2.1"
     hypher "^0.2.5"
     is-url "^1.2.2"
-    isomorphic-fetch "^2.2.1"
     lodash.groupby "^4.6.0"
     lodash.isfunction "^3.0.8"
-    lodash.isnil "^4.0.0"
     lodash.merge "^4.6.1"
     lodash.pick "^4.4.0"
     lodash.topairsin "^4.3.0"
     media-engine "^1.0.3"
     page-wrapping "^1.1.0"
     react "^16.4.1"
-    react-reconciler "^0.12.0"
+    react-reconciler "^0.19.1"
     yoga-layout-prebuilt "1.9.3"
 
 "@react-pdf/script-itemizer@^0.2.1":
@@ -155,10 +153,10 @@
   dependencies:
     "@react-pdf/unicode-properties" "^2.2.0"
 
-"@react-pdf/textkit-core@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@react-pdf/textkit-core/-/textkit-core-0.2.0.tgz#d577175b7dcae160bdd537a1123d7a976064f169"
-  integrity sha512-B7YbLvjsQkku4X4RpsLxz3kL95M6NoCz/LqiMYfy5AKOpQjBwpldQqYm+h+BmE3TeMy73zEYJ6RDLWZWdrpdDA==
+"@react-pdf/textkit-core@0.2.3":
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/@react-pdf/textkit-core/-/textkit-core-0.2.3.tgz#a2012cae16031f7763a5f591e530b7c2c81a354a"
+  integrity sha512-6DTvTn2lCdYvXc8G2K0ZedAkzQZAO5Mh9nVXEKg4RmvIn3N2QkD8gcqGOmPfvDfM70ZA5N4eodWowbOvKtxN3g==
   dependencies:
     "@react-pdf/unicode-properties" "^2.2.0"
     cubic2quad "^1.1.0"
@@ -178,10 +176,10 @@
     lodash.clone "^4.5.0"
     lodash.merge "^4.6.1"
 
-"@textkit/pdf-renderer@^0.1.11":
-  version "0.1.11"
-  resolved "https://registry.yarnpkg.com/@textkit/pdf-renderer/-/pdf-renderer-0.1.11.tgz#2743441f39d486879e4de9a530a2610c0965b49f"
-  integrity sha512-U6v4Th5sR9n1yEW/lmalzgc+bi92iQj4RrmnV63pn6d1kqiibrJsnoxZfaQh/IANitQsYJwz7FNXDyy5TDzlMg==
+"@textkit/pdf-renderer@^0.1.12":
+  version "0.1.12"
+  resolved "https://registry.yarnpkg.com/@textkit/pdf-renderer/-/pdf-renderer-0.1.12.tgz#ee444ecd0b3bb17ae8a5a9912218e9b2c0a648b0"
+  integrity sha512-q/YD03lZ4zNaq9w5h76mhAA5HbgyWyJ0RjWvAeQR16M/d21PehDzMKe3rQDyYXMjv6sJG5K7tiwvN70ALFgoBA==
 
 "@textkit/text-decoration-engine@^0.1.10":
   version "0.1.10"
@@ -1733,6 +1731,14 @@ cross-fetch@^1.0.0:
     node-fetch "1.7.3"
     whatwg-fetch "2.0.3"
 
+cross-fetch@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/cross-fetch/-/cross-fetch-3.0.1.tgz#3f207bbd829a76e9aa2a953348bd1f2a3cf388a7"
+  integrity sha512-qWtpgBAF8ioqBOddRD+pHhrdzm/UWOArkrlIU7c08DlNbOxo5GfUbSY2vr90ZypWf0raW+HNN1F38pi5CEOjiQ==
+  dependencies:
+    node-fetch "2.3.0"
+    whatwg-fetch "3.0.0"
+
 cross-spawn@^5.0.1, cross-spawn@^5.1.0:
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-5.1.0.tgz#e8bd0efee58fcff6f8f94510a0a554bbfa235449"
@@ -1981,10 +1987,10 @@ elegant-spinner@^1.0.1:
   resolved "https://registry.yarnpkg.com/elegant-spinner/-/elegant-spinner-1.0.1.tgz#db043521c95d7e303fd8f345bedc3349cfb0729e"
   integrity sha1-2wQ1IcldfjA/2PNFvtwzSc+wcp4=
 
-emoji-regex@^6.5.1:
-  version "6.5.1"
-  resolved "https://registry.yarnpkg.com/emoji-regex/-/emoji-regex-6.5.1.tgz#9baea929b155565c11ea41c6626eaa65cef992c2"
-  integrity sha512-PAHp6TxrCy7MGMFidro8uikr+zlJJKJ/Q6mm2ExZ7HwkyR9lSVFfE3kt36qcwa24BQL7y0G9axycGjK1A/0uNQ==
+emoji-regex@^7.0.3:
+  version "7.0.3"
+  resolved "https://registry.yarnpkg.com/emoji-regex/-/emoji-regex-7.0.3.tgz#933a04052860c85e83c122479c4748a8e4c72156"
+  integrity sha512-CwBLREIQ7LvYFB0WyRvwhq5N5qPhc6PMjD6bYggFlI5YyDgl+0vxq5VHbMOFqLg7hfWzmu8T5Z1QofhmTIhItA==
 
 encodeurl@~1.0.2:
   version "1.0.2"
@@ -2582,7 +2588,7 @@ fast-levenshtein@~2.0.4:
   resolved "https://registry.yarnpkg.com/fast-levenshtein/-/fast-levenshtein-2.0.6.tgz#3d8a5c66883a16a30ca8643e851f19baa7797917"
   integrity sha1-PYpcZog6FqMMqGQ+hR8Zuqd5eRc=
 
-fbjs@^0.8.16, fbjs@^0.8.4:
+fbjs@^0.8.16:
   version "0.8.17"
   resolved "https://registry.yarnpkg.com/fbjs/-/fbjs-0.8.17.tgz#c4d598ead6949112653d6588b01a5cdcd9f90fdd"
   integrity sha1-xNWY6taUkRJlPWWIsBpc3Nn5D90=
@@ -3487,7 +3493,7 @@ isobject@^3.0.0, isobject@^3.0.1:
   resolved "https://registry.yarnpkg.com/isobject/-/isobject-3.0.1.tgz#4e431e92b11a9731636aa1f9c8d1ccbcfdab78df"
   integrity sha1-TkMekrEalzFjaqH5yNHMvP2reN8=
 
-isomorphic-fetch@^2.1.1, isomorphic-fetch@^2.2.1:
+isomorphic-fetch@^2.1.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/isomorphic-fetch/-/isomorphic-fetch-2.2.1.tgz#611ae1acf14f5e81f729507472819fe9733558a9"
   integrity sha1-YRrhrPFPXoH3KVB0coGf6XM1WKk=
@@ -3766,11 +3772,6 @@ lodash.isfunction@^3.0.8:
   version "3.0.9"
   resolved "https://registry.yarnpkg.com/lodash.isfunction/-/lodash.isfunction-3.0.9.tgz#06de25df4db327ac931981d1bdb067e5af68d051"
   integrity sha512-AirXNj15uRIMMPihnkInB4i3NHeb4iBtNg9WRWuK2o31S+ePwwNmDPaTL3o7dTJ+VXNZim7rFs4rxN4YU1oUJw==
-
-lodash.isnil@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/lodash.isnil/-/lodash.isnil-4.0.0.tgz#49e28cd559013458c814c5479d3c663a21bfaa6c"
-  integrity sha1-SeKM1VkBNFjIFMVHnTxmOiG/qmw=
 
 lodash.merge@^4.6.1:
   version "4.6.1"
@@ -4073,6 +4074,11 @@ node-fetch@1.7.3, node-fetch@^1.0.1:
   dependencies:
     encoding "^0.1.11"
     is-stream "^1.0.1"
+
+node-fetch@2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.3.0.tgz#1a1d940bbfb916a1d3e0219f037e89e71f8c5fa5"
+  integrity sha512-MOd8pV3fxENbryESLgVIeaGKrdl+uaYhCSSVkjeOb/31/njTpcis5aWfdqgNlHIrKOLRbMnfPINPOML2CIFeXA==
 
 node-fetch@^2.1.2:
   version "2.2.0"
@@ -4662,15 +4668,15 @@ react-dom@^16.2.0:
     prop-types "^15.6.2"
     schedule "^0.5.0"
 
-react-reconciler@^0.12.0:
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/react-reconciler/-/react-reconciler-0.12.0.tgz#dd3ecd98f64a2d8449298dadab041910cafd2849"
-  integrity sha512-BBaE+asD1HdzS35GLhvOEUGFwFKBNN/Jj9b+VlCt9JjF+jDnmIij4SbulNpqccYxPE/Eeup3/ciouo9YmhSgbg==
+react-reconciler@^0.19.1:
+  version "0.19.1"
+  resolved "https://registry.yarnpkg.com/react-reconciler/-/react-reconciler-0.19.1.tgz#0735fc290617780a2c9735218a4762e7d77797e6"
+  integrity sha512-zgzY3mLQ2CpQ9hP3tEZi6wlRW628V4WYiRigaSbrgvN013STZn3/N19p8pW4/dn4oCKapRuL7dycbtwRcOzE+w==
   dependencies:
-    fbjs "^0.8.16"
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
-    prop-types "^15.6.0"
+    prop-types "^15.6.2"
+    scheduler "^0.13.1"
 
 react@^16.2.0:
   version "16.5.2"
@@ -5009,6 +5015,14 @@ scheduler@^0.11.2:
   version "0.11.3"
   resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.11.3.tgz#b5769b90cf8b1464f3f3cfcafe8e3cd7555a2d6b"
   integrity sha512-i9X9VRRVZDd3xZw10NY5Z2cVMbdYg6gqFecfj79USv1CFN+YrJ3gIPRKf1qlY+Sxly4djoKdfx1T+m9dnRB8kQ==
+  dependencies:
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
+
+scheduler@^0.13.1:
+  version "0.13.2"
+  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.13.2.tgz#969eaee2764a51d2e97b20a60963b2546beff8fa"
+  integrity sha512-qK5P8tHS7vdEMCW5IPyt8v9MJOHqTrOUgPXib7tqm9vh834ibBX5BNhwkplX/0iOzHW5sXyluehYfS9yrkz9+w==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
@@ -5672,7 +5686,7 @@ whatwg-fetch@2.0.3:
   resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-2.0.3.tgz#9c84ec2dcf68187ff00bc64e1274b442176e1c84"
   integrity sha1-nITsLc9oGH/wC8ZOEnS0QhduHIQ=
 
-whatwg-fetch@>=0.10.0:
+whatwg-fetch@3.0.0, whatwg-fetch@>=0.10.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-3.0.0.tgz#fc804e458cc460009b1a2b966bc8817d2578aefb"
   integrity sha512-9GSJUgz1D4MfyKU7KRqwOjXCXTqWdFNvEr7eUBYchQiVc744mqK/MzXPNR2WsPkmkOa4ywfg8C2n8h+13Bey1Q==
