@@ -31,10 +31,10 @@ const start = (workerId) => {
 
   const stripDotPdf = path => path.replace(/\.pdf$/, '')
 
-  server.get('/fixtures/:path', (req, res) => {
+  server.get('/fixtures/:path*', (req, res) => {
     const fixturePath = path.join(
-      __dirname, '..', 'fixtures',
-      `${stripDotPdf(req.params.path)}.json`
+      __dirname, '..',
+      `${stripDotPdf(req.path)}.json`
     )
     if (!fs.existsSync(fixturePath)) {
       res.status(404).end('No Fixture Found')
