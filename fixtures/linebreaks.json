@@ -1,0 +1,142 @@
+{
+  "data": {
+    "document": {
+      "content": {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Jetzt kommt es zum Prozess in der Causa Geri Müller"
+                  }
+                ],
+                "depth": 1,
+                "type": "heading"
+              },
+              {
+                "children": [],
+                "depth": 2,
+                "type": "heading"
+              },
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "PR-Mann Sacha Wigdorovits ist wegen Verdachts auf versuchte Nötigung und wegen unbefugt aufgenommener Gespräche angeklagt. Mit einem Journalisten und einem lokalen Gegner einigte sich Ex-Politiker Geri Müller aussergerichtlich."
+                  }
+                ],
+                "type": "paragraph"
+              },
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Von "
+                  },
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Carlos Hanimann"
+                      }
+                    ],
+                    "title": null,
+                    "type": "link",
+                    "url": "/~chanimann"
+                  },
+                  {
+                    "type": "text",
+                    "value": ", 19.02.2019"
+                  }
+                ],
+                "type": "paragraph"
+              }
+            ],
+            "data": {},
+            "identifier": "TITLE",
+            "type": "zone"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Welche Rolle spielte PR-Mann Wigdorovits?"
+                  }
+                ],
+                "depth": 2,
+                "type": "heading"
+              },
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Angeklagt ist der PR-Mann Sacha Wigdorovits. Die Staats­anwaltschaft wirft ihm versuchte Nötigung beziehungsweise Anstiftung oder Gehilfen­schaft dazu vor. Ausserdem geht es um das Aufbewahren, Auswerten, Zugänglich­machen und Weitergeben von unbefugt aufgenommenen Gesprächen. Für Sacha Wigdorovits gilt die Unschuldsvermutung."
+                  }
+                ],
+                "type": "paragraph"
+              }
+            ],
+            "data": {},
+            "identifier": "CENTER",
+            "type": "zone"
+          }
+        ],
+        "meta": {
+          "audioSource": null,
+          "authors": [
+            "Carlos Hanimann"
+          ],
+          "credits": [
+            {
+              "type": "text",
+              "value": "Von "
+            },
+            {
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Carlos Hanimann"
+                }
+              ],
+              "title": null,
+              "type": "link",
+              "url": "/~5b6da6a6-c9fa-4ebb-a020-8dc85258310e"
+            },
+            {
+              "type": "text",
+              "value": ", 19.02.2019"
+            }
+          ],
+          "description": "PR-Mann Sacha Wigdorovits ist wegen Verdachts auf versuchte Nötigung und wegen unbefugt aufgenommener Gespräche angeklagt. Mit einem Journalisten und einem lokalen Gegner einigte sich Ex-Politiker Geri Müller aussergerichtlich.",
+          "facebookImage": "https://cdn.republik.space/s3/republik-assets/github/republik/article-geri-mueller-und-kein-ende/images/4abe5f8c0df8874acbae4ee685c031ec65626b7b.png?size=1204x630",
+          "feed": true,
+          "gallery": true,
+          "hasAudio": false,
+          "hasVideo": false,
+          "isSeriesEpisode": false,
+          "isSeriesMaster": false,
+          "path": "/2019/02/19/jetzt-kommt-es-zum-prozess-in-der-causa-geri-mueller",
+          "prepublication": false,
+          "publishDate": "2019-02-19T03:50:00.000Z",
+          "repoId": "republik/article-geri-mueller-und-kein-ende",
+          "scheduledAt": "2019-02-19T03:50:00.000Z",
+          "slug": "jetzt-kommt-es-zum-prozess-in-der-causa-geri-mueller",
+          "subject": "",
+          "template": "article",
+          "title": "Jetzt kommt es zum Prozess in der Causa Geri Müller",
+          "twitterDescription": "PR-Mann Sacha Wigdorovits ist wegen Verdachts auf versuchte Nötigung und wegen unbefugt aufgenommener Gespräche angeklagt. ",
+          "twitterImage": "https://cdn.republik.space/s3/republik-assets/github/republik/article-geri-mueller-und-kein-ende/images/fd387b64e9b54babc1e8aaf24d8c65d3b293eec6.png?size=1204x604"
+        },
+        "type": "root"
+      },
+      "meta": {
+        "path": "/2019/02/19/jetzt-kommt-es-zum-prozess-in-der-causa-geri-mueller",
+        "template": "article"
+      }
+    }
+  }
+}
