@@ -19,7 +19,7 @@ export default ({ node, ancestors }) => {
   const ranges = getRanges({ node, ancestors })
 
   const extractUrl = `${FRONTEND_BASE_URL}${rootNode.path}?extract=${ranges.join(':')}&unpack=${ranges.length}`
-  const renderUrl = `${ASSETS_SERVER_BASE_URL}/render?width=665&height=1&id=${encodeURIComponent(rootNode.id)}&url=${encodeURIComponent(extractUrl)}`
+  const renderUrl = `${ASSETS_SERVER_BASE_URL}/render?viewport=665&resize=665&zoomFactor=2&id=${encodeURIComponent(rootNode.id)}&url=${encodeURIComponent(extractUrl)}`
 
   return (
     <Image style={styles.image} src={renderUrl} />
