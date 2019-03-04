@@ -13,7 +13,7 @@ open http://localhost:3007/example
 
 ```sh
 API_URL=https://api.republik.ch/graphql
-FRONTEND_BASE_URL=https://republik.ch
+FRONTEND_BASE_URL=https://www.republik.ch
 ASSETS_SERVER_BASE_URL=https://cdn.republik.space
 ```
 
