@@ -11,12 +11,13 @@ const styles = StyleSheet.create({
   listitem: {
     flex: 1,
     fontSize: 10,
+    paddingLeft: 15,
     textAlign: 'justify',
     fontFamily: fontFamilies.serifRegular
   },
   bulletPoint: {
     width: 30,
-    left: -37,
+    left: -20,
     fontSize: 10,
     textAlign: 'right',
     position: 'absolute',
