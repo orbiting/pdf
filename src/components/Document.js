@@ -117,10 +117,7 @@ const MdastDocument = ({ article, options }) => {
     }
   )
 
-  const meta = article.meta
-  const formatMeta = meta.template === 'format' ? meta : meta.format && meta.format.meta
-
-  const formatColor = formatMeta && formatMeta.color
+  const { formatColor } = options
 
   return (
     <Document>
