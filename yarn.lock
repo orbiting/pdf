@@ -122,10 +122,10 @@
   resolved "https://registry.yarnpkg.com/@react-pdf/png-js/-/png-js-1.0.0.tgz#00fcb969dca4ce82a0a7673413ade039e47b361e"
   integrity sha1-APy5adykzoKgp2c0E63gOeR7Nh4=
 
-"@react-pdf/renderer@^1.5.0":
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/@react-pdf/renderer/-/renderer-1.5.0.tgz#0c33c7e6dec111dbae7a058ec442e7f718662a25"
-  integrity sha512-Ica7giI8UX/1xCoaM7vs3WrMSIm1QjX7bWvJv61HOcluAAXyBjmin5oUrl+lU2Y3Q6enHF9atMYJljMGZ0M9Vg==
+"@react-pdf/renderer@^1.5.1":
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/@react-pdf/renderer/-/renderer-1.5.1.tgz#a872332394bac17256f90bb9b74fa67cbebd4d45"
+  integrity sha512-724g51gWPWyiK6xdf61ZKgceNX/LBGeFEfpLdm9YAhu9NqtgWYslSPqFk28YZvoouSzwzCXYkQf8BydhWU4oew==
   dependencies:
     "@babel/runtime" "^7.3.1"
     "@react-pdf/fontkit" "^1.13.0"
@@ -136,13 +136,9 @@
     cross-fetch "^3.0.1"
     emoji-regex "^7.0.3"
     is-url "^1.2.4"
-    lodash.groupby "^4.6.0"
-    lodash.isfunction "^3.0.9"
-    lodash.merge "^4.6.1"
-    lodash.pick "^4.4.0"
-    lodash.topairsin "^4.3.0"
     media-engine "^1.0.3"
     page-wrapping "^1.1.0"
+    ramda "^0.26.1"
     react "^16.8.3"
     react-reconciler "^0.20.1"
     yoga-layout-prebuilt "^1.9.3"
@@ -3724,31 +3720,6 @@ lodash.debounce@^4.0.8:
   version "4.0.8"
   resolved "https://registry.yarnpkg.com/lodash.debounce/-/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
   integrity sha1-gteb/zCmfEAF/9XiUVMArZyk168=
-
-lodash.groupby@^4.6.0:
-  version "4.6.0"
-  resolved "https://registry.yarnpkg.com/lodash.groupby/-/lodash.groupby-4.6.0.tgz#0b08a1dcf68397c397855c3239783832df7403d1"
-  integrity sha1-Cwih3PaDl8OXhVwyOXg4Mt90A9E=
-
-lodash.isfunction@^3.0.9:
-  version "3.0.9"
-  resolved "https://registry.yarnpkg.com/lodash.isfunction/-/lodash.isfunction-3.0.9.tgz#06de25df4db327ac931981d1bdb067e5af68d051"
-  integrity sha512-AirXNj15uRIMMPihnkInB4i3NHeb4iBtNg9WRWuK2o31S+ePwwNmDPaTL3o7dTJ+VXNZim7rFs4rxN4YU1oUJw==
-
-lodash.merge@^4.6.1:
-  version "4.6.1"
-  resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.1.tgz#adc25d9cb99b9391c59624f379fbba60d7111d54"
-  integrity sha512-AOYza4+Hf5z1/0Hztxpm2/xiPZgi/cjMqdnKTUWTBSKchJlxXXuUSxCCl8rJlf4g6yww/j6mA8nC8Hw/EZWxKQ==
-
-lodash.pick@^4.4.0:
-  version "4.4.0"
-  resolved "https://registry.yarnpkg.com/lodash.pick/-/lodash.pick-4.4.0.tgz#52f05610fff9ded422611441ed1fc123a03001b3"
-  integrity sha1-UvBWEP/53tQiYRRB7R/BI6AwAbM=
-
-lodash.topairsin@^4.3.0:
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/lodash.topairsin/-/lodash.topairsin-4.3.0.tgz#1a6966d46484898fca42522286f1529a4397ad3b"
-  integrity sha1-Gmlm1GSEiY/KQlIihvFSmkOXrTs=
 
 lodash@^4.0.0, lodash@^4.17.10, lodash@^4.17.4, lodash@^4.2.0, lodash@^4.3.0:
   version "4.17.11"
