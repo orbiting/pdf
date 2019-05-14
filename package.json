@@ -35,7 +35,6 @@
     "@react-pdf/renderer": "^1.5.6",
     "apollo-fetch": "^0.7.0",
     "babel-preset-stage-0": "^6.24.1",
-    "d3-array": "^1.2.1",
     "d3-time-format": "^2.1.1",
     "express": "^4.16.2",
     "graphql-tag": "^2.6.0",
@@ -44,7 +43,7 @@
     "react": "^16.2.0",
     "react-apollo": "^2.0.4",
     "react-dom": "^16.2.0",
-    "regenerator-runtime": "^0.11.1",
+    "regenerator-runtime": "^0.13.2",
     "regiment": "https://github.com/orbiting/regiment"
   },
   "devDependencies": {
