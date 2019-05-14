@@ -22,7 +22,7 @@ export const renderDocument = async (article, query, response) => {
     )
   }
 
-  const output = ReactPDF.renderToStream(
+  ReactPDF.renderToStream(
     <Document article={article} options={{
       formatTitle,
       formatColor,
@@ -30,7 +30,7 @@ export const renderDocument = async (article, query, response) => {
       images: query.images !== '0',
       size: query.size || 'A4'
     }} />
-  )
-
-  output.pipe(response)
+  ).then(output => {
+    output.pipe(response)
+  })
 }
