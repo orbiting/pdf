@@ -11,8 +11,9 @@ const fonts = JSON.parse(process.env.FONTS || '{}')
 Object.keys(fonts).forEach(key => {
   const font = fonts[key]
   if (font.url) {
-    Font.register(font.url, {
-      family: font.family
+    Font.register({
+      family: font.family,
+      src: font.url
     })
   }
 })
