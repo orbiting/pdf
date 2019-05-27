@@ -24,7 +24,7 @@ You can create a local `.env` file which will be auto loaded.
 This project includes a script that runs a batch of PDF generation processes. To run it, provide your session cookie as `API_COOKIE`:
 
 ```sh
-CONCURRENCY=1 API_COOKIE=connect.sid=s%... node test/renderToFile.js
+FIRST=500 CONCURRENCY=1 API_COOKIE=connect.sid=s%... node test/renderToFile.js
 ```
 
 With `DOTENV=1` you can also use your `.env` file.

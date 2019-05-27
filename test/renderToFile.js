@@ -13,12 +13,13 @@ const {
   CONCURRENCY = 1,
   BASE_URL = 'http://localhost:3007',
   API_URL = 'https://api.republik.ch/graphql',
-  OFFSET = 0
+  OFFSET = 0,
+  FIRST = 500
 } = process.env
 
 const query = `
 {
-  documents(first: 10000, template: "article") {
+  documents(first: ${FIRST}, template: "article") {
     totalCount
     nodes {
       meta {
