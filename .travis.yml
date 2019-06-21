@@ -19,7 +19,7 @@ notifications:
     on_success: never
     on_failure: always
 node_js:
-  - "10.4.1"
+  - "12.2.0"
 matrix:
   include:
     - name: "react-pdf npm"
