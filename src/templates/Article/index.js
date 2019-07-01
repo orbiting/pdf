@@ -67,11 +67,11 @@ const interactionParagraphRules = [
   ...globalInlines,
   {
     matchMdast: matchType('strong'),
-    component: Interaction.Emphasis
+    component: Interaction.Strong
   },
   {
     matchMdast: matchType('emphasis'),
-    component: Interaction.Cursive
+    component: Interaction.Emphasis
   },
   link
 ]
@@ -80,11 +80,27 @@ const editorialParagraphRules = [
   ...globalInlines,
   {
     matchMdast: matchType('strong'),
-    component: Editorial.Emphasis
+    component: Editorial.Strong,
+    rules: [
+      {
+        matchMdast: matchType('emphasis'),
+        component: Editorial.StrongEmphasis
+      },
+      ...globalInlines,
+      link
+    ]
   },
   {
     matchMdast: matchType('emphasis'),
-    component: Editorial.Cursive
+    component: Editorial.Emphasis,
+    rules: [
+      {
+        matchMdast: matchType('strong'),
+        component: Editorial.StrongEmphasis
+      },
+      ...globalInlines,
+      link
+    ]
   },
   link
 ]
