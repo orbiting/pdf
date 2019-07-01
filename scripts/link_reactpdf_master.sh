@@ -9,6 +9,7 @@ build_and_link_reactpdf() {
   git clone $reactpdf_master
   cd react-pdf
   yarn install
+  yarn build
   yarn link
   cd ..
 }
