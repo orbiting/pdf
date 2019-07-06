@@ -5,6 +5,8 @@ import { fontFamilies } from '../lib/fonts'
 import SafeImage from './SafeImage'
 import Alt from './Alt'
 
+import { makeList } from './List'
+
 const styles = StyleSheet.create({
   infobox: {
     flexDirection: 'row',
@@ -27,6 +29,12 @@ const styles = StyleSheet.create({
     borderTopColor: 'black',
     fontFamily: fontFamilies.sansSerifMedium
   },
+  heading2: {
+    fontSize: 10,
+    lineHeight: 1.2,
+    fontFamily: fontFamilies.sansSerifMedium,
+    marginBottom: 5
+  },
   paragraph: {
     fontSize: 10,
     lineHeight: 1.2,
@@ -47,6 +55,10 @@ const InfoboxFigure = ({ children, ...props }) => (
 
 const InfoboxHeading = ({ children }) => {
   return <Text style={styles.heading}>{children}</Text>
+}
+
+const InfoboxHeading2 = ({ children }) => {
+  return <Text style={styles.heading2}>{children}</Text>
 }
 
 const InfoboxParagraph = ({ children }) => {
@@ -105,6 +117,8 @@ const Infobox = ({ children }) => {
 Infobox.Image = InfoboxImage
 Infobox.Figure = InfoboxFigure
 Infobox.Heading = InfoboxHeading
+Infobox.Heading2 = InfoboxHeading2
 Infobox.Paragraph = InfoboxParagraph
+Infobox.List = makeList('sansSerifRegular')
 
 export default Infobox

@@ -272,6 +272,35 @@ const figureGroup = {
   ]
 }
 
+const makeListRule = (Base, paragraphRules) => ({
+  matchMdast: matchType('list'),
+  component: Base,
+  props: node => ({
+    data: {
+      ordered: node.ordered,
+      start: node.start
+    }
+  }),
+  rules: [
+    {
+      matchMdast: matchType('listItem'),
+      component: Base.Item,
+      props: (node, index, parent) => ({
+        node,
+        index,
+        parent
+      }),
+      rules: [
+        {
+          matchMdast: matchParagraph,
+          component: Base.ItemContent,
+          rules: paragraphRules
+        }
+      ]
+    }
+  ]
+})
+
 const infobox = {
   matchMdast: matchZone('INFOBOX'),
   component: Infobox,
@@ -299,40 +328,15 @@ const infobox = {
       component: Infobox.Heading
     },
     {
+      matchMdast: matchHeading(4),
+      component: Infobox.Heading2
+    },
+    {
       matchMdast: matchParagraph,
       component: Infobox.Paragraph,
       rules: interactionParagraphRules
-    }
-  ]
-}
-
-const listItem = {
-  matchMdast: matchType('listItem'),
-  component: List.Item,
-  props: (node, index, parent) => ({
-    node,
-    index,
-    parent
-  }),
-  rules: [
-    {
-      ...paragraph,
-      component: List.ItemContent
-    }
-  ]
-}
-
-const list = {
-  matchMdast: matchType('list'),
-  component: List,
-  props: node => ({
-    data: {
-      ordered: node.ordered,
-      start: node.start
-    }
-  }),
-  rules: [
-    listItem
+    },
+    makeListRule(Infobox.List, interactionParagraphRules)
   ]
 }
 
@@ -423,7 +427,7 @@ const center = {
     figure,
     figureGroup,
     infobox,
-    list,
+    makeListRule(List, editorialParagraphRules),
     note,
     embedTweet,
     embedVideo,
