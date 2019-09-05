@@ -18,7 +18,6 @@ const Center = ({ size, columns, children, ...props }) => {
 
   return (
     <View
-      wrap={false}
       style={[styles.container, sizeClassName]}
     >
       {children}
