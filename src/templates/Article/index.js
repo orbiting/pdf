@@ -5,6 +5,7 @@ import {
   matchZone,
   matchHeading,
   matchParagraph,
+  matchImage,
   matchImageParagraph,
   imageSizeInfo
 } from 'mdast-react-render/lib/utils'
@@ -35,6 +36,13 @@ import {
   FigureGroup,
   EmbedTwitter
 } from '../../components'
+
+const matchImagesParagraph = node =>
+  matchImageParagraph(node) ||
+  (matchParagraph(node) &&
+    node.children.length === 3 &&
+    matchImage(node.children[0]) &&
+    matchImage(node.children[2]))
 
 const matchFigure = matchZone('FIGURE')
 const matchLast = (node, index, parent) => index === parent.children.length - 1
@@ -139,7 +147,7 @@ const title = {
   rules: [
     {
       matchMdast: matchHeading(1),
-      component: ({children, kind}) => <H1 kind={kind}>{children}</H1>,
+      component: ({ children, kind }) => <H1 kind={kind}>{children}</H1>,
       props: (node, index, parent, { ancestors }) => {
         const rootNode = ancestors[ancestors.length - 1]
         const { formatKind } = rootNode.options
@@ -163,7 +171,7 @@ const title = {
           index === numHeadings
         )
       },
-      component: ({children, ...props}) => {
+      component: ({ children, ...props }) => {
         if (
           children &&
           children.length === 1 &&
@@ -171,7 +179,7 @@ const title = {
         ) {
           return null
         }
-        return <Lead children={children} {...props} />
+        return <Lead {...props}>{children}</Lead>
       }
     },
     {
@@ -211,7 +219,7 @@ const getImageProps = (node, index, parent, { ancestors }) => {
 
 const figure = {
   matchMdast: matchZone('FIGURE'),
-  component: ({empty, isCover, aspectRatio, ...props}) => {
+  component: ({ empty, isCover, aspectRatio, ...props }) => {
     if (empty) {
       return null
     }
@@ -231,7 +239,7 @@ const figure = {
     const columns = parent.data && parent.data.columns
     const inCenter = !!ancestors.find(matchZone('CENTER'))
     const isCover = ancestors[0].type === 'root'
-    const image = node.children.find(matchImageParagraph).children[0]
+    const image = node.children.find(matchImagesParagraph).children[0]
     const srcSize = image && imageSizeInfo(image.url)
     const aspectRatio = srcSize && srcSize.width / srcSize.height
 
@@ -247,14 +255,14 @@ const figure = {
       empty: (
         !rootNode.options.images &&
         node.children.length === 1 &&
-        matchImageParagraph(node.children[0]) &&
+        matchImagesParagraph(node.children[0]) &&
         !node.children[0].children[0].alt
       )
     }
   },
   rules: [
     {
-      matchMdast: matchImageParagraph,
+      matchMdast: matchImagesParagraph,
       component: Image,
       props: getImageProps,
       isVoid: true
@@ -315,7 +323,7 @@ const infobox = {
       component: Infobox.Figure,
       rules: [
         {
-          matchMdast: matchImageParagraph,
+          matchMdast: matchImagesParagraph,
           component: Infobox.Image,
           props: getImageProps,
           isVoid: true
