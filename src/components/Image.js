@@ -3,7 +3,7 @@ import { StyleSheet } from '@react-pdf/renderer'
 import { imageResizeUrl } from 'mdast-react-render/lib/utils'
 import Alt from './Alt'
 import SafeImage from './SafeImage'
-import { branch, renderComponent } from '../lib/hocs'
+import { branch } from '../lib/hocs'
 
 const styles = StyleSheet.create({
   image: {
@@ -23,4 +23,4 @@ const ImageAlt = ({ alt, isCover }) => (
   </Alt>
 )
 
-export default branch(props => props.skip, renderComponent(ImageAlt))(Image)
+export default branch(props => props.skip, ImageAlt)(Image)

@@ -1,6 +1,6 @@
 import React, { Children } from 'react'
 import { Text, View, StyleSheet } from '@react-pdf/renderer'
-import { branch, renderComponent } from '../lib/hocs'
+import { branch } from '../lib/hocs'
 import { fontFamilies } from '../lib/fonts'
 import SafeImage from './SafeImage'
 import Alt from './Alt'
@@ -48,8 +48,7 @@ const styles = StyleSheet.create({
 const InfoboxFigure = ({ children, ...props }) => (
   <View>
     {React.Children.map(children, child => (
-      React.cloneElement(child, { ...props })))
-    }
+      React.cloneElement(child, { ...props })))}
   </View>
 )
 
@@ -97,7 +96,7 @@ const InfoboxSafeImage = ({ figureSize, src }) => {
 
 const InfoboxImage = branch(
   props => props.skip,
-  renderComponent(InfoBoxAlt)
+  InfoBoxAlt
 )(InfoboxSafeImage)
 
 const Infobox = ({ children }) => {
