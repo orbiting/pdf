@@ -17,7 +17,7 @@ const SafeImage = ({ src, ...props }) => {
   // force convert gif to png
   // and ensure pngs are not interlaced
   // - not supported by pdfkit
-  if (url.pathname.match(/\.(gif|png)$/)) {
+  if (url.pathname.match(/\.(gif|png|svg)$/)) {
     url.searchParams.set('format', 'png')
   }
   return (
