@@ -11,6 +11,7 @@ export const renderDocument = async (article, query, response) => {
   const formatKind = formatMeta.kind
 
   response.set('Content-Type', 'application/pdf')
+  response.set('X-Robots-Tag', 'noindex')
   if (query.download) {
     const fileName = article.meta.path
       .split('/')
@@ -23,13 +24,15 @@ export const renderDocument = async (article, query, response) => {
   }
 
   ReactPDF.renderToStream(
-    <Document article={article} options={{
-      formatTitle,
-      formatColor,
-      formatKind,
-      images: query.images !== '0',
-      size: query.size || 'A4'
-    }} />
+    <Document
+      article={article} options={{
+        formatTitle,
+        formatColor,
+        formatKind,
+        images: query.images !== '0',
+        size: query.size || 'A4'
+      }}
+    />
   ).then(output => {
     output.pipe(response)
   })
