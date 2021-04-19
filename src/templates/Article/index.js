@@ -47,6 +47,13 @@ const matchImagesParagraph = node =>
 const matchFigure = matchZone('FIGURE')
 const matchLast = (node, index, parent) => index === parent.children.length - 1
 
+const mdastToString = node =>
+  node
+    ? node.value ||
+      (node.children && node.children.map(mdastToString).join('')) ||
+      ''
+    : ''
+
 const globalInlines = [
   {
     matchMdast: matchType('sub'),
@@ -312,6 +319,9 @@ const makeListRule = (Base, paragraphRules) => ({
 const infobox = {
   matchMdast: matchZone('INFOBOX'),
   component: Infobox,
+  props: (node) => ({
+    wrap: mdastToString(node).length > 500
+  }),
   rules: [
     {
       matchMdast: matchZone('FIGURE'),

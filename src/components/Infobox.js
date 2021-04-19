@@ -99,12 +99,12 @@ const InfoboxImage = branch(
   InfoBoxAlt
 )(InfoboxSafeImage)
 
-const Infobox = ({ children }) => {
+const Infobox = ({ children, wrap }) => {
   const figure = Children.toArray(children).filter(child => child.type === InfoboxFigure)
   const childs = Children.toArray(children).filter(child => child.type !== InfoboxFigure)
 
   return (
-    <View style={styles.infobox} wrap={childs.length > 3}>
+    <View style={styles.infobox} wrap={wrap || childs.length > 3}>
       {figure}
       <View style={{ flex: 1 }}>
         {childs}
