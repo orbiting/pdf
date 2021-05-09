@@ -10,8 +10,7 @@ const family = {
 
 const styles = StyleSheet.create({
   headline: {
-    fontSize: 30,
-    marginBottom: 10
+    fontSize: 30
   }
 })
 
@@ -19,7 +18,7 @@ const H1 = ({ children, kind }) => (
   <Text
     minPresenceAhead={26}
     hyphenationPenalty={10000}
-    style={[styles.headline, {fontFamily: family[kind] || family.editorial}]}
+    style={[styles.headline, { fontFamily: family[kind] || family.editorial }]}
   >
     {children}
   </Text>
