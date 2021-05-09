@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
   center: {
     paddingHorizontal: 90,
     '@media max-width: 420': {
-      paddingHorizontal: 30
+      paddingHorizontal: 0
     }
   }
 })

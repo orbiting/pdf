@@ -8,7 +8,9 @@ const styles = StyleSheet.create({
     marginBottom: 40,
     paddingHorizontal: 90,
     '@media max-width: 420': {
-      paddingHorizontal: 30
+      marginTop: 15,
+      marginBottom: 20,
+      paddingHorizontal: 0
     }
   },
   formatTitle: {
@@ -31,7 +33,7 @@ const TitleBlock = ({
     ]}
     {...props}
   >
-    { formatTitle && (
+    {formatTitle && (
       <Text
         style={[
           styles.formatTitle,
