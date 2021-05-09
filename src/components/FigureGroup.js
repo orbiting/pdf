@@ -5,6 +5,10 @@ const styles = StyleSheet.create({
   container: {
     width: '455',
     marginLeft: -60,
+    '@media max-width: 420': {
+      width: '100%',
+      marginLeft: 0
+    },
     flexWrap: 'wrap',
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -13,12 +17,10 @@ const styles = StyleSheet.create({
   }
 })
 
-const Center = ({ size, columns, children, ...props }) => {
-  const sizeClassName = size === 'breakout' ? styles.fullWidth : null
-
+const Center = ({ children }) => {
   return (
     <View
-      style={[styles.container, sizeClassName]}
+      style={styles.container}
     >
       {children}
     </View>

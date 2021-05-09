@@ -22,14 +22,23 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     paddingTop: 35,
     paddingBottom: 50,
-    paddingHorizontal: 40
+    paddingHorizontal: 40,
+    '@media max-width: 420': {
+      paddingTop: 15,
+      paddingBottom: 30,
+      paddingHorizontal: 20
+    }
   },
   decorator: {
     marginBottom: 15
   },
   logo: {
     left: 40,
-    top: 809,
+    top: 841 - 32,
+    '@media max-width: 420': {
+      left: 20,
+      top: 595 - 22
+    },
     right: 40,
     fontSize: 10,
     position: 'absolute',
@@ -37,7 +46,11 @@ const styles = StyleSheet.create({
   },
   path: {
     left: 105,
-    top: 807,
+    top: 841 - 34,
+    '@media max-width: 420': {
+      left: 85,
+      top: 595 - 24
+    },
     right: 65,
     fontSize: 8,
     position: 'absolute',
@@ -48,7 +61,12 @@ const styles = StyleSheet.create({
   numbers: {
     left: 40,
     right: 40,
-    top: 807,
+    top: 841 - 34,
+    '@media max-width: 420': {
+      left: 20,
+      right: 20,
+      top: 595 - 24
+    },
     fontSize: 8,
     textAlign: 'right',
     position: 'absolute',
@@ -77,7 +95,7 @@ const renderPageNumbers = ({ pageNumber, totalPages }) => `${pageNumber} / ${tot
 const isValidPageSize = size => SUPPORTED_PAGE_SIZES.includes(size.toUpperCase())
 
 const Footer = ({ article }) => (
-  <Fragment>
+  <>
     <Text style={styles.logo} fixed>
       REPUBLIK
     </Text>
@@ -88,11 +106,11 @@ const Footer = ({ article }) => (
       fixed
     />
     <Text style={styles.numbers} render={renderPageNumbers} fixed />
-  </Fragment>
+  </>
 )
 
 const MdastDocument = ({ article, options }) => {
-  let pageSize = isValidPageSize(options.size) ? options.size.toUpperCase() : 'A4'
+  const pageSize = isValidPageSize(options.size) ? options.size.toUpperCase() : 'A4'
 
   if (article.meta.template !== 'article') {
     return (
