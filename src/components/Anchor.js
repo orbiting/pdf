@@ -5,7 +5,8 @@ const { FRONTEND_BASE_URL } = process.env
 
 const styles = StyleSheet.create({
   link: {
-    color: '#000000'
+    color: '#000000',
+    textDecoration: 'underline'
   }
 })
 
