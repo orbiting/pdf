@@ -7,7 +7,7 @@
     "node": "14"
   },
   "scripts": {
-    "start": "cross-env NODE_ENV=production node lib/index.js",
+    "start": "node lib/index.js",
     "build": "babel src --out-dir lib",
     "heroku-postbuild": "npm run build",
     "prepare": "husky install",
@@ -50,7 +50,6 @@
     "@babel/eslint-parser": "^7.13.14",
     "@babel/preset-env": "^7.14.1",
     "@babel/preset-react": "^7.13.13",
-    "cross-env": "^7.0.2",
     "d3-queue": "^3.0.7",
     "dotenv": "^9.0.1",
     "eslint": "^7.13.0",
