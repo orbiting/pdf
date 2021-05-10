@@ -1,7 +1,7 @@
 module.exports = {
-  'parser': 'babel-eslint',
-  'extends': ['standard', 'standard-react'],
-  'rules': {
+  parser: "@babel/eslint-parser",
+  extends: ['standard', 'standard-react'],
+  rules: {
     'react/prop-types': 0
   }
 }

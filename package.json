@@ -10,15 +10,14 @@
     "start": "cross-env NODE_ENV=production node lib/index.js",
     "build": "babel src --out-dir lib",
     "heroku-postbuild": "npm run build",
-    "precommit": "lint-staged",
+    "prepare": "husky install",
     "dev": "rimraf lib && npm run build && (babel -w src --out-dir lib & nodemon -w lib -w .env lib/index.js)",
     "cloc": "find . -name '*.js' -not -path \"./node_modules*\" -not -path \"./lib*\" | xargs wc -l",
     "test": "node test/renderToFile.js"
   },
   "lint-staged": {
     "*.js": [
-      "standard --fix",
-      "git add"
+      "standard --fix"
     ]
   },
   "repository": {
@@ -34,7 +33,6 @@
   "dependencies": {
     "@react-pdf/renderer": "^2.0.12",
     "apollo-fetch": "^0.7.0",
-    "babel-preset-stage-0": "^6.24.1",
     "d3-time-format": "^2.1.1",
     "express": "^4.16.2",
     "graphql-tag": "^2.6.0",
@@ -47,10 +45,11 @@
     "regiment": "https://github.com/orbiting/regiment"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-eslint": "^10.0.2",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-react": "^6.24.1",
+    "@babel/cli": "^7.13.16",
+    "@babel/core": "^7.14.0",
+    "@babel/eslint-parser": "^7.13.14",
+    "@babel/preset-env": "^7.14.1",
+    "@babel/preset-react": "^7.13.13",
     "cross-env": "^7.0.2",
     "d3-queue": "^3.0.7",
     "dotenv": "^9.0.1",
@@ -59,11 +58,11 @@
     "eslint-config-standard-react": "^11.0.1",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-react": "^7.6.1",
-    "eslint-plugin-standard": "^4.0.0",
-    "husky": "^3.0.0",
-    "lint-staged": "^9.2.0",
+    "eslint-plugin-standard": "^5.0.0",
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
     "node-fetch": "^2.1.2",
     "nodemon": "^2.0.6",
     "rimraf": "^3.0.2",

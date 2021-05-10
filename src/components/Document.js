@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { StyleSheet, Document, Page, Text, Link, Font, View } from '@react-pdf/renderer'
 import { renderMdast } from 'mdast-react-render'
 import hyphenationCallback from '../lib/hyphenation'
