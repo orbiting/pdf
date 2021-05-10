@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
   maxHeight: {
     maxHeight: 560,
     '@media max-width: 420': {
-      maxHeight: 400
+      maxHeight: 500
     }
   }
 })
