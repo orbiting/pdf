@@ -10,6 +10,7 @@ build_and_link_reactpdf() {
   cd react-pdf
   yarn install
   yarn build
+  cd packages/renderer
   yarn link
   cd ..
 }
