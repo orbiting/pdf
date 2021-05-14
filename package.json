@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/orbiting/pdf#readme",
   "dependencies": {
-    "@react-pdf/renderer": "^2.0.12",
+    "@react-pdf/renderer": "^1.6.16",
     "apollo-fetch": "^0.7.0",
     "d3-time-format": "^2.1.1",
     "express": "^4.16.2",
