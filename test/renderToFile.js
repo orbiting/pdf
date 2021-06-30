@@ -39,7 +39,7 @@ apolloFetch.use(({ request, options }, next) => {
   if (!options.headers) {
     options.headers = {}
   }
-  options.headers['Cookie'] = process.env.API_COOKIE
+  options.headers.Cookie = process.env.API_COOKIE
 
   next()
 })
@@ -123,7 +123,7 @@ const run = async () => {
           },
           onFinish: () => {
             if (retryFails.length) {
-              console.log(`Failed:\n${retryFails.map(doc => `- ${doc.meta.path}\n`)}`)
+              console.log(`Failed:\n${retryFails.map(doc => `- ${doc.meta.path}\n`).join('')}`)
             }
             const success = 1 - retryFails.length / docs.length
             console.log(`${Math.round(success * 100)}% success`)
