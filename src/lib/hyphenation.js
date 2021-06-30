@@ -7,7 +7,7 @@ const hypenator = createHyphenator(patterns)
 
 const hyphenate = (string) => {
   if (string.includes(SOFT_HYPHEN)) {
-    return string.split(SOFT_HYPHEN)
+    return string.split(SOFT_HYPHEN).filter(Boolean)
   }
 
   return hypenator(string).split(SOFT_HYPHEN)
