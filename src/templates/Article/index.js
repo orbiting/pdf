@@ -401,7 +401,8 @@ const blockQuote = {
       rules: [
         {
           matchMdast: matchParagraph,
-          component: BlockQuote.Text
+          component: BlockQuote.Text,
+          rules: interactionParagraphRules
         }
       ]
     },
