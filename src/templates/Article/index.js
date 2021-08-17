@@ -397,7 +397,13 @@ const blockQuote = {
   rules: [
     {
       matchMdast: matchType('blockquote'),
-      component: BlockQuote.Text
+      component: View,
+      rules: [
+        {
+          matchMdast: matchParagraph,
+          component: BlockQuote.Text
+        }
+      ]
     },
     legend
   ]
