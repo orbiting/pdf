@@ -1,6 +1,7 @@
 import React, { Children } from 'react'
 import { Text, View, StyleSheet } from '@react-pdf/renderer'
 import { fontFamilies } from '../lib/fonts'
+import Legend from './Legend'
 
 const styles = StyleSheet.create({
   container: {
@@ -11,6 +12,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#f7f7f7'
   },
   text: {
+    fontSize: 9,
     marginBottom: 10,
     fontFamily: fontFamilies.sansSerifRegular
   }
@@ -21,8 +23,8 @@ const BlockQuoteText = ({ children, ...props }) => (
 )
 
 const BlockQuote = ({ children }) => {
-  const texts = Children.toArray(children).filter(child => child.type === BlockQuoteText)
-  const legend = Children.toArray(children).filter(child => child.type !== BlockQuoteText)
+  const texts = Children.toArray(children).filter(child => child.type !== Legend)
+  const legend = Children.toArray(children).filter(child => child.type === Legend)
 
   return (
     <View>
