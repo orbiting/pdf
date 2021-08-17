@@ -207,7 +207,7 @@ const legend = {
   component: Legend,
   rules: [
     legendEmphasis,
-    ...editorialParagraphRules
+    ...interactionParagraphRules
   ]
 }
 
