@@ -5,6 +5,7 @@ import { branch, RenderNothing } from '../lib/hocs'
 
 const styles = StyleSheet.create({
   maxHeight: {
+    objectFit: 'contain',
     maxHeight: 560,
     '@media max-width: 420': {
       maxHeight: 500
