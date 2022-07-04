@@ -1,6 +1,7 @@
 import React from 'react'
-import { Image, StyleSheet } from '@react-pdf/renderer'
+import { StyleSheet } from '@react-pdf/renderer'
 import { getRanges } from '../lib/ranges'
+import SafeImage from './SafeImage'
 
 const styles = StyleSheet.create({
   image: {
@@ -22,6 +23,6 @@ export default ({ node, ancestors }) => {
   const renderUrl = `${ASSETS_SERVER_BASE_URL}/render?viewport=665&zoomFactor=2&id=${encodeURIComponent(rootNode.id)}&url=${encodeURIComponent(extractUrl)}`
 
   return (
-    <Image style={styles.image} src={renderUrl} />
+    <SafeImage style={styles.image} src={renderUrl} />
   )
 }
