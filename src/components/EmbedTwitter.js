@@ -73,7 +73,7 @@ const EmbedTwitter = ({ text, image, userName, userScreenName, userProfileImageU
   const date = format(new Date(createdAt))
 
   return (
-    <View style={styles.container} wrap={false}>
+    <View style={styles.container} wrap={!!image}>
       <View style={styles.border}>
         <View style={styles.header}>
           <SafeImage style={styles.avatar} src={userProfileImageUrl} />
